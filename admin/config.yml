@@ -1,0 +1,66 @@
+backend:
+  name: github
+  repo: yoebar/Aja
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "assets/uploads"
+publish_mode: editorial_workflow
+
+collections:
+  - name: "site_content"
+    label: "Website Content"
+    files:
+      - name: "main_site_content"
+        label: "Main Site Content"
+        file: "content/site.json"
+        format: "json"
+        fields:
+          - label: "Information Section"
+            name: "information"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Summary", name: "summary", widget: "text" }
+              - label: "Categories"
+                name: "categories"
+                widget: "list"
+                fields:
+                  - { label: "ID", name: "id", widget: "string", hint: "Use simple lower-case text, for example news, vacancies, procurement." }
+                  - { label: "Tab Label", name: "label", widget: "string" }
+                  - { label: "Status Label", name: "status", widget: "string" }
+                  - { label: "Panel Title", name: "title", widget: "string" }
+                  - { label: "Panel Summary", name: "summary", widget: "text" }
+                  - { label: "Contact Button Label", name: "contactLabel", widget: "string" }
+                  - { label: "Contact Email", name: "contactEmail", widget: "string" }
+                  - { label: "Contact Email Subject", name: "contactSubject", widget: "string" }
+                  - label: "Items"
+                    name: "items"
+                    widget: "list"
+                    fields:
+                      - { label: "Type", name: "type", widget: "string" }
+                      - { label: "Title", name: "title", widget: "string" }
+                      - { label: "Summary", name: "summary", widget: "text" }
+          - label: "Contact Section"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Form Recipient Email", name: "formRecipient", widget: "string" }
+              - { label: "Form Subject Prefix", name: "formSubjectPrefix", widget: "string" }
+              - { label: "Form Endpoint", name: "formEndpoint", widget: "string", required: false, hint: "Optional Formspree or other form endpoint. Leave blank to use email." }
+              - label: "Contact Cards"
+                name: "cards"
+                widget: "list"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - label: "Lines"
+                    name: "lines"
+                    widget: "list"
+                    fields:
+                      - { label: "Type", name: "type", widget: "select", options: ["text", "email", "phone"] }
+                      - { label: "Display Text", name: "label", widget: "string" }
+                      - { label: "Value", name: "value", widget: "string", required: false, hint: "Email address or phone number for linked lines." }
+                      - { label: "Muted", name: "muted", widget: "boolean", required: false, default: false }

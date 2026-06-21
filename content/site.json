@@ -1,0 +1,137 @@
+{
+  "information": {
+    "eyebrow": "Information",
+    "title": "Company notices, vacancies, procurement updates, and tender information.",
+    "summary": "Select a category below for the latest public information from Aja Alloys. Published items can later be added here as formal notices, vacancy announcements, or procurement updates.",
+    "categories": [
+      {
+        "id": "news",
+        "label": "News",
+        "status": "Sample announcements",
+        "title": "News",
+        "summary": "Company updates, public notices, operational announcements, and general information will be published in this category.",
+        "contactLabel": "Contact for information",
+        "contactEmail": "info@aja.bt",
+        "contactSubject": "News and announcement enquiry",
+        "items": [
+          {
+            "type": "Announcement",
+            "title": "Trial production update",
+            "summary": "Sample notice for plant readiness, documentation preparation, and buyer communication."
+          },
+          {
+            "type": "Public information",
+            "title": "Buyer documentation desk",
+            "summary": "Sample notice for specification requests, certificate support, and export correspondence."
+          }
+        ]
+      },
+      {
+        "id": "vacancies",
+        "label": "Vacancies",
+        "status": "Sample vacancies",
+        "title": "Vacancies",
+        "summary": "Recruitment notices, job descriptions, application deadlines, and employment announcements will appear here when positions are open.",
+        "contactLabel": "Contact HR",
+        "contactEmail": "info@aja.bt",
+        "contactSubject": "Vacancy enquiry",
+        "items": [
+          {
+            "type": "Vacancy announcement",
+            "title": "Furnace shift technician",
+            "summary": "Sample vacancy for furnace operation, production monitoring, and shift reporting."
+          },
+          {
+            "type": "Vacancy announcement",
+            "title": "Quality and documentation assistant",
+            "summary": "Sample vacancy for sampling records, dispatch files, and buyer document coordination."
+          }
+        ]
+      },
+      {
+        "id": "procurement",
+        "label": "Procurement",
+        "status": "Sample procurement",
+        "title": "Procurement",
+        "summary": "Supplier notices, tender announcements, procurement schedules, and submission instructions will be published here when available.",
+        "contactLabel": "Contact procurement",
+        "contactEmail": "info@aja.bt",
+        "contactSubject": "Procurement enquiry",
+        "items": [
+          {
+            "type": "Procurement notice",
+            "title": "Supply of packing materials",
+            "summary": "Sample procurement notice for bags, labels, pallets, and dispatch packing support."
+          },
+          {
+            "type": "Tender information",
+            "title": "Laboratory consumables and safety items",
+            "summary": "Sample tender note for laboratory materials, PPE, and production support consumables."
+          }
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Talk to Aja Alloys.",
+    "formRecipient": "info@aja.bt",
+    "formSubjectPrefix": "Aja Alloys specification request",
+    "formEndpoint": "",
+    "cards": [
+      {
+        "title": "All enquiries",
+        "lines": [
+          {
+            "type": "email",
+            "label": "info@aja.bt",
+            "value": "info@aja.bt"
+          },
+          {
+            "type": "text",
+            "label": "Sales, procurement, factory, documentation, and general enquiries.",
+            "muted": true
+          }
+        ]
+      },
+      {
+        "title": "Corporate office",
+        "lines": [
+          {
+            "type": "text",
+            "label": "Ashi Building No-4, 1st Floor, Chuba Lam 2, Olakha, PO: 1958, Thimphu"
+          },
+          {
+            "type": "phone",
+            "label": "Telephone: +975-1712 5900",
+            "value": "+97517125900"
+          },
+          {
+            "type": "email",
+            "label": "Email: tandin@aja.bt",
+            "value": "tandin@aja.bt"
+          }
+        ]
+      },
+      {
+        "title": "Factory site",
+        "lines": [
+          {
+            "type": "text",
+            "label": "Norbugang Industrial Park, Plot No 6, Samtse, Bhutan"
+          },
+          {
+            "type": "phone",
+            "label": "Telephone: +975-1765 0842",
+            "value": "+97517650842"
+          },
+          {
+            "type": "email",
+            "label": "Email: tenzin@aja.bt",
+            "value": "tenzin@aja.bt"
+          }
+        ]
+      }
+    ]
+  }
+}
