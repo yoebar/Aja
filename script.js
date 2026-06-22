@@ -65,6 +65,7 @@ function syncHeader() {
 function syncActiveNav() {
   const activeTarget = snapTargets[currentSnapIndex()];
   const activeId = activeTarget ? activeTarget.id : "";
+  document.body.dataset.section = activeId;
 
   sectionNavLinks.forEach((link) => {
     const isActive = link.getAttribute("href") === `#${activeId}`;
