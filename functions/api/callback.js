@@ -63,6 +63,8 @@ function renderAuthPage(status, content) {
       var authorised = ${JSON.stringify(status === "success")};
       var statusText = document.getElementById('status');
       var details = document.getElementById('details');
+      var channelName = 'aja-decap-auth';
+      var storageKey = 'aja-decap-auth-message';
 
       details.textContent = authorised
         ? 'GitHub approved this login. Returning to the admin page.'
@@ -82,7 +84,26 @@ function renderAuthPage(status, content) {
         return true;
       }
 
+      function broadcastAuthMessage(data) {
+        if ('BroadcastChannel' in window) {
+          var channel = new BroadcastChannel(channelName);
+          channel.postMessage(data);
+          channel.close();
+        }
+
+        try {
+          localStorage.setItem(storageKey, JSON.stringify({
+            message: data,
+            time: Date.now()
+          }));
+        } catch (error) {
+          console.error('Unable to store admin login message', error);
+        }
+      }
+
       function sendHandshake() {
+        broadcastAuthMessage('authorizing:github');
+
         if (!window.opener) {
           updateStatus('This login window cannot find the admin page. Close this window, return to /admin/, and click Login with GitHub again.');
           return false;
@@ -94,6 +115,7 @@ function renderAuthPage(status, content) {
 
       function receiveMessage(event) {
         sendAuthMessage(event.origin);
+        broadcastAuthMessage(message);
         window.removeEventListener('message', receiveMessage, false);
 
         window.setTimeout(function () {
@@ -108,9 +130,14 @@ function renderAuthPage(status, content) {
         attempts += 1;
         sendHandshake();
 
+        if (attempts > 1) {
+          broadcastAuthMessage(message);
+        }
+
         if (attempts >= 20) {
           window.clearInterval(retry);
           sendAuthMessage(window.location.origin);
+          broadcastAuthMessage(message);
           updateStatus(authorised
             ? 'GitHub approved this login, but the admin page did not respond. Close this window, refresh /admin/, and try once more.'
             : 'GitHub returned an error. Close this window, return to /admin/, and try once more.');

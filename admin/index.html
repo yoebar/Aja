@@ -7,6 +7,45 @@
   <title>Aja Alloys Website Admin</title>
 </head>
 <body>
+  <script>
+    (function () {
+      var channelName = 'aja-decap-auth';
+      var storageKey = 'aja-decap-auth-message';
+
+      function forwardAuthMessage(data) {
+        if (typeof data !== 'string') return;
+
+        if (
+          data !== 'authorizing:github' &&
+          data.indexOf('authorization:github:') !== 0
+        ) {
+          return;
+        }
+
+        window.dispatchEvent(new MessageEvent('message', {
+          data: data,
+          origin: window.location.origin
+        }));
+      }
+
+      if ('BroadcastChannel' in window) {
+        var channel = new BroadcastChannel(channelName);
+        channel.addEventListener('message', function (event) {
+          forwardAuthMessage(event.data);
+        });
+      }
+
+      window.addEventListener('storage', function (event) {
+        if (event.key !== storageKey || !event.newValue) return;
+
+        try {
+          forwardAuthMessage(JSON.parse(event.newValue).message);
+        } catch (error) {
+          console.error('Unable to read admin login message', error);
+        }
+      });
+    })();
+  </script>
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 </body>
 </html>
