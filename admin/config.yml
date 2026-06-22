@@ -2,6 +2,9 @@ backend:
   name: github
   repo: yoebar/Aja
   branch: main
+  site_domain: https://aja-468.pages.dev
+  base_url: https://aja-468.pages.dev
+  auth_endpoint: /api/auth
 
 media_folder: "assets/uploads"
 public_folder: "assets/uploads"
