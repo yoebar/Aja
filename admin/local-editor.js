@@ -1428,7 +1428,7 @@ async function saveCurrentSection() {
 async function loadContent() {
   const filesResponse = await fetch(`${apiBase}/files`);
   if (!filesResponse.ok) {
-    window.location.href = "/admin/login.html";
+    window.location.href = "/admin/post-editor-login.html";
     return;
   }
 
@@ -1447,7 +1447,7 @@ async function loadSession() {
   const response = await fetch(`${apiBase}/session`);
   const session = await response.json().catch(() => ({}));
   if (!session.authenticated) {
-    window.location.href = "/admin/login.html";
+    window.location.href = "/admin/post-editor-login.html";
     return false;
   }
 
@@ -1460,7 +1460,7 @@ async function loadSession() {
 
 async function logout() {
   await fetch(`${apiBase}/logout`, { method: "POST" });
-  window.location.href = "/admin/login.html";
+  window.location.href = "/admin/post-editor-login.html";
 }
 
 sectionButtons.forEach((button) => {
