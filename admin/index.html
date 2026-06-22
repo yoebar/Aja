@@ -2,50 +2,49 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex">
-  <title>Aja Alloys Website Admin</title>
+  <title>Aja Admin</title>
+  <link rel="stylesheet" href="local-editor.css">
 </head>
-<body>
+<body class="login-page">
+  <main class="login-shell">
+    <section class="login-card">
+      <p>Aja Alloys</p>
+      <h1>Admin Dashboard</h1>
+      <p class="login-status" id="admin-status">Opening the admin dashboard...</p>
+      <noscript>
+        <p class="login-status">
+          JavaScript is required. Open <a href="/admin/login.html">the admin login</a>.
+        </p>
+      </noscript>
+    </section>
+  </main>
+
   <script>
-    (function () {
-      var channelName = 'aja-decap-auth';
-      var storageKey = 'aja-decap-auth-message';
+    (async function () {
+      const statusLine = document.querySelector("#admin-status");
+      const isLocalPreview = ["127.0.0.1", "localhost", ""].includes(window.location.hostname);
+      const apiBase = isLocalPreview ? "/__local-admin" : "/api/post-editor";
 
-      function forwardAuthMessage(data) {
-        if (typeof data !== 'string') return;
+      try {
+        const response = await fetch(`${apiBase}/session`, {
+          cache: "no-store",
+          credentials: "same-origin"
+        });
+        const session = await response.json().catch(() => ({}));
 
-        if (
-          data !== 'authorizing:github' &&
-          data.indexOf('authorization:github:') !== 0
-        ) {
+        if (response.ok && session.authenticated) {
+          window.location.replace("/admin/post-editor.html");
           return;
         }
-
-        window.dispatchEvent(new MessageEvent('message', {
-          data: data,
-          origin: window.location.origin
-        }));
+      } catch (error) {
+        console.error("Unable to check admin session", error);
       }
 
-      if ('BroadcastChannel' in window) {
-        var channel = new BroadcastChannel(channelName);
-        channel.addEventListener('message', function (event) {
-          forwardAuthMessage(event.data);
-        });
-      }
-
-      window.addEventListener('storage', function (event) {
-        if (event.key !== storageKey || !event.newValue) return;
-
-        try {
-          forwardAuthMessage(JSON.parse(event.newValue).message);
-        } catch (error) {
-          console.error('Unable to read admin login message', error);
-        }
-      });
+      statusLine.textContent = "Redirecting to login...";
+      window.location.replace("/admin/login.html");
     })();
   </script>
-  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 </body>
 </html>
