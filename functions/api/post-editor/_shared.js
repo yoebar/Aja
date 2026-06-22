@@ -1,8 +1,13 @@
 const CONTENT_FILES = {
   notices: "content/notices.json",
   vacancies: "content/vacancies.json",
-  tenders: "content/tenders.json"
+  tenders: "content/tenders.json",
+  contact_form: "content/contact-form.json",
+  contact_submissions: "content/contact-submissions.json"
 };
+
+const POST_ITEM_KEYS = new Set(["notices", "vacancies", "tenders"]);
+const FULL_CONTENT_KEYS = new Set(["contact_form", "contact_submissions"]);
 
 const IMAGE_EXTENSIONS = new Set([".jpg", ".jpeg", ".png", ".webp", ".gif"]);
 const PDF_EXTENSIONS = new Set([".pdf"]);
@@ -125,18 +130,22 @@ export async function savePostItems(key, incomingData, env) {
   }
 
   const current = await githubGetJson(path, env);
-  const next = {
-    ...current,
-    items: Array.isArray(incomingData.items) ? incomingData.items : current.items || []
-  };
+  const next = POST_ITEM_KEYS.has(key)
+    ? {
+      ...current,
+      items: Array.isArray(incomingData.items) ? incomingData.items : current.items || []
+    }
+    : FULL_CONTENT_KEYS.has(key)
+      ? incomingData
+      : current;
 
-  await githubPutJson(path, next, `Update ${key} advert posts`, env);
+  await githubPutJson(path, next, `Update ${key.replaceAll("_", " ")} content`, env);
   return { file: path, data: next };
 }
 
 export function cleanUpload(section, filename) {
   const safeSection = safeSegment(section);
-  if (!getContentPath(safeSection)) {
+  if (!POST_ITEM_KEYS.has(safeSection)) {
     throw new Error("Invalid advert section");
   }
 
