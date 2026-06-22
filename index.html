@@ -71,12 +71,32 @@
       },
       {
         "@type": "Product",
+        "@id": "https://www.aja.bt/#product-ferrosilicon",
         "name": "Ferro Silicon (FeSi)",
-        "description": "Ferro Silicon produced by Aja Alloys in Bhutan using clean hydroelectric power and submerged arc furnace technology, supplied to steel mills and foundries worldwide.",
+        "description": "Ferro Silicon produced by Aja Alloys in Bhutan using clean hydroelectric power and submerged arc furnace technology, supplied to steel mills and foundries worldwide. Standard grades supplied: FeSi 75, FeSi 72, FeSi 70 to 75, and FeSi 65.",
         "image": "https://www.aja.bt/assets/product-ferro-silicon.jpg",
         "category": "Ferro Alloys",
+        "material": "Ferro Silicon",
+        "countryOfOrigin": "BT",
         "brand": { "@id": "https://www.aja.bt/#organization" },
-        "manufacturer": { "@id": "https://www.aja.bt/#organization" }
+        "manufacturer": { "@id": "https://www.aja.bt/#organization" },
+        "audience": {
+          "@type": "BusinessAudience",
+          "name": "Steel mills, foundries, ferro alloy traders, and industrial buyers"
+        },
+        "additionalProperty": [
+          { "@type": "PropertyValue", "name": "Grades supplied", "value": "FeSi 75, FeSi 72, FeSi 70 to 75, FeSi 65" },
+          { "@type": "PropertyValue", "name": "Energy source", "value": "Clean hydroelectric power (Bhutan)" },
+          { "@type": "PropertyValue", "name": "Furnace technology", "value": "2 x 9 MVA submerged arc furnaces (18 MVA)" },
+          { "@type": "PropertyValue", "name": "By-product", "value": "Micro Silica (Silica Fume)" }
+        ],
+        "offers": {
+          "@type": "Offer",
+          "availability": "https://schema.org/InStock",
+          "areaServed": "Worldwide",
+          "url": "https://www.aja.bt/",
+          "seller": { "@id": "https://www.aja.bt/#organization" }
+        }
       }
     ]
   }

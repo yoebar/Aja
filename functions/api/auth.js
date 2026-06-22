@@ -4,7 +4,9 @@ export async function onRequest({ request, env }) {
   }
 
   const url = new URL(request.url);
-  const scope = url.searchParams.get("scope") || "repo";
+  const requestedScope = url.searchParams.get("scope") || "public_repo";
+  const allowFullRepoScope = env.ALLOW_FULL_REPO_SCOPE === "true";
+  const scope = requestedScope === "repo" && allowFullRepoScope ? "repo" : "public_repo";
   const redirectUrl = new URL("https://github.com/login/oauth/authorize");
   redirectUrl.searchParams.set("client_id", env.GITHUB_CLIENT_ID);
   redirectUrl.searchParams.set("redirect_uri", `${url.origin}/api/callback`);

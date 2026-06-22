@@ -5,6 +5,7 @@ backend:
   site_domain: https://www.aja.bt
   base_url: https://www.aja.bt
   auth_endpoint: api/auth
+  auth_scope: public_repo
 
 media_folder: "assets/uploads"
 public_folder: "assets/uploads"

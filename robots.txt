@@ -1,6 +1,37 @@
+# Aja Alloys Pvt Ltd - robots.txt
+# AI assistants and search crawlers are welcome to read and cite this site.
+
 User-agent: *
 Allow: /
 Disallow: /admin/
 Disallow: /api/
+
+# AI answer engines (explicitly permitted)
+User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: Claude-Web
+Allow: /
+User-agent: anthropic-ai
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Perplexity-User
+Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: Applebot-Extended
+Allow: /
+User-agent: Amazonbot
+Allow: /
+User-agent: Bingbot
+Allow: /
+User-agent: CCBot
+Allow: /
 
 Sitemap: https://www.aja.bt/sitemap.xml
