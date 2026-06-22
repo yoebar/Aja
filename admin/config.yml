@@ -9,72 +9,105 @@ backend:
 media_folder: "assets/uploads"
 public_folder: "assets/uploads"
 publish_mode: editorial_workflow
+site_url: "https://aja-468.pages.dev"
+display_url: "https://aja-468.pages.dev"
+logo_url: "https://aja-468.pages.dev/assets/aja-logo-transparent.png"
 
 collections:
   - name: "site_content"
-    label: "Website Content"
+    label: "Dashboard"
+    label_singular: "Dashboard Area"
+    description: "Manage public notices, vacancies, procurement updates, enquiry routing, and contact details."
+    summary: "Aja website dashboard"
+    editor:
+      preview: false
     files:
       - name: "main_site_content"
-        label: "Main Site Content"
+        label: "Manage Website Content"
+        description: "Use these sections to update the public Information and Contact areas on the website."
         file: "content/site.json"
         format: "json"
         fields:
-          - label: "Information Section"
+          - label: "Information Dashboard"
             name: "information"
             widget: "object"
+            hint: "Controls the Notices, Vacancies, and Procurement tabs on the public site."
             fields:
-              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Summary", name: "summary", widget: "text" }
-              - label: "Categories"
+              - { label: "Small Heading", name: "eyebrow", widget: "string", hint: "Short label above the section title." }
+              - { label: "Section Title", name: "title", widget: "string" }
+              - { label: "Section Summary", name: "summary", widget: "text", hint: "Short introduction shown above the tabs." }
+              - label: "Information Tabs"
                 name: "categories"
                 widget: "list"
+                label_singular: "Tab"
+                collapsed: true
+                minimize_collapsed: true
+                summary: "{{fields.label}}: {{fields.title}}"
+                hint: "Each tab becomes one public information area, for example Notices, Vacancies, or Procurement."
                 fields:
-                  - { label: "ID", name: "id", widget: "string", hint: "Use simple lower-case text, for example news, vacancies, procurement." }
+                  - { label: "Tab ID", name: "id", widget: "string", hint: "Use simple lower-case text with no spaces, for example news, vacancies, procurement." }
                   - { label: "Tab Label", name: "label", widget: "string" }
-                  - { label: "Status Label", name: "status", widget: "string" }
+                  - { label: "Status Label", name: "status", widget: "string", hint: "Small label shown inside the tab panel." }
                   - { label: "Panel Title", name: "title", widget: "string" }
                   - { label: "Panel Summary", name: "summary", widget: "text" }
-                  - { label: "Hide Panel Header", name: "hideIntro", widget: "boolean", required: false, default: false }
+                  - { label: "Hide Panel Header", name: "hideIntro", widget: "boolean", required: false, default: false, hint: "Use this when the tab label is enough and the panel does not need another heading." }
                   - { label: "Contact Button Label", name: "contactLabel", widget: "string" }
-                  - { label: "Contact Email", name: "contactEmail", widget: "string" }
-                  - { label: "Contact Email Subject", name: "contactSubject", widget: "string" }
-                  - label: "Items"
+                  - { label: "Contact Email", name: "contactEmail", widget: "string", hint: "Email address used by the tab contact button." }
+                  - { label: "Contact Email Subject", name: "contactSubject", widget: "string", hint: "Default subject line for enquiries from this tab." }
+                  - label: "Cards in This Tab"
                     name: "items"
                     widget: "list"
+                    label_singular: "Card"
+                    collapsed: true
+                    minimize_collapsed: true
+                    summary: "{{fields.type}}: {{fields.title}}"
+                    hint: "Add one card for each notice, vacancy, procurement item, or tender update."
                     fields:
-                      - { label: "Type", name: "type", widget: "string" }
-                      - { label: "Title", name: "title", widget: "string" }
-                      - { label: "Summary", name: "summary", widget: "text" }
-          - label: "Contact Section"
+                      - { label: "Card Type", name: "type", widget: "string", hint: "Examples: Announcement, Vacancy announcement, Procurement notice, Tender information." }
+                      - { label: "Card Title", name: "title", widget: "string" }
+                      - { label: "Card Summary", name: "summary", widget: "text" }
+          - label: "Contact Dashboard"
             name: "contact"
             widget: "object"
+            hint: "Controls the contact section, office details, factory details, map links, and enquiry form behaviour."
             fields:
-              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Form Recipient Email", name: "formRecipient", widget: "string" }
-              - { label: "Form Subject Prefix", name: "formSubjectPrefix", widget: "string" }
+              - { label: "Small Heading", name: "eyebrow", widget: "string" }
+              - { label: "Section Title", name: "title", widget: "string" }
+              - { label: "Form Recipient Email", name: "formRecipient", widget: "string", hint: "All website enquiry forms go to this email unless a form endpoint is configured." }
+              - { label: "Form Subject Prefix", name: "formSubjectPrefix", widget: "string", hint: "Prefix added to enquiry email subjects." }
               - { label: "Form Endpoint", name: "formEndpoint", widget: "string", required: false, hint: "Optional Formspree or other form endpoint. Leave blank to use email." }
               - label: "Contact Cards"
                 name: "cards"
                 widget: "list"
+                label_singular: "Contact Card"
+                collapsed: true
+                minimize_collapsed: true
+                summary: "{{fields.title}}"
+                hint: "Each card becomes one block in the public contact section."
                 fields:
-                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Card Title", name: "title", widget: "string" }
                   - label: "Google Map"
                     name: "map"
                     widget: "object"
                     required: false
+                    collapsed: true
+                    hint: "Optional map and directions settings for this contact card."
                     fields:
                       - { label: "Map Button Label", name: "label", widget: "string", required: false }
                       - { label: "Google Maps Search Query", name: "query", widget: "string", required: false, hint: "Use the full address or exact Google Maps place name." }
                       - { label: "Directions Button Label", name: "directionsLabel", widget: "string", required: false }
                       - { label: "Custom Embed URL", name: "embedUrl", widget: "string", required: false, hint: "Optional Google Maps iframe embed URL. Leave blank to generate from the query." }
                       - { label: "Custom Directions URL", name: "directionsUrl", widget: "string", required: false, hint: "Optional Google Maps directions link. Leave blank to generate from the query." }
-                  - label: "Lines"
+                  - label: "Contact Lines"
                     name: "lines"
                     widget: "list"
+                    label_singular: "Line"
+                    collapsed: true
+                    minimize_collapsed: true
+                    summary: "{{fields.type}}: {{fields.label}}"
+                    hint: "Add addresses, email addresses, phone numbers, or muted notes."
                     fields:
-                      - { label: "Type", name: "type", widget: "select", options: ["text", "email", "phone"] }
+                      - { label: "Line Type", name: "type", widget: "select", options: ["text", "email", "phone"], hint: "Email and phone lines become clickable links." }
                       - { label: "Display Text", name: "label", widget: "string" }
                       - { label: "Value", name: "value", widget: "string", required: false, hint: "Email address or phone number for linked lines." }
-                      - { label: "Muted", name: "muted", widget: "boolean", required: false, default: false }
+                      - { label: "Muted Note", name: "muted", widget: "boolean", required: false, default: false, hint: "Use for explanatory text that should appear less prominent." }
