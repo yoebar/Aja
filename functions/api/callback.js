@@ -10,16 +10,30 @@ function renderAuthPage(status, content) {
 <body>
   <script>
     (function () {
+      var message = 'authorization:github:${status}:${payload}';
+      var attempts = 0;
+
+      function sendAuthMessage(targetOrigin) {
+        if (!window.opener) return;
+        window.opener.postMessage(message, targetOrigin || '*');
+      }
+
       function receiveMessage(message) {
-        window.opener.postMessage(
-          'authorization:github:${status}:${payload}',
-          message.origin
-        );
+        sendAuthMessage(message.origin);
         window.removeEventListener('message', receiveMessage, false);
       }
 
       window.addEventListener('message', receiveMessage, false);
       window.opener.postMessage('authorizing:github', '*');
+
+      var retry = window.setInterval(function () {
+        attempts += 1;
+        sendAuthMessage('*');
+
+        if (attempts >= 10) {
+          window.clearInterval(retry);
+        }
+      }, 250);
     })();
   </script>
 </body>
