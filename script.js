@@ -291,19 +291,22 @@ function renderInformationContent(information) {
     panel.dataset.noticePanel = id;
 
     const content = document.createElement("div");
+    const shouldShowIntro = !category.hideIntro;
 
-    const status = document.createElement("span");
-    status.className = "notice-status";
-    status.textContent = category.status || "Notice";
-    content.append(status);
+    if (shouldShowIntro) {
+      const status = document.createElement("span");
+      status.className = "notice-status";
+      status.textContent = category.status || "Notice";
+      content.append(status);
 
-    const title = document.createElement("h3");
-    title.textContent = category.title || category.label || "Information";
-    content.append(title);
+      const title = document.createElement("h3");
+      title.textContent = category.title || category.label || "Information";
+      content.append(title);
 
-    const summary = document.createElement("p");
-    summary.textContent = category.summary || "";
-    content.append(summary);
+      const summary = document.createElement("p");
+      summary.textContent = category.summary || "";
+      content.append(summary);
+    }
 
     const list = document.createElement("ul");
     list.className = "notice-list";

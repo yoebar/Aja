@@ -10,7 +10,8 @@
         "status": "Company notices",
         "title": "Company notices",
         "summary": "Company updates and public notices will appear here.",
-        "contactLabel": "Contact for information",
+        "hideIntro": true,
+        "contactLabel": "Click for more",
         "contactEmail": "sales@aja.bt",
         "contactSubject": "Company notice enquiry",
         "items": [
@@ -32,7 +33,7 @@
         "status": "Vacancies",
         "title": "Vacancies",
         "summary": "Open roles and application details will appear here.",
-        "contactLabel": "Contact HR",
+        "contactLabel": "Click for more",
         "contactEmail": "sales@aja.bt",
         "contactSubject": "Vacancy enquiry",
         "items": [
@@ -54,7 +55,7 @@
         "status": "Procurement updates",
         "title": "Procurement",
         "summary": "Supplier notices and tender details will appear here.",
-        "contactLabel": "Contact procurement",
+        "contactLabel": "Click for more",
         "contactEmail": "sales@aja.bt",
         "contactSubject": "Procurement enquiry",
         "items": [

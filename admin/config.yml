@@ -35,6 +35,7 @@ collections:
                   - { label: "Status Label", name: "status", widget: "string" }
                   - { label: "Panel Title", name: "title", widget: "string" }
                   - { label: "Panel Summary", name: "summary", widget: "text" }
+                  - { label: "Hide Panel Header", name: "hideIntro", widget: "boolean", required: false, default: false }
                   - { label: "Contact Button Label", name: "contactLabel", widget: "string" }
                   - { label: "Contact Email", name: "contactEmail", widget: "string" }
                   - { label: "Contact Email Subject", name: "contactSubject", widget: "string" }
