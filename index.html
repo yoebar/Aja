@@ -27,7 +27,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700;800&family=Uchen&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260622-section-line-v1">
+  <link rel="stylesheet" href="styles.css?v=20260622-image-hover-transition-v2">
 </head>
 <body>
   <a class="skip-link" href="#top">Skip to content</a>
@@ -78,14 +78,14 @@
       <div class="hero-inner">
         <div class="hero-content">
           <p class="eyebrow">Ferro Silicon · Bhutan</p>
-          <h1>High-quality Ferro Silicon, made in Bhutan.</h1>
+          <h1 class="hero-title">
+            <span class="hero-title-emphasis hero-title-accent">High Quality</span>
+            <span>Ferro Silicon</span>
+            <span class="hero-title-emphasis">Made in Bhutan</span>
+          </h1>
           <p class="hero-copy">
             Produced with Bhutan's clean hydroelectric power and modern submerged arc furnace technology for steel, foundry, and international ferro-alloy customers.
           </p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#quality">Specification</a>
-            <a class="button button-light" href="#contact">Enquire on export</a>
-          </div>
         </div>
         <aside class="hero-panel" aria-label="Aja Alloys identity and export positioning">
           <img src="assets/aja-logo-transparent.png?v=clear-logo-v2" alt="" width="1024" height="1024" decoding="async">
@@ -187,36 +187,44 @@
         <p>
           Buyers in Europe, India, and neighbouring markets expect clarity, speed, documentation, and consistency. Aja Alloys combines Bhutan's clean energy base, submerged arc furnace production, and international Ferro Silicon export experience to serve customers worldwide.
         </p>
-        <div class="export-points" aria-label="Export customer focus areas" data-export-accordion>
-          <article class="is-expanded">
-            <h3><button type="button" aria-expanded="true">Europe</button></h3>
+        <div class="export-points" aria-label="Export customer focus areas">
+          <article>
+            <h3><span>Europe</span></h3>
             <p>Cleaner energy position, documentation readiness, technical clarity, and dependable long-term supply.</p>
           </article>
           <article>
-            <h3><button type="button" aria-expanded="false">India</button></h3>
+            <h3><span>India</span></h3>
             <p>Regional proximity, familiar Ferro Silicon demand, faster commercial conversations, and responsive dispatch coordination.</p>
           </article>
           <article>
-            <h3><button type="button" aria-expanded="false">Global trade</button></h3>
+            <h3><span>Global trade</span></h3>
             <p>Direct enquiry route, buyer-specific certificates, packing details, and export document support for worldwide customers.</p>
           </article>
         </div>
       </div>
       <div class="positioning-strip export-positioning-strip" aria-label="Aja Alloys positioning">
         <article>
-          <span>Reliable</span>
+          <button class="positioning-popout-trigger" type="button" data-positioning-popout aria-haspopup="dialog">
+            <span>Reliable</span>
+          </button>
           <p>Built around repeat industrial supply, quality production, and responsive commercial communication.</p>
         </article>
         <article>
-          <span>Technical</span>
+          <button class="positioning-popout-trigger" type="button" data-positioning-popout aria-haspopup="dialog">
+            <span>Technical</span>
+          </button>
           <p>Modern submerged arc furnace production with product specifications and buyer documents presented clearly.</p>
         </article>
         <article>
-          <span>Serious</span>
+          <button class="positioning-popout-trigger" type="button" data-positioning-popout aria-haspopup="dialog">
+            <span>Serious</span>
+          </button>
           <p>Restrained industrial identity for procurement teams, traders, and manufacturers.</p>
         </article>
         <article>
-          <span>Export-ready</span>
+          <button class="positioning-popout-trigger" type="button" data-positioning-popout aria-haspopup="dialog">
+            <span>Export-ready</span>
+          </button>
           <p>Backed by team experience in Ferro Silicon production and exports across India, Malaysia, and Kuwait.</p>
         </article>
       </div>
@@ -447,53 +455,53 @@
     <section class="section careers" id="information">
       <div class="section-heading compact">
         <p class="eyebrow" data-information-eyebrow>Information</p>
-        <h2 data-information-title>Company notices, vacancies, procurement updates, and tender information.</h2>
+        <h2 data-information-title>Notices, vacancies, procurement, and tenders.</h2>
         <p data-information-summary>
-          Select a category below for the latest public information from Aja Alloys. Published items can later be added here as formal notices, vacancy announcements, or procurement updates.
+          Public updates from Aja Alloys will be posted here.
         </p>
       </div>
       <div class="notice-board" data-notice-tabs data-dynamic-notices>
         <div class="notice-tabs" role="tablist" aria-label="Information categories">
-          <a class="notice-tab is-active" href="#notice-panel-news" id="notice-tab-news" role="tab" aria-selected="true" aria-controls="notice-panel-news" data-notice-tab="news">News</a>
+          <a class="notice-tab is-active" href="#notice-panel-news" id="notice-tab-news" role="tab" aria-selected="true" aria-controls="notice-panel-news" data-notice-tab="news">Notices</a>
           <a class="notice-tab" href="#notice-panel-vacancies" id="notice-tab-vacancies" role="tab" aria-selected="false" aria-controls="notice-panel-vacancies" data-notice-tab="vacancies">Vacancies</a>
           <a class="notice-tab" href="#notice-panel-procurement" id="notice-tab-procurement" role="tab" aria-selected="false" aria-controls="notice-panel-procurement" data-notice-tab="procurement">Procurement</a>
         </div>
         <div class="notice-panels">
           <article class="notice-panel is-active" id="notice-panel-news" role="tabpanel" aria-labelledby="notice-tab-news" data-notice-panel="news">
             <div>
-              <span class="notice-status">Sample announcements</span>
-              <h3>News</h3>
-              <p>Company updates, public notices, operational announcements, and general information will be published in this category.</p>
+              <span class="notice-status">Company notices</span>
+              <h3>Company notices</h3>
+              <p>Company updates and public notices will appear here.</p>
               <ul class="notice-list">
                 <li>
                   <span>Announcement</span>
-                  <strong>Trial production update</strong>
-                  <p>Sample notice for plant readiness, documentation preparation, and buyer communication.</p>
+                  <strong>Production update</strong>
+                  <p>Plant readiness and buyer updates.</p>
                 </li>
                 <li>
                   <span>Public information</span>
-                  <strong>Buyer documentation desk</strong>
-                  <p>Sample notice for specification requests, certificate support, and export correspondence.</p>
+                  <strong>Documentation desk</strong>
+                  <p>Specifications, certificates, and export documents.</p>
                 </li>
               </ul>
             </div>
-            <a href="mailto:info@aja.bt?subject=News%20and%20announcement%20enquiry">Contact for information</a>
+            <a href="mailto:info@aja.bt?subject=Company%20notice%20enquiry">Contact for information</a>
           </article>
           <article class="notice-panel" id="notice-panel-vacancies" role="tabpanel" aria-labelledby="notice-tab-vacancies" data-notice-panel="vacancies">
             <div>
-              <span class="notice-status">Sample vacancies</span>
+              <span class="notice-status">Vacancies</span>
               <h3>Vacancies</h3>
-              <p>Recruitment notices, job descriptions, application deadlines, and employment announcements will appear here when positions are open.</p>
+              <p>Open roles and application details will appear here.</p>
               <ul class="notice-list">
                 <li>
                   <span>Vacancy announcement</span>
                   <strong>Furnace shift technician</strong>
-                  <p>Sample vacancy for furnace operation, production monitoring, and shift reporting.</p>
+                  <p>Furnace operation and shift reporting.</p>
                 </li>
                 <li>
                   <span>Vacancy announcement</span>
                   <strong>Quality and documentation assistant</strong>
-                  <p>Sample vacancy for sampling records, dispatch files, and buyer document coordination.</p>
+                  <p>Sampling records and dispatch documents.</p>
                 </li>
               </ul>
             </div>
@@ -501,19 +509,19 @@
           </article>
           <article class="notice-panel" id="notice-panel-procurement" role="tabpanel" aria-labelledby="notice-tab-procurement" data-notice-panel="procurement">
             <div>
-              <span class="notice-status">Sample procurement</span>
+              <span class="notice-status">Procurement updates</span>
               <h3>Procurement</h3>
-              <p>Supplier notices, tender announcements, procurement schedules, and submission instructions will be published here when available.</p>
+              <p>Supplier notices and tender details will appear here.</p>
               <ul class="notice-list">
                 <li>
                   <span>Procurement notice</span>
-                  <strong>Supply of packing materials</strong>
-                  <p>Sample procurement notice for bags, labels, pallets, and dispatch packing support.</p>
+                  <strong>Packing materials</strong>
+                  <p>Bags, labels, pallets, and dispatch support.</p>
                 </li>
                 <li>
                   <span>Tender information</span>
-                  <strong>Laboratory consumables and safety items</strong>
-                  <p>Sample tender note for laboratory materials, PPE, and production support consumables.</p>
+                  <strong>Lab and safety supplies</strong>
+                  <p>Laboratory materials, PPE, and consumables.</p>
                 </li>
               </ul>
             </div>
@@ -604,6 +612,19 @@
     </article>
   </div>
 
+  <div class="spec-modal positioning-modal" data-positioning-modal role="dialog" aria-modal="true" aria-labelledby="positioning-modal-title" hidden>
+    <div class="spec-modal-backdrop" data-positioning-modal-close></div>
+    <article class="spec-modal-panel positioning-modal-panel">
+      <button class="spec-modal-close" type="button" data-positioning-modal-close aria-label="Close positioning detail">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M6 6l12 12M18 6 6 18"></path>
+        </svg>
+      </button>
+      <h2 id="positioning-modal-title" data-positioning-modal-title>Positioning</h2>
+      <p data-positioning-modal-body></p>
+    </article>
+  </div>
+
   <nav class="mobile-swipe-nav" data-mobile-swipe-nav aria-label="Section navigation">
     <button class="mobile-swipe-button mobile-swipe-button-prev" type="button" data-swipe-prev aria-label="Previous section">
       <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
@@ -617,6 +638,6 @@
     </button>
   </nav>
 
-  <script src="script.js?v=20260622-quality-layout-v2"></script>
+  <script src="script.js?v=20260622-image-hover-transition-v2"></script>
 </body>
 </html>

@@ -5,7 +5,6 @@ const form = document.querySelector("[data-contact-form]");
 const noticeTabs = document.querySelector("[data-notice-tabs]");
 const specTabs = document.querySelector("[data-spec-tabs]");
 const themeToggle = document.querySelector("[data-theme-toggle]");
-const exportAccordion = document.querySelector("[data-export-accordion]");
 const swipeNav = document.querySelector("[data-mobile-swipe-nav]");
 const swipePrevButton = document.querySelector("[data-swipe-prev]");
 const swipeNextButton = document.querySelector("[data-swipe-next]");
@@ -13,6 +12,11 @@ const specModal = document.querySelector("[data-spec-modal]");
 const specModalTitle = document.querySelector("[data-spec-modal-title]");
 const specModalBody = document.querySelector("[data-spec-modal-body]");
 const specModalCloseButtons = [...document.querySelectorAll("[data-spec-modal-close]")];
+const positioningModal = document.querySelector("[data-positioning-modal]");
+const positioningModalTitle = document.querySelector("[data-positioning-modal-title]");
+const positioningModalBody = document.querySelector("[data-positioning-modal-body]");
+const positioningModalCloseButtons = [...document.querySelectorAll("[data-positioning-modal-close]")];
+const positioningTriggers = [...document.querySelectorAll("[data-positioning-popout]")];
 const companySlideshows = [...document.querySelectorAll("[data-company-slideshow]")];
 const snapTargets = [...document.querySelectorAll("main > section:not(.positioning-strip)")];
 const sectionNavLinks = nav
@@ -27,15 +31,7 @@ let pointerStartX = 0;
 let pointerSwipeActive = false;
 let lastHorizontalSwipeAt = 0;
 let activeTheme = "dark";
-
-function readStoredTheme() {
-  try {
-    const storedTheme = window.localStorage.getItem("aja-theme");
-    return storedTheme === "warm" ? "light" : storedTheme;
-  } catch {
-    return null;
-  }
-}
+let lastPositioningTrigger = null;
 
 function storeTheme(theme) {
   try {
@@ -142,7 +138,7 @@ function isMobileViewport() {
 }
 
 function isSwipeDeckViewport() {
-  return window.matchMedia("(max-width: 620px)").matches;
+  return isMobileViewport();
 }
 
 function syncSwipeControls() {
@@ -400,7 +396,8 @@ async function loadSiteContent() {
 
 syncHeader();
 syncActiveNav();
-applyTheme(readStoredTheme());
+applyTheme("dark");
+storeTheme("dark");
 syncSwipeControls();
 loadSiteContent();
 
@@ -412,25 +409,46 @@ if (themeToggle) {
   });
 }
 
-if (exportAccordion) {
-  const exportArticles = [...exportAccordion.querySelectorAll("article")];
+function closePositioningModal() {
+  if (!positioningModal) return;
 
-  function syncExportAccordion(activeArticle) {
-    exportArticles.forEach((article) => {
-      const isExpanded = article === activeArticle;
-      article.classList.toggle("is-expanded", isExpanded);
-      article.querySelector("button")?.setAttribute("aria-expanded", String(isExpanded));
-    });
+  positioningModal.hidden = true;
+  if (positioningModalBody) {
+    positioningModalBody.textContent = "";
   }
 
-  exportArticles.forEach((article) => {
-    const button = article.querySelector("button");
-    button?.addEventListener("click", () => {
-      if (!isSwipeDeckViewport()) return;
-      syncExportAccordion(article);
-    });
-  });
+  if (lastPositioningTrigger) {
+    lastPositioningTrigger.focus();
+  }
 }
+
+function openPositioningModal(trigger) {
+  if (!positioningModal || !positioningModalTitle || !positioningModalBody) return;
+
+  const article = trigger.closest("article");
+  const title = trigger.textContent.trim();
+  const body = article?.querySelector("p")?.textContent.trim();
+  if (!title || !body) return;
+
+  lastPositioningTrigger = trigger;
+  positioningModalTitle.textContent = title;
+  positioningModalBody.textContent = body;
+  positioningModal.hidden = false;
+  positioningModal.querySelector(".spec-modal-close")?.focus();
+}
+
+positioningTriggers.forEach((trigger) => {
+  trigger.addEventListener("click", () => openPositioningModal(trigger));
+});
+
+positioningModalCloseButtons.forEach((button) => {
+  button.addEventListener("click", closePositioningModal);
+});
+
+window.addEventListener("keydown", (event) => {
+  if (!positioningModal || positioningModal.hidden || event.key !== "Escape") return;
+  closePositioningModal();
+});
 
 companySlideshows.forEach((slideshow) => {
   const slideStage = slideshow.querySelector(".company-slides");
@@ -438,7 +456,7 @@ companySlideshows.forEach((slideshow) => {
   const caption = slideshow.querySelector("[data-company-slideshow-caption]");
   const prevButton = slideshow.querySelector("[data-company-slide-prev]");
   const nextButton = slideshow.querySelector("[data-company-slide-next]");
-  const slideDelay = 10000;
+  const slideDelay = 15000;
   let slideTimer = null;
   let activeIndex = 0;
   let slideTouchStartX = 0;

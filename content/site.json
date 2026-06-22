@@ -1,37 +1,37 @@
 {
   "information": {
     "eyebrow": "Information",
-    "title": "Company notices, vacancies, procurement updates, and tender information.",
-    "summary": "Select a category below for the latest public information from Aja Alloys. Published items can later be added here as formal notices, vacancy announcements, or procurement updates.",
+    "title": "Notices, vacancies, procurement, and tenders.",
+    "summary": "Public updates from Aja Alloys will be posted here.",
     "categories": [
       {
         "id": "news",
-        "label": "News",
-        "status": "Sample announcements",
-        "title": "News",
-        "summary": "Company updates, public notices, operational announcements, and general information will be published in this category.",
+        "label": "Notices",
+        "status": "Company notices",
+        "title": "Company notices",
+        "summary": "Company updates and public notices will appear here.",
         "contactLabel": "Contact for information",
         "contactEmail": "info@aja.bt",
-        "contactSubject": "News and announcement enquiry",
+        "contactSubject": "Company notice enquiry",
         "items": [
           {
             "type": "Announcement",
-            "title": "Trial production update",
-            "summary": "Sample notice for plant readiness, documentation preparation, and buyer communication."
+            "title": "Production update",
+            "summary": "Plant readiness and buyer updates."
           },
           {
             "type": "Public information",
-            "title": "Buyer documentation desk",
-            "summary": "Sample notice for specification requests, certificate support, and export correspondence."
+            "title": "Documentation desk",
+            "summary": "Specifications, certificates, and export documents."
           }
         ]
       },
       {
         "id": "vacancies",
         "label": "Vacancies",
-        "status": "Sample vacancies",
+        "status": "Vacancies",
         "title": "Vacancies",
-        "summary": "Recruitment notices, job descriptions, application deadlines, and employment announcements will appear here when positions are open.",
+        "summary": "Open roles and application details will appear here.",
         "contactLabel": "Contact HR",
         "contactEmail": "info@aja.bt",
         "contactSubject": "Vacancy enquiry",
@@ -39,34 +39,34 @@
           {
             "type": "Vacancy announcement",
             "title": "Furnace shift technician",
-            "summary": "Sample vacancy for furnace operation, production monitoring, and shift reporting."
+            "summary": "Furnace operation and shift reporting."
           },
           {
             "type": "Vacancy announcement",
             "title": "Quality and documentation assistant",
-            "summary": "Sample vacancy for sampling records, dispatch files, and buyer document coordination."
+            "summary": "Sampling records and dispatch documents."
           }
         ]
       },
       {
         "id": "procurement",
         "label": "Procurement",
-        "status": "Sample procurement",
+        "status": "Procurement updates",
         "title": "Procurement",
-        "summary": "Supplier notices, tender announcements, procurement schedules, and submission instructions will be published here when available.",
+        "summary": "Supplier notices and tender details will appear here.",
         "contactLabel": "Contact procurement",
         "contactEmail": "info@aja.bt",
         "contactSubject": "Procurement enquiry",
         "items": [
           {
             "type": "Procurement notice",
-            "title": "Supply of packing materials",
-            "summary": "Sample procurement notice for bags, labels, pallets, and dispatch packing support."
+            "title": "Packing materials",
+            "summary": "Bags, labels, pallets, and dispatch support."
           },
           {
             "type": "Tender information",
-            "title": "Laboratory consumables and safety items",
-            "summary": "Sample tender note for laboratory materials, PPE, and production support consumables."
+            "title": "Lab and safety supplies",
+            "summary": "Laboratory materials, PPE, and consumables."
           }
         ]
       }
