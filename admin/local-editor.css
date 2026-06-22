@@ -407,6 +407,36 @@ body[data-dashboard="post-editor"] .topbar h1::after {
   gap: 10px;
 }
 
+.confirm-modal {
+  align-items: center;
+  background: rgba(0, 0, 0, 0.62);
+  display: flex;
+  inset: 0;
+  justify-content: center;
+  padding: 20px;
+  position: fixed;
+  z-index: 20;
+}
+
+.confirm-modal-panel {
+  background: var(--surface-raised);
+  border: 1px solid var(--line);
+  display: grid;
+  gap: 12px;
+  max-width: 420px;
+  padding: 20px;
+  width: min(100%, 420px);
+}
+
+.confirm-modal-panel h3,
+.confirm-modal-panel p {
+  margin: 0;
+}
+
+.confirm-modal-panel small {
+  color: var(--muted);
+}
+
 .table-note {
   color: var(--muted);
   margin: 0;
