@@ -59,6 +59,16 @@ collections:
                 widget: "list"
                 fields:
                   - { label: "Title", name: "title", widget: "string" }
+                  - label: "Google Map"
+                    name: "map"
+                    widget: "object"
+                    required: false
+                    fields:
+                      - { label: "Map Button Label", name: "label", widget: "string", required: false }
+                      - { label: "Google Maps Search Query", name: "query", widget: "string", required: false, hint: "Use the full address or exact Google Maps place name." }
+                      - { label: "Directions Button Label", name: "directionsLabel", widget: "string", required: false }
+                      - { label: "Custom Embed URL", name: "embedUrl", widget: "string", required: false, hint: "Optional Google Maps iframe embed URL. Leave blank to generate from the query." }
+                      - { label: "Custom Directions URL", name: "directionsUrl", widget: "string", required: false, hint: "Optional Google Maps directions link. Leave blank to generate from the query." }
                   - label: "Lines"
                     name: "lines"
                     widget: "list"

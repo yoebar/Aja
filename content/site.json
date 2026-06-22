@@ -96,6 +96,13 @@
       },
       {
         "title": "Corporate office",
+        "map": {
+          "label": "Directions",
+          "query": "27.445754,89.660812",
+          "embedUrl": "https://www.google.com/maps?q=27.445754,89.660812&z=17&output=embed",
+          "directionsUrl": "https://www.google.com/maps/place/27%C2%B026'44.7%22N+89%C2%B039'38.9%22E/@27.4457552,89.6601683,243m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d27.445754!4d89.660812?entry=ttu&g_ep=EgoyMDI2MDYxNi4wIKXMDSoASAFQAw%3D%3D",
+          "directionsLabel": "Get directions"
+        },
         "lines": [
           {
             "type": "text",
@@ -115,6 +122,13 @@
       },
       {
         "title": "Factory site",
+        "map": {
+          "label": "Directions",
+          "query": "Aja Alloys Pvt Ltd, Norbugang Industrial Park, Samtse, Bhutan",
+          "embedUrl": "https://www.google.com/maps?q=26.9169417,89.0510542&z=16&output=embed",
+          "directionsUrl": "https://maps.app.goo.gl/HTXgqH4mB6ehb2JJ6",
+          "directionsLabel": "Get directions"
+        },
         "lines": [
           {
             "type": "text",

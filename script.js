@@ -17,6 +17,11 @@ const positioningModalTitle = document.querySelector("[data-positioning-modal-ti
 const positioningModalBody = document.querySelector("[data-positioning-modal-body]");
 const positioningModalCloseButtons = [...document.querySelectorAll("[data-positioning-modal-close]")];
 const positioningTriggers = [...document.querySelectorAll("[data-positioning-popout]")];
+const mapModal = document.querySelector("[data-map-modal]");
+const mapModalTitle = document.querySelector("[data-map-modal-title]");
+const mapModalFrame = document.querySelector("[data-map-modal-frame]");
+const mapDirectionsLink = document.querySelector("[data-map-directions]");
+const mapModalCloseButtons = [...document.querySelectorAll("[data-map-modal-close]")];
 const companySlideshows = [...document.querySelectorAll("[data-company-slideshow]")];
 const snapTargets = [...document.querySelectorAll("main > section:not(.positioning-strip)")];
 const sectionNavLinks = nav
@@ -32,6 +37,7 @@ let pointerSwipeActive = false;
 let lastHorizontalSwipeAt = 0;
 let activeTheme = "dark";
 let lastPositioningTrigger = null;
+let lastMapTrigger = null;
 
 function storeTheme(theme) {
   try {
@@ -184,6 +190,68 @@ function createMailto(email, subject) {
   return `mailto:${email}${query}`;
 }
 
+function googleMapsEmbedUrl(query) {
+  return `https://www.google.com/maps?q=${encodeURIComponent(query)}&output=embed`;
+}
+
+function googleMapsDirectionsUrl(query) {
+  return `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(query)}`;
+}
+
+function mapQueryFromCard(card) {
+  const map = card?.map || {};
+  if (map.query) return map.query;
+
+  const addressLine = Array.isArray(card?.lines)
+    ? card.lines.find((line) => line.type === "text" && !line.muted && line.label)
+    : null;
+
+  return addressLine?.label || "";
+}
+
+function createMapFrame(title, embedUrl) {
+  const iframe = document.createElement("iframe");
+  iframe.title = title;
+  iframe.src = embedUrl;
+  iframe.loading = "lazy";
+  iframe.referrerPolicy = "no-referrer-when-downgrade";
+  iframe.allowFullscreen = true;
+  return iframe;
+}
+
+function closeMapModal() {
+  if (!mapModal) return;
+
+  mapModal.hidden = true;
+  document.body.classList.remove("spec-modal-open");
+  mapModalFrame?.replaceChildren();
+
+  if (lastMapTrigger) {
+    lastMapTrigger.focus();
+  }
+}
+
+function openMapModal(card, trigger) {
+  if (!mapModal || !mapModalTitle || !mapModalFrame || !mapDirectionsLink) return;
+
+  const map = card.map || {};
+  const query = mapQueryFromCard(card);
+  if (!query && !map.embedUrl) return;
+
+  const title = card.title ? `${card.title} map` : "Location map";
+  const embedUrl = map.embedUrl || googleMapsEmbedUrl(query);
+  const directionsUrl = map.directionsUrl || googleMapsDirectionsUrl(query);
+
+  lastMapTrigger = trigger;
+  mapModalTitle.textContent = title;
+  mapModalFrame.replaceChildren(createMapFrame(title, embedUrl));
+  mapDirectionsLink.href = directionsUrl;
+  mapDirectionsLink.textContent = map.directionsLabel || "Get directions";
+  mapModal.hidden = false;
+  document.body.classList.add("spec-modal-open");
+  mapModal.querySelector(".spec-modal-close")?.focus();
+}
+
 function renderInformationContent(information) {
   if (!information || !noticeTabs || !Array.isArray(information.categories)) return;
 
@@ -302,6 +370,9 @@ function renderContactContent(contact) {
     block.append(title);
 
     const lines = Array.isArray(card.lines) ? card.lines : [];
+    const map = card.map || {};
+    const query = mapQueryFromCard(card);
+
     lines.forEach((line) => {
       const paragraph = document.createElement("p");
       if (line.muted) {
@@ -324,6 +395,19 @@ function renderContactContent(contact) {
 
       block.append(paragraph);
     });
+
+    if (map.embedUrl || query) {
+      const mapLine = document.createElement("p");
+      mapLine.className = "contact-map-line";
+      const mapButton = document.createElement("button");
+      mapButton.type = "button";
+      mapButton.className = "contact-map-link";
+      mapButton.textContent = map.label || "Directions";
+      mapButton.addEventListener("click", () => openMapModal(card, mapButton));
+
+      mapLine.append(mapButton);
+      block.append(mapLine);
+    }
 
     contactGrid.insertBefore(block, contactForm);
   });
@@ -445,7 +529,16 @@ positioningModalCloseButtons.forEach((button) => {
   button.addEventListener("click", closePositioningModal);
 });
 
+mapModalCloseButtons.forEach((button) => {
+  button.addEventListener("click", closeMapModal);
+});
+
 window.addEventListener("keydown", (event) => {
+  if (mapModal && !mapModal.hidden && event.key === "Escape") {
+    closeMapModal();
+    return;
+  }
+
   if (!positioningModal || positioningModal.hidden || event.key !== "Escape") return;
   closePositioningModal();
 });
