@@ -1,6 +1,6 @@
 import { getContentPath, githubGetJson, jsonResponse, requireEditor } from "./_shared.js";
 
-const KEYS = ["notices", "vacancies", "tenders"];
+const KEYS = ["notices", "vacancies", "tenders", "contact_form", "contact_submissions"];
 
 export async function onRequestGet({ request, env }) {
   const auth = await requireEditor(request, env);
