@@ -1,0 +1,23 @@
+{
+  "id": "news",
+  "label": "Notices",
+  "status": "Company notices",
+  "title": "Company notices",
+  "summary": "Company updates and public notices will appear here.",
+  "hideIntro": true,
+  "contactLabel": "Click for more",
+  "contactEmail": "sales@aja.bt",
+  "contactSubject": "Company notice enquiry",
+  "items": [
+    {
+      "type": "Announcement",
+      "title": "Production update",
+      "summary": "Plant readiness and buyer updates."
+    },
+    {
+      "type": "Public information",
+      "title": "Documentation desk",
+      "summary": "Specifications, certificates, and export documents."
+    }
+  ]
+}

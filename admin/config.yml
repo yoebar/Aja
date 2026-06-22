@@ -8,106 +8,283 @@ backend:
 
 media_folder: "assets/uploads"
 public_folder: "assets/uploads"
-publish_mode: editorial_workflow
 site_url: "https://aja-468.pages.dev"
 display_url: "https://aja-468.pages.dev"
 logo_url: "https://aja-468.pages.dev/assets/aja-logo-transparent.png"
 
 collections:
-  - name: "site_content"
-    label: "Dashboard"
-    label_singular: "Dashboard Area"
-    description: "Manage public notices, vacancies, procurement updates, enquiry routing, and contact details."
-    summary: "Aja website dashboard"
+  - name: "website_admin"
+    label: "Website Admin"
+    label_singular: "Website Area"
+    description: "Use one page for one update. Most editors only need Notices, Vacancies, Procurement, or Contact Cards."
     editor:
       preview: false
     files:
-      - name: "main_site_content"
-        label: "Manage Website Content"
-        description: "Use these sections to update the public Information and Contact areas on the website."
-        file: "content/site.json"
+      - name: "information_heading"
+        label: "Information Section Heading"
+        description: "Change the heading above Notices, Vacancies, and Procurement."
+        file: "content/information.json"
         format: "json"
         fields:
-          - label: "Information Dashboard"
-            name: "information"
-            widget: "object"
-            hint: "Controls the Notices, Vacancies, and Procurement tabs on the public site."
+          - label: "Small Heading"
+            name: "eyebrow"
+            widget: "string"
+            default: "Information"
+          - label: "Main Heading"
+            name: "title"
+            widget: "string"
+          - label: "Short Intro Text"
+            name: "summary"
+            widget: "text"
+
+      - name: "notices"
+        label: "Notices"
+        description: "Add or edit public company notices."
+        file: "content/notices.json"
+        format: "json"
+        fields:
+          - { label: "Tab ID", name: "id", widget: "hidden", default: "news" }
+          - { label: "Tab Name", name: "label", widget: "hidden", default: "Notices" }
+          - { label: "Hide Panel Header", name: "hideIntro", widget: "hidden", default: true }
+          - label: "Status Label"
+            name: "status"
+            widget: "string"
+            default: "Company notices"
+          - label: "Panel Heading"
+            name: "title"
+            widget: "string"
+          - label: "Panel Intro Text"
+            name: "summary"
+            widget: "text"
+          - label: "Button Text"
+            name: "contactLabel"
+            widget: "string"
+            default: "Click for more"
+          - label: "Enquiry Email"
+            name: "contactEmail"
+            widget: "string"
+            default: "sales@aja.bt"
+          - label: "Email Subject"
+            name: "contactSubject"
+            widget: "string"
+            default: "Company notice enquiry"
+          - label: "Notice Cards"
+            name: "items"
+            widget: "list"
+            label_singular: "Notice"
+            collapsed: true
+            minimize_collapsed: true
+            summary: "{{fields.title}}"
             fields:
-              - { label: "Small Heading", name: "eyebrow", widget: "string", hint: "Short label above the section title." }
-              - { label: "Section Title", name: "title", widget: "string" }
-              - { label: "Section Summary", name: "summary", widget: "text", hint: "Short introduction shown above the tabs." }
-              - label: "Information Tabs"
-                name: "categories"
+              - label: "Type"
+                name: "type"
+                widget: "select"
+                options: ["Announcement", "Public information", "Company update", "Documentation"]
+              - label: "Title"
+                name: "title"
+                widget: "string"
+              - label: "Summary"
+                name: "summary"
+                widget: "text"
+
+      - name: "vacancies"
+        label: "Vacancies"
+        description: "Add or edit open roles and recruitment notices."
+        file: "content/vacancies.json"
+        format: "json"
+        fields:
+          - { label: "Tab ID", name: "id", widget: "hidden", default: "vacancies" }
+          - { label: "Tab Name", name: "label", widget: "hidden", default: "Vacancies" }
+          - { label: "Hide Panel Header", name: "hideIntro", widget: "hidden", default: false }
+          - label: "Status Label"
+            name: "status"
+            widget: "string"
+            default: "Vacancies"
+          - label: "Panel Heading"
+            name: "title"
+            widget: "string"
+          - label: "Panel Intro Text"
+            name: "summary"
+            widget: "text"
+          - label: "Button Text"
+            name: "contactLabel"
+            widget: "string"
+            default: "Click for more"
+          - label: "HR or Contact Email"
+            name: "contactEmail"
+            widget: "string"
+            default: "sales@aja.bt"
+          - label: "Email Subject"
+            name: "contactSubject"
+            widget: "string"
+            default: "Vacancy enquiry"
+          - label: "Vacancy Cards"
+            name: "items"
+            widget: "list"
+            label_singular: "Vacancy"
+            collapsed: true
+            minimize_collapsed: true
+            summary: "{{fields.title}}"
+            fields:
+              - label: "Type"
+                name: "type"
+                widget: "select"
+                options: ["Vacancy announcement", "Internship", "Contract role", "Recruitment notice"]
+                default: "Vacancy announcement"
+              - label: "Job Title"
+                name: "title"
+                widget: "string"
+              - label: "Short Description"
+                name: "summary"
+                widget: "text"
+
+      - name: "procurement"
+        label: "Procurement And Tenders"
+        description: "Add or edit supplier notices, procurement updates, and tenders."
+        file: "content/procurement.json"
+        format: "json"
+        fields:
+          - { label: "Tab ID", name: "id", widget: "hidden", default: "procurement" }
+          - { label: "Tab Name", name: "label", widget: "hidden", default: "Procurement" }
+          - { label: "Hide Panel Header", name: "hideIntro", widget: "hidden", default: false }
+          - label: "Status Label"
+            name: "status"
+            widget: "string"
+            default: "Procurement updates"
+          - label: "Panel Heading"
+            name: "title"
+            widget: "string"
+          - label: "Panel Intro Text"
+            name: "summary"
+            widget: "text"
+          - label: "Button Text"
+            name: "contactLabel"
+            widget: "string"
+            default: "Click for more"
+          - label: "Procurement Email"
+            name: "contactEmail"
+            widget: "string"
+            default: "sales@aja.bt"
+          - label: "Email Subject"
+            name: "contactSubject"
+            widget: "string"
+            default: "Procurement enquiry"
+          - label: "Procurement Cards"
+            name: "items"
+            widget: "list"
+            label_singular: "Procurement Item"
+            collapsed: true
+            minimize_collapsed: true
+            summary: "{{fields.title}}"
+            fields:
+              - label: "Type"
+                name: "type"
+                widget: "select"
+                options: ["Procurement notice", "Tender information", "Supplier notice", "Request for quotation"]
+              - label: "Title"
+                name: "title"
+                widget: "string"
+              - label: "Summary"
+                name: "summary"
+                widget: "text"
+
+      - name: "contact_form"
+        label: "Contact Form"
+        description: "Set where website enquiries go."
+        file: "content/contact-form.json"
+        format: "json"
+        fields:
+          - label: "Small Heading"
+            name: "eyebrow"
+            widget: "string"
+            default: "Contact"
+          - label: "Contact Section Heading"
+            name: "title"
+            widget: "string"
+          - label: "Default Recipient Email"
+            name: "formRecipient"
+            widget: "string"
+            hint: "Used when no form endpoint is set."
+          - label: "Email Subject Prefix"
+            name: "formSubjectPrefix"
+            widget: "string"
+          - label: "Form Endpoint"
+            name: "formEndpoint"
+            widget: "string"
+            required: false
+            hint: "Optional Formspree or similar endpoint. Leave blank to use email."
+
+      - name: "contact_cards"
+        label: "Contact Cards"
+        description: "Edit the office, factory, and enquiry cards shown beside the contact form."
+        file: "content/contact-cards.json"
+        format: "json"
+        fields:
+          - label: "Contact Cards"
+            name: "cards"
+            widget: "list"
+            label_singular: "Contact Card"
+            collapsed: true
+            minimize_collapsed: true
+            summary: "{{fields.title}}"
+            fields:
+              - label: "Card Title"
+                name: "title"
+                widget: "string"
+              - label: "Contact Lines"
+                name: "lines"
                 widget: "list"
-                label_singular: "Tab"
+                label_singular: "Line"
                 collapsed: true
                 minimize_collapsed: true
-                summary: "{{fields.label}}: {{fields.title}}"
-                hint: "Each tab becomes one public information area, for example Notices, Vacancies, or Procurement."
+                summary: "{{fields.label}}"
                 fields:
-                  - { label: "Tab ID", name: "id", widget: "string", hint: "Use simple lower-case text with no spaces, for example news, vacancies, procurement." }
-                  - { label: "Tab Label", name: "label", widget: "string" }
-                  - { label: "Status Label", name: "status", widget: "string", hint: "Small label shown inside the tab panel." }
-                  - { label: "Panel Title", name: "title", widget: "string" }
-                  - { label: "Panel Summary", name: "summary", widget: "text" }
-                  - { label: "Hide Panel Header", name: "hideIntro", widget: "boolean", required: false, default: false, hint: "Use this when the tab label is enough and the panel does not need another heading." }
-                  - { label: "Contact Button Label", name: "contactLabel", widget: "string" }
-                  - { label: "Contact Email", name: "contactEmail", widget: "string", hint: "Email address used by the tab contact button." }
-                  - { label: "Contact Email Subject", name: "contactSubject", widget: "string", hint: "Default subject line for enquiries from this tab." }
-                  - label: "Cards in This Tab"
-                    name: "items"
-                    widget: "list"
-                    label_singular: "Card"
-                    collapsed: true
-                    minimize_collapsed: true
-                    summary: "{{fields.type}}: {{fields.title}}"
-                    hint: "Add one card for each notice, vacancy, procurement item, or tender update."
-                    fields:
-                      - { label: "Card Type", name: "type", widget: "string", hint: "Examples: Announcement, Vacancy announcement, Procurement notice, Tender information." }
-                      - { label: "Card Title", name: "title", widget: "string" }
-                      - { label: "Card Summary", name: "summary", widget: "text" }
-          - label: "Contact Dashboard"
-            name: "contact"
-            widget: "object"
-            hint: "Controls the contact section, office details, factory details, map links, and enquiry form behaviour."
-            fields:
-              - { label: "Small Heading", name: "eyebrow", widget: "string" }
-              - { label: "Section Title", name: "title", widget: "string" }
-              - { label: "Form Recipient Email", name: "formRecipient", widget: "string", hint: "All website enquiry forms go to this email unless a form endpoint is configured." }
-              - { label: "Form Subject Prefix", name: "formSubjectPrefix", widget: "string", hint: "Prefix added to enquiry email subjects." }
-              - { label: "Form Endpoint", name: "formEndpoint", widget: "string", required: false, hint: "Optional Formspree or other form endpoint. Leave blank to use email." }
-              - label: "Contact Cards"
-                name: "cards"
-                widget: "list"
-                label_singular: "Contact Card"
-                collapsed: true
-                minimize_collapsed: true
-                summary: "{{fields.title}}"
-                hint: "Each card becomes one block in the public contact section."
-                fields:
-                  - { label: "Card Title", name: "title", widget: "string" }
-                  - label: "Google Map"
-                    name: "map"
-                    widget: "object"
+                  - label: "Line Type"
+                    name: "type"
+                    widget: "select"
+                    options:
+                      - { label: "Text", value: "text" }
+                      - { label: "Email", value: "email" }
+                      - { label: "Phone", value: "phone" }
+                  - label: "Display Text"
+                    name: "label"
+                    widget: "string"
+                  - label: "Email Or Phone Value"
+                    name: "value"
+                    widget: "string"
                     required: false
-                    collapsed: true
-                    hint: "Optional map and directions settings for this contact card."
-                    fields:
-                      - { label: "Map Button Label", name: "label", widget: "string", required: false }
-                      - { label: "Google Maps Search Query", name: "query", widget: "string", required: false, hint: "Use the full address or exact Google Maps place name." }
-                      - { label: "Directions Button Label", name: "directionsLabel", widget: "string", required: false }
-                      - { label: "Custom Embed URL", name: "embedUrl", widget: "string", required: false, hint: "Optional Google Maps iframe embed URL. Leave blank to generate from the query." }
-                      - { label: "Custom Directions URL", name: "directionsUrl", widget: "string", required: false, hint: "Optional Google Maps directions link. Leave blank to generate from the query." }
-                  - label: "Contact Lines"
-                    name: "lines"
-                    widget: "list"
-                    label_singular: "Line"
-                    collapsed: true
-                    minimize_collapsed: true
-                    summary: "{{fields.type}}: {{fields.label}}"
-                    hint: "Add addresses, email addresses, phone numbers, or muted notes."
-                    fields:
-                      - { label: "Line Type", name: "type", widget: "select", options: ["text", "email", "phone"], hint: "Email and phone lines become clickable links." }
-                      - { label: "Display Text", name: "label", widget: "string" }
-                      - { label: "Value", name: "value", widget: "string", required: false, hint: "Email address or phone number for linked lines." }
-                      - { label: "Muted Note", name: "muted", widget: "boolean", required: false, default: false, hint: "Use for explanatory text that should appear less prominent." }
+                    hint: "Only needed when the line type is Email or Phone."
+                  - label: "Show As Muted Note"
+                    name: "muted"
+                    widget: "boolean"
+                    required: false
+                    default: false
+              - label: "Map Button"
+                name: "map"
+                widget: "object"
+                required: false
+                collapsed: true
+                fields:
+                  - label: "Button Text"
+                    name: "label"
+                    widget: "string"
+                    required: false
+                    default: "Directions"
+                  - label: "Map Search Query"
+                    name: "query"
+                    widget: "string"
+                    required: false
+                    hint: "Use coordinates or the exact Google Maps place name."
+                  - label: "Custom Map Embed URL"
+                    name: "embedUrl"
+                    widget: "string"
+                    required: false
+                  - label: "Directions URL"
+                    name: "directionsUrl"
+                    widget: "string"
+                    required: false
+                  - label: "Directions Button Text"
+                    name: "directionsLabel"
+                    widget: "string"
+                    required: false
+                    default: "Get directions"

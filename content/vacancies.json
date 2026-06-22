@@ -1,0 +1,23 @@
+{
+  "id": "vacancies",
+  "label": "Vacancies",
+  "status": "Vacancies",
+  "title": "Vacancies",
+  "summary": "Open roles and application details will appear here.",
+  "hideIntro": false,
+  "contactLabel": "Click for more",
+  "contactEmail": "sales@aja.bt",
+  "contactSubject": "Vacancy enquiry",
+  "items": [
+    {
+      "type": "Vacancy announcement",
+      "title": "Furnace shift technician",
+      "summary": "Furnace operation and shift reporting."
+    },
+    {
+      "type": "Vacancy announcement",
+      "title": "Quality and documentation assistant",
+      "summary": "Sampling records and dispatch documents."
+    }
+  ]
+}

@@ -416,6 +416,60 @@ function renderContactContent(contact) {
   });
 }
 
+async function fetchJson(path) {
+  const response = await fetch(path, { cache: "no-store" });
+  if (!response.ok) {
+    throw new Error(`Unable to load ${path}`);
+  }
+
+  return response.json();
+}
+
+function normaliseInformationCategory(category, fallback) {
+  return {
+    ...fallback,
+    ...category,
+    items: Array.isArray(category?.items) ? category.items : []
+  };
+}
+
+async function loadSplitSiteContent() {
+  const [
+    information,
+    notices,
+    vacancies,
+    procurement,
+    contactForm,
+    contactCards
+  ] = await Promise.all([
+    fetchJson("content/information.json"),
+    fetchJson("content/notices.json"),
+    fetchJson("content/vacancies.json"),
+    fetchJson("content/procurement.json"),
+    fetchJson("content/contact-form.json"),
+    fetchJson("content/contact-cards.json")
+  ]);
+
+  return {
+    information: {
+      ...information,
+      categories: [
+        normaliseInformationCategory(notices, { id: "news", label: "Notices" }),
+        normaliseInformationCategory(vacancies, { id: "vacancies", label: "Vacancies" }),
+        normaliseInformationCategory(procurement, { id: "procurement", label: "Procurement" })
+      ]
+    },
+    contact: {
+      ...contactForm,
+      cards: Array.isArray(contactCards.cards) ? contactCards.cards : []
+    }
+  };
+}
+
+async function loadLegacySiteContent() {
+  return fetchJson("content/site.json");
+}
+
 function initialiseNoticeTabs() {
   if (!noticeTabs) return;
 
@@ -468,10 +522,14 @@ function initialiseNoticeTabs() {
 
 async function loadSiteContent() {
   try {
-    const response = await fetch("content/site.json", { cache: "no-store" });
-    if (!response.ok) return;
+    let siteContent;
 
-    const siteContent = await response.json();
+    try {
+      siteContent = await loadSplitSiteContent();
+    } catch {
+      siteContent = await loadLegacySiteContent();
+    }
+
     renderInformationContent(siteContent.information);
     renderContactContent(siteContent.contact);
   } catch {

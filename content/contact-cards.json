@@ -1,0 +1,71 @@
+{
+  "cards": [
+    {
+      "title": "All enquiries",
+      "lines": [
+        {
+          "type": "email",
+          "label": "sales@aja.bt",
+          "value": "sales@aja.bt"
+        },
+        {
+          "type": "text",
+          "label": "Sales, procurement, factory, documentation, and general enquiries.",
+          "muted": true
+        }
+      ]
+    },
+    {
+      "title": "Corporate office",
+      "map": {
+        "label": "Directions",
+        "query": "27.445754,89.660812",
+        "embedUrl": "https://www.google.com/maps?q=27.445754,89.660812&z=17&output=embed",
+        "directionsUrl": "https://www.google.com/maps/place/27%C2%B026'44.7%22N+89%C2%B039'38.9%22E/@27.4457552,89.6601683,243m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d27.445754!4d89.660812?entry=ttu&g_ep=EgoyMDI2MDYxNi4wIKXMDSoASAFQAw%3D%3D",
+        "directionsLabel": "Get directions"
+      },
+      "lines": [
+        {
+          "type": "text",
+          "label": "Ashi Building No-4, 1st Floor, Chuba Lam 2, Olakha, PO: 1958, Thimphu"
+        },
+        {
+          "type": "phone",
+          "label": "Telephone: +975-1712 5900",
+          "value": "+97517125900"
+        },
+        {
+          "type": "email",
+          "label": "Email: tandin@aja.bt",
+          "value": "tandin@aja.bt"
+        }
+      ]
+    },
+    {
+      "title": "Factory site",
+      "map": {
+        "label": "Directions",
+        "query": "Aja Alloys Pvt Ltd, Norbugang Industrial Park, Samtse, Bhutan",
+        "embedUrl": "https://www.google.com/maps?q=26.9169417,89.0510542&z=16&output=embed",
+        "directionsUrl": "https://maps.app.goo.gl/HTXgqH4mB6ehb2JJ6",
+        "directionsLabel": "Get directions"
+      },
+      "lines": [
+        {
+          "type": "text",
+          "label": "Norbugang Industrial Park, Plot No LCHE-16, Samtse, Bhutan"
+        },
+        {
+          "type": "phone",
+          "label": "Telephone: +975-1765 0842",
+          "value": "+97517650842"
+        },
+        {
+          "type": "email",
+          "label": "Email: tenzin@aja.bt",
+          "value": "tenzin@aja.bt"
+        }
+      ]
+    }
+  ]
+}
