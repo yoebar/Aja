@@ -205,6 +205,23 @@ function todayDateValue() {
   return `${year}-${month}-${day}`;
 }
 
+function postDateForSort(post = {}) {
+  return post.postDate || post.date || post.closingDate || "";
+}
+
+function dateSortValue(value) {
+  const match = String(value || "").match(/^(\d{4})-(\d{2})-(\d{2})/);
+  return match ? Number(`${match[1]}${match[2]}${match[3]}`) : 0;
+}
+
+function comparePostsByLatest(first, second) {
+  return dateSortValue(postDateForSort(second)) - dateSortValue(postDateForSort(first));
+}
+
+function sortPostsByLatest(items = []) {
+  return [...items].sort(comparePostsByLatest);
+}
+
 function mediaTypeFromPost(post) {
   if (post.pdfUrl) return "pdf";
   if ((post.imageUrls || []).length) return "image";
@@ -295,22 +312,24 @@ function readCommonCategory() {
   data.contactEmail = form.contactEmail?.value ?? data.contactEmail;
   data.contactSubject = form.contactSubject?.value ?? data.contactSubject;
   data.hideIntro = form.hideIntro?.checked ?? data.hideIntro;
-  data.items = [...form.querySelectorAll("[data-post-row]")].map((row) => ({
-    type: row.querySelector("[name='postType']").value,
-    title: row.querySelector("[name='postTitle']").value,
-    summary: row.querySelector("[name='postSummary']").value,
-    postDate: row.querySelector("[name='postDate']").value,
-    closingDate: row.querySelector("[name='postClosingDate']").value,
-    actionLabel: row.querySelector("[name='postActionLabel']").value,
-    actionUrl: row.querySelector("[name='postActionUrl']").value,
-    mediaType: row.querySelector("[name='postMediaType']").value,
-    imageUrls: row.querySelector("[name='postImageUrls']").value
-      .split("\n")
-      .map((url) => url.trim())
-      .filter(Boolean),
-    pdfUrl: row.querySelector("[name='postPdfUrl']").value,
-    pdfLabel: row.querySelector("[name='postPdfLabel']").value
-  }));
+  data.items = sortPostsByLatest(
+    [...form.querySelectorAll("[data-post-row]")].map((row) => ({
+      type: row.querySelector("[name='postType']").value,
+      title: row.querySelector("[name='postTitle']").value,
+      summary: row.querySelector("[name='postSummary']").value,
+      postDate: row.querySelector("[name='postDate']").value,
+      closingDate: row.querySelector("[name='postClosingDate']").value,
+      actionLabel: row.querySelector("[name='postActionLabel']").value,
+      actionUrl: row.querySelector("[name='postActionUrl']").value,
+      mediaType: row.querySelector("[name='postMediaType']").value,
+      imageUrls: row.querySelector("[name='postImageUrls']").value
+        .split("\n")
+        .map((url) => url.trim())
+        .filter(Boolean),
+      pdfUrl: row.querySelector("[name='postPdfUrl']").value,
+      pdfLabel: row.querySelector("[name='postPdfLabel']").value
+    }))
+  );
   return data;
 }
 
@@ -758,6 +777,13 @@ function syncPostNumbers(tbody) {
   });
 }
 
+function sortPostRows(tbody) {
+  const rows = [...tbody.querySelectorAll("[data-post-row]")];
+  rows.sort((first, second) => comparePostsByLatest(getRowPost(first), getRowPost(second)));
+  rows.forEach((row) => tbody.append(row));
+  syncPostNumbers(tbody);
+}
+
 function renderPostManager(items, itemTypes, includeClosingDate = false) {
   const manager = document.createElement("div");
   manager.className = "post-manager";
@@ -774,7 +800,7 @@ function renderPostManager(items, itemTypes, includeClosingDate = false) {
   const editorHost = document.createElement("div");
   editorHost.className = "post-editor-host";
 
-  (items || []).forEach((item) => {
+  sortPostsByLatest(items || []).forEach((item) => {
     tbody.append(renderPostRow(postData(item, itemTypes[0]), itemTypes, tbody, editorHost, includeClosingDate));
   });
 
@@ -788,7 +814,7 @@ function renderPostManager(items, itemTypes, includeClosingDate = false) {
   add.addEventListener("click", () => {
     const row = renderPostRow(postData({ type: itemTypes[0] }, itemTypes[0]), itemTypes, tbody, editorHost, includeClosingDate);
     tbody.append(row);
-    syncPostNumbers(tbody);
+    sortPostRows(tbody);
     openPostEditor(row, itemTypes, editorHost, tbody, includeClosingDate);
   });
 
@@ -930,6 +956,7 @@ function openPostEditor(row, itemTypes, editorHost, tbody, includeClosingDate = 
     });
     const latestTitle = row.querySelector("[name='postTitle']").value;
     heading.textContent = latestTitle ? `Edit: ${latestTitle}` : "Edit advert post";
+    sortPostRows(tbody);
     syncMediaFields();
   }
 
