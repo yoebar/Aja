@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Aja Post Editor Login</title>
+  <link rel="stylesheet" href="local-editor.css">
+</head>
+<body class="login-page">
+  <main class="login-shell">
+    <section class="login-card">
+      <p>Aja Alloys</p>
+      <h1>Post Editor Login</h1>
+      <form id="login-form">
+        <label>
+          Username
+          <input name="username" autocomplete="username" required>
+        </label>
+        <label>
+          Password
+          <input name="password" type="password" autocomplete="current-password" required>
+        </label>
+        <button type="submit">Sign in</button>
+      </form>
+      <p class="login-status" id="login-status">This login is only for the advert post editor.</p>
+    </section>
+  </main>
+
+  <script>
+    const form = document.querySelector("#login-form");
+    const statusLine = document.querySelector("#login-status");
+    const isLocalPreview = ["127.0.0.1", "localhost", ""].includes(window.location.hostname);
+    const apiBase = isLocalPreview ? "/__local-admin" : "/api/post-editor";
+
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      statusLine.textContent = "Signing in...";
+
+      const response = await fetch(`${apiBase}/login`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          username: form.username.value,
+          password: form.password.value
+        })
+      });
+
+      const result = await response.json().catch(() => ({}));
+      if (!response.ok || !result.ok) {
+        statusLine.textContent = result.error || "Login failed.";
+        return;
+      }
+
+      window.location.href = result.redirect || "/admin/post-editor.html";
+    });
+  </script>
+</body>
+</html>
