@@ -4,9 +4,134 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex">
-  <title>Aja GitHub Admin</title>
+  <title>Aja Admin Dashboard</title>
+  <link rel="stylesheet" href="local-editor.css">
+  <style>
+    .admin-home {
+      display: grid;
+      gap: 24px;
+      padding: 24px;
+    }
+
+    .dashboard-hero {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      display: grid;
+      gap: 10px;
+      padding: 24px;
+    }
+
+    .dashboard-hero p,
+    .dashboard-hero h2 {
+      margin: 0;
+    }
+
+    .dashboard-hero p {
+      color: var(--muted);
+      max-width: 760px;
+    }
+
+    .dashboard-hero h2 {
+      font-size: 30px;
+    }
+
+    .dashboard-grid {
+      display: grid;
+      gap: 16px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .dashboard-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      color: var(--ink);
+      display: grid;
+      gap: 12px;
+      min-height: 190px;
+      padding: 20px;
+      text-decoration: none;
+    }
+
+    .dashboard-card:hover,
+    .dashboard-card:focus-visible {
+      border-color: var(--accent-soft);
+      outline: 0;
+    }
+
+    .dashboard-card p,
+    .dashboard-card h3 {
+      margin: 0;
+    }
+
+    .dashboard-card small {
+      color: var(--accent-soft);
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .dashboard-card p {
+      color: var(--muted);
+    }
+
+    .dashboard-card span {
+      align-self: end;
+      color: var(--accent-soft);
+      font-weight: 800;
+    }
+
+    @media (max-width: 980px) {
+      .dashboard-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
-<body>
-  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+<body data-dashboard="admin-home">
+  <header class="topbar">
+    <div>
+      <p>Aja Alloys</p>
+      <h1>Admin Dashboard</h1>
+    </div>
+    <div class="topbar-actions">
+      <a href="/" target="_blank" rel="noreferrer">Open website</a>
+    </div>
+  </header>
+
+  <main class="admin-home">
+    <section class="dashboard-hero">
+      <h2>Website control centre</h2>
+      <p>Manage website content, public posts, vacancies, tenders, contact form settings, and inquiry records from one place.</p>
+    </section>
+
+    <section class="dashboard-grid" aria-label="Admin modules">
+      <a class="dashboard-card" href="/admin/post-editor.html">
+        <small>Content editor</small>
+        <h3>Post Editor</h3>
+        <p>Edit Notice, Vacancy, Tender, Contact Form, and Inquiry Submission records.</p>
+        <span>Open editor</span>
+      </a>
+
+      <a class="dashboard-card" href="/admin/cms.html#/collections/website_admin">
+        <small>GitHub admin</small>
+        <h3>Website CMS</h3>
+        <p>Open the GitHub-backed content editor for the configured website sections only.</p>
+        <span>Open CMS</span>
+      </a>
+
+      <a class="dashboard-card" href="/admin/post-editor-login.html">
+        <small>Access</small>
+        <h3>Post Editor Login</h3>
+        <p>Use the dedicated Post Editor username and password login page.</p>
+        <span>Open login</span>
+      </a>
+    </section>
+  </main>
+
+  <script>
+    if (window.location.hash) {
+      window.history.replaceState(null, "", "/admin/");
+    }
+  </script>
 </body>
 </html>
