@@ -206,7 +206,64 @@ function todayDateValue() {
 }
 
 function confirmDelete(message) {
-  return window.confirm(`${message}\n\nSave changes after deleting to publish this update.`);
+  return new Promise((resolve) => {
+    const overlay = document.createElement("div");
+    overlay.className = "confirm-modal";
+    overlay.setAttribute("role", "dialog");
+    overlay.setAttribute("aria-modal", "true");
+
+    const panel = document.createElement("div");
+    panel.className = "confirm-modal-panel";
+
+    const heading = document.createElement("h3");
+    heading.textContent = "Confirm delete";
+
+    const body = document.createElement("p");
+    body.textContent = message;
+
+    const helper = document.createElement("small");
+    helper.textContent = "Save changes after deleting to publish this update.";
+
+    const actions = document.createElement("div");
+    actions.className = "form-actions";
+
+    const cancel = document.createElement("button");
+    cancel.className = "ghost-button";
+    cancel.type = "button";
+    cancel.textContent = "Cancel";
+
+    const confirm = document.createElement("button");
+    confirm.className = "danger-button";
+    confirm.type = "button";
+    confirm.textContent = "Delete";
+
+    function close(result) {
+      document.removeEventListener("keydown", onKeydown);
+      overlay.remove();
+      resolve(result);
+    }
+
+    function onKeydown(event) {
+      if (event.key === "Escape") {
+        close(false);
+      }
+    }
+
+    cancel.addEventListener("click", () => close(false));
+    confirm.addEventListener("click", () => close(true));
+    overlay.addEventListener("click", (event) => {
+      if (event.target === overlay) {
+        close(false);
+      }
+    });
+    document.addEventListener("keydown", onKeydown);
+
+    actions.append(cancel, confirm);
+    panel.append(heading, body, helper, actions);
+    overlay.append(panel);
+    document.body.append(overlay);
+    cancel.focus();
+  });
 }
 
 function showSaveSuccess(message) {
@@ -482,8 +539,8 @@ function renderUserRow(user) {
   const actionCell = document.createElement("td");
   actionCell.className = "post-actions";
   const remove = iconActionButton("delete", "Delete user", { danger: true });
-  remove.addEventListener("click", () => {
-    if (confirmDelete("Delete this user?")) {
+  remove.addEventListener("click", async () => {
+    if (await confirmDelete("Delete this user?")) {
       row.remove();
     }
   });
@@ -584,8 +641,8 @@ function renderSubmissionActions(submission, detail) {
   });
 
   const remove = iconActionButton("delete", "Delete submission", { danger: true });
-  remove.addEventListener("click", () => {
-    if (confirmDelete("Delete this contact submission record?")) {
+  remove.addEventListener("click", async () => {
+    if (await confirmDelete("Delete this contact submission record?")) {
       deleteSubmission(submission.id);
     }
   });
@@ -954,9 +1011,9 @@ function renderPostRow(post, itemTypes, tbody, editorHost, includeClosingDate = 
   edit.addEventListener("click", () => openPostEditor(row, itemTypes, editorHost, tbody, includeClosingDate));
 
   const remove = iconActionButton("delete", "Delete advert post", { danger: true });
-  remove.addEventListener("click", () => {
+  remove.addEventListener("click", async () => {
     const postTitle = row.querySelector("[data-post-title]").textContent || "this advert post";
-    if (!confirmDelete(`Delete "${postTitle}"?`)) return;
+    if (!(await confirmDelete(`Delete "${postTitle}"?`))) return;
 
     const wasEditing = row.classList.contains("is-editing");
     row.remove();
@@ -1175,8 +1232,8 @@ function renderContactCard(card, number) {
   remove.className = "danger-button";
   remove.type = "button";
   remove.textContent = "Remove";
-  remove.addEventListener("click", () => {
-    if (confirmDelete(`Remove contact card ${number}?`)) {
+  remove.addEventListener("click", async () => {
+    if (await confirmDelete(`Remove contact card ${number}?`)) {
       wrapper.remove();
     }
   });
@@ -1220,8 +1277,8 @@ function renderContactLine(line, number) {
   remove.className = "danger-button";
   remove.type = "button";
   remove.textContent = "Remove";
-  remove.addEventListener("click", () => {
-    if (confirmDelete(`Remove contact line ${number}?`)) {
+  remove.addEventListener("click", async () => {
+    if (await confirmDelete(`Remove contact line ${number}?`)) {
       wrapper.remove();
     }
   });
@@ -1371,7 +1428,7 @@ async function saveCurrentSection() {
 async function loadContent() {
   const filesResponse = await fetch(`${apiBase}/files`);
   if (!filesResponse.ok) {
-    window.location.href = "/admin/login.html";
+    window.location.href = "/admin/post-editor-login.html";
     return;
   }
 
@@ -1390,7 +1447,7 @@ async function loadSession() {
   const response = await fetch(`${apiBase}/session`);
   const session = await response.json().catch(() => ({}));
   if (!session.authenticated) {
-    window.location.href = "/admin/login.html";
+    window.location.href = "/admin/post-editor-login.html";
     return false;
   }
 
@@ -1403,7 +1460,7 @@ async function loadSession() {
 
 async function logout() {
   await fetch(`${apiBase}/logout`, { method: "POST" });
-  window.location.href = "/admin/login.html";
+  window.location.href = "/admin/post-editor-login.html";
 }
 
 sectionButtons.forEach((button) => {
