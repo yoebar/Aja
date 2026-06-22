@@ -272,7 +272,7 @@ function renderInformationContent(information) {
     content.append(list);
 
     const contactLink = document.createElement("a");
-    contactLink.href = createMailto(category.contactEmail || "info@aja.bt", category.contactSubject);
+    contactLink.href = createMailto(category.contactEmail || "sales@aja.bt", category.contactSubject);
     contactLink.textContent = category.contactLabel || "Contact";
 
     panel.append(content, contactLink);
@@ -763,7 +763,7 @@ if (form) {
       }
     }
 
-    const recipient = contactSettings?.formRecipient || "info@aja.bt";
+    const recipient = contactSettings?.formRecipient || "sales@aja.bt";
     const subjectPrefix = contactSettings?.formSubjectPrefix || "Aja Alloys specification request";
     const subject = encodeURIComponent(`${subjectPrefix}: ${data.get("grade")}`);
     const body = encodeURIComponent(

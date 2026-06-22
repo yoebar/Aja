@@ -11,7 +11,7 @@
         "title": "Company notices",
         "summary": "Company updates and public notices will appear here.",
         "contactLabel": "Contact for information",
-        "contactEmail": "info@aja.bt",
+        "contactEmail": "sales@aja.bt",
         "contactSubject": "Company notice enquiry",
         "items": [
           {
@@ -33,7 +33,7 @@
         "title": "Vacancies",
         "summary": "Open roles and application details will appear here.",
         "contactLabel": "Contact HR",
-        "contactEmail": "info@aja.bt",
+        "contactEmail": "sales@aja.bt",
         "contactSubject": "Vacancy enquiry",
         "items": [
           {
@@ -55,7 +55,7 @@
         "title": "Procurement",
         "summary": "Supplier notices and tender details will appear here.",
         "contactLabel": "Contact procurement",
-        "contactEmail": "info@aja.bt",
+        "contactEmail": "sales@aja.bt",
         "contactSubject": "Procurement enquiry",
         "items": [
           {
@@ -75,7 +75,7 @@
   "contact": {
     "eyebrow": "Contact",
     "title": "Talk to Aja Alloys.",
-    "formRecipient": "info@aja.bt",
+    "formRecipient": "sales@aja.bt",
     "formSubjectPrefix": "Aja Alloys specification request",
     "formEndpoint": "",
     "cards": [
@@ -84,8 +84,8 @@
         "lines": [
           {
             "type": "email",
-            "label": "info@aja.bt",
-            "value": "info@aja.bt"
+            "label": "sales@aja.bt",
+            "value": "sales@aja.bt"
           },
           {
             "type": "text",
