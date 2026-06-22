@@ -1,7 +1,18 @@
 {
   "eyebrow": "Contact",
   "title": "Talk to Aja Alloys.",
+  "formTitle": "Send an enquiry",
+  "formIntro": "Share your requirement and the right team will respond.",
   "formRecipient": "sales@aja.bt",
+  "notificationEmail": "sales@aja.pt",
   "formSubjectPrefix": "Aja Alloys specification request",
-  "formEndpoint": ""
+  "formEndpoint": "/__local-admin/contact-submit",
+  "enquiryTypes": [
+    "Sales enquiry",
+    "Tender or supplier enquiry",
+    "Tender notice enquiry",
+    "Vacancy enquiry",
+    "Documentation request",
+    "General enquiry"
+  ]
 }

@@ -1,0 +1,21 @@
+{
+  "submissions": [
+    {
+      "id": "a6fa94f8-18da-4697-85b3-06d6d382477b",
+      "submittedAt": "2026-06-22T15:08:00+0600",
+      "notificationTo": "sales@aja.pt",
+      "notificationStatus": "not_configured",
+      "name": "Sample Buyer",
+      "company": "Test Metals Pvt Ltd",
+      "country": "Bhutan",
+      "email": "buyer@example.com",
+      "phone": "+975 1700 0000",
+      "enquiryType": "Sales enquiry",
+      "grade": "FeSi 75",
+      "quantity": "25 MT",
+      "message": "This is a sample contact form record for checking the dashboard table.",
+      "reviewStatus": "reviewed",
+      "reviewedAt": "2026-06-22T09:12:45.948Z"
+    }
+  ]
+}

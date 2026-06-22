@@ -1,0 +1,133 @@
+{
+  "id": "tenders",
+  "label": "Tenders",
+  "status": "Tender adverts",
+  "title": "Tenders",
+  "summary": "Tender, supplier, and RFQ notices will appear here.",
+  "hideIntro": false,
+  "contactLabel": "Tender enquiry",
+  "contactEmail": "sales@aja.bt",
+  "contactSubject": "Tender enquiry",
+  "items": [
+    {
+      "type": "Tender notice",
+      "title": "March furnace spares supply",
+      "summary": "Aja Alloys invites eligible suppliers to submit offers for routine furnace spares and related consumables. The supply scope includes standard items used for plant maintenance. Bidders should review the PDF and submit complete offers before the closing date.",
+      "postDate": "2026-03-03",
+      "closingDate": "2026-03-22",
+      "imageUrls": [
+        "assets/company-factory-exterior-wide.webp",
+        "assets/company-furnace-hall.webp"
+      ],
+      "pdfUrl": "assets/adverts/tenders/march-spares-tender.pdf",
+      "pdfLabel": "View tender PDF",
+      "actionLabel": "",
+      "actionUrl": ""
+    },
+    {
+      "type": "Request for quotation",
+      "title": "March packing materials RFQ",
+      "summary": "Quotations are invited for packing materials used in product dispatch. The requirement includes bags, labels, pallets, and supporting materials for loading. Suppliers should quote clearly with delivery timing, taxes, and validity of offer.",
+      "postDate": "2026-03-10",
+      "closingDate": "2026-03-27",
+      "actionLabel": "",
+      "actionUrl": ""
+    },
+    {
+      "type": "Supplier notice",
+      "title": "March workshop tools supplier registration",
+      "summary": "Supplier registration is open for workshop tools and small equipment vendors. Interested vendors should provide company details, product range, and contact information. Registration does not guarantee purchase orders but supports future procurement review.",
+      "postDate": "2026-03-25",
+      "closingDate": "2026-04-08",
+      "imageUrls": [
+        "assets/company-plant-yard-crane.webp",
+        "assets/company-silo-tower.webp"
+      ],
+      "actionLabel": "",
+      "actionUrl": ""
+    },
+    {
+      "type": "Request for quotation",
+      "title": "April safety equipment RFQ",
+      "summary": "Aja Alloys requests quotations for PPE, safety signage, and site safety consumables. Suppliers should ensure that quoted items meet normal industrial use standards. The RFQ PDF contains the basic scope and submission instructions.",
+      "postDate": "2026-04-04",
+      "closingDate": "2026-04-18",
+      "pdfUrl": "assets/adverts/tenders/april-safety-rfq.pdf",
+      "pdfLabel": "View RFQ PDF",
+      "actionLabel": "",
+      "actionUrl": ""
+    },
+    {
+      "type": "Tender notice",
+      "title": "April lab consumables tender",
+      "summary": "Tender offers are invited for laboratory materials, reagents, and sampling consumables. The items will support routine quality testing and documentation activities. Suppliers should mention shelf life, delivery schedule, and any storage conditions.",
+      "postDate": "2026-04-12",
+      "closingDate": "2026-04-30",
+      "imageUrls": [
+        "assets/quality-lab-room.webp",
+        "assets/quality-lab-balances.webp"
+      ],
+      "actionLabel": "",
+      "actionUrl": ""
+    },
+    {
+      "type": "Tender addendum",
+      "title": "April transport addendum",
+      "summary": "This addendum clarifies the reporting format and service scope for transport-related submissions. Bidders should treat the addendum as part of the tender record. Any revised offer should refer to the tender title and updated closing date.",
+      "postDate": "2026-04-26",
+      "closingDate": "2026-05-06",
+      "actionLabel": "",
+      "actionUrl": ""
+    },
+    {
+      "type": "Tender notice",
+      "title": "May plant transport services",
+      "summary": "Aja Alloys invites bids for plant transport, material movement, and dispatch support services. The successful bidder may be required to coordinate with factory and logistics teams. Bidders should review the attached PDF before submitting offers.",
+      "postDate": "2026-05-05",
+      "closingDate": "2026-05-25",
+      "imageUrls": [
+        "assets/company-plant-yard-crane.webp",
+        "assets/company-silo-tower.webp"
+      ],
+      "pdfUrl": "assets/adverts/tenders/may-transport-tender.pdf",
+      "pdfLabel": "View tender PDF",
+      "actionLabel": "",
+      "actionUrl": ""
+    },
+    {
+      "type": "Request for quotation",
+      "title": "May office and IT consumables RFQ",
+      "summary": "Quotations are requested for office stationery, printer supplies, and basic IT consumables. Vendors should quote for available items with clear unit prices and delivery timing. Submissions should remain valid through the stated evaluation period.",
+      "postDate": "2026-05-13",
+      "closingDate": "2026-05-28",
+      "actionLabel": "",
+      "actionUrl": ""
+    },
+    {
+      "type": "Supplier notice",
+      "title": "May refractory materials supplier notice",
+      "summary": "Supplier interest is invited for refractory materials and related plant inputs. Vendors should provide product specifications, origin details, and supply lead times. The notice will help Aja Alloys identify suitable vendors for future requirements.",
+      "postDate": "2026-05-21",
+      "closingDate": "2026-06-07",
+      "imageUrls": [
+        "assets/product-ferro-silicon-lump.webp",
+        "assets/product-ferro-silicon-lump-2.webp"
+      ],
+      "actionLabel": "",
+      "actionUrl": ""
+    },
+    {
+      "type": "Tender notice",
+      "title": "May factory civil repair works",
+      "summary": "Tender offers are invited for minor civil repair works around the factory area. The scope may include small repairs, surface works, and related site support. Bidders should include work methodology, timeline, and safety arrangements in their offer.",
+      "postDate": "2026-05-31",
+      "closingDate": "2026-06-14",
+      "imageUrls": [
+        "assets/company-factory-exterior-wide.webp",
+        "assets/company-furnace-hall.webp"
+      ],
+      "actionLabel": "",
+      "actionUrl": ""
+    }
+  ]
+}

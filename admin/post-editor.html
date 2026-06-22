@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Aja Post Editor</title>
+  <link rel="stylesheet" href="local-editor.css">
+</head>
+<body data-dashboard="post-editor">
+  <header class="topbar">
+    <div>
+      <p>Aja Alloys</p>
+      <h1>Post Editor</h1>
+    </div>
+    <div class="topbar-actions">
+      <span id="session-user">Checking user...</span>
+      <button type="button" id="logout-button">Sign out</button>
+      <a href="/" target="_blank" rel="noreferrer">Open website</a>
+    </div>
+  </header>
+
+  <main class="layout">
+    <nav class="sidebar" aria-label="Post editor sections">
+      <p class="sidebar-group">Advert posts</p>
+      <button type="button" class="is-active" data-section="notices">
+        <span>Notice adverts</span>
+        <small>Public notices and information posts</small>
+      </button>
+      <button type="button" data-section="vacancies">
+        <span>Vacancy adverts</span>
+        <small>Job and recruitment posts</small>
+      </button>
+      <button type="button" data-section="tenders">
+        <span>Tender adverts</span>
+        <small>Tender, supplier, and RFQ posts</small>
+      </button>
+    </nav>
+
+    <section class="editor" aria-live="polite">
+      <div class="editor-head">
+        <div>
+          <p id="section-kicker">Advert posts</p>
+          <h2 id="section-title">Notice adverts</h2>
+        </div>
+        <button type="button" id="save-button">Save changes</button>
+      </div>
+      <form id="content-form"></form>
+      <p class="status" id="status-line">Create and publish advert posts.</p>
+    </section>
+  </main>
+
+  <script src="local-editor.js"></script>
+</body>
+</html>

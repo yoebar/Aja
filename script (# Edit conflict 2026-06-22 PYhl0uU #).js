@@ -6,8 +6,6 @@ const contactFormTitle = document.querySelector("[data-contact-form-title]");
 const contactFormIntro = document.querySelector("[data-contact-form-intro]");
 const contactFormStatus = document.querySelector("[data-contact-form-status]");
 const enquiryTypeSelect = document.querySelector("[data-enquiry-type]");
-const countrySelect = document.querySelector("[data-country-select]");
-const phoneCountryCodeSelect = document.querySelector("[data-phone-country-code]");
 const captchaCanvas = document.querySelector("[data-captcha-canvas]");
 const captchaInput = document.querySelector("[data-captcha-input]");
 const captchaRefresh = document.querySelector("[data-captcha-refresh]");
@@ -42,6 +40,7 @@ const sectionNavLinks = nav
   : [];
 const noticePreviewSentenceLimit = 2;
 const noticePreviewCharacterLimit = 220;
+const noticeVisibleItemLimit = 10;
 let contactSettings = null;
 let isSnapping = false;
 let touchStartY = 0;
@@ -55,246 +54,6 @@ let lastPositioningTrigger = null;
 let lastMapTrigger = null;
 let lastNoticeTrigger = null;
 let captchaCode = "";
-let noticeLayoutFrame = 0;
-
-const countryCallingCodes = [
-  ["Afghanistan", "+93"],
-  ["Albania", "+355"],
-  ["Algeria", "+213"],
-  ["American Samoa", "+1-684"],
-  ["Andorra", "+376"],
-  ["Angola", "+244"],
-  ["Anguilla", "+1-264"],
-  ["Antigua and Barbuda", "+1-268"],
-  ["Argentina", "+54"],
-  ["Armenia", "+374"],
-  ["Aruba", "+297"],
-  ["Australia", "+61"],
-  ["Austria", "+43"],
-  ["Azerbaijan", "+994"],
-  ["Bahamas", "+1-242"],
-  ["Bahrain", "+973"],
-  ["Bangladesh", "+880"],
-  ["Barbados", "+1-246"],
-  ["Belarus", "+375"],
-  ["Belgium", "+32"],
-  ["Belize", "+501"],
-  ["Benin", "+229"],
-  ["Bermuda", "+1-441"],
-  ["Bhutan", "+975"],
-  ["Bolivia", "+591"],
-  ["Bosnia and Herzegovina", "+387"],
-  ["Botswana", "+267"],
-  ["Brazil", "+55"],
-  ["British Virgin Islands", "+1-284"],
-  ["Brunei", "+673"],
-  ["Bulgaria", "+359"],
-  ["Burkina Faso", "+226"],
-  ["Burundi", "+257"],
-  ["Cambodia", "+855"],
-  ["Cameroon", "+237"],
-  ["Canada", "+1"],
-  ["Cape Verde", "+238"],
-  ["Cayman Islands", "+1-345"],
-  ["Central African Republic", "+236"],
-  ["Chad", "+235"],
-  ["Chile", "+56"],
-  ["China", "+86"],
-  ["Colombia", "+57"],
-  ["Comoros", "+269"],
-  ["Congo", "+242"],
-  ["Cook Islands", "+682"],
-  ["Costa Rica", "+506"],
-  ["Croatia", "+385"],
-  ["Cuba", "+53"],
-  ["Curacao", "+599"],
-  ["Cyprus", "+357"],
-  ["Czech Republic", "+420"],
-  ["Democratic Republic of the Congo", "+243"],
-  ["Denmark", "+45"],
-  ["Djibouti", "+253"],
-  ["Dominica", "+1-767"],
-  ["Dominican Republic", "+1-809"],
-  ["Ecuador", "+593"],
-  ["Egypt", "+20"],
-  ["El Salvador", "+503"],
-  ["Equatorial Guinea", "+240"],
-  ["Eritrea", "+291"],
-  ["Estonia", "+372"],
-  ["Eswatini", "+268"],
-  ["Ethiopia", "+251"],
-  ["Falkland Islands", "+500"],
-  ["Faroe Islands", "+298"],
-  ["Fiji", "+679"],
-  ["Finland", "+358"],
-  ["France", "+33"],
-  ["French Guiana", "+594"],
-  ["French Polynesia", "+689"],
-  ["Gabon", "+241"],
-  ["Gambia", "+220"],
-  ["Georgia", "+995"],
-  ["Germany", "+49"],
-  ["Ghana", "+233"],
-  ["Gibraltar", "+350"],
-  ["Greece", "+30"],
-  ["Greenland", "+299"],
-  ["Grenada", "+1-473"],
-  ["Guadeloupe", "+590"],
-  ["Guam", "+1-671"],
-  ["Guatemala", "+502"],
-  ["Guernsey", "+44-1481"],
-  ["Guinea", "+224"],
-  ["Guinea-Bissau", "+245"],
-  ["Guyana", "+592"],
-  ["Haiti", "+509"],
-  ["Honduras", "+504"],
-  ["Hong Kong", "+852"],
-  ["Hungary", "+36"],
-  ["Iceland", "+354"],
-  ["India", "+91"],
-  ["Indonesia", "+62"],
-  ["Iran", "+98"],
-  ["Iraq", "+964"],
-  ["Ireland", "+353"],
-  ["Isle of Man", "+44-1624"],
-  ["Israel", "+972"],
-  ["Italy", "+39"],
-  ["Ivory Coast", "+225"],
-  ["Jamaica", "+1-876"],
-  ["Japan", "+81"],
-  ["Jersey", "+44-1534"],
-  ["Jordan", "+962"],
-  ["Kazakhstan", "+7"],
-  ["Kenya", "+254"],
-  ["Kiribati", "+686"],
-  ["Kosovo", "+383"],
-  ["Kuwait", "+965"],
-  ["Kyrgyzstan", "+996"],
-  ["Laos", "+856"],
-  ["Latvia", "+371"],
-  ["Lebanon", "+961"],
-  ["Lesotho", "+266"],
-  ["Liberia", "+231"],
-  ["Libya", "+218"],
-  ["Liechtenstein", "+423"],
-  ["Lithuania", "+370"],
-  ["Luxembourg", "+352"],
-  ["Macau", "+853"],
-  ["Madagascar", "+261"],
-  ["Malawi", "+265"],
-  ["Malaysia", "+60"],
-  ["Maldives", "+960"],
-  ["Mali", "+223"],
-  ["Malta", "+356"],
-  ["Marshall Islands", "+692"],
-  ["Martinique", "+596"],
-  ["Mauritania", "+222"],
-  ["Mauritius", "+230"],
-  ["Mayotte", "+262"],
-  ["Mexico", "+52"],
-  ["Micronesia", "+691"],
-  ["Moldova", "+373"],
-  ["Monaco", "+377"],
-  ["Mongolia", "+976"],
-  ["Montenegro", "+382"],
-  ["Montserrat", "+1-664"],
-  ["Morocco", "+212"],
-  ["Mozambique", "+258"],
-  ["Myanmar", "+95"],
-  ["Namibia", "+264"],
-  ["Nauru", "+674"],
-  ["Nepal", "+977"],
-  ["Netherlands", "+31"],
-  ["New Caledonia", "+687"],
-  ["New Zealand", "+64"],
-  ["Nicaragua", "+505"],
-  ["Niger", "+227"],
-  ["Nigeria", "+234"],
-  ["Niue", "+683"],
-  ["North Korea", "+850"],
-  ["North Macedonia", "+389"],
-  ["Northern Mariana Islands", "+1-670"],
-  ["Norway", "+47"],
-  ["Oman", "+968"],
-  ["Pakistan", "+92"],
-  ["Palau", "+680"],
-  ["Palestine", "+970"],
-  ["Panama", "+507"],
-  ["Papua New Guinea", "+675"],
-  ["Paraguay", "+595"],
-  ["Peru", "+51"],
-  ["Philippines", "+63"],
-  ["Poland", "+48"],
-  ["Portugal", "+351"],
-  ["Puerto Rico", "+1-787"],
-  ["Qatar", "+974"],
-  ["Reunion", "+262"],
-  ["Romania", "+40"],
-  ["Russia", "+7"],
-  ["Rwanda", "+250"],
-  ["Saint Barthelemy", "+590"],
-  ["Saint Helena", "+290"],
-  ["Saint Kitts and Nevis", "+1-869"],
-  ["Saint Lucia", "+1-758"],
-  ["Saint Martin", "+590"],
-  ["Saint Pierre and Miquelon", "+508"],
-  ["Saint Vincent and the Grenadines", "+1-784"],
-  ["Samoa", "+685"],
-  ["San Marino", "+378"],
-  ["Sao Tome and Principe", "+239"],
-  ["Saudi Arabia", "+966"],
-  ["Senegal", "+221"],
-  ["Serbia", "+381"],
-  ["Seychelles", "+248"],
-  ["Sierra Leone", "+232"],
-  ["Singapore", "+65"],
-  ["Sint Maarten", "+1-721"],
-  ["Slovakia", "+421"],
-  ["Slovenia", "+386"],
-  ["Solomon Islands", "+677"],
-  ["Somalia", "+252"],
-  ["South Africa", "+27"],
-  ["South Korea", "+82"],
-  ["South Sudan", "+211"],
-  ["Spain", "+34"],
-  ["Sri Lanka", "+94"],
-  ["Sudan", "+249"],
-  ["Suriname", "+597"],
-  ["Sweden", "+46"],
-  ["Switzerland", "+41"],
-  ["Syria", "+963"],
-  ["Taiwan", "+886"],
-  ["Tajikistan", "+992"],
-  ["Tanzania", "+255"],
-  ["Thailand", "+66"],
-  ["Timor-Leste", "+670"],
-  ["Togo", "+228"],
-  ["Tokelau", "+690"],
-  ["Tonga", "+676"],
-  ["Trinidad and Tobago", "+1-868"],
-  ["Tunisia", "+216"],
-  ["Turkey", "+90"],
-  ["Turkmenistan", "+993"],
-  ["Turks and Caicos Islands", "+1-649"],
-  ["Tuvalu", "+688"],
-  ["Uganda", "+256"],
-  ["Ukraine", "+380"],
-  ["United Arab Emirates", "+971"],
-  ["United Kingdom", "+44"],
-  ["United States", "+1"],
-  ["Uruguay", "+598"],
-  ["US Virgin Islands", "+1-340"],
-  ["Uzbekistan", "+998"],
-  ["Vanuatu", "+678"],
-  ["Vatican City", "+379"],
-  ["Venezuela", "+58"],
-  ["Vietnam", "+84"],
-  ["Wallis and Futuna", "+681"],
-  ["Western Sahara", "+212"],
-  ["Yemen", "+967"],
-  ["Zambia", "+260"],
-  ["Zimbabwe", "+263"]
-];
 
 function storeTheme(theme) {
   try {
@@ -490,38 +249,6 @@ function renderSelectOptions(select, values) {
     option.textContent = value;
     select.append(option);
   });
-}
-
-function populateCountryCallingFields() {
-  if (!countrySelect || !phoneCountryCodeSelect) return;
-
-  countrySelect.replaceChildren();
-  phoneCountryCodeSelect.replaceChildren();
-
-  countryCallingCodes.forEach(([country, code]) => {
-    const countryOption = document.createElement("option");
-    countryOption.value = country;
-    countryOption.textContent = country;
-    countryOption.selected = country === "Bhutan";
-    countrySelect.append(countryOption);
-
-    const codeOption = document.createElement("option");
-    codeOption.value = code;
-    codeOption.dataset.country = country;
-    codeOption.textContent = code;
-    codeOption.selected = country === "Bhutan";
-    phoneCountryCodeSelect.append(codeOption);
-  });
-}
-
-function syncPhoneCodeToCountry() {
-  if (!countrySelect || !phoneCountryCodeSelect) return;
-
-  const selectedCountry = countrySelect.value;
-  const matchingOption = [...phoneCountryCodeSelect.options].find((option) => option.dataset.country === selectedCountry);
-  if (matchingOption) {
-    phoneCountryCodeSelect.selectedIndex = matchingOption.index;
-  }
 }
 
 function randomCaptchaCode() {
@@ -726,10 +453,6 @@ function noticePreviewText(text) {
   return preview && preview.length < normalised.length ? `${preview}...` : preview;
 }
 
-function hasLongerNoticeText(text) {
-  return normaliseNoticeText(noticePreviewText(text)) !== normaliseNoticeText(text);
-}
-
 function noticeDateValue(item) {
   const rawDate = item?.postDate || item?.date || item?.closingDate || "";
   const timestamp = Date.parse(rawDate);
@@ -738,53 +461,6 @@ function noticeDateValue(item) {
 
 function sortedNoticeItems(items) {
   return [...items].sort((firstItem, secondItem) => noticeDateValue(secondItem) - noticeDateValue(firstItem));
-}
-
-function fitNoticePanelItems(panel) {
-  const content = panel.querySelector(".notice-panel-content");
-  const list = panel.querySelector(".notice-list");
-  if (!content || !list) return;
-
-  const items = [...list.querySelectorAll(":scope > li")];
-  if (!items.length) return;
-
-  items.forEach((item) => {
-    item.hidden = false;
-  });
-
-  const contentBottom = content.getBoundingClientRect().bottom;
-  let visibleCount = 0;
-
-  items.forEach((item) => {
-    const itemBottom = item.getBoundingClientRect().bottom;
-    const fits = itemBottom <= contentBottom + 1;
-    item.hidden = !fits;
-    if (fits) {
-      visibleCount += 1;
-    }
-  });
-
-  if (!visibleCount) {
-    items[0].hidden = false;
-  }
-}
-
-function syncNoticeLayoutLimits() {
-  if (!noticeTabs) return;
-
-  noticeLayoutFrame = 0;
-  const visiblePanels = [...noticeTabs.querySelectorAll("[data-notice-panel]")].filter((panel) => {
-    return panel.getClientRects().length && window.getComputedStyle(panel).display !== "none";
-  });
-
-  visiblePanels.forEach(fitNoticePanelItems);
-}
-
-function scheduleNoticeLayoutSync() {
-  if (noticeLayoutFrame) {
-    window.cancelAnimationFrame(noticeLayoutFrame);
-  }
-  noticeLayoutFrame = window.requestAnimationFrame(syncNoticeLayoutLimits);
 }
 
 function appendNoticeTextBlock(parent, text) {
@@ -807,90 +483,21 @@ function appendNoticeTextBlock(parent, text) {
 function createNoticeDetailArticle(item, category) {
   const article = document.createElement("article");
   article.className = "notice-modal-item";
-  const hasImages = Array.isArray(item.imageUrls) && item.imageUrls.filter(Boolean).length > 0;
-  const copy = document.createElement("div");
-  copy.className = "notice-modal-copy";
 
   const type = document.createElement("span");
   type.textContent = item.type || category.status || "Notice";
-  copy.append(type);
+  article.append(type);
 
   const title = document.createElement("h3");
   title.textContent = item.title || "Untitled notice";
-  copy.append(title);
+  article.append(title);
 
-  appendNoticeTextBlock(copy, item.summary || "");
-  appendNoticeMeta(copy, item);
-  appendNoticeAction(copy, item);
-
-  if (hasImages) {
-    article.classList.add("has-media");
-    const media = document.createElement("div");
-    media.className = "notice-modal-media";
-    appendNoticeMedia(media, item);
-    article.append(media, copy);
-  } else {
-    appendNoticeMedia(copy, item);
-    article.append(copy);
-  }
+  appendNoticeTextBlock(article, item.summary || "");
+  appendNoticeMeta(article, item);
+  appendNoticeMedia(article, item);
+  appendNoticeAction(article, item);
 
   return article;
-}
-
-function createNoticeNavIcon(direction) {
-  const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-  svg.setAttribute("viewBox", "0 0 24 24");
-  svg.setAttribute("aria-hidden", "true");
-  svg.setAttribute("focusable", "false");
-
-  const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
-  path.setAttribute("d", direction === "previous" ? "M15 5 8 12l7 7" : "m9 5 7 7-7 7");
-  svg.append(path);
-
-  return svg;
-}
-
-function createNoticeItemNavigation(category, items, activeIndex) {
-  if (items.length <= 1) return null;
-
-  const nav = document.createElement("div");
-  nav.className = "notice-modal-nav";
-
-  const previous = document.createElement("button");
-  previous.type = "button";
-  previous.className = "notice-modal-nav-button notice-modal-nav-prev";
-  previous.disabled = activeIndex <= 0;
-  previous.setAttribute("aria-label", "Previous notice");
-  previous.append(createNoticeNavIcon("previous"));
-
-  const previousLabel = document.createElement("span");
-  previousLabel.textContent = "Previous";
-  previous.append(previousLabel);
-
-  const count = document.createElement("span");
-  count.className = "notice-modal-count";
-  count.textContent = `${activeIndex + 1} / ${items.length}`;
-
-  const next = document.createElement("button");
-  next.type = "button";
-  next.className = "notice-modal-nav-button notice-modal-nav-next";
-  next.disabled = activeIndex >= items.length - 1;
-  next.setAttribute("aria-label", "Next notice");
-
-  const nextLabel = document.createElement("span");
-  nextLabel.textContent = "Next";
-  next.append(nextLabel, createNoticeNavIcon("next"));
-
-  previous.addEventListener("click", () => {
-    openNoticeItemModal(category, items[activeIndex - 1], previous, activeIndex - 1);
-  });
-
-  next.addEventListener("click", () => {
-    openNoticeItemModal(category, items[activeIndex + 1], next, activeIndex + 1);
-  });
-
-  nav.append(previous, count, next);
-  return nav;
 }
 
 function closeNoticeModal() {
@@ -899,28 +506,18 @@ function closeNoticeModal() {
   noticeModal.hidden = true;
   document.body.classList.remove("spec-modal-open");
   noticeModalBody?.replaceChildren();
-  delete noticeModal.dataset.noticeMode;
 
   if (lastNoticeTrigger) {
     lastNoticeTrigger.focus();
   }
 }
 
-function openNoticeItemModal(category, item, trigger, preferredIndex) {
+function openNoticeItemModal(category, item, trigger) {
   if (!noticeModal || !noticeModalTitle || !noticeModalBody) return;
 
-  const items = sortedNoticeItems(Array.isArray(category.items) ? category.items : []);
-  const activeIndex = Number.isInteger(preferredIndex) ? preferredIndex : Math.max(0, items.indexOf(item));
-  const activeItem = items[activeIndex] || item;
-
-  if (!noticeModal.contains(trigger)) {
-    lastNoticeTrigger = trigger;
-  }
-  noticeModal.dataset.noticeMode = "item";
-  noticeModalTitle.textContent = activeItem.title || category.title || category.label || "Information";
-  const detail = createNoticeDetailArticle(activeItem, category);
-  const navigation = createNoticeItemNavigation(category, items, activeIndex);
-  noticeModalBody.replaceChildren(...[detail, navigation].filter(Boolean));
+  lastNoticeTrigger = trigger;
+  noticeModalTitle.textContent = item.title || category.title || category.label || "Information";
+  noticeModalBody.replaceChildren(createNoticeDetailArticle(item, category));
   noticeModal.hidden = false;
   document.body.classList.add("spec-modal-open");
   noticeModal.querySelector(".spec-modal-close")?.focus();
@@ -931,7 +528,6 @@ function openNoticeModal(category, trigger) {
 
   const items = sortedNoticeItems(Array.isArray(category.items) ? category.items : []);
   lastNoticeTrigger = trigger;
-  noticeModal.dataset.noticeMode = "category";
   noticeModalTitle.textContent = category.title || category.label || "Information";
   noticeModalBody.replaceChildren();
 
@@ -1038,7 +634,6 @@ function renderInformationContent(information) {
     panel.dataset.noticePanel = id;
 
     const content = document.createElement("div");
-    content.className = "notice-panel-content";
     const shouldShowIntro = !category.hideIntro;
 
     if (shouldShowIntro) {
@@ -1060,8 +655,9 @@ function renderInformationContent(information) {
     list.className = "notice-list";
 
     const items = sortedNoticeItems(Array.isArray(category.items) ? category.items : []);
-    if (items.length) {
-      items.forEach((item) => {
+    const visibleItems = items.slice(0, noticeVisibleItemLimit);
+    if (visibleItems.length) {
+      visibleItems.forEach((item) => {
         const listItem = document.createElement("li");
 
         const type = document.createElement("span");
@@ -1103,8 +699,6 @@ function renderInformationContent(information) {
     panel.append(content, contactLink);
     panels.append(panel);
   });
-
-  scheduleNoticeLayoutSync();
 }
 
 function renderContactContent(contact) {
@@ -1252,8 +846,6 @@ function initialiseNoticeTabs() {
       panel.classList.toggle("is-active", isActive);
       panel.setAttribute("aria-hidden", String(!isActive));
     });
-
-    scheduleNoticeLayoutSync();
   }
 
   function activateNoticePanelFromHash() {
@@ -1309,7 +901,6 @@ syncActiveNav();
 applyTheme("dark");
 storeTheme("dark");
 syncSwipeControls();
-populateCountryCallingFields();
 loadSiteContent();
 
 if (themeToggle) {
@@ -1318,10 +909,6 @@ if (themeToggle) {
     applyTheme(nextTheme);
     storeTheme(nextTheme);
   });
-}
-
-if (countrySelect) {
-  countrySelect.addEventListener("change", syncPhoneCodeToCountry);
 }
 
 function closePositioningModal() {
@@ -1517,10 +1104,7 @@ window.addEventListener("scroll", () => {
   syncSwipeControls();
 });
 
-window.addEventListener("resize", () => {
-  syncSwipeControls();
-  scheduleNoticeLayoutSync();
-});
+window.addEventListener("resize", syncSwipeControls);
 
 if (snapTargets.length > 1) {
   window.addEventListener(
@@ -1728,16 +1312,13 @@ if (form) {
     const recipient = contactSettings?.formRecipient || "sales@aja.bt";
     const subjectPrefix = contactSettings?.formSubjectPrefix || "Aja Alloys specification request";
     const subject = encodeURIComponent(`${subjectPrefix}: ${enquiryType}`);
-    const phoneCode = data.get("phoneCountryCode") || "";
-    const phoneNumber = data.get("phone") || "";
-    const phoneLine = [phoneCode, phoneNumber].filter(Boolean).join(" ");
     const body = encodeURIComponent(
       [
         `Name: ${data.get("name")}`,
         `Company: ${data.get("company") || ""}`,
         `Country: ${data.get("country") || ""}`,
         `Email: ${data.get("email")}`,
-        `Phone: ${phoneLine}`,
+        `Phone: ${data.get("phone") || ""}`,
         `Enquiry type: ${enquiryType}`,
         `Product or grade: ${data.get("grade")}`,
         `Quantity: ${data.get("quantity") || ""}`,

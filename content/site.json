@@ -1,8 +1,8 @@
 {
   "information": {
     "eyebrow": "Information",
-    "title": "Notices, vacancies, procurement, and tenders.",
-    "summary": "Public updates from Aja Alloys will be posted here.",
+    "title": "Advert posts for notices, vacancies, and tenders.",
+    "summary": "Public adverts and official updates from Aja Alloys will be posted here.",
     "categories": [
       {
         "id": "news",
@@ -16,14 +16,92 @@
         "contactSubject": "Company notice enquiry",
         "items": [
           {
-            "type": "Announcement",
-            "title": "Production update",
-            "summary": "Plant readiness and buyer updates."
+            "type": "Company update",
+            "title": "March furnace maintenance notice",
+            "summary": "Aja Alloys will carry out routine furnace maintenance during the first week of March. Dispatch teams will coordinate any affected loading slots with buyers in advance. Visitors and contractors should report to the gate office before entering the plant area.",
+            "postDate": "2026-03-05",
+            "imageUrls": [
+              "assets/company-factory-exterior-wide.webp",
+              "assets/company-furnace-hall.webp"
+            ],
+            "pdfUrl": "assets/adverts/notices/march-maintenance-notice.pdf",
+            "pdfLabel": "View notice PDF"
           },
           {
             "type": "Public information",
-            "title": "Documentation desk",
-            "summary": "Specifications, certificates, and export documents."
+            "title": "March dispatch documentation desk",
+            "summary": "The documentation desk will handle certificate and dispatch document requests during normal office hours. Buyers should share shipment references clearly when requesting copies. Urgent requests may be routed through the sales contact for faster coordination.",
+            "postDate": "2026-03-12"
+          },
+          {
+            "type": "Announcement",
+            "title": "March visitor entry advisory",
+            "summary": "Factory visitors are requested to complete entry registration before moving beyond the security gate. The updated process helps the safety team track visitor movement and plant access. Please carry a valid identity document when visiting the site.",
+            "postDate": "2026-03-26",
+            "imageUrls": [
+              "assets/company-plant-yard-crane.webp",
+              "assets/company-silo-tower.webp"
+            ]
+          },
+          {
+            "type": "Company update",
+            "title": "April plant readiness update",
+            "summary": "The plant readiness update covers routine checks, buyer coordination, and internal production scheduling. Teams are reviewing operating records and support requirements for the coming month. Further updates will be posted if any schedule changes are required.",
+            "postDate": "2026-04-03",
+            "imageUrls": [
+              "assets/company-control-room-operators.webp",
+              "assets/company-control-room-monitors.webp"
+            ]
+          },
+          {
+            "type": "Public information",
+            "title": "April product specification desk",
+            "summary": "Product specification requests for ferro silicon and related materials may be sent to the sales desk. The team will respond with available grade details, standard documents, and sample coordination steps. Buyers should include intended quantity and destination.",
+            "postDate": "2026-04-11"
+          },
+          {
+            "type": "Announcement",
+            "title": "April safety orientation notice",
+            "summary": "A safety orientation session will be arranged for contractors and regular visitors entering operating areas. The session covers site movement, PPE use, and emergency reporting. Attendance will be recorded before access is granted to restricted zones.",
+            "postDate": "2026-04-24",
+            "imageUrls": [
+              "assets/quality-lab-room.webp",
+              "assets/quality-lab-balances.webp"
+            ]
+          },
+          {
+            "type": "Company update",
+            "title": "May quality lab update",
+            "summary": "The quality lab update covers sample testing, record review, and certificate preparation for dispatches. The lab team is aligning document checks with production and logistics teams. Buyers may request supporting quality documents through the normal enquiry channel.",
+            "postDate": "2026-05-06",
+            "imageUrls": [
+              "assets/quality-lab-room.webp",
+              "assets/quality-lab-balances.webp"
+            ]
+          },
+          {
+            "type": "Public information",
+            "title": "May export document timing",
+            "summary": "Export document timing may vary depending on shipment readiness and buyer documentation requirements. Aja Alloys will coordinate certificate, invoice, and dispatch details as early as possible. Buyers are requested to confirm final document format before loading.",
+            "postDate": "2026-05-14",
+            "pdfUrl": "assets/adverts/notices/may-public-notice.pdf",
+            "pdfLabel": "View notice PDF"
+          },
+          {
+            "type": "Announcement",
+            "title": "May logistics coordination notice",
+            "summary": "Vehicle reporting and dispatch sequencing will be coordinated through the factory logistics desk. Drivers should follow gate instructions and wait for loading confirmation before entering the yard. This notice supports smoother movement around the dispatch area.",
+            "postDate": "2026-05-22",
+            "imageUrls": [
+              "assets/company-plant-yard-crane.webp",
+              "assets/company-silo-tower.webp"
+            ]
+          },
+          {
+            "type": "Company update",
+            "title": "May buyer communication notice",
+            "summary": "Buyer communication for order updates will continue through the sales and documentation contacts. Please include product grade, quantity, and expected shipment timing in each enquiry. This helps the team respond with the correct production or dispatch update.",
+            "postDate": "2026-05-30"
           }
         ]
       },
@@ -33,41 +111,227 @@
         "status": "Vacancies",
         "title": "Vacancies",
         "summary": "Open roles and application details will appear here.",
+        "hideIntro": false,
         "contactLabel": "Click for more",
         "contactEmail": "sales@aja.bt",
         "contactSubject": "Vacancy enquiry",
         "items": [
           {
             "type": "Vacancy announcement",
-            "title": "Furnace shift technician",
-            "summary": "Furnace operation and shift reporting."
+            "title": "March furnace shift technician",
+            "summary": "Aja Alloys is inviting applications for a furnace shift technician role at the factory site. The position supports furnace operation, shift records, and routine safety checks. Applicants should be comfortable working in an industrial shift environment.",
+            "postDate": "2026-03-04",
+            "imageUrls": [
+              "assets/company-factory-exterior-wide.webp",
+              "assets/company-furnace-hall.webp"
+            ]
+          },
+          {
+            "type": "Contract role",
+            "title": "March electrical maintenance helper",
+            "summary": "The electrical maintenance helper role will support workshop coordination and basic maintenance activities. The selected candidate will assist technicians with tools, records, and site housekeeping. Prior industrial exposure will be an advantage.",
+            "postDate": "2026-03-13"
+          },
+          {
+            "type": "Recruitment notice",
+            "title": "March plant store assistant",
+            "summary": "The plant store assistant will help with material receipt, issue records, and inventory support. The role requires careful filing and coordination with the maintenance and operations teams. Applicants should be organised and comfortable with daily recordkeeping.",
+            "postDate": "2026-03-28",
+            "imageUrls": [
+              "assets/company-plant-yard-crane.webp",
+              "assets/company-silo-tower.webp"
+            ]
           },
           {
             "type": "Vacancy announcement",
-            "title": "Quality and documentation assistant",
-            "summary": "Sampling records and dispatch documents."
+            "title": "April furnace operator trainee",
+            "summary": "A trainee furnace operator position is open for candidates interested in plant operations. The role includes supervised operating support, observation of safety practices, and shift documentation. Shortlisted candidates may be asked to attend a practical discussion.",
+            "postDate": "2026-04-02",
+            "pdfUrl": "assets/adverts/vacancies/april-technician-vacancy.pdf",
+            "pdfLabel": "View vacancy PDF"
+          },
+          {
+            "type": "Internship",
+            "title": "April quality lab intern",
+            "summary": "The quality lab internship will support sample preparation, document filing, and basic testing coordination. Interns will work under supervision and learn the flow of quality records. Candidates with science or technical training are encouraged to apply.",
+            "postDate": "2026-04-09",
+            "imageUrls": [
+              "assets/quality-lab-room.webp",
+              "assets/quality-lab-balances.webp"
+            ]
+          },
+          {
+            "type": "Vacancy announcement",
+            "title": "April documentation assistant",
+            "summary": "The documentation assistant role supports dispatch records, certificates, and office coordination. The selected candidate will work with sales, logistics, and quality teams. Strong attention to detail and clear written communication are important for this role.",
+            "postDate": "2026-04-19"
+          },
+          {
+            "type": "Contract role",
+            "title": "May loader and dispatch coordinator",
+            "summary": "A contract role is available for loader and dispatch coordination at the factory site. The work includes vehicle reporting, loading records, and coordination with the yard team. Candidates should be able to work responsibly around industrial movement areas.",
+            "postDate": "2026-05-03",
+            "imageUrls": [
+              "assets/company-plant-yard-crane.webp",
+              "assets/company-silo-tower.webp"
+            ]
+          },
+          {
+            "type": "Vacancy announcement",
+            "title": "May quality and documentation assistant",
+            "summary": "A quality and documentation assistant is required to support sampling records and certificate preparation. The role connects the lab, production, and dispatch teams. Applicants should be accurate with records and comfortable using office tools.",
+            "postDate": "2026-05-11",
+            "pdfUrl": "assets/adverts/vacancies/may-quality-assistant-vacancy.pdf",
+            "pdfLabel": "View vacancy PDF"
+          },
+          {
+            "type": "Recruitment notice",
+            "title": "May safety assistant",
+            "summary": "The safety assistant role will support inspection records, visitor orientation, and PPE coordination. The selected candidate will assist the safety team during routine site checks. Experience in industrial safety support will be useful but is not mandatory.",
+            "postDate": "2026-05-20",
+            "imageUrls": [
+              "assets/company-control-room-operators.webp",
+              "assets/company-control-room-monitors.webp"
+            ]
+          },
+          {
+            "type": "Internship",
+            "title": "May accounts and admin intern",
+            "summary": "An accounts and admin internship is open for candidates seeking office experience. The intern will support filing, basic records, and administrative coordination. Applicants should be reliable, careful with documents, and willing to learn daily office procedures.",
+            "postDate": "2026-05-29"
           }
         ]
       },
       {
-        "id": "procurement",
-        "label": "Procurement",
-        "status": "Procurement updates",
-        "title": "Procurement",
-        "summary": "Supplier notices and tender details will appear here.",
-        "contactLabel": "Click for more",
+        "id": "tenders",
+        "label": "Tenders",
+        "status": "Tender adverts",
+        "title": "Tenders",
+        "summary": "Tender, supplier, and RFQ notices will appear here.",
+        "hideIntro": false,
+        "contactLabel": "Tender enquiry",
         "contactEmail": "sales@aja.bt",
-        "contactSubject": "Procurement enquiry",
+        "contactSubject": "Tender enquiry",
         "items": [
           {
-            "type": "Procurement notice",
-            "title": "Packing materials",
-            "summary": "Bags, labels, pallets, and dispatch support."
+            "type": "Tender notice",
+            "title": "March furnace spares supply",
+            "summary": "Aja Alloys invites eligible suppliers to submit offers for routine furnace spares and related consumables. The supply scope includes standard items used for plant maintenance. Bidders should review the PDF and submit complete offers before the closing date.",
+            "postDate": "2026-03-03",
+            "closingDate": "2026-03-22",
+            "imageUrls": [
+              "assets/company-factory-exterior-wide.webp",
+              "assets/company-furnace-hall.webp"
+            ],
+            "pdfUrl": "assets/adverts/tenders/march-spares-tender.pdf",
+            "pdfLabel": "View tender PDF",
+            "actionLabel": "",
+            "actionUrl": ""
           },
           {
-            "type": "Tender information",
-            "title": "Lab and safety supplies",
-            "summary": "Laboratory materials, PPE, and consumables."
+            "type": "Request for quotation",
+            "title": "March packing materials RFQ",
+            "summary": "Quotations are invited for packing materials used in product dispatch. The requirement includes bags, labels, pallets, and supporting materials for loading. Suppliers should quote clearly with delivery timing, taxes, and validity of offer.",
+            "postDate": "2026-03-10",
+            "closingDate": "2026-03-27",
+            "actionLabel": "",
+            "actionUrl": ""
+          },
+          {
+            "type": "Supplier notice",
+            "title": "March workshop tools supplier registration",
+            "summary": "Supplier registration is open for workshop tools and small equipment vendors. Interested vendors should provide company details, product range, and contact information. Registration does not guarantee purchase orders but supports future procurement review.",
+            "postDate": "2026-03-25",
+            "closingDate": "2026-04-08",
+            "imageUrls": [
+              "assets/company-plant-yard-crane.webp",
+              "assets/company-silo-tower.webp"
+            ],
+            "actionLabel": "",
+            "actionUrl": ""
+          },
+          {
+            "type": "Request for quotation",
+            "title": "April safety equipment RFQ",
+            "summary": "Aja Alloys requests quotations for PPE, safety signage, and site safety consumables. Suppliers should ensure that quoted items meet normal industrial use standards. The RFQ PDF contains the basic scope and submission instructions.",
+            "postDate": "2026-04-04",
+            "closingDate": "2026-04-18",
+            "pdfUrl": "assets/adverts/tenders/april-safety-rfq.pdf",
+            "pdfLabel": "View RFQ PDF",
+            "actionLabel": "",
+            "actionUrl": ""
+          },
+          {
+            "type": "Tender notice",
+            "title": "April lab consumables tender",
+            "summary": "Tender offers are invited for laboratory materials, reagents, and sampling consumables. The items will support routine quality testing and documentation activities. Suppliers should mention shelf life, delivery schedule, and any storage conditions.",
+            "postDate": "2026-04-12",
+            "closingDate": "2026-04-30",
+            "imageUrls": [
+              "assets/quality-lab-room.webp",
+              "assets/quality-lab-balances.webp"
+            ],
+            "actionLabel": "",
+            "actionUrl": ""
+          },
+          {
+            "type": "Tender addendum",
+            "title": "April transport addendum",
+            "summary": "This addendum clarifies the reporting format and service scope for transport-related submissions. Bidders should treat the addendum as part of the tender record. Any revised offer should refer to the tender title and updated closing date.",
+            "postDate": "2026-04-26",
+            "closingDate": "2026-05-06",
+            "actionLabel": "",
+            "actionUrl": ""
+          },
+          {
+            "type": "Tender notice",
+            "title": "May plant transport services",
+            "summary": "Aja Alloys invites bids for plant transport, material movement, and dispatch support services. The successful bidder may be required to coordinate with factory and logistics teams. Bidders should review the attached PDF before submitting offers.",
+            "postDate": "2026-05-05",
+            "closingDate": "2026-05-25",
+            "imageUrls": [
+              "assets/company-plant-yard-crane.webp",
+              "assets/company-silo-tower.webp"
+            ],
+            "pdfUrl": "assets/adverts/tenders/may-transport-tender.pdf",
+            "pdfLabel": "View tender PDF",
+            "actionLabel": "",
+            "actionUrl": ""
+          },
+          {
+            "type": "Request for quotation",
+            "title": "May office and IT consumables RFQ",
+            "summary": "Quotations are requested for office stationery, printer supplies, and basic IT consumables. Vendors should quote for available items with clear unit prices and delivery timing. Submissions should remain valid through the stated evaluation period.",
+            "postDate": "2026-05-13",
+            "closingDate": "2026-05-28",
+            "actionLabel": "",
+            "actionUrl": ""
+          },
+          {
+            "type": "Supplier notice",
+            "title": "May refractory materials supplier notice",
+            "summary": "Supplier interest is invited for refractory materials and related plant inputs. Vendors should provide product specifications, origin details, and supply lead times. The notice will help Aja Alloys identify suitable vendors for future requirements.",
+            "postDate": "2026-05-21",
+            "closingDate": "2026-06-07",
+            "imageUrls": [
+              "assets/product-ferro-silicon-lump.webp",
+              "assets/product-ferro-silicon-lump-2.webp"
+            ],
+            "actionLabel": "",
+            "actionUrl": ""
+          },
+          {
+            "type": "Tender notice",
+            "title": "May factory civil repair works",
+            "summary": "Tender offers are invited for minor civil repair works around the factory area. The scope may include small repairs, surface works, and related site support. Bidders should include work methodology, timeline, and safety arrangements in their offer.",
+            "postDate": "2026-05-31",
+            "closingDate": "2026-06-14",
+            "imageUrls": [
+              "assets/company-factory-exterior-wide.webp",
+              "assets/company-furnace-hall.webp"
+            ],
+            "actionLabel": "",
+            "actionUrl": ""
           }
         ]
       }
@@ -77,8 +341,9 @@
     "eyebrow": "Contact",
     "title": "Talk to Aja Alloys.",
     "formRecipient": "sales@aja.bt",
+    "notificationEmail": "sales@aja.pt",
     "formSubjectPrefix": "Aja Alloys specification request",
-    "formEndpoint": "",
+    "formEndpoint": "/__local-admin/contact-submit",
     "cards": [
       {
         "title": "All enquiries",
@@ -90,7 +355,7 @@
           },
           {
             "type": "text",
-            "label": "Sales, procurement, factory, documentation, and general enquiries.",
+            "label": "Sales, tender, factory, documentation, and general enquiries.",
             "muted": true
           }
         ]

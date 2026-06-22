@@ -27,7 +27,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700;800&family=Uchen&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260622-image-hover-transition-v2">
+  <link rel="stylesheet" href="styles.css?v=20260622-captcha-format-v13">
 </head>
 <body>
   <a class="skip-link" href="#top">Skip to content</a>
@@ -454,16 +454,16 @@
     <section class="section careers" id="information">
       <div class="section-heading compact">
         <p class="eyebrow" data-information-eyebrow>Information</p>
-        <h2 data-information-title>Notices, vacancies, procurement, and tenders.</h2>
+        <h2 data-information-title>Advert posts for notices, vacancies, and tenders.</h2>
         <p data-information-summary>
-          Public updates from Aja Alloys will be posted here.
+          Public adverts and official updates from Aja Alloys will be posted here.
         </p>
       </div>
       <div class="notice-board" data-notice-tabs data-dynamic-notices>
         <div class="notice-tabs" role="tablist" aria-label="Information categories">
           <a class="notice-tab is-active" href="#notice-panel-news" id="notice-tab-news" role="tab" aria-selected="true" aria-controls="notice-panel-news" data-notice-tab="news">Notices</a>
           <a class="notice-tab" href="#notice-panel-vacancies" id="notice-tab-vacancies" role="tab" aria-selected="false" aria-controls="notice-panel-vacancies" data-notice-tab="vacancies">Vacancies</a>
-          <a class="notice-tab" href="#notice-panel-procurement" id="notice-tab-procurement" role="tab" aria-selected="false" aria-controls="notice-panel-procurement" data-notice-tab="procurement">Procurement</a>
+          <a class="notice-tab" href="#notice-panel-tenders" id="notice-tab-tenders" role="tab" aria-selected="false" aria-controls="notice-panel-tenders" data-notice-tab="tenders">Tenders</a>
         </div>
         <div class="notice-panels">
           <article class="notice-panel is-active" id="notice-panel-news" role="tabpanel" aria-labelledby="notice-tab-news" data-notice-panel="news">
@@ -481,7 +481,7 @@
                 </li>
               </ul>
             </div>
-            <a href="mailto:sales@aja.bt?subject=Company%20notice%20enquiry">Click for more</a>
+            <button class="notice-more-link" type="button">Click for more</button>
           </article>
           <article class="notice-panel" id="notice-panel-vacancies" role="tabpanel" aria-labelledby="notice-tab-vacancies" data-notice-panel="vacancies">
             <div>
@@ -501,27 +501,27 @@
                 </li>
               </ul>
             </div>
-            <a href="mailto:sales@aja.bt?subject=Vacancy%20enquiry">Click for more</a>
+            <button class="notice-more-link" type="button">Click for more</button>
           </article>
-          <article class="notice-panel" id="notice-panel-procurement" role="tabpanel" aria-labelledby="notice-tab-procurement" data-notice-panel="procurement">
+          <article class="notice-panel" id="notice-panel-tenders" role="tabpanel" aria-labelledby="notice-tab-tenders" data-notice-panel="tenders">
             <div>
-              <span class="notice-status">Procurement updates</span>
-              <h3>Procurement</h3>
-              <p>Supplier notices and tender details will appear here.</p>
+              <span class="notice-status">Tender adverts</span>
+              <h3>Tenders</h3>
+              <p>Tender, supplier, and RFQ notices will appear here.</p>
               <ul class="notice-list">
                 <li>
-                  <span>Procurement notice</span>
+                  <span>Tender notice</span>
                   <strong>Packing materials</strong>
                   <p>Bags, labels, pallets, and dispatch support.</p>
                 </li>
                 <li>
-                  <span>Tender information</span>
+                  <span>Request for quotation</span>
                   <strong>Lab and safety supplies</strong>
                   <p>Laboratory materials, PPE, and consumables.</p>
                 </li>
               </ul>
             </div>
-            <a href="mailto:sales@aja.bt?subject=Procurement%20enquiry">Click for more</a>
+            <button class="notice-more-link" type="button">Click for more</button>
           </article>
         </div>
       </div>
@@ -536,7 +536,7 @@
         <div class="contact-block">
           <h3>All enquiries</h3>
           <p><a href="mailto:sales@aja.bt">sales@aja.bt</a></p>
-          <p class="muted">Sales, procurement, factory, documentation, and general enquiries.</p>
+          <p class="muted">Sales, tender, factory, documentation, and general enquiries.</p>
         </div>
         <div class="contact-block">
           <h3>Corporate office</h3>
@@ -551,24 +551,48 @@
           <p>Email: <a href="mailto:tenzin@aja.bt">tenzin@aja.bt</a></p>
         </div>
         <form class="contact-form" data-contact-form>
+          <div class="contact-form-intro">
+            <h3 data-contact-form-title>Send an enquiry</h3>
+            <p data-contact-form-intro>Share your requirement and the right team will respond.</p>
+          </div>
           <label>
             Name
-            <input type="text" name="name" required>
+            <input type="text" name="name" autocomplete="name" required>
           </label>
           <label>
             Company
-            <input type="text" name="company">
+            <input type="text" name="company" autocomplete="organisation">
           </label>
           <label>
             Country
-            <input type="text" name="country">
+            <select name="country" autocomplete="country-name" data-country-select required>
+              <option value="">Select country</option>
+            </select>
           </label>
           <label>
             Email
-            <input type="email" name="email" required>
+            <input type="email" name="email" autocomplete="email" required>
           </label>
           <label>
-            Grade of interest
+            Phone
+            <span class="phone-input-group">
+              <select name="phoneCountryCode" aria-label="Phone country code" data-phone-country-code></select>
+              <input type="tel" name="phone" autocomplete="tel" inputmode="tel">
+            </span>
+          </label>
+          <label>
+            Enquiry type
+            <select name="enquiryType" data-enquiry-type>
+              <option>Sales enquiry</option>
+              <option>Tender or supplier enquiry</option>
+              <option>Tender notice enquiry</option>
+              <option>Vacancy enquiry</option>
+              <option>Documentation request</option>
+              <option>General enquiry</option>
+            </select>
+          </label>
+          <label>
+            Product or grade
             <select name="grade">
               <option>FeSi 70 to 75</option>
               <option>FeSi 75</option>
@@ -582,11 +606,31 @@
             Quantity
             <input type="text" name="quantity" placeholder="MT">
           </label>
-          <label>
+          <label class="form-wide">
             Message
-            <textarea name="message" rows="5" required></textarea>
+            <textarea name="message" rows="5" placeholder="Tell us what you need, including deadline or delivery location if relevant." required></textarea>
           </label>
+          <label class="form-trap" aria-hidden="true">
+            Website
+            <input type="text" name="website" tabindex="-1" autocomplete="off">
+          </label>
+          <div class="captcha-field" data-captcha-field>
+            <div class="captcha-prompt">
+              <span>Security check</span>
+              <canvas width="148" height="46" aria-label="Security code" data-captcha-canvas></canvas>
+              <button class="captcha-refresh" type="button" data-captcha-refresh aria-label="Refresh security code" title="Refresh security code">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M20 11a8 8 0 0 0-14.8-4.2L3 9m0 0V3m0 6h6M4 13a8 8 0 0 0 14.8 4.2L21 15m0 0v6m0-6h-6"></path>
+                </svg>
+              </button>
+            </div>
+            <label>
+              Enter code
+              <input type="text" name="captcha" autocomplete="off" inputmode="text" data-captcha-input required>
+            </label>
+          </div>
           <button class="button button-primary" type="submit">Send enquiry</button>
+          <p class="form-status" data-contact-form-status aria-live="polite"></p>
         </form>
       </div>
       <footer class="site-footer">
@@ -635,6 +679,19 @@
     </article>
   </div>
 
+  <div class="spec-modal notice-modal" data-notice-modal role="dialog" aria-modal="true" aria-labelledby="notice-modal-title" hidden>
+    <div class="spec-modal-backdrop" data-notice-modal-close></div>
+    <article class="spec-modal-panel notice-modal-panel">
+      <button class="spec-modal-close" type="button" data-notice-modal-close aria-label="Close advert details">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M6 6l12 12M18 6 6 18"></path>
+        </svg>
+      </button>
+      <h2 id="notice-modal-title" data-notice-modal-title>Information</h2>
+      <div class="spec-modal-body notice-modal-body" data-notice-modal-body></div>
+    </article>
+  </div>
+
   <nav class="mobile-swipe-nav" data-mobile-swipe-nav aria-label="Section navigation">
     <button class="mobile-swipe-button mobile-swipe-button-prev" type="button" data-swipe-prev aria-label="Previous section">
       <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
@@ -648,6 +705,6 @@
     </button>
   </nav>
 
-  <script src="script.js?v=20260622-image-hover-transition-v2"></script>
+  <script src="script.js?v=20260622-captcha-format-v13"></script>
 </body>
 </html>

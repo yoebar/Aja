@@ -16,13 +16,13 @@ collections:
   - name: "website_admin"
     label: "Website Admin"
     label_singular: "Website Area"
-    description: "Use one page for one update. Most editors only need Notices, Vacancies, Procurement, or Contact Cards."
+    description: "Use one page for one update. Admin users can edit website settings and advert posts."
     editor:
       preview: false
     files:
       - name: "information_heading"
         label: "Information Section Heading"
-        description: "Change the heading above Notices, Vacancies, and Procurement."
+        description: "Change the heading above Notices, Vacancies, and Tenders."
         file: "content/information.json"
         format: "json"
         fields:
@@ -86,6 +86,33 @@ collections:
               - label: "Summary"
                 name: "summary"
                 widget: "text"
+              - label: "Date"
+                name: "postDate"
+                widget: "datetime"
+                format: "YYYY-MM-DD"
+                date_format: "YYYY-MM-DD"
+                time_format: false
+              - label: "Action Button Text"
+                name: "actionLabel"
+                widget: "string"
+                required: false
+              - label: "Action Link"
+                name: "actionUrl"
+                widget: "string"
+                required: false
+              - label: "Images"
+                name: "imageUrls"
+                widget: "list"
+                required: false
+                field: { label: "Image", name: "image", widget: "image" }
+              - label: "PDF File"
+                name: "pdfUrl"
+                widget: "file"
+                required: false
+              - label: "PDF Button Text"
+                name: "pdfLabel"
+                widget: "string"
+                required: false
 
       - name: "vacancies"
         label: "Vacancies"
@@ -137,20 +164,47 @@ collections:
               - label: "Short Description"
                 name: "summary"
                 widget: "text"
+              - label: "Date"
+                name: "postDate"
+                widget: "datetime"
+                format: "YYYY-MM-DD"
+                date_format: "YYYY-MM-DD"
+                time_format: false
+              - label: "Action Button Text"
+                name: "actionLabel"
+                widget: "string"
+                required: false
+              - label: "Action Link"
+                name: "actionUrl"
+                widget: "string"
+                required: false
+              - label: "Images"
+                name: "imageUrls"
+                widget: "list"
+                required: false
+                field: { label: "Image", name: "image", widget: "image" }
+              - label: "PDF File"
+                name: "pdfUrl"
+                widget: "file"
+                required: false
+              - label: "PDF Button Text"
+                name: "pdfLabel"
+                widget: "string"
+                required: false
 
-      - name: "procurement"
-        label: "Procurement And Tenders"
-        description: "Add or edit supplier notices, procurement updates, and tenders."
-        file: "content/procurement.json"
+      - name: "tenders"
+        label: "Tenders"
+        description: "Add or edit tender, supplier, and RFQ notices."
+        file: "content/tenders.json"
         format: "json"
         fields:
-          - { label: "Tab ID", name: "id", widget: "hidden", default: "procurement" }
-          - { label: "Tab Name", name: "label", widget: "hidden", default: "Procurement" }
+          - { label: "Tab ID", name: "id", widget: "hidden", default: "tenders" }
+          - { label: "Tab Name", name: "label", widget: "hidden", default: "Tenders" }
           - { label: "Hide Panel Header", name: "hideIntro", widget: "hidden", default: false }
           - label: "Status Label"
             name: "status"
             widget: "string"
-            default: "Procurement updates"
+            default: "Tender adverts"
           - label: "Panel Heading"
             name: "title"
             widget: "string"
@@ -161,18 +215,18 @@ collections:
             name: "contactLabel"
             widget: "string"
             default: "Click for more"
-          - label: "Procurement Email"
+          - label: "Tender Email"
             name: "contactEmail"
             widget: "string"
             default: "sales@aja.bt"
           - label: "Email Subject"
             name: "contactSubject"
             widget: "string"
-            default: "Procurement enquiry"
-          - label: "Procurement Cards"
+            default: "Tender enquiry"
+          - label: "Tender Posts"
             name: "items"
             widget: "list"
-            label_singular: "Procurement Item"
+            label_singular: "Tender Post"
             collapsed: true
             minimize_collapsed: true
             summary: "{{fields.title}}"
@@ -180,13 +234,47 @@ collections:
               - label: "Type"
                 name: "type"
                 widget: "select"
-                options: ["Procurement notice", "Tender information", "Supplier notice", "Request for quotation"]
+                options: ["Tender notice", "Supplier notice", "Request for quotation", "Tender addendum"]
               - label: "Title"
                 name: "title"
                 widget: "string"
               - label: "Summary"
                 name: "summary"
                 widget: "text"
+              - label: "Date"
+                name: "postDate"
+                widget: "datetime"
+                format: "YYYY-MM-DD"
+                date_format: "YYYY-MM-DD"
+                time_format: false
+              - label: "Closing Date"
+                name: "closingDate"
+                widget: "datetime"
+                format: "YYYY-MM-DD"
+                date_format: "YYYY-MM-DD"
+                time_format: false
+                required: false
+              - label: "Action Button Text"
+                name: "actionLabel"
+                widget: "string"
+                required: false
+              - label: "Action Link"
+                name: "actionUrl"
+                widget: "string"
+                required: false
+              - label: "Images"
+                name: "imageUrls"
+                widget: "list"
+                required: false
+                field: { label: "Image", name: "image", widget: "image" }
+              - label: "PDF File"
+                name: "pdfUrl"
+                widget: "file"
+                required: false
+              - label: "PDF Button Text"
+                name: "pdfLabel"
+                widget: "string"
+                required: false
 
       - name: "contact_form"
         label: "Contact Form"

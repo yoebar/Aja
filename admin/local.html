@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Aja Local Admin</title>
+  <link rel="stylesheet" href="local-editor.css">
+  <script>
+    if (!["127.0.0.1", "localhost", ""].includes(window.location.hostname)) {
+      window.location.replace("/admin/");
+    }
+  </script>
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <p>Aja Alloys</p>
+      <h1>Local Admin</h1>
+    </div>
+    <div class="topbar-actions">
+      <span id="session-user">Checking user...</span>
+      <button type="button" id="logout-button">Sign out</button>
+      <a href="/" target="_blank" rel="noreferrer">Open website</a>
+    </div>
+  </header>
+
+  <main class="layout">
+    <nav class="sidebar" aria-label="Admin sections">
+      <p class="sidebar-group">Website details</p>
+      <button type="button" class="is-active" data-section="information">
+        <span>Information section</span>
+        <small>Heading and intro only</small>
+      </button>
+      <button type="button" data-section="contact_form">
+        <span>Contact form</span>
+        <small>Enquiry form settings</small>
+      </button>
+      <button type="button" data-section="contact_cards">
+        <span>Contact details</span>
+        <small>Office, factory, email, phone</small>
+      </button>
+      <button type="button" data-section="contact_submissions">
+        <span>Inquiry Submissions</span>
+        <small>Enquiry records table</small>
+      </button>
+
+      <p class="sidebar-group">Admin</p>
+      <button type="button" data-section="users">
+        <span>Users</span>
+        <small>Create admin and post editor users</small>
+      </button>
+
+      <p class="sidebar-group">Advert posts</p>
+      <button type="button" data-section="notices">
+        <span>Notice adverts</span>
+        <small>Public notices and information posts</small>
+      </button>
+      <button type="button" data-section="vacancies">
+        <span>Vacancy adverts</span>
+        <small>Job and recruitment posts</small>
+      </button>
+      <button type="button" data-section="tenders">
+        <span>Tender adverts</span>
+        <small>Tender, supplier, and RFQ posts</small>
+      </button>
+
+    </nav>
+
+    <section class="editor" aria-live="polite">
+      <div class="editor-head">
+        <div>
+          <p id="section-kicker">Local content file</p>
+          <h2 id="section-title">Information Heading</h2>
+        </div>
+        <button type="button" id="save-button">Save changes</button>
+      </div>
+      <form id="content-form"></form>
+      <p class="status" id="status-line">Changes save to local files only.</p>
+    </section>
+  </main>
+
+  <script src="local-editor.js"></script>
+</body>
+</html>
