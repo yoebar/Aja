@@ -430,7 +430,7 @@ function renderContactFormSettings() {
     field("Form Heading", "formTitle", data.formTitle),
     field("Form Intro Text", "formIntro", data.formIntro, { type: "textarea" }),
     field("Default Recipient Email", "formRecipient", data.formRecipient),
-    field("Notification Email", "notificationEmail", data.notificationEmail || "sales@aja.pt", {
+    field("Notification Email", "notificationEmail", data.notificationEmail || "sales@aja.bt", {
       hint: "Server notification target. RESEND_API_KEY and AJA_EMAIL_FROM are required for live email delivery."
     }),
     field("Email Subject Prefix", "formSubjectPrefix", data.formSubjectPrefix),

@@ -4,7 +4,7 @@
   "formTitle": "Send an enquiry",
   "formIntro": "Share your requirement and the right team will respond.",
   "formRecipient": "sales@aja.bt",
-  "notificationEmail": "sales@aja.pt",
+  "notificationEmail": "sales@aja.bt",
   "formSubjectPrefix": "Aja Alloys specification request",
   "formEndpoint": "/api/contact-submit",
   "enquiryTypes": [

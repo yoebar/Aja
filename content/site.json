@@ -341,7 +341,7 @@
     "eyebrow": "Contact",
     "title": "Talk to Aja Alloys.",
     "formRecipient": "sales@aja.bt",
-    "notificationEmail": "sales@aja.pt",
+    "notificationEmail": "sales@aja.bt",
     "formSubjectPrefix": "Aja Alloys specification request",
     "formEndpoint": "/api/contact-submit",
     "cards": [
