@@ -205,6 +205,15 @@ function todayDateValue() {
   return `${year}-${month}-${day}`;
 }
 
+function confirmDelete(message) {
+  return window.confirm(`${message}\n\nSave changes after deleting to publish this update.`);
+}
+
+function showSaveSuccess(message) {
+  statusLine.textContent = message;
+  window.alert(`${message}\n\nThe save is complete. It is ok to close this page.`);
+}
+
 function postDateForSort(post = {}) {
   return post.postDate || post.date || post.closingDate || "";
 }
@@ -220,6 +229,17 @@ function comparePostsByLatest(first, second) {
 
 function sortPostsByLatest(items = []) {
   return [...items].sort(comparePostsByLatest);
+}
+
+function dateTimeSortValue(value) {
+  const parsed = new Date(value || "");
+  return Number.isNaN(parsed.getTime()) ? 0 : parsed.getTime();
+}
+
+function sortSubmissionsByLatest(submissions = []) {
+  return [...submissions].sort((first, second) => (
+    dateTimeSortValue(second.submittedAt) - dateTimeSortValue(first.submittedAt)
+  ));
 }
 
 function mediaTypeFromPost(post) {
@@ -463,7 +483,7 @@ function renderUserRow(user) {
   actionCell.className = "post-actions";
   const remove = iconActionButton("delete", "Delete user", { danger: true });
   remove.addEventListener("click", () => {
-    if (window.confirm("Delete this user?")) {
+    if (confirmDelete("Delete this user?")) {
       row.remove();
     }
   });
@@ -486,7 +506,7 @@ function readUsers() {
 
 function renderContactSubmissions() {
   const data = content.contact_submissions || {};
-  const submissions = Array.isArray(data.submissions) ? data.submissions : [];
+  const submissions = sortSubmissionsByLatest(Array.isArray(data.submissions) ? data.submissions : []);
   const wrapper = document.createElement("div");
   wrapper.className = "submissions-panel";
 
@@ -537,7 +557,7 @@ function renderContactSubmissions() {
 
   const note = document.createElement("p");
   note.className = "table-note";
-  note.textContent = "Records are saved locally in content/contact-submissions.json. Email delivery needs SMTP settings on the server.";
+  note.textContent = "Records are saved in content/contact-submissions.json. Email delivery needs SMTP settings on the server.";
   wrapper.append(tableWrap, detail, note);
   form.replaceChildren(wrapper);
 }
@@ -548,6 +568,9 @@ function renderSubmissionActions(submission, detail) {
 
   const view = iconActionButton("view", "View submission");
   view.addEventListener("click", () => renderSubmissionDetail(submission, detail));
+
+  const edit = iconActionButton("edit", "Edit submission");
+  edit.addEventListener("click", () => renderSubmissionEditor(submission, detail));
 
   const reviewedLabel = submission.reviewStatus === "reviewed" ? "Mark as new" : "Mark as reviewed";
   const reviewedIcon = submission.reviewStatus === "reviewed" ? "new" : "reviewed";
@@ -562,12 +585,12 @@ function renderSubmissionActions(submission, detail) {
 
   const remove = iconActionButton("delete", "Delete submission", { danger: true });
   remove.addEventListener("click", () => {
-    if (window.confirm("Delete this contact submission record?")) {
+    if (confirmDelete("Delete this contact submission record?")) {
       deleteSubmission(submission.id);
     }
   });
 
-  cell.append(view, reviewed, remove);
+  cell.append(view, edit, reviewed, remove);
   return cell;
 }
 
@@ -610,6 +633,70 @@ function renderSubmissionDetail(submission, detail) {
   detail.append(heading, meta, message, reply);
 }
 
+function renderSubmissionEditor(submission, detail) {
+  detail.hidden = false;
+  detail.replaceChildren();
+
+  const heading = document.createElement("h3");
+  heading.textContent = `${submission.name || "Contact submission"} editor`;
+
+  const grid = document.createElement("div");
+  grid.className = "form-grid";
+  grid.append(
+    field("Name", "editSubmissionName", submission.name),
+    field("Company", "editSubmissionCompany", submission.company),
+    field("Country", "editSubmissionCountry", submission.country),
+    field("Email", "editSubmissionEmail", submission.email, { type: "email" }),
+    field("Phone", "editSubmissionPhone", submission.phone),
+    field("Enquiry Type", "editSubmissionEnquiryType", submission.enquiryType),
+    field("Product Or Grade", "editSubmissionGrade", submission.grade),
+    field("Quantity", "editSubmissionQuantity", submission.quantity),
+    selectField("Review Status", "editSubmissionReviewStatus", submission.reviewStatus || "new", ["new", "reviewed"]),
+    field("Notification Email", "editSubmissionNotificationTo", submission.notificationTo),
+    field("Notification Status", "editSubmissionNotificationStatus", submission.notificationStatus),
+    field("Message", "editSubmissionMessage", submission.message, { type: "textarea" })
+  );
+
+  const actions = document.createElement("div");
+  actions.className = "form-actions";
+
+  const save = document.createElement("button");
+  save.className = "small-button";
+  save.type = "button";
+  save.textContent = "Save inquiry";
+  save.addEventListener("click", () => {
+    const reviewStatus = detail.querySelector("[name='editSubmissionReviewStatus']").value;
+    updateSubmission(
+      submission.id,
+      {
+        name: detail.querySelector("[name='editSubmissionName']").value,
+        company: detail.querySelector("[name='editSubmissionCompany']").value,
+        country: detail.querySelector("[name='editSubmissionCountry']").value,
+        email: detail.querySelector("[name='editSubmissionEmail']").value,
+        phone: detail.querySelector("[name='editSubmissionPhone']").value,
+        enquiryType: detail.querySelector("[name='editSubmissionEnquiryType']").value,
+        grade: detail.querySelector("[name='editSubmissionGrade']").value,
+        quantity: detail.querySelector("[name='editSubmissionQuantity']").value,
+        message: detail.querySelector("[name='editSubmissionMessage']").value,
+        reviewStatus,
+        reviewedAt: reviewStatus === "reviewed" ? submission.reviewedAt || new Date().toISOString() : "",
+        notificationTo: detail.querySelector("[name='editSubmissionNotificationTo']").value,
+        notificationStatus: detail.querySelector("[name='editSubmissionNotificationStatus']").value
+      },
+      { notify: true, successMessage: "Inquiry record saved." }
+    );
+  });
+
+  const cancel = document.createElement("button");
+  cancel.className = "ghost-button";
+  cancel.type = "button";
+  cancel.textContent = "Cancel";
+  cancel.addEventListener("click", () => renderSubmissionDetail(submission, detail));
+
+  actions.append(save, cancel);
+  detail.append(heading, grid, actions);
+}
+
 function contactSubmissionReplyUrl(submission) {
   const subject = encodeURIComponent(`Re: ${submission.enquiryType || "Aja Alloys enquiry"}`);
   const body = encodeURIComponent(
@@ -624,7 +711,8 @@ function contactSubmissionReplyUrl(submission) {
   return `mailto:${submission.email || ""}?subject=${subject}&body=${body}`;
 }
 
-async function persistContactSubmissions() {
+async function persistContactSubmissions(options = {}) {
+  const successMessage = options.successMessage || "Contact submission records updated.";
   const response = await fetch(`${apiBase}/save`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -636,16 +724,20 @@ async function persistContactSubmissions() {
     return false;
   }
 
-  statusLine.textContent = "Contact submission records updated.";
+  if (options.notify) {
+    showSaveSuccess(successMessage);
+  } else {
+    statusLine.textContent = successMessage;
+  }
   return true;
 }
 
-async function updateSubmission(id, updates) {
+async function updateSubmission(id, updates, options = {}) {
   const submissions = content.contact_submissions?.submissions || [];
   content.contact_submissions.submissions = submissions.map((submission) => (
     submission.id === id ? { ...submission, ...updates } : submission
   ));
-  if (await persistContactSubmissions()) {
+  if (await persistContactSubmissions(options)) {
     renderContactSubmissions();
   }
 }
@@ -863,6 +955,9 @@ function renderPostRow(post, itemTypes, tbody, editorHost, includeClosingDate = 
 
   const remove = iconActionButton("delete", "Delete advert post", { danger: true });
   remove.addEventListener("click", () => {
+    const postTitle = row.querySelector("[data-post-title]").textContent || "this advert post";
+    if (!confirmDelete(`Delete "${postTitle}"?`)) return;
+
     const wasEditing = row.classList.contains("is-editing");
     row.remove();
     syncPostNumbers(tbody);
@@ -1080,7 +1175,11 @@ function renderContactCard(card, number) {
   remove.className = "danger-button";
   remove.type = "button";
   remove.textContent = "Remove";
-  remove.addEventListener("click", () => wrapper.remove());
+  remove.addEventListener("click", () => {
+    if (confirmDelete(`Remove contact card ${number}?`)) {
+      wrapper.remove();
+    }
+  });
   head.append(heading, remove);
 
   const lines = document.createElement("div");
@@ -1121,7 +1220,11 @@ function renderContactLine(line, number) {
   remove.className = "danger-button";
   remove.type = "button";
   remove.textContent = "Remove";
-  remove.addEventListener("click", () => wrapper.remove());
+  remove.addEventListener("click", () => {
+    if (confirmDelete(`Remove contact line ${number}?`)) {
+      wrapper.remove();
+    }
+  });
   head.append(heading, remove);
 
   wrapper.append(
@@ -1245,7 +1348,7 @@ async function saveCurrentSection() {
     }
 
     content.users = result.users || [];
-    statusLine.textContent = "Users saved.";
+    showSaveSuccess("Users saved.");
     renderUsers();
     return;
   }
@@ -1262,7 +1365,7 @@ async function saveCurrentSection() {
   }
 
   content[activeSection] = data;
-  statusLine.textContent = `Saved ${files[activeSection]}. Refresh the website preview to see the change.`;
+  showSaveSuccess(`Saved ${files[activeSection]}. Refresh the website preview to see the change.`);
 }
 
 async function loadContent() {
