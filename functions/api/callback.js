@@ -5,33 +5,115 @@ function renderAuthPage(status, content) {
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Authorising GitHub</title>
+  <style>
+    body {
+      align-items: center;
+      background: #f5f7fb;
+      color: #172026;
+      display: flex;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      justify-content: center;
+      margin: 0;
+      min-height: 100vh;
+    }
+
+    main {
+      background: #ffffff;
+      border: 1px solid #d8dee8;
+      border-radius: 8px;
+      box-shadow: 0 16px 45px rgba(15, 23, 42, 0.12);
+      max-width: 520px;
+      padding: 28px;
+      width: calc(100% - 48px);
+    }
+
+    h1 {
+      font-size: 22px;
+      margin: 0 0 10px;
+    }
+
+    p {
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    code {
+      background: #eef2f7;
+      border-radius: 4px;
+      display: block;
+      margin-top: 16px;
+      overflow-wrap: anywhere;
+      padding: 12px;
+    }
+  </style>
 </head>
 <body>
+  <main>
+    <h1>Authorising GitHub</h1>
+    <p id="status">Waiting for the admin page to complete login...</p>
+    <code id="details"></code>
+  </main>
   <script>
     (function () {
-      var message = 'authorization:github:${status}:${payload}';
+      var payload = ${payload};
+      var message = 'authorization:github:${status}:' + JSON.stringify(payload);
       var attempts = 0;
+      var authorised = ${JSON.stringify(status === "success")};
+      var statusText = document.getElementById('status');
+      var details = document.getElementById('details');
 
-      function sendAuthMessage(targetOrigin) {
-        if (!window.opener) return;
-        window.opener.postMessage(message, targetOrigin || '*');
+      details.textContent = authorised
+        ? 'GitHub approved this login. Returning to the admin page.'
+        : 'GitHub returned: ' + JSON.stringify(payload);
+
+      function updateStatus(text) {
+        statusText.textContent = text;
       }
 
-      function receiveMessage(message) {
-        sendAuthMessage(message.origin);
+      function sendAuthMessage(targetOrigin) {
+        if (!window.opener) {
+          updateStatus('This login window cannot find the admin page. Close this window, return to /admin/, and click Login with GitHub again.');
+          return false;
+        }
+
+        window.opener.postMessage(message, targetOrigin || window.location.origin);
+        return true;
+      }
+
+      function sendHandshake() {
+        if (!window.opener) {
+          updateStatus('This login window cannot find the admin page. Close this window, return to /admin/, and click Login with GitHub again.');
+          return false;
+        }
+
+        window.opener.postMessage('authorizing:github', window.location.origin);
+        return true;
+      }
+
+      function receiveMessage(event) {
+        sendAuthMessage(event.origin);
         window.removeEventListener('message', receiveMessage, false);
+
+        window.setTimeout(function () {
+          window.close();
+        }, 600);
       }
 
       window.addEventListener('message', receiveMessage, false);
-      window.opener.postMessage('authorizing:github', '*');
+      sendHandshake();
 
       var retry = window.setInterval(function () {
         attempts += 1;
-        sendAuthMessage('*');
+        sendHandshake();
 
-        if (attempts >= 10) {
+        if (attempts >= 20) {
           window.clearInterval(retry);
+          sendAuthMessage(window.location.origin);
+          updateStatus(authorised
+            ? 'GitHub approved this login, but the admin page did not respond. Close this window, refresh /admin/, and try once more.'
+            : 'GitHub returned an error. Close this window, return to /admin/, and try once more.');
         }
       }, 250);
     })();
