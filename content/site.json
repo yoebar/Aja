@@ -343,7 +343,7 @@
     "formRecipient": "sales@aja.bt",
     "notificationEmail": "sales@aja.pt",
     "formSubjectPrefix": "Aja Alloys specification request",
-    "formEndpoint": "/__local-admin/contact-submit",
+    "formEndpoint": "/api/contact-submit",
     "cards": [
       {
         "title": "All enquiries",

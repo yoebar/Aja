@@ -431,11 +431,11 @@ function renderContactFormSettings() {
     field("Form Intro Text", "formIntro", data.formIntro, { type: "textarea" }),
     field("Default Recipient Email", "formRecipient", data.formRecipient),
     field("Notification Email", "notificationEmail", data.notificationEmail || "sales@aja.pt", {
-      hint: "Server notification target. SMTP settings are required for live email delivery."
+      hint: "Server notification target. RESEND_API_KEY and AJA_EMAIL_FROM are required for live email delivery."
     }),
     field("Email Subject Prefix", "formSubjectPrefix", data.formSubjectPrefix),
     field("Form Endpoint", "formEndpoint", data.formEndpoint, {
-      hint: "Use /__local-admin/contact-submit for local record keeping."
+      hint: "Use /api/contact-submit for live website enquiries."
     }),
     field(
       "Enquiry Types",
@@ -572,7 +572,7 @@ function renderContactSubmissions() {
   const table = document.createElement("table");
   table.className = "post-table submissions-table";
   const thead = document.createElement("thead");
-  thead.innerHTML = "<tr><th>Date</th><th>Name</th><th>Company</th><th>Email</th><th>Phone</th><th>Type</th><th>Product</th><th>Message</th><th>Status</th><th>Notification</th><th>Action</th></tr>";
+  thead.innerHTML = "<tr><th>Date</th><th>Name</th><th>Company</th><th>Email</th><th>Phone</th><th>Type</th><th>Product</th><th>Message</th><th>Status</th><th>Notification</th><th>Auto Reply</th><th>Action</th></tr>";
   const tbody = document.createElement("tbody");
   const detail = document.createElement("div");
   detail.className = "submission-detail";
@@ -591,7 +591,8 @@ function renderContactSubmissions() {
         submission.grade,
         submission.message,
         submission.reviewStatus || "new",
-        `${submission.notificationTo || ""} (${submission.notificationStatus || "pending"})`
+        `${submission.notificationTo || ""} (${submission.notificationStatus || "pending"})`,
+        submission.autoReplyStatus || "pending"
       ].forEach((value) => {
         const cell = document.createElement("td");
         cell.textContent = value || "";
@@ -603,7 +604,7 @@ function renderContactSubmissions() {
   } else {
     const row = document.createElement("tr");
     const cell = document.createElement("td");
-    cell.colSpan = 11;
+    cell.colSpan = 12;
     cell.textContent = "No contact submissions yet.";
     row.append(cell);
     tbody.append(row);
@@ -670,7 +671,8 @@ function renderSubmissionDetail(submission, detail) {
     ["Product or grade", submission.grade],
     ["Quantity", submission.quantity],
     ["Review status", submission.reviewStatus || "new"],
-    ["Notification", `${submission.notificationTo || ""} (${submission.notificationStatus || "pending"})`]
+    ["Notification", `${submission.notificationTo || ""} (${submission.notificationStatus || "pending"})`],
+    ["Auto reply", submission.autoReplyStatus || "pending"]
   ].forEach(([label, value]) => {
     const term = document.createElement("dt");
     term.textContent = label;
@@ -711,6 +713,7 @@ function renderSubmissionEditor(submission, detail) {
     selectField("Review Status", "editSubmissionReviewStatus", submission.reviewStatus || "new", ["new", "reviewed"]),
     field("Notification Email", "editSubmissionNotificationTo", submission.notificationTo),
     field("Notification Status", "editSubmissionNotificationStatus", submission.notificationStatus),
+    field("Auto Reply Status", "editSubmissionAutoReplyStatus", submission.autoReplyStatus),
     field("Message", "editSubmissionMessage", submission.message, { type: "textarea" })
   );
 
@@ -738,7 +741,8 @@ function renderSubmissionEditor(submission, detail) {
         reviewStatus,
         reviewedAt: reviewStatus === "reviewed" ? submission.reviewedAt || new Date().toISOString() : "",
         notificationTo: detail.querySelector("[name='editSubmissionNotificationTo']").value,
-        notificationStatus: detail.querySelector("[name='editSubmissionNotificationStatus']").value
+        notificationStatus: detail.querySelector("[name='editSubmissionNotificationStatus']").value,
+        autoReplyStatus: detail.querySelector("[name='editSubmissionAutoReplyStatus']").value
       },
       { notify: true, successMessage: "Inquiry record saved." }
     );
