@@ -143,6 +143,7 @@ body[data-dashboard="post-editor"] .topbar h1::after {
 .sidebar button,
 #save-button,
 .small-button,
+.ghost-button,
 .danger-button,
 .icon-button {
   border: 1px solid var(--line);
@@ -359,7 +360,7 @@ body[data-dashboard="post-editor"] .topbar h1::after {
 }
 
 .submission-actions {
-  min-width: 132px;
+  min-width: 176px;
 }
 
 .submission-detail {
@@ -398,6 +399,12 @@ body[data-dashboard="post-editor"] .topbar h1::after {
 .submission-reply {
   justify-self: start;
   text-decoration: none;
+}
+
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .table-note {
@@ -559,6 +566,12 @@ textarea {
 
 .small-button {
   background: rgba(255, 255, 255, 0.06);
+  color: var(--ink);
+  padding: 10px 12px;
+}
+
+.ghost-button {
+  background: rgba(255, 255, 255, 0.025);
   color: var(--ink);
   padding: 10px 12px;
 }
