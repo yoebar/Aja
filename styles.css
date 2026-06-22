@@ -956,7 +956,7 @@ main > section.quality {
     "export-image export-details"
     "export-strip export-strip";
   align-items: stretch;
-  align-content: center;
+  align-content: start;
   height: 100svh;
   min-height: 100svh;
   overflow-y: auto;
@@ -2474,7 +2474,7 @@ body[data-theme="light"] main > section:not(.positioning-strip)::after {
   .contact {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   .products {
@@ -3157,7 +3157,7 @@ body[data-theme="light"] main > section:not(.positioning-strip)::after {
   .careers {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
-    align-content: center;
+    align-content: start;
     justify-content: stretch;
     padding-top: 250px;
     padding-bottom: 150px;
@@ -4695,13 +4695,13 @@ body[data-theme="light"] main > section:not(.positioning-strip)::after {
   }
 }
 
-/* Operations on desktop: centre the content as one page and keep the image
-   column equal in height to the process-card column (not stretched tall). */
+/* Operations on desktop: keep the image column equal in height to the
+   process-card column without vertically centring the section. */
 @media (min-width: 981px) {
   main > section.operations {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   .operations-layout {
@@ -4742,14 +4742,12 @@ body[data-theme="light"] main > section:not(.positioning-strip)::after {
   }
 }
 
-/* Full-screen snap sections: when content is shorter than the viewport, centre
-   it vertically so short sections read as a balanced single page instead of
-   leaving an asymmetric gap. */
+/* Full-screen snap sections keep content at the top of each page. */
 main > section.intro,
 main > section.products {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 /* The intro profile table was pinned to the section bottom (position:absolute),
