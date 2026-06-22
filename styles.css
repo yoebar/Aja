@@ -20,6 +20,7 @@
   --amber-soft: #f09a38;
   --molten: #c85a12;
   --shadow: none;
+  --section-start-offset: 96px;
 }
 
 * {
@@ -2143,6 +2144,10 @@ body[data-theme="light"] main > section:not(.positioning-strip)::after {
 }
 
 @media (min-width: 1800px) {
+  :root {
+    --section-start-offset: 120px;
+  }
+
   h1 {
     font-size: 70px;
   }
@@ -2174,6 +2179,10 @@ body[data-theme="light"] main > section:not(.positioning-strip)::after {
 }
 
 @media (min-width: 2600px) {
+  :root {
+    --section-start-offset: 250px;
+  }
+
   .site-header {
     padding: 36px 170px;
   }
@@ -3259,6 +3268,10 @@ body[data-theme="light"] main > section:not(.positioning-strip)::after {
 }
 
 @media (max-width: 980px) {
+  :root {
+    --section-start-offset: 78px;
+  }
+
   html {
     scroll-snap-type: y mandatory;
   }
@@ -4743,6 +4756,16 @@ body[data-theme="light"] main > section:not(.positioning-strip)::after {
 }
 
 /* Full-screen snap sections keep content at the top of each page. */
+main > section.intro,
+main > section.split-section,
+main > section.products,
+main > section.quality,
+main > section.operations,
+main > section.careers,
+main > section.contact {
+  padding-top: var(--section-start-offset);
+}
+
 main > section.intro,
 main > section.products {
   display: flex;
