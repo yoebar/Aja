@@ -2,15 +2,15 @@ backend:
   name: github
   repo: yoebar/Aja
   branch: main
-  site_domain: https://aja-468.pages.dev
-  base_url: https://aja-468.pages.dev
+  site_domain: https://www.aja.bt
+  base_url: https://www.aja.bt
   auth_endpoint: api/auth
 
 media_folder: "assets/uploads"
 public_folder: "assets/uploads"
-site_url: "https://aja-468.pages.dev"
-display_url: "https://aja-468.pages.dev"
-logo_url: "https://aja-468.pages.dev/assets/aja-logo-transparent.png"
+site_url: "https://www.aja.bt"
+display_url: "https://www.aja.bt"
+logo_url: "https://www.aja.bt/assets/aja-logo-transparent.png"
 
 collections:
   - name: "website_admin"
