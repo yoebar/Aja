@@ -1,9 +1,51 @@
 {
   "version": 1,
-  "updatedAt": "",
-  "totalVisits": 0,
-  "countries": [],
-  "cities": [],
-  "pages": [],
-  "recentVisits": []
+  "updatedAt": "2026-06-23T01:34:00.955Z",
+  "totalVisits": 1,
+  "countries": [
+    {
+      "key": "BT",
+      "label": "BT",
+      "country": "BT",
+      "count": 1,
+      "firstSeenAt": "2026-06-23T01:34:00.955Z",
+      "lastSeenAt": "2026-06-23T01:34:00.955Z"
+    }
+  ],
+  "cities": [
+    {
+      "key": "Thimphu, Thimphu District, BT",
+      "label": "Thimphu, Thimphu District, BT",
+      "city": "Thimphu",
+      "region": "Thimphu District",
+      "country": "BT",
+      "latitude": "27.466",
+      "longitude": "89.642",
+      "count": 1,
+      "firstSeenAt": "2026-06-23T01:34:00.955Z",
+      "lastSeenAt": "2026-06-23T01:34:00.955Z"
+    }
+  ],
+  "pages": [
+    {
+      "key": "/",
+      "label": "/",
+      "count": 1,
+      "firstSeenAt": "2026-06-23T01:34:00.955Z",
+      "lastSeenAt": "2026-06-23T01:34:00.955Z"
+    }
+  ],
+  "recentVisits": [
+    {
+      "visitedAt": "2026-06-23T01:34:00.955Z",
+      "page": "/",
+      "country": "BT",
+      "continent": "AS",
+      "region": "Thimphu District",
+      "city": "Thimphu",
+      "timezone": "Asia/Thimphu",
+      "latitude": "27.466",
+      "longitude": "89.642"
+    }
+  ]
 }
