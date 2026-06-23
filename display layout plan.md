@@ -6,6 +6,25 @@ Last reviewed: 2026-06-23
 
 This file records the display settings and layout rules already established for the Aja website. Use it before changing `index.html`, `styles.css`, `script.js`, `content/*.json`, or the local admin editor so future display changes stay consistent.
 
+## Responsive Website Rule
+
+The website must be a fully responsive, dynamic, scroll-snap slideshow-style layout. It must adapt naturally to desktop landscape, tablet, square view, portrait tablet, and mobile screens.
+
+1. Do not use fixed widths, fixed heights, or hardcoded layout sizes that break on different screens.
+   Use responsive units and patterns such as `%`, `vw`, `vh`, `svh`, `rem`, `clamp()`, `minmax()`, `auto-fit`, `auto-fill`, CSS Grid, and Flexbox.
+
+2. Treat each main section as a slide on larger screens.
+   Each section should behave like one full-screen slide where possible. Users should move between sections through scroll, swipe, navigation links, or navigation arrows.
+
+3. Relax the one-page slide rule when readability requires it.
+   On tablet, square, portrait, and mobile views, content may scroll inside a section if it cannot fit comfortably on one screen. Never shrink text to an unreadable size just to force a section into one viewport.
+
+4. Keep alignment exact.
+   Images, text blocks, buttons, paragraph borders, content cards, and related panels must stay aligned. Text must not overlap images, borders, buttons, or neighbouring sections.
+
+5. Prioritise readability and image clarity.
+   The final behaviour should feel like a smooth responsive presentation on large screens and a clean scrollable mobile website on smaller screens.
+
 ## Core Display Rules
 
 1. Keep the site as a full-screen section experience on desktop.
@@ -29,11 +48,51 @@ This file records the display settings and layout rules already established for 
 7. Keep text readable without letting it break layout.
    Body copy and list content use automatic hyphenation, normal word breaking, and `overflow-wrap: break-word`. Text should not overflow cards, tables, tabs, buttons, or panels.
 
-8. Keep text alignment left.
+8. Use dynamic font sizing.
+   Headings, subheadings, paragraphs, buttons, captions, labels, and controls should use `clamp()` or other responsive sizing where scale is needed. Paragraph text must remain readable on tablet and mobile screens.
+
+9. Keep text alignment left.
    Main copy, section descriptions, notice previews, product summaries, operations copy, and contact text should stay left aligned.
 
-9. Preserve theme and navigation controls.
+10. Preserve theme and navigation controls.
    The theme toggle is an icon-only circular button. The mobile navigation toggle uses the compact three-line button. Keep accessible labels and pressed or expanded states.
+
+11. Avoid unnecessary blank spaces.
+   Use flexible spacing, responsive grids, adaptive section height, and internal scrolling rather than leaving large empty gaps when the browser size changes.
+
+## Image And Media Rules
+
+1. Images must resize automatically without distortion.
+   Use proportional scaling and `object-fit` so images remain visually balanced with their related content.
+
+2. Preserve intended image orientation.
+   Landscape images should remain landscape. Do not crop landscape images into portrait unless a specific page design requires it.
+
+3. Preserve carousel image ratios.
+   Image carousels should preserve the intended image ratio. If a carousel image is landscape, display it as landscape.
+
+4. Keep images separated from text and controls.
+   Images must not overlap text, borders, buttons, cards, modals, or other sections.
+
+5. Use real business imagery.
+   Prefer Aja plant, product, furnace, laboratory, export, and office imagery over generic decoration.
+
+6. Use responsive image performance patterns for major images.
+   For hero, carousel, product, and large section images, consider `srcset` and `sizes` when multiple image sizes are available. Mobile users should not be forced to download unnecessarily large desktop images.
+
+7. Keep image dimensions declared.
+   Where images are in HTML, keep meaningful `width`, `height`, `loading`, `decoding`, and `alt` attributes so layout space is predictable and accessibility remains intact.
+
+## Text Block And Border Rules
+
+1. Keep paragraph borders attached to their content.
+   Borders around paragraph sections, content cards, and text boxes should grow or shrink with the related text. They must not detach, overflow, or overlap nearby images.
+
+2. Match text blocks with their related images.
+   When an image and paragraph are paired, the spacing, height, and border treatment should make them read as one unit.
+
+3. Maintain consistent padding.
+   Padding and gaps should be responsive, but the design should keep a consistent industrial rhythm across desktop, tablet, square, portrait, and mobile views.
 
 ## Desktop Layout Rules
 
@@ -46,20 +105,40 @@ This file records the display settings and layout rules already established for 
 3. Keep content at the top of each section.
    Intro, products, quality, operations, information, FAQ, and contact sections should start below the header offset and align content to the top, not centre everything vertically.
 
-4. Keep major two-column layouts balanced.
+4. Use scroll snapping in desktop and landscape mode.
+   Desktop and landscape screens should use `scroll-snap-type` and `scroll-snap-align` so each section locks neatly into view like a slideshow.
+
+5. Keep major two-column layouts balanced.
    Company, export, products, quality, operations, and contact layouts should use grid or flex structures that keep image and text columns visually balanced without forcing unnecessary vertical centring.
 
-5. Keep the operations visual equal to the process cards on desktop.
+6. Keep the operations visual equal to the process cards on desktop.
    The operations section uses a stretched layout so the image column matches the height of the process-card column.
 
-6. Keep the intro profile table in normal flow.
+7. Keep the intro profile table in normal flow.
    The company profile table should not be absolutely pinned to the bottom. It should flow after the intro grid to avoid large empty gaps on tall screens.
 
-7. Keep the contact footer pinned to the bottom of the final page.
+8. Keep the contact footer pinned to the bottom of the final page.
    The contact section is a flex column, and the footer uses `margin-top: auto`.
 
-8. Keep FAQ compact and readable.
+9. Keep FAQ compact and readable.
    FAQ items are a grid list with restrained spacing. On very wide displays, FAQ width and typography scale up, but the list must not become full-width noise.
+
+## Tablet, Square, And Portrait Rules
+
+1. Let the layout switch automatically.
+   When the screen becomes smaller, square, or portrait, layouts should shift from wide multi-column arrangements to clearer stacked or simplified arrangements.
+
+2. Collapse the menu when space is limited.
+   Full navigation links belong on desktop. Use the hamburger menu on tablet and mobile when there is not enough room for the full navigation.
+
+3. Allow internal section scrolling.
+   In tablet, square, and portrait views, the strict one-page slide rule may be relaxed. Sections may scroll internally when content cannot fit comfortably.
+
+4. Protect readable font sizes.
+   Do not reduce text too far to preserve the slideshow effect. Readability takes priority over forcing every section to fit one page.
+
+5. Preserve swipe navigation for touch devices.
+   Tablet and touch devices should support swipe navigation where the viewport behaves like a deck.
 
 ## Mobile Layout Rules
 
@@ -75,17 +154,92 @@ This file records the display settings and layout rules already established for 
 4. Keep hero content focused.
    On mobile, the hero fills the viewport, moves the main content slightly down, hides the side panel, uses compact heading sizes, and keeps hero facts stacked.
 
-5. Keep mobile forms usable but dense.
+5. Stack content clearly.
+   On mobile, image and text areas should stack vertically or use very simple grids, with clear separation between image, text, forms, and controls.
+
+6. Keep mobile forms usable but dense.
    Contact form fields use two columns where possible, wide fields span both columns, inputs are compact, and the captcha is compressed into a small grid.
 
-6. Keep mobile contact cards compact.
+7. Keep mobile contact cards compact.
    Contact cards sit in three equal columns, with small text and hidden muted details so the full contact section fits inside the viewport.
 
-7. Allow internal scrolling inside sections.
+8. Allow internal scrolling inside sections.
    Mobile sections use `overflow-y: auto`, while the body itself stays locked. This preserves the deck-like feel without trapping long content.
 
-8. Keep swipe navigation visible only on mobile.
+9. Keep swipe navigation visible only on mobile.
    The previous and next section controls are hidden on desktop and shown only for mobile deck navigation.
+
+10. Support multiple movement methods.
+    Mobile users should be able to move to the next section by scrolling inside the section where needed, swiping horizontally, using navigation arrows, or opening the hamburger menu.
+
+11. Keep mobile text readable.
+    Use a readable standard font size on mobile. Do not make paragraph text, buttons, captions, or form labels too small to read comfortably.
+
+## Navigation Rules
+
+1. Use full navigation links on desktop.
+   Desktop and wide landscape layouts should show the full navigation where it fits cleanly.
+
+2. Use the hamburger menu when space is limited.
+   Tablet, square, portrait, and mobile views should collapse navigation into the menu when full links would crowd the header.
+
+3. Keep slideshow movement controls.
+   Use left and right arrows where suitable for section-to-section movement. Preserve swipe navigation for tablets and touch devices.
+
+4. Keep navigation state visible.
+   Active navigation links should reflect the current section, and controls should update disabled states when the user reaches the first or last section.
+
+5. Keep touch targets comfortable.
+   Hamburger buttons, arrow controls, tabs, modal close buttons, captcha refresh, form buttons, and notice item buttons should remain easy to tap on coarse pointers. Do not make interactive controls tiny just because a screen is small.
+
+6. Support keyboard and non-touch users.
+   Swipe and arrows should not be the only way to move. Navigation links, focus states, buttons, and modal close controls must remain usable with keyboard input.
+
+## Technical CSS Rules
+
+1. Use CSS Grid and Flexbox for layout.
+   Page sections, cards, contact blocks, forms, tabs, and image-content pairings should use responsive grid or flex structures.
+
+2. Use media queries for behaviour changes.
+   The key current breakpoint is `980px`, but future refinements may add tablet, square, portrait, or landscape-specific queries where needed.
+
+3. Use `clamp()` for scalable type and spacing.
+   Font sizes, gaps, card padding, section padding, controls, and image bands should scale with the viewport while staying within readable limits.
+
+4. Use scroll snapping intentionally.
+   Use `scroll-snap-type` and `scroll-snap-align` for the large-screen slideshow experience. Disable or relax snapping where smaller screens need internal scrolling.
+
+5. Use `object-fit` for images.
+   Images should fill their intended containers proportionally without distortion.
+
+6. Avoid fixed pixel layout except for small controls.
+   Fixed pixel values are acceptable for small icons, minimum control sizes, borders, and minimum spacing. They should not control the main page layout.
+
+7. Use responsive containers.
+   Prefer flexible containers over fixed wrappers so the layout survives browser resizing, square windows, and rotated tablets.
+
+8. Respect reduced-motion preferences.
+   If animation, smooth movement, transitions, or slideshow effects are added, include a `prefers-reduced-motion` path that reduces or disables unnecessary motion.
+
+9. Test pointer and hover assumptions.
+   Where interaction sizing depends on device input, use media features such as `pointer`, `any-pointer`, `hover`, and `any-hover` rather than assuming mobile means touch and desktop means mouse.
+
+## Accessibility And Reflow Rules
+
+1. Support reflow at narrow widths.
+   Ordinary content should reflow at narrow widths without requiring two-direction scrolling. Use 320 CSS pixels as a key narrow-width reference when testing.
+
+2. Support browser zoom.
+   The layout should remain readable and usable at increased zoom levels, including 200 percent where possible. Do not hide essential content simply because text becomes larger.
+
+3. Do not force unreadable text to preserve the slide effect.
+   If content cannot fit in one viewport with readable text, allow internal scrolling or simplify the section layout.
+
+4. Keep focus visible.
+   Buttons, links, tabs, form controls, modal close buttons, and navigation controls need visible focus states in both dark and light themes.
+
+5. Keep modals accessible.
+   Modals should lock the background, focus the close button or first useful control when opened, and return focus to the triggering element when closed.
 
 ## Information And Notice Rules
 
@@ -184,17 +338,44 @@ This file records the display settings and layout rules already established for 
 1. Check desktop width above `980px`.
    Verify one section per viewport, header state, active nav, top-aligned sections, no clipped critical content, and no accidental horizontal scrolling.
 
-2. Check mobile width below `980px`.
+2. Check laptop and short landscape views.
+   Verify that the slideshow layout still works when the screen is wide but not tall. Watch for clipped contact forms, notice panels, product cards, and operation cards.
+
+3. Check tablet landscape.
+   Verify full navigation or collapsed navigation depending on available space, balanced image-text layout, clear carousels, and no overlapping cards.
+
+4. Check square viewport.
+   Verify that sections do not create large blank gaps or squeezed text. Layout should switch or scroll internally where needed.
+
+5. Check tablet portrait.
+   Verify stacked layouts, hamburger navigation, readable text, proportional images, and internal section scroll where needed.
+
+6. Check mobile width below `980px`.
    Verify the body does not become a long scrolling page, each section fits as a deck screen, internal scroll works where needed, and horizontal swipe buttons move between sections.
 
-3. Check the information section.
+7. Check mobile landscape.
+   Verify that short-height screens do not hide critical controls, captions, form fields, or modal close buttons.
+
+8. Check 320 CSS pixel reflow.
+   Verify ordinary content does not require horizontal scrolling to read. Exceptions may apply to maps, tables, or inherently two-dimensional content.
+
+9. Check 200 percent zoom.
+   Verify text remains readable, controls remain reachable, and essential content is not clipped beyond use.
+
+10. Check reduced motion.
+    Verify the site remains usable when motion is reduced by user preference.
+
+11. Check coarse pointer controls.
+    Verify hamburger, arrows, tabs, buttons, captcha refresh, and modal close controls are comfortable to tap.
+
+12. Check the information section.
    Verify the newest visible posts fit, tabs switch correctly, notice title buttons open detail modals, and "Click for more" opens the full category modal.
 
-4. Check contact.
+13. Check contact.
    Verify contact cards fit, form fields fit, captcha is legible, footer stays at the bottom, and map modals open and close cleanly.
 
-5. Check both themes.
+14. Check both themes.
    Verify dark theme remains the primary polished state and light theme still has readable text, borders, controls, and footer contrast.
 
-6. Check content fallbacks.
+15. Check content fallbacks.
    If JSON loading fails or a deployment serves old fallback content, visible text should still be coherent and not contradict the split content files.
