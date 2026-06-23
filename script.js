@@ -50,6 +50,7 @@ let pointerStartY = 0;
 let pointerStartX = 0;
 let pointerSwipeActive = false;
 let lastHorizontalSwipeAt = 0;
+let lastSectionSnapAt = 0;
 let activeTheme = "dark";
 let lastPositioningTrigger = null;
 let lastMapTrigger = null;
@@ -362,6 +363,7 @@ function snapToIndex(index) {
   if (!target) return;
 
   isSnapping = true;
+  lastSectionSnapAt = Date.now();
   window.scrollTo({
     top: target.offsetTop,
     behavior: "auto"
@@ -391,15 +393,7 @@ function shouldUseSectionSnapping(direction) {
 
   const activeTarget = snapTargets[currentSnapIndex()];
   if (!activeTarget) return false;
-  if (activeTarget.scrollHeight <= window.innerHeight + 2) return true;
-
-  const sectionTop = activeTarget.offsetTop;
-  const sectionBottom = sectionTop + activeTarget.scrollHeight;
-  const viewportTop = window.scrollY;
-  const viewportBottom = viewportTop + window.innerHeight;
-
-  if (direction > 0) return viewportBottom >= sectionBottom - 8;
-  return viewportTop <= sectionTop + 8;
+  return true;
 }
 
 function isMobileViewport() {
@@ -407,7 +401,7 @@ function isMobileViewport() {
 }
 
 function isSwipeDeckViewport() {
-  return isMobileViewport();
+  return false;
 }
 
 function syncSwipeControls() {
@@ -1753,24 +1747,35 @@ if (snapTargets.length > 1) {
     swipeToAdjacentSection(1);
   });
 
-  window.addEventListener("keydown", (event) => {
-    const keys = ["PageDown", "PageUp", "ArrowDown", "ArrowUp", "ArrowLeft", "ArrowRight", " "];
-    if (!keys.includes(event.key)) return;
-    if (isFormControl(event.target)) return;
+  window.addEventListener(
+    "keydown",
+    (event) => {
+      const keys = ["PageDown", "PageUp", "ArrowDown", "ArrowUp", "ArrowLeft", "ArrowRight", " "];
+      if (!keys.includes(event.key)) return;
+      if (isFormControl(event.target)) return;
+      if (event.repeat || isSnapping || Date.now() - lastSectionSnapAt < 700) {
+        event.preventDefault();
+        event.stopImmediatePropagation();
+        return;
+      }
 
-    const direction = event.key === "PageUp" || event.key === "ArrowUp" || event.key === "ArrowLeft" ? -1 : 1;
-    if (isSwipeDeckViewport()) {
+      const direction = event.key === "PageUp" || event.key === "ArrowUp" || event.key === "ArrowLeft" ? -1 : 1;
+      if (isSwipeDeckViewport()) {
+        event.preventDefault();
+        event.stopImmediatePropagation();
+        swipeToAdjacentSection(direction);
+        return;
+      }
+
+      if (!shouldUseSectionSnapping(direction)) return;
+
       event.preventDefault();
-      swipeToAdjacentSection(direction);
-      return;
-    }
-
-    if (!shouldUseSectionSnapping(direction)) return;
-
-    event.preventDefault();
-    const nextIndex = Math.max(0, Math.min(snapTargets.length - 1, currentSnapIndex() + direction));
-    snapToIndex(nextIndex);
-  });
+      event.stopImmediatePropagation();
+      const nextIndex = Math.max(0, Math.min(snapTargets.length - 1, currentSnapIndex() + direction));
+      snapToIndex(nextIndex);
+    },
+    { capture: true }
+  );
 }
 
 if (toggle && nav) {
