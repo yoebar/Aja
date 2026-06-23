@@ -764,3 +764,24 @@ textarea {
 .login-status {
   color: var(--muted);
 }
+
+.login-links {
+  display: grid;
+  gap: 10px;
+}
+
+.login-links a {
+  border: 1px solid var(--line);
+  color: var(--ink);
+  min-height: 42px;
+  padding: 10px 14px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.login-links a:hover,
+.login-links a:focus-visible {
+  border-color: var(--accent-soft);
+  color: var(--accent-soft);
+  outline: 0;
+}
