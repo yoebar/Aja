@@ -1,15 +1,15 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-23T10:48:33.249Z",
-  "totalVisits": 13,
+  "updatedAt": "2026-06-23T11:11:04.958Z",
+  "totalVisits": 14,
   "countries": [
     {
       "key": "BT",
       "label": "BT",
       "country": "BT",
-      "count": 10,
+      "count": 11,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-06-23T10:48:33.249Z"
+      "lastSeenAt": "2026-06-23T11:11:04.958Z"
     },
     {
       "key": "IN",
@@ -29,9 +29,9 @@
       "country": "BT",
       "latitude": "27.466",
       "longitude": "89.642",
-      "count": 10,
+      "count": 11,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-06-23T10:48:33.249Z"
+      "lastSeenAt": "2026-06-23T11:11:04.958Z"
     },
     {
       "key": "Guwahati, Assam, IN",
@@ -62,12 +62,23 @@
     {
       "key": "/",
       "label": "/",
-      "count": 13,
+      "count": 14,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-06-23T10:48:33.249Z"
+      "lastSeenAt": "2026-06-23T11:11:04.958Z"
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-06-23T11:11:04.958Z",
+      "page": "/",
+      "country": "BT",
+      "continent": "AS",
+      "region": "Thimphu District",
+      "city": "Thimphu",
+      "timezone": "Asia/Thimphu",
+      "latitude": "27.466",
+      "longitude": "89.642"
+    },
     {
       "visitedAt": "2026-06-23T10:48:33.249Z",
       "page": "/",
