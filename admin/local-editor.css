@@ -401,6 +401,50 @@ body[data-dashboard="post-editor"] .topbar h1::after {
   text-decoration: none;
 }
 
+.analytics-panel {
+  display: grid;
+  gap: 22px;
+}
+
+.analytics-summary {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.analytics-card {
+  background: var(--surface-soft);
+  border: 1px solid var(--line);
+  display: grid;
+  gap: 8px;
+  min-height: 112px;
+  padding: 16px;
+}
+
+.analytics-card span {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.analytics-card strong {
+  color: var(--ink);
+  font-size: 26px;
+  line-height: 1.1;
+}
+
+.analytics-table-section {
+  display: grid;
+  gap: 10px;
+}
+
+.analytics-table-section h3 {
+  font-size: 18px;
+  margin: 0;
+}
+
 .form-actions {
   display: flex;
   flex-wrap: wrap;
@@ -641,6 +685,16 @@ textarea {
     align-items: stretch;
     display: grid;
     gap: 14px;
+  }
+
+  .analytics-summary {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .analytics-summary {
+    grid-template-columns: 1fr;
   }
 }
 

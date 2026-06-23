@@ -32,6 +32,11 @@ const sections = {
     group: "Website details",
     description: "View inquiry records submitted through the website contact form."
   },
+  visitor_analytics: {
+    label: "Visitor Geolocation",
+    group: "Website details",
+    description: "View consent-based visitor location counts from the public website."
+  },
   users: {
     label: "Users",
     group: "Admin",
@@ -62,12 +67,14 @@ const files = {
   contact_form: "content/contact-form.json",
   contact_cards: "content/contact-cards.json",
   contact_submissions: "content/contact-submissions.json",
+  visitor_analytics: "content/visitor-analytics.json",
   users: "admin/users.local.json"
 };
 
 let content = {};
 let currentUser = null;
-let activeSection = sectionButtons[0]?.dataset.section || "information";
+const initialSection = window.location.hash.slice(1);
+let activeSection = sections[initialSection] ? initialSection : sectionButtons[0]?.dataset.section || "information";
 
 function field(label, name, value = "", options = {}) {
   const wrapper = document.createElement("div");
@@ -620,6 +627,118 @@ function renderContactSubmissions() {
   form.replaceChildren(wrapper);
 }
 
+function renderVisitorAnalytics() {
+  const data = content.visitor_analytics || {};
+  const countries = Array.isArray(data.countries) ? data.countries : [];
+  const cities = Array.isArray(data.cities) ? data.cities : [];
+  const pages = Array.isArray(data.pages) ? data.pages : [];
+  const recentVisits = Array.isArray(data.recentVisits) ? data.recentVisits : [];
+
+  const wrapper = document.createElement("div");
+  wrapper.className = "analytics-panel";
+
+  const summary = document.createElement("div");
+  summary.className = "analytics-summary";
+  summary.append(
+    analyticsCard("Total visits", data.totalVisits || 0),
+    analyticsCard("Countries", countries.filter((item) => item.key !== "Unknown").length),
+    analyticsCard("Cities", cities.filter((item) => item.key !== "Unknown").length),
+    analyticsCard("Last update", formatSubmissionDate(data.updatedAt) || "No visits yet")
+  );
+
+  wrapper.append(summary);
+  wrapper.append(
+    analyticsTable("Visitors by country", ["Country", "Visits", "Last seen"], countries.map((item) => [
+      displayCountry(item.country || item.label),
+      item.count || 0,
+      formatSubmissionDate(item.lastSeenAt)
+    ])),
+    analyticsTable("Visitors by city", ["City", "Country", "Visits", "Last seen"], cities.map((item) => [
+      item.city || item.label || "Unknown",
+      displayCountry(item.country),
+      item.count || 0,
+      formatSubmissionDate(item.lastSeenAt)
+    ])),
+    analyticsTable("Visited pages", ["Page", "Visits", "Last seen"], pages.map((item) => [
+      item.label || item.key || "/",
+      item.count || 0,
+      formatSubmissionDate(item.lastSeenAt)
+    ])),
+    analyticsTable("Recent consented visits", ["Date", "Page", "Country", "City", "Timezone"], recentVisits.map((visit) => [
+      formatSubmissionDate(visit.visitedAt),
+      visit.page || "/",
+      displayCountry(visit.country),
+      [visit.city, visit.region].filter(Boolean).join(", ") || "Unknown",
+      visit.timezone || ""
+    ]))
+  );
+
+  const note = document.createElement("p");
+  note.className = "table-note";
+  note.textContent = "Analytics are recorded only after cookie consent. IP addresses are not stored.";
+  wrapper.append(note);
+
+  form.replaceChildren(wrapper);
+}
+
+function analyticsCard(label, value) {
+  const card = document.createElement("article");
+  card.className = "analytics-card";
+  const titleElement = document.createElement("span");
+  titleElement.textContent = label;
+  const valueElement = document.createElement("strong");
+  valueElement.textContent = String(value || 0);
+  card.append(titleElement, valueElement);
+  return card;
+}
+
+function analyticsTable(titleText, headers, rows) {
+  const section = document.createElement("section");
+  section.className = "analytics-table-section";
+
+  const heading = document.createElement("h3");
+  heading.textContent = titleText;
+
+  const tableWrap = document.createElement("div");
+  tableWrap.className = "post-table-wrap";
+  const table = document.createElement("table");
+  table.className = "post-table";
+
+  const thead = document.createElement("thead");
+  const headRow = document.createElement("tr");
+  headers.forEach((header) => {
+    const cell = document.createElement("th");
+    cell.textContent = header;
+    headRow.append(cell);
+  });
+  thead.append(headRow);
+
+  const tbody = document.createElement("tbody");
+  if (rows.length) {
+    rows.forEach((row) => {
+      const tableRow = document.createElement("tr");
+      row.forEach((value) => {
+        const cell = document.createElement("td");
+        cell.textContent = value || "";
+        tableRow.append(cell);
+      });
+      tbody.append(tableRow);
+    });
+  } else {
+    const emptyRow = document.createElement("tr");
+    const emptyCell = document.createElement("td");
+    emptyCell.colSpan = headers.length;
+    emptyCell.textContent = "No visitor records yet.";
+    emptyRow.append(emptyCell);
+    tbody.append(emptyRow);
+  }
+
+  table.append(thead, tbody);
+  tableWrap.append(table);
+  section.append(heading, tableWrap);
+  return section;
+}
+
 function renderSubmissionActions(submission, detail) {
   const cell = document.createElement("td");
   cell.className = "post-actions submission-actions";
@@ -822,6 +941,18 @@ function formatSubmissionDate(value) {
     hour: "2-digit",
     minute: "2-digit"
   });
+}
+
+function displayCountry(value) {
+  const country = String(value || "").trim();
+  if (!country || country === "Unknown") return "Unknown";
+  if (country.length !== 2) return country;
+
+  try {
+    return new Intl.DisplayNames(["en"], { type: "region" }).of(country.toUpperCase()) || country;
+  } catch {
+    return country.toUpperCase();
+  }
 }
 
 function dropdownSection(titleText, description, open = false) {
@@ -1306,7 +1437,7 @@ function updateSection(section) {
   title.textContent = sections[section].label;
   kicker.textContent = `${sections[section].group} | ${files[section]}`;
   statusLine.textContent = sections[section].description;
-  saveButton.hidden = section === "contact_submissions";
+  saveButton.hidden = ["contact_submissions", "visitor_analytics"].includes(section);
 
   if (section === "information") {
     renderSimple([
@@ -1320,6 +1451,8 @@ function updateSection(section) {
     renderContactCards();
   } else if (section === "contact_submissions") {
     renderContactSubmissions();
+  } else if (section === "visitor_analytics") {
+    renderVisitorAnalytics();
   } else if (section === "users") {
     renderUsers();
   } else if (section === "vacancies") {
@@ -1376,6 +1509,9 @@ function readCurrentSection() {
   if (activeSection === "contact_submissions") {
     return content.contact_submissions || { submissions: [] };
   }
+  if (activeSection === "visitor_analytics") {
+    return content.visitor_analytics || {};
+  }
   if (activeSection === "users") {
     return readUsers();
   }
@@ -1392,7 +1528,7 @@ function readCurrentSection() {
 }
 
 async function saveCurrentSection() {
-  if (activeSection === "contact_submissions") return;
+  if (["contact_submissions", "visitor_analytics"].includes(activeSection)) return;
 
   const data = readCurrentSection();
   if (activeSection === "users") {
@@ -1468,7 +1604,10 @@ async function logout() {
 }
 
 sectionButtons.forEach((button) => {
-  button.addEventListener("click", () => updateSection(button.dataset.section));
+  button.addEventListener("click", () => {
+    window.history.replaceState(null, "", `#${button.dataset.section}`);
+    updateSection(button.dataset.section);
+  });
 });
 
 saveButton.addEventListener("click", saveCurrentSection);

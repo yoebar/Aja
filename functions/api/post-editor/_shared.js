@@ -3,11 +3,12 @@ const CONTENT_FILES = {
   vacancies: "content/vacancies.json",
   tenders: "content/tenders.json",
   contact_form: "content/contact-form.json",
-  contact_submissions: "content/contact-submissions.json"
+  contact_submissions: "content/contact-submissions.json",
+  visitor_analytics: "content/visitor-analytics.json"
 };
 
 const POST_ITEM_KEYS = new Set(["notices", "vacancies", "tenders"]);
-const FULL_CONTENT_KEYS = new Set(["contact_form", "contact_submissions"]);
+const FULL_CONTENT_KEYS = new Set(["contact_form", "contact_submissions", "visitor_analytics"]);
 
 const IMAGE_EXTENSIONS = new Set([".jpg", ".jpeg", ".png", ".webp", ".gif"]);
 const PDF_EXTENSIONS = new Set([".pdf"]);

@@ -56,6 +56,8 @@ let lastMapTrigger = null;
 let lastNoticeTrigger = null;
 let captchaCode = "";
 let noticeLayoutFrame = 0;
+const cookieConsentName = "aja_cookie_consent";
+const visitorTrackedKey = "aja_visitor_tracked";
 
 const countryCallingCodes = [
   ["Afghanistan", "+93"],
@@ -1188,6 +1190,103 @@ async function fetchJson(path) {
   return response.json();
 }
 
+function readCookie(name) {
+  return document.cookie
+    .split(";")
+    .map((part) => part.trim())
+    .find((part) => part.startsWith(`${name}=`))
+    ?.slice(name.length + 1) || "";
+}
+
+function writeCookie(name, value, days) {
+  const maxAge = Math.max(1, days) * 24 * 60 * 60;
+  document.cookie = `${name}=${encodeURIComponent(value)}; Path=/; SameSite=Lax; Max-Age=${maxAge}`;
+}
+
+function sessionValue(key) {
+  try {
+    return window.sessionStorage.getItem(key);
+  } catch {
+    return "";
+  }
+}
+
+function setSessionValue(key, value) {
+  try {
+    window.sessionStorage.setItem(key, value);
+  } catch {
+    // Consent still works when session storage is unavailable.
+  }
+}
+
+async function trackVisitorLocation() {
+  if (readCookie(cookieConsentName) !== "accepted" || sessionValue(visitorTrackedKey)) return;
+
+  setSessionValue(visitorTrackedKey, "pending");
+  try {
+    const response = await fetch("/api/visitor-track", {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        page: `${window.location.pathname}${window.location.search}`
+      })
+    });
+
+    if (response.ok) {
+      setSessionValue(visitorTrackedKey, "done");
+    } else {
+      setSessionValue(visitorTrackedKey, "");
+    }
+  } catch {
+    setSessionValue(visitorTrackedKey, "");
+  }
+}
+
+function initialiseCookieConsent() {
+  const consent = readCookie(cookieConsentName);
+  if (consent === "accepted") {
+    trackVisitorLocation();
+    return;
+  }
+  if (consent === "declined" || document.querySelector("[data-cookie-consent]")) return;
+
+  const banner = document.createElement("section");
+  banner.className = "cookie-consent";
+  banner.dataset.cookieConsent = "true";
+  banner.setAttribute("aria-label", "Cookie consent");
+
+  const copy = document.createElement("p");
+  copy.textContent = "Aja Alloys uses a small cookie to understand approximate visitor locations and improve the website.";
+
+  const actions = document.createElement("div");
+  const decline = document.createElement("button");
+  decline.type = "button";
+  decline.className = "cookie-consent-secondary";
+  decline.textContent = "Decline";
+
+  const accept = document.createElement("button");
+  accept.type = "button";
+  accept.textContent = "Accept";
+
+  decline.addEventListener("click", () => {
+    writeCookie(cookieConsentName, "declined", 180);
+    banner.remove();
+  });
+
+  accept.addEventListener("click", () => {
+    writeCookie(cookieConsentName, "accepted", 365);
+    banner.remove();
+    trackVisitorLocation();
+  });
+
+  actions.append(decline, accept);
+  banner.append(copy, actions);
+  document.body.append(banner);
+}
+
 function normaliseInformationCategory(category, fallback) {
   return {
     ...fallback,
@@ -1311,6 +1410,7 @@ storeTheme("dark");
 syncSwipeControls();
 populateCountryCallingFields();
 loadSiteContent();
+initialiseCookieConsent();
 
 if (themeToggle) {
   themeToggle.addEventListener("click", () => {

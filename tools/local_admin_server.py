@@ -23,7 +23,7 @@ USERS_FILE = ROOT / "admin" / "users.local.json"
 IMAGE_EXTENSIONS = {".jpg", ".jpeg", ".png", ".webp", ".gif"}
 PDF_EXTENSIONS = {".pdf"}
 POST_CONTENT_KEYS = {"notices", "vacancies", "tenders"}
-ADMIN_CONTENT_KEYS = {"information", "contact_form", "contact_cards", "contact_submissions"}
+ADMIN_CONTENT_KEYS = {"information", "contact_form", "contact_cards", "contact_submissions", "visitor_analytics"}
 SESSIONS = {}
 CONTENT_FILES = {
     "information": ROOT / "content" / "information.json",
@@ -33,6 +33,7 @@ CONTENT_FILES = {
     "contact_form": ROOT / "content" / "contact-form.json",
     "contact_cards": ROOT / "content" / "contact-cards.json",
     "contact_submissions": ROOT / "content" / "contact-submissions.json",
+    "visitor_analytics": ROOT / "content" / "visitor-analytics.json",
 }
 
 
