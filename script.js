@@ -42,6 +42,7 @@ const sectionNavLinks = nav
   : [];
 const noticePreviewSentenceLimit = 2;
 const noticePreviewCharacterLimit = 220;
+const noticePreviewItemLimit = 3;
 let contactSettings = null;
 let isSnapping = false;
 let touchStartY = 0;
@@ -1056,8 +1057,9 @@ function renderInformationContent(information) {
     list.className = "notice-list";
 
     const items = sortedNoticeItems(Array.isArray(category.items) ? category.items : []);
+    const previewItems = items.slice(0, noticePreviewItemLimit);
     if (items.length) {
-      items.forEach((item) => {
+      previewItems.forEach((item) => {
         const listItem = document.createElement("li");
 
         const type = document.createElement("span");

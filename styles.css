@@ -6507,3 +6507,489 @@ body[data-theme="light"] .site-footer p {
     font-size: 8px;
   }
 }
+
+/* Mobile and tablet carousel fit: keep image bands in a true landscape shape.
+   These views can scroll, so the carousels should not be squeezed into thin strips. */
+@media (max-width: 980px) {
+  .company-aside,
+  .company-photo,
+  .product-summary .product-visual,
+  .operations-visual.company-photo,
+  .quality-visual.company-photo {
+    max-height: none;
+  }
+
+  .company-slides,
+  .image-band,
+  .product-summary .product-visual,
+  .operations-visual.company-photo .company-slides,
+  .quality-visual .company-slides {
+    aspect-ratio: 16 / 9;
+    min-height: clamp(210px, 52vw, 430px);
+    height: auto;
+    max-height: none;
+  }
+
+  .split-section .image-band {
+    height: auto;
+  }
+
+  .products .product-summary {
+    grid-template-rows: auto minmax(0, 1fr);
+  }
+
+  .products .product-summary div {
+    max-height: none;
+  }
+}
+
+@media (max-width: 620px) {
+  .company-slides,
+  .image-band,
+  .product-summary .product-visual,
+  .operations-visual.company-photo .company-slides,
+  .quality-visual .company-slides {
+    min-height: clamp(190px, 56vw, 320px);
+  }
+}
+
+/* Mobile and tablet quality specs: show buttons, keep tables in the pop-up. */
+@media (max-width: 980px) {
+  .quality-parameters {
+    display: grid;
+    gap: 12px;
+    margin-top: 16px;
+  }
+
+  .quality-parameters::before {
+    content: "Specifications";
+    display: block;
+    color: var(--amber);
+    font-family: "IBM Plex Mono", monospace;
+    font-size: clamp(12px, 2.8vw, 15px);
+    font-weight: 900;
+    letter-spacing: 0;
+    text-transform: uppercase;
+  }
+
+  .quality-parameters .spec-tabs {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .quality-parameters .spec-tab {
+    min-height: 44px;
+    padding: 12px 14px;
+    font-size: clamp(12px, 2.8vw, 15px);
+    white-space: normal;
+  }
+
+  .quality-parameters .spec-panels {
+    display: none;
+  }
+}
+
+/* Information and Contact can scroll in mobile and tablet views, so keep their
+   type and controls readable instead of compressing them into a single screen. */
+@media (max-width: 980px) {
+  main > section.careers,
+  main > section.contact {
+    height: 100svh;
+    min-height: 100svh;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .careers .notice-board,
+  .careers .notice-panels,
+  .careers .notice-panel,
+  .careers .notice-panel > div,
+  .careers .notice-list,
+  .careers .notice-list li {
+    height: auto;
+    max-height: none;
+    overflow: visible;
+  }
+
+  .careers .section-heading {
+    margin-bottom: 18px;
+  }
+
+  .careers .section-heading.compact {
+    max-width: none;
+  }
+
+  .careers h2,
+  .contact .section-heading h2 {
+    font-size: clamp(26px, 5.6vw, 38px);
+    line-height: 1.08;
+  }
+
+  .careers .section-heading p:not(.eyebrow),
+  .contact .section-heading p:not(.eyebrow) {
+    display: block;
+    margin-top: 10px;
+    font-size: clamp(14.5px, 3vw, 18px);
+    line-height: 1.38;
+  }
+
+  .notice-board {
+    margin-top: 18px;
+  }
+
+  .notice-tab {
+    min-height: 44px;
+    padding: 12px 14px;
+    font-size: clamp(12px, 2.8vw, 15px);
+  }
+
+  .notice-panel {
+    padding: clamp(18px, 4vw, 28px);
+  }
+
+  .notice-panel h3 {
+    font-size: clamp(20px, 4.4vw, 26px);
+  }
+
+  .notice-panel p {
+    font-size: clamp(14px, 3vw, 17px);
+    line-height: 1.38;
+  }
+
+  .notice-list {
+    gap: 12px;
+  }
+
+  .notice-list li {
+    padding: clamp(16px, 4vw, 22px);
+  }
+
+  .notice-list span,
+  .notice-status {
+    font-size: clamp(11px, 2.5vw, 13px);
+  }
+
+  .notice-list strong,
+  .notice-item-title {
+    font-size: clamp(17px, 3.8vw, 22px);
+    line-height: 1.14;
+  }
+
+  .notice-list p {
+    font-size: clamp(13.5px, 2.9vw, 16px);
+    line-height: 1.36;
+  }
+
+  .notice-panel a,
+  .notice-panel .notice-more-link {
+    min-height: 44px;
+    padding: 12px 16px;
+    font-size: clamp(12px, 2.8vw, 15px);
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .contact-block {
+    max-height: none;
+    overflow: visible;
+    padding: clamp(16px, 4vw, 24px);
+  }
+
+  .contact-block h3 {
+    margin-bottom: 8px;
+    font-size: clamp(17px, 3.8vw, 22px);
+  }
+
+  .contact-block p,
+  .contact-block a {
+    font-size: clamp(13.5px, 2.9vw, 16px);
+    line-height: 1.36;
+  }
+
+  .contact-block .muted,
+  .contact-form-intro,
+  .form-status {
+    display: block;
+  }
+
+  .contact-form {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: clamp(16px, 4vw, 24px);
+  }
+
+  .contact-form-intro h3 {
+    font-size: clamp(18px, 4vw, 24px);
+  }
+
+  .contact-form-intro p,
+  .form-status {
+    font-size: clamp(13px, 2.7vw, 16px);
+    line-height: 1.34;
+  }
+
+  .contact-form label {
+    gap: 6px;
+    font-size: clamp(10.5px, 2.4vw, 13px);
+  }
+
+  .contact-form > label,
+  .contact-form > label:last-of-type,
+  .contact-form .form-wide,
+  .captcha-field,
+  .contact-form-intro,
+  .form-status,
+  .contact-form > button {
+    grid-column: 1 / -1;
+  }
+
+  .contact-form input,
+  .contact-form select,
+  .contact-form textarea {
+    min-height: 44px;
+    padding: 10px 12px;
+    font-size: 15px;
+    line-height: 1.3;
+  }
+
+  .contact-form textarea {
+    min-height: 112px;
+  }
+
+  .captcha-field {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    align-items: start;
+  }
+
+  .captcha-prompt {
+    grid-template-columns: 132px 40px;
+    gap: 6px 8px;
+  }
+
+  .captcha-prompt span {
+    font-size: 11px;
+  }
+
+  .captcha-prompt canvas {
+    width: 132px;
+    height: 40px;
+  }
+
+  .captcha-refresh {
+    width: 40px;
+    height: 40px;
+    min-height: 40px;
+  }
+
+  .contact-form > button {
+    min-height: 46px;
+    padding: 12px 16px;
+  }
+
+  .site-footer p {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 980px) and (orientation: landscape) {
+  main > section.careers,
+  main > section.contact {
+    height: 100svh;
+    min-height: 100svh;
+    overflow: hidden;
+    padding-top: clamp(62px, 11svh, 76px);
+    padding-bottom: clamp(14px, 4svh, 24px);
+  }
+
+  .careers .section-heading,
+  .contact .section-heading {
+    margin-bottom: 8px;
+  }
+
+  .careers h2,
+  .contact .section-heading h2 {
+    font-size: clamp(22px, 4.2vw, 32px);
+    line-height: 1.05;
+  }
+
+  .careers .section-heading p:not(.eyebrow),
+  .contact .section-heading p:not(.eyebrow),
+  .contact-form-intro,
+  .contact-block .muted,
+  .form-status {
+    display: none;
+  }
+
+  .careers .notice-board,
+  .careers .notice-panels,
+  .careers .notice-panel,
+  .careers .notice-panel > div,
+  .careers .notice-list,
+  .careers .notice-list li {
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  .notice-board {
+    margin-top: 8px;
+  }
+
+  .notice-tabs {
+    gap: 6px;
+  }
+
+  .notice-tab {
+    min-height: 34px;
+    padding: 7px 10px;
+    font-size: 10px;
+  }
+
+  .notice-panel {
+    gap: 8px;
+    padding: 10px 12px;
+  }
+
+  .notice-panel h3 {
+    margin: 4px 0;
+    font-size: 16px;
+  }
+
+  .notice-panel p {
+    font-size: 12.5px;
+    line-height: 1.25;
+  }
+
+  .notice-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+    margin-top: 8px;
+  }
+
+  .notice-list li {
+    padding: 9px;
+  }
+
+  .notice-list span,
+  .notice-status {
+    font-size: 8.5px;
+  }
+
+  .notice-list strong,
+  .notice-item-title {
+    display: -webkit-box;
+    font-size: 13.5px;
+    line-height: 1.18;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .notice-list p {
+    display: -webkit-box;
+    font-size: 11.5px;
+    line-height: 1.25;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .notice-panel .notice-more-link {
+    min-height: 34px;
+    padding: 7px 10px;
+    font-size: 10px;
+  }
+
+  .contact-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: auto minmax(0, 1fr);
+    gap: 6px;
+    height: 100%;
+    min-height: 0;
+  }
+
+  .contact-block {
+    max-height: 76px;
+    padding: 8px;
+    overflow: hidden;
+  }
+
+  .contact-block h3 {
+    margin-bottom: 3px;
+    font-size: 12px;
+  }
+
+  .contact-block p,
+  .contact-block a {
+    font-size: 10.5px;
+    line-height: 1.2;
+  }
+
+  .contact-form {
+    grid-column: 1 / -1;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 5px 8px;
+    padding: 8px;
+    overflow: hidden;
+  }
+
+  .contact-form label {
+    gap: 2px;
+    font-size: 8.5px;
+  }
+
+  .contact-form input,
+  .contact-form select,
+  .contact-form textarea {
+    min-height: 30px;
+    padding: 6px 8px;
+    font-size: 11px;
+    line-height: 1.15;
+  }
+
+  .contact-form textarea {
+    min-height: 42px;
+  }
+
+  .captcha-field {
+    grid-template-columns: max-content minmax(0, 1fr);
+    gap: 4px 8px;
+  }
+
+  .captcha-prompt {
+    grid-template-columns: 94px 30px;
+    gap: 3px 6px;
+  }
+
+  .captcha-prompt span {
+    font-size: 8px;
+  }
+
+  .captcha-prompt canvas {
+    width: 94px;
+    height: 30px;
+  }
+
+  .captcha-refresh {
+    width: 30px;
+    height: 30px;
+    min-height: 30px;
+  }
+
+  .contact-form > button {
+    min-height: 32px;
+    padding: 7px 10px;
+  }
+
+  .site-footer {
+    padding-top: 4px;
+  }
+
+  .site-footer p {
+    font-size: 8px;
+  }
+}
