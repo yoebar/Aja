@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-23T05:36:24.975Z",
-  "totalVisits": 4,
+  "updatedAt": "2026-06-23T07:39:09.743Z",
+  "totalVisits": 5,
   "countries": [
     {
       "key": "IN",
@@ -15,9 +15,9 @@
       "key": "BT",
       "label": "BT",
       "country": "BT",
-      "count": 1,
+      "count": 2,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-06-23T01:34:00.955Z"
+      "lastSeenAt": "2026-06-23T07:39:09.743Z"
     }
   ],
   "cities": [
@@ -41,9 +41,9 @@
       "country": "BT",
       "latitude": "27.466",
       "longitude": "89.642",
-      "count": 1,
+      "count": 2,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-06-23T01:34:00.955Z"
+      "lastSeenAt": "2026-06-23T07:39:09.743Z"
     },
     {
       "key": "Siliguri, West Bengal, IN",
@@ -62,12 +62,23 @@
     {
       "key": "/",
       "label": "/",
-      "count": 4,
+      "count": 5,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-06-23T05:36:24.975Z"
+      "lastSeenAt": "2026-06-23T07:39:09.743Z"
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-06-23T07:39:09.743Z",
+      "page": "/",
+      "country": "BT",
+      "continent": "AS",
+      "region": "Thimphu District",
+      "city": "Thimphu",
+      "timezone": "Asia/Thimphu",
+      "latitude": "27.466",
+      "longitude": "89.642"
+    },
     {
       "visitedAt": "2026-06-23T05:36:24.975Z",
       "page": "/",
