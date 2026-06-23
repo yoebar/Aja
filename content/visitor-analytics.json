@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-23T13:30:04.286Z",
-  "totalVisits": 18,
+  "updatedAt": "2026-06-23T17:25:37.923Z",
+  "totalVisits": 19,
   "countries": [
     {
       "key": "BT",
@@ -18,6 +18,14 @@
       "count": 5,
       "firstSeenAt": "2026-06-23T05:03:11.022Z",
       "lastSeenAt": "2026-06-23T13:30:04.286Z"
+    },
+    {
+      "key": "SG",
+      "label": "SG",
+      "country": "SG",
+      "count": 1,
+      "firstSeenAt": "2026-06-23T17:25:37.923Z",
+      "lastSeenAt": "2026-06-23T17:25:37.923Z"
     }
   ],
   "cities": [
@@ -68,18 +76,41 @@
       "count": 1,
       "firstSeenAt": "2026-06-23T05:10:53.647Z",
       "lastSeenAt": "2026-06-23T05:10:53.647Z"
+    },
+    {
+      "key": "Singapore, SG",
+      "label": "Singapore, SG",
+      "city": "Singapore",
+      "region": "",
+      "country": "SG",
+      "latitude": "1.290",
+      "longitude": "103.850",
+      "count": 1,
+      "firstSeenAt": "2026-06-23T17:25:37.923Z",
+      "lastSeenAt": "2026-06-23T17:25:37.923Z"
     }
   ],
   "pages": [
     {
       "key": "/",
       "label": "/",
-      "count": 18,
+      "count": 19,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-06-23T13:30:04.286Z"
+      "lastSeenAt": "2026-06-23T17:25:37.923Z"
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-06-23T17:25:37.923Z",
+      "page": "/",
+      "country": "SG",
+      "continent": "AS",
+      "region": "",
+      "city": "Singapore",
+      "timezone": "Asia/Singapore",
+      "latitude": "1.290",
+      "longitude": "103.850"
+    },
     {
       "visitedAt": "2026-06-23T13:30:04.286Z",
       "page": "/",
