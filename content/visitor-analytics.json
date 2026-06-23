@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-23T17:59:19.864Z",
-  "totalVisits": 22,
+  "updatedAt": "2026-06-23T18:02:12.369Z",
+  "totalVisits": 23,
   "countries": [
     {
       "key": "BT",
@@ -23,9 +23,9 @@
       "key": "SG",
       "label": "SG",
       "country": "SG",
-      "count": 2,
+      "count": 3,
       "firstSeenAt": "2026-06-23T17:25:37.923Z",
-      "lastSeenAt": "2026-06-23T17:50:24.551Z"
+      "lastSeenAt": "2026-06-23T18:02:12.369Z"
     }
   ],
   "cities": [
@@ -40,6 +40,18 @@
       "count": 15,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
       "lastSeenAt": "2026-06-23T17:59:19.864Z"
+    },
+    {
+      "key": "Singapore, SG",
+      "label": "Singapore, SG",
+      "city": "Singapore",
+      "region": "",
+      "country": "SG",
+      "latitude": "1.290",
+      "longitude": "103.850",
+      "count": 3,
+      "firstSeenAt": "2026-06-23T17:25:37.923Z",
+      "lastSeenAt": "2026-06-23T18:02:12.369Z"
     },
     {
       "key": "Guwahati, Assam, IN",
@@ -66,18 +78,6 @@
       "lastSeenAt": "2026-06-23T13:30:04.286Z"
     },
     {
-      "key": "Singapore, SG",
-      "label": "Singapore, SG",
-      "city": "Singapore",
-      "region": "",
-      "country": "SG",
-      "latitude": "1.290",
-      "longitude": "103.850",
-      "count": 2,
-      "firstSeenAt": "2026-06-23T17:25:37.923Z",
-      "lastSeenAt": "2026-06-23T17:50:24.551Z"
-    },
-    {
       "key": "Siliguri, West Bengal, IN",
       "label": "Siliguri, West Bengal, IN",
       "city": "Siliguri",
@@ -94,12 +94,23 @@
     {
       "key": "/",
       "label": "/",
-      "count": 22,
+      "count": 23,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-06-23T17:59:19.864Z"
+      "lastSeenAt": "2026-06-23T18:02:12.369Z"
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-06-23T18:02:12.369Z",
+      "page": "/",
+      "country": "SG",
+      "continent": "AS",
+      "region": "",
+      "city": "Singapore",
+      "timezone": "Asia/Singapore",
+      "latitude": "1.290",
+      "longitude": "103.850"
+    },
     {
       "visitedAt": "2026-06-23T17:59:19.864Z",
       "page": "/",
