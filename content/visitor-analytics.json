@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-23T12:55:00.057Z",
-  "totalVisits": 17,
+  "updatedAt": "2026-06-23T13:30:04.286Z",
+  "totalVisits": 18,
   "countries": [
     {
       "key": "BT",
@@ -15,9 +15,9 @@
       "key": "IN",
       "label": "IN",
       "country": "IN",
-      "count": 4,
+      "count": 5,
       "firstSeenAt": "2026-06-23T05:03:11.022Z",
-      "lastSeenAt": "2026-06-23T12:55:00.057Z"
+      "lastSeenAt": "2026-06-23T13:30:04.286Z"
     }
   ],
   "cities": [
@@ -46,6 +46,18 @@
       "lastSeenAt": "2026-06-23T05:36:24.975Z"
     },
     {
+      "key": "Hyderabad, Telangana, IN",
+      "label": "Hyderabad, Telangana, IN",
+      "city": "Hyderabad",
+      "region": "Telangana",
+      "country": "IN",
+      "latitude": "17.384",
+      "longitude": "78.456",
+      "count": 2,
+      "firstSeenAt": "2026-06-23T12:55:00.057Z",
+      "lastSeenAt": "2026-06-23T13:30:04.286Z"
+    },
+    {
       "key": "Siliguri, West Bengal, IN",
       "label": "Siliguri, West Bengal, IN",
       "city": "Siliguri",
@@ -56,30 +68,29 @@
       "count": 1,
       "firstSeenAt": "2026-06-23T05:10:53.647Z",
       "lastSeenAt": "2026-06-23T05:10:53.647Z"
-    },
-    {
-      "key": "Hyderabad, Telangana, IN",
-      "label": "Hyderabad, Telangana, IN",
-      "city": "Hyderabad",
-      "region": "Telangana",
-      "country": "IN",
-      "latitude": "17.384",
-      "longitude": "78.456",
-      "count": 1,
-      "firstSeenAt": "2026-06-23T12:55:00.057Z",
-      "lastSeenAt": "2026-06-23T12:55:00.057Z"
     }
   ],
   "pages": [
     {
       "key": "/",
       "label": "/",
-      "count": 17,
+      "count": 18,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-06-23T12:55:00.057Z"
+      "lastSeenAt": "2026-06-23T13:30:04.286Z"
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-06-23T13:30:04.286Z",
+      "page": "/",
+      "country": "IN",
+      "continent": "AS",
+      "region": "Telangana",
+      "city": "Hyderabad",
+      "timezone": "Asia/Kolkata",
+      "latitude": "17.384",
+      "longitude": "78.456"
+    },
     {
       "visitedAt": "2026-06-23T12:55:00.057Z",
       "page": "/",
