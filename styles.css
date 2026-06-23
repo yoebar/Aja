@@ -6202,27 +6202,34 @@ body[data-theme="light"] .site-footer p {
 @media (max-width: 980px) {
   html {
     overflow-x: hidden;
-    overflow-y: auto;
+    overflow-y: hidden;
     scroll-snap-type: none;
   }
 
   body {
     overflow-x: hidden;
-    overflow-y: auto;
-    overscroll-behavior-y: auto;
+    overflow-y: hidden;
+    overscroll-behavior-y: none;
   }
 
   main > section:not(.positioning-strip) {
-    height: auto;
-    min-height: auto;
-    overflow: visible;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    height: 100svh;
+    min-height: 100svh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior: contain;
     scroll-snap-align: none;
     scroll-snap-stop: normal;
+    touch-action: pan-y;
   }
 
   .section {
     padding-top: clamp(76px, 12svh, 96px);
-    padding-bottom: clamp(28px, 8svh, 72px);
+    padding-bottom: clamp(42px, 7svh, 72px);
   }
 
   .company-slides,
@@ -6240,15 +6247,169 @@ body[data-theme="light"] .site-footer p {
   }
 
   .contact-form {
-    grid-template-columns: minmax(0, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .contact-form .form-wide,
-  .contact-form > label,
   .contact-form-intro,
   .captcha-field,
   .form-status,
   .contact-form > button {
     grid-column: 1 / -1;
+  }
+
+  .intro-copy {
+    max-height: clamp(190px, 29svh, 250px);
+    overflow: hidden;
+  }
+
+  .company-aside {
+    max-height: clamp(136px, 24svh, 190px);
+    overflow: hidden;
+  }
+
+  .profile-panel {
+    max-height: clamp(92px, 15svh, 128px);
+    overflow: hidden;
+  }
+
+  .products .section-heading p:not(.eyebrow) {
+    display: none;
+  }
+
+  .products .product-summary {
+    grid-template-rows: clamp(78px, 17svh, 130px) minmax(0, 1fr);
+  }
+
+  .products .product-layout {
+    gap: 6px;
+    padding-bottom: 0;
+  }
+
+  .products .product-summary div {
+    max-height: clamp(130px, 23svh, 190px);
+    overflow: hidden;
+  }
+
+  .quality-parameters {
+    display: none;
+  }
+
+  .contact .section-heading {
+    margin-bottom: 8px;
+  }
+
+  .contact .section-heading p:not(.eyebrow),
+  .contact-form-intro,
+  .contact-block .muted,
+  .form-status {
+    display: none;
+  }
+
+  .contact-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 6px;
+  }
+
+  .contact-block {
+    max-height: 74px;
+    overflow: hidden;
+    padding: 8px;
+  }
+
+  .contact-block h3 {
+    margin-bottom: 3px;
+    font-size: 11px;
+  }
+
+  .contact-block p {
+    font-size: 9.5px;
+    line-height: 1.15;
+  }
+
+  .contact-form {
+    grid-column: 1 / -1;
+    gap: 5px 6px;
+    padding: 8px;
+  }
+
+  .contact-form label {
+    gap: 2px;
+    font-size: 8px;
+  }
+
+  .contact-form > label {
+    grid-column: auto;
+  }
+
+  .contact-form > label:last-of-type,
+  .contact-form .form-wide {
+    grid-column: 1 / -1;
+  }
+
+  .contact-form input,
+  .contact-form select,
+  .contact-form textarea {
+    min-height: 30px;
+    padding: 6px 7px;
+    font-size: 11px;
+    line-height: 1.15;
+  }
+
+  .phone-input-group {
+    grid-template-columns: minmax(56px, 0.42fr) minmax(0, 1fr);
+    gap: 4px;
+  }
+
+  .contact-form textarea {
+    min-height: 48px;
+  }
+
+  .captcha-field {
+    grid-template-columns: 132px minmax(0, 1fr);
+    gap: 4px 8px;
+    align-items: end;
+  }
+
+  .captcha-prompt {
+    grid-template-columns: 94px 30px;
+    gap: 3px 6px;
+  }
+
+  .captcha-prompt span {
+    font-size: 8px;
+  }
+
+  .captcha-prompt canvas {
+    width: 94px;
+    height: 30px;
+  }
+
+  .captcha-refresh {
+    width: 30px;
+    height: 30px;
+    min-height: 30px;
+  }
+
+  .captcha-refresh svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .captcha-field label {
+    width: 100%;
+  }
+
+  .contact-form > button {
+    min-height: 34px;
+    padding: 8px 10px;
+  }
+
+  .site-footer {
+    padding-top: 8px;
+  }
+
+  .site-footer p {
+    font-size: 8px;
   }
 }

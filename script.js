@@ -401,7 +401,7 @@ function isMobileViewport() {
 }
 
 function isSwipeDeckViewport() {
-  return false;
+  return isMobileViewport();
 }
 
 function syncSwipeControls() {
