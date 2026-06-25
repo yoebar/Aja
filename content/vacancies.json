@@ -11,21 +11,6 @@
   "items": [
     {
       "type": "Vacancy announcement",
-      "title": " Corporate Service Division",
-      "summary": "Various posotion at Corporate Service Division",
-      "postDate": "2026-10-16",
-      "closingDate": "",
-      "actionLabel": "",
-      "actionUrl": "",
-      "mediaType": "image",
-      "imageUrls": [
-        "assets/adverts/vacancies/1782353445416-4.jpg"
-      ],
-      "pdfUrl": "",
-      "pdfLabel": "View PDF"
-    },
-    {
-      "type": "Vacancy announcement",
       "title": "Mechanical and Maintenance Department",
       "summary": "Various positions at the Mechanical and Maintenance Department",
       "postDate": "2025-12-16",
@@ -42,7 +27,7 @@
     {
       "type": "Vacancy announcement",
       "title": "Production Department",
-      "summary": "",
+      "summary": "Aja Alloys Pvt. Ltd. invites applications for the following Production Department positions:\n\n1. Shift In charge, 9 slots\n2. CRO (Control Room Operator), 4 slots\n3. Stroking Car Operator, 4 slots\n4. Senior Tapper, 1 slot\n5. Tapper, 6 slots\n6. Tapper Helper, 16 slots\n7. Crane Operator, 4 slots\n8. RMHS Supervisor, 1 slot\n9. Packing Supervisor, 1 slot\n\nTotal slots: 46.\n\nInterested candidates may submit their application by email to info@aja.bt.",
       "postDate": "2025-10-16",
       "closingDate": "",
       "actionLabel": "",
@@ -50,6 +35,21 @@
       "mediaType": "image",
       "imageUrls": [
         "assets/adverts/vacancies/1782352853333-1.jpg"
+      ],
+      "pdfUrl": "",
+      "pdfLabel": "View PDF"
+    },
+    {
+      "type": "Vacancy announcement",
+      "title": " Corporate Service Division",
+      "summary": "Various posotion at Corporate Service Division",
+      "postDate": "2025-10-16",
+      "closingDate": "",
+      "actionLabel": "",
+      "actionUrl": "",
+      "mediaType": "image",
+      "imageUrls": [
+        "assets/adverts/vacancies/1782353445416-4.jpg"
       ],
       "pdfUrl": "",
       "pdfLabel": "View PDF"
