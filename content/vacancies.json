@@ -11,6 +11,21 @@
   "items": [
     {
       "type": "Vacancy announcement",
+      "title": " Corporate Service Division",
+      "summary": "Various posotion at Corporate Service Division",
+      "postDate": "2026-10-16",
+      "closingDate": "",
+      "actionLabel": "",
+      "actionUrl": "",
+      "mediaType": "image",
+      "imageUrls": [
+        "assets/adverts/vacancies/1782353445416-4.jpg"
+      ],
+      "pdfUrl": "",
+      "pdfLabel": "View PDF"
+    },
+    {
+      "type": "Vacancy announcement",
       "title": "Mechanical and Maintenance Department",
       "summary": "Various positions at the Mechanical and Maintenance Department",
       "postDate": "2025-12-16",
