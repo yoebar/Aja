@@ -11,25 +11,24 @@
   "items": [
     {
       "type": "Vacancy announcement",
-      "title": "March furnace shift technician",
-      "summary": "Aja Alloys is inviting applications for a furnace shift technician role at the factory site. The position supports furnace operation, shift records, and routine safety checks. Applicants should be comfortable working in an industrial shift environment.",
-      "postDate": "2026-03-04",
+      "title": "Technician",
+      "summary": "3 Technicians",
+      "postDate": "2026-06-22",
       "closingDate": "",
       "actionLabel": "",
       "actionUrl": "",
       "mediaType": "image",
       "imageUrls": [
-        "assets/company-factory-exterior-wide.webp",
-        "assets/company-furnace-hall.webp"
+        "assets/adverts/vacancies/1782133202080-Control-Room-1.png"
       ],
       "pdfUrl": "",
-      "pdfLabel": ""
+      "pdfLabel": "View PDF"
     },
     {
-      "type": "Contract role",
-      "title": "March electrical maintenance helper",
-      "summary": "The electrical maintenance helper role will support workshop coordination and basic maintenance activities. The selected candidate will assist technicians with tools, records, and site housekeeping. Prior industrial exposure will be an advantage.",
-      "postDate": "2026-03-13",
+      "type": "Internship",
+      "title": "May accounts and admin intern",
+      "summary": "An accounts and admin internship is open for candidates seeking office experience. The intern will support filing, basic records, and administrative coordination. Applicants should be reliable, careful with documents, and willing to learn daily office procedures.",
+      "postDate": "2026-05-29",
       "closingDate": "",
       "actionLabel": "",
       "actionUrl": "",
@@ -40,61 +39,32 @@
     },
     {
       "type": "Recruitment notice",
-      "title": "March plant store assistant",
-      "summary": "The plant store assistant will help with material receipt, issue records, and inventory support. The role requires careful filing and coordination with the maintenance and operations teams. Applicants should be organised and comfortable with daily recordkeeping.",
-      "postDate": "2026-03-28",
+      "title": "May safety assistant",
+      "summary": "The safety assistant role will support inspection records, visitor orientation, and PPE coordination. The selected candidate will assist the safety team during routine site checks. Experience in industrial safety support will be useful but is not mandatory.",
+      "postDate": "2026-05-20",
       "closingDate": "",
       "actionLabel": "",
       "actionUrl": "",
       "mediaType": "image",
       "imageUrls": [
-        "assets/company-plant-yard-crane.webp",
-        "assets/company-silo-tower.webp"
+        "assets/company-control-room-operators.webp",
+        "assets/company-control-room-monitors.webp"
       ],
       "pdfUrl": "",
       "pdfLabel": ""
     },
     {
       "type": "Vacancy announcement",
-      "title": "April furnace operator trainee",
-      "summary": "A trainee furnace operator position is open for candidates interested in plant operations. The role includes supervised operating support, observation of safety practices, and shift documentation. Shortlisted candidates may be asked to attend a practical discussion.",
-      "postDate": "2026-04-02",
+      "title": "May quality and documentation assistant",
+      "summary": "A quality and documentation assistant is required to support sampling records and certificate preparation. The role connects the lab, production, and dispatch teams. Applicants should be accurate with records and comfortable using office tools.",
+      "postDate": "2026-05-11",
       "closingDate": "",
       "actionLabel": "",
       "actionUrl": "",
       "mediaType": "pdf",
       "imageUrls": [],
-      "pdfUrl": "assets/adverts/vacancies/april-technician-vacancy.pdf",
+      "pdfUrl": "assets/adverts/vacancies/may-quality-assistant-vacancy.pdf",
       "pdfLabel": "View vacancy PDF"
-    },
-    {
-      "type": "Internship",
-      "title": "April quality lab intern",
-      "summary": "The quality lab internship will support sample preparation, document filing, and basic testing coordination. Interns will work under supervision and learn the flow of quality records. Candidates with science or technical training are encouraged to apply.",
-      "postDate": "2026-04-09",
-      "closingDate": "",
-      "actionLabel": "",
-      "actionUrl": "",
-      "mediaType": "image",
-      "imageUrls": [
-        "assets/quality-lab-room.webp",
-        "assets/quality-lab-balances.webp"
-      ],
-      "pdfUrl": "",
-      "pdfLabel": ""
-    },
-    {
-      "type": "Vacancy announcement",
-      "title": "April documentation assistant",
-      "summary": "The documentation assistant role supports dispatch records, certificates, and office coordination. The selected candidate will work with sales, logistics, and quality teams. Strong attention to detail and clear written communication are important for this role.",
-      "postDate": "2026-04-19",
-      "closingDate": "",
-      "actionLabel": "",
-      "actionUrl": "",
-      "mediaType": "none",
-      "imageUrls": [],
-      "pdfUrl": "",
-      "pdfLabel": ""
     },
     {
       "type": "Contract role",
@@ -114,38 +84,67 @@
     },
     {
       "type": "Vacancy announcement",
-      "title": "May quality and documentation assistant",
-      "summary": "A quality and documentation assistant is required to support sampling records and certificate preparation. The role connects the lab, production, and dispatch teams. Applicants should be accurate with records and comfortable using office tools.",
-      "postDate": "2026-05-11",
+      "title": "April documentation assistant",
+      "summary": "The documentation assistant role supports dispatch records, certificates, and office coordination. The selected candidate will work with sales, logistics, and quality teams. Strong attention to detail and clear written communication are important for this role.",
+      "postDate": "2026-04-19",
       "closingDate": "",
       "actionLabel": "",
       "actionUrl": "",
-      "mediaType": "pdf",
+      "mediaType": "none",
       "imageUrls": [],
-      "pdfUrl": "assets/adverts/vacancies/may-quality-assistant-vacancy.pdf",
-      "pdfLabel": "View vacancy PDF"
-    },
-    {
-      "type": "Recruitment notice",
-      "title": "May safety assistant",
-      "summary": "The safety assistant role will support inspection records, visitor orientation, and PPE coordination. The selected candidate will assist the safety team during routine site checks. Experience in industrial safety support will be useful but is not mandatory.",
-      "postDate": "2026-05-20",
-      "closingDate": "",
-      "actionLabel": "",
-      "actionUrl": "",
-      "mediaType": "image",
-      "imageUrls": [
-        "assets/company-control-room-operators.webp",
-        "assets/company-control-room-monitors.webp"
-      ],
       "pdfUrl": "",
       "pdfLabel": ""
     },
     {
       "type": "Internship",
-      "title": "May accounts and admin intern",
-      "summary": "An accounts and admin internship is open for candidates seeking office experience. The intern will support filing, basic records, and administrative coordination. Applicants should be reliable, careful with documents, and willing to learn daily office procedures.",
-      "postDate": "2026-05-29",
+      "title": "April quality lab intern",
+      "summary": "The quality lab internship will support sample preparation, document filing, and basic testing coordination. Interns will work under supervision and learn the flow of quality records. Candidates with science or technical training are encouraged to apply.",
+      "postDate": "2026-04-09",
+      "closingDate": "",
+      "actionLabel": "",
+      "actionUrl": "",
+      "mediaType": "image",
+      "imageUrls": [
+        "assets/quality-lab-room.webp",
+        "assets/quality-lab-balances.webp"
+      ],
+      "pdfUrl": "",
+      "pdfLabel": ""
+    },
+    {
+      "type": "Vacancy announcement",
+      "title": "April furnace operator trainee",
+      "summary": "A trainee furnace operator position is open for candidates interested in plant operations. The role includes supervised operating support, observation of safety practices, and shift documentation. Shortlisted candidates may be asked to attend a practical discussion.",
+      "postDate": "2026-04-02",
+      "closingDate": "",
+      "actionLabel": "",
+      "actionUrl": "",
+      "mediaType": "pdf",
+      "imageUrls": [],
+      "pdfUrl": "assets/adverts/vacancies/april-technician-vacancy.pdf",
+      "pdfLabel": "View vacancy PDF"
+    },
+    {
+      "type": "Recruitment notice",
+      "title": "March plant store assistant",
+      "summary": "The plant store assistant will help with material receipt, issue records, and inventory support. The role requires careful filing and coordination with the maintenance and operations teams. Applicants should be organised and comfortable with daily recordkeeping.",
+      "postDate": "2026-03-28",
+      "closingDate": "",
+      "actionLabel": "",
+      "actionUrl": "",
+      "mediaType": "image",
+      "imageUrls": [
+        "assets/company-plant-yard-crane.webp",
+        "assets/company-silo-tower.webp"
+      ],
+      "pdfUrl": "",
+      "pdfLabel": ""
+    },
+    {
+      "type": "Contract role",
+      "title": "March electrical maintenance helper",
+      "summary": "The electrical maintenance helper role will support workshop coordination and basic maintenance activities. The selected candidate will assist technicians with tools, records, and site housekeeping. Prior industrial exposure will be an advantage.",
+      "postDate": "2026-03-13",
       "closingDate": "",
       "actionLabel": "",
       "actionUrl": "",
@@ -156,15 +155,31 @@
     },
     {
       "type": "Vacancy announcement",
-      "title": "Technician",
-      "summary": "3 Technicians",
-      "postDate": "2026-06-22",
+      "title": "March furnace shift technician",
+      "summary": "Aja Alloys is inviting applications for a furnace shift technician role at the factory site. The position supports furnace operation, shift records, and routine safety checks. Applicants should be comfortable working in an industrial shift environment.",
+      "postDate": "2026-03-04",
       "closingDate": "",
       "actionLabel": "",
       "actionUrl": "",
       "mediaType": "image",
       "imageUrls": [
-        "assets/adverts/vacancies/1782133202080-Control-Room-1.png"
+        "assets/company-factory-exterior-wide.webp",
+        "assets/company-furnace-hall.webp"
+      ],
+      "pdfUrl": "",
+      "pdfLabel": ""
+    },
+    {
+      "type": "Vacancy announcement",
+      "title": "Production Department",
+      "summary": "",
+      "postDate": "2025-10-16",
+      "closingDate": "",
+      "actionLabel": "",
+      "actionUrl": "",
+      "mediaType": "image",
+      "imageUrls": [
+        "assets/adverts/vacancies/1782352853333-1.jpg"
       ],
       "pdfUrl": "",
       "pdfLabel": "View PDF"
