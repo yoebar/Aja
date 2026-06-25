@@ -38,6 +38,21 @@
       ],
       "pdfUrl": "",
       "pdfLabel": "View PDF"
+    },
+    {
+      "type": "Vacancy announcement",
+      "title": "Electrical and Control Room Department",
+      "summary": "Various positions at Electrical and Control Room Department",
+      "postDate": "2025-10-12",
+      "closingDate": "",
+      "actionLabel": "",
+      "actionUrl": "",
+      "mediaType": "image",
+      "imageUrls": [
+        "assets/adverts/vacancies/1782353338451-3.jpg"
+      ],
+      "pdfUrl": "",
+      "pdfLabel": "View PDF"
     }
   ]
 }
