@@ -78,8 +78,10 @@
       "closingDate": "",
       "actionLabel": "",
       "actionUrl": "",
-      "mediaType": "none",
-      "imageUrls": [],
+      "mediaType": "image",
+      "imageUrls": [
+        "assets/adverts/notices/1782356710764-Image7.jpg"
+      ],
       "pdfUrl": "",
       "pdfLabel": "View PDF"
     },
