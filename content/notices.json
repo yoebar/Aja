@@ -8,5 +8,22 @@
   "contactLabel": "Click for more",
   "contactEmail": "sales@aja.bt",
   "contactSubject": "Company notice enquiry",
-  "items": []
+  "items": [
+    {
+      "type": "Company update",
+      "title": "Second Furnace Operations Commenced.",
+      "summary": "Aja Alloys Pvt. Ltd. is pleased to announce the commencement of operations for its second furnace at Norbugang Industrial Park, Samtse.\n\nThe start of the second furnace marks an important milestone in strengthening our production capacity, improving operational continuity, and supporting the company’s long-term growth plans.\n\nWe extend our appreciation to our employees, technical teams, partners, and stakeholders for their continued support in achieving this milestone.\n\nFor further information, please contact sales@aja.bt.",
+      "postDate": "2026-06-10",
+      "closingDate": "",
+      "actionLabel": "",
+      "actionUrl": "",
+      "mediaType": "image",
+      "imageUrls": [
+        "assets/adverts/notices/1782354431736-image1.png",
+        "assets/adverts/notices/1782354437967-image2.png"
+      ],
+      "pdfUrl": "",
+      "pdfLabel": "View PDF"
+    }
+  ]
 }
