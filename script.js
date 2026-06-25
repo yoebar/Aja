@@ -42,7 +42,7 @@ const sectionNavLinks = nav
   : [];
 const noticePreviewSentenceLimit = 2;
 const noticePreviewCharacterLimit = 220;
-const noticePreviewItemLimit = 3;
+const noticePreviewItemLimit = 4;
 let contactSettings = null;
 let isSnapping = false;
 let touchStartY = 0;

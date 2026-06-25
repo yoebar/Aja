@@ -253,7 +253,7 @@ The website must be a fully responsive, dynamic, scroll-snap slideshow-style lay
    Notices currently hide the panel intro so the newest posts appear higher. Vacancies and tenders currently show their intro text.
 
 4. Keep only the newest visible posts inside the information section.
-   The information section is guarded so old or long posts do not push the page beyond one viewport. Older posts remain available through the pop-up.
+   The information section shows the newest four posts in each tab. It is guarded so old or long posts do not push the page beyond one viewport. Older posts remain available through the pop-up.
 
 5. Use "Click for more" as the full-list action.
    The panel button opens the modal for the full category list. Tenders may use a tender-specific enquiry label where appropriate in content settings, but the panel action should remain clear and short.

@@ -4,7 +4,7 @@
   "status": "Vacancies",
   "title": "Vacancies",
   "summary": "Open roles and application details will appear here.",
-  "hideIntro": false,
+  "hideIntro": true,
   "contactLabel": "Click for more",
   "contactEmail": "sales@aja.bt",
   "contactSubject": "Vacancy enquiry",

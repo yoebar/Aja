@@ -4,7 +4,7 @@
   "status": "Tender adverts",
   "title": "Tenders",
   "summary": "Tender, supplier, and RFQ notices will appear here.",
-  "hideIntro": false,
+  "hideIntro": true,
   "contactLabel": "Tender enquiry",
   "contactEmail": "sales@aja.bt",
   "contactSubject": "Tender enquiry",

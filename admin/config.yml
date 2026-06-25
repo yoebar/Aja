@@ -123,7 +123,7 @@ collections:
         fields:
           - { label: "Tab ID", name: "id", widget: "hidden", default: "vacancies" }
           - { label: "Tab Name", name: "label", widget: "hidden", default: "Vacancies" }
-          - { label: "Hide Panel Header", name: "hideIntro", widget: "hidden", default: false }
+          - { label: "Hide Panel Header", name: "hideIntro", widget: "hidden", default: true }
           - label: "Status Label"
             name: "status"
             widget: "string"
@@ -201,7 +201,7 @@ collections:
         fields:
           - { label: "Tab ID", name: "id", widget: "hidden", default: "tenders" }
           - { label: "Tab Name", name: "label", widget: "hidden", default: "Tenders" }
-          - { label: "Hide Panel Header", name: "hideIntro", widget: "hidden", default: false }
+          - { label: "Hide Panel Header", name: "hideIntro", widget: "hidden", default: true }
           - label: "Status Label"
             name: "status"
             widget: "string"
