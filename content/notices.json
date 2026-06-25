@@ -10,21 +10,6 @@
   "contactSubject": "Company notice enquiry",
   "items": [
     {
-      "type": "Public information",
-      "title": "Director General Visits Aja Factory Site at Norbugang",
-      "summary": "On March 19, 2026, the Director General of the Department of Industry, Ministry of Industry, Commerce and Employment visited Norbugang Industrial Park and the Aja Alloys Pvt. Ltd. factory site at Norbugang to review the progress of the project.\n\nDuring the visit, the Director General observed the development of the factory site, plant facilities, and ongoing operations. He expressed appreciation for the progress achieved by Aja Alloys Pvt. Ltd. within a short span of time.\n\nAja Alloys Pvt. Ltd. remains committed to strengthening industrial development, supporting local employment, and contributing to Bhutan’s manufacturing sector.\n\nFor further information, please contact sales@aja.bt.",
-      "postDate": "2026-06-25",
-      "closingDate": "",
-      "actionLabel": "",
-      "actionUrl": "",
-      "mediaType": "image",
-      "imageUrls": [
-        "assets/adverts/notices/1782355533885-image5.png"
-      ],
-      "pdfUrl": "",
-      "pdfLabel": "View PDF"
-    },
-    {
       "type": "Company update",
       "title": "Second Furnace Operations Commenced.",
       "summary": "Aja Alloys Pvt. Ltd. is pleased to announce the commencement of operations for its second furnace at Norbugang Industrial Park, Samtse.\n\nThe start of the second furnace marks an important milestone in strengthening our production capacity, improving operational continuity, and supporting the company’s long-term growth plans.\n\nWe extend our appreciation to our employees, technical teams, partners, and stakeholders for their continued support in achieving this milestone.\n\nFor further information, please contact sales@aja.bt.",
@@ -51,6 +36,21 @@
       "mediaType": "image",
       "imageUrls": [
         "assets/adverts/notices/1782354881253-image3.png"
+      ],
+      "pdfUrl": "",
+      "pdfLabel": "View PDF"
+    },
+    {
+      "type": "Public information",
+      "title": "Director General Visits Aja Factory Site at Norbugang",
+      "summary": "On March 19, 2026, the Director General of the Department of Industry, Ministry of Industry, Commerce and Employment visited Norbugang Industrial Park and the Aja Alloys Pvt. Ltd. factory site at Norbugang to review the progress of the project.\n\nDuring the visit, the Director General observed the development of the factory site, plant facilities, and ongoing operations. He expressed appreciation for the progress achieved by Aja Alloys Pvt. Ltd. within a short span of time.\n\nAja Alloys Pvt. Ltd. remains committed to strengthening industrial development, supporting local employment, and contributing to Bhutan’s manufacturing sector.\n\nFor further information, please contact sales@aja.bt.",
+      "postDate": "2026-03-19",
+      "closingDate": "",
+      "actionLabel": "",
+      "actionUrl": "",
+      "mediaType": "image",
+      "imageUrls": [
+        "assets/adverts/notices/1782355533885-image5.png"
       ],
       "pdfUrl": "",
       "pdfLabel": "View PDF"
