@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-25T08:58:41.882Z",
-  "totalVisits": 41,
+  "updatedAt": "2026-06-25T10:03:36.982Z",
+  "totalVisits": 42,
   "countries": [
     {
       "key": "BT",
@@ -15,9 +15,9 @@
       "key": "IN",
       "label": "IN",
       "country": "IN",
-      "count": 6,
+      "count": 7,
       "firstSeenAt": "2026-06-23T05:03:11.022Z",
-      "lastSeenAt": "2026-06-24T09:33:09.115Z"
+      "lastSeenAt": "2026-06-25T10:03:36.982Z"
     },
     {
       "key": "SG",
@@ -132,15 +132,27 @@
       "count": 1,
       "firstSeenAt": "2026-06-24T09:33:09.115Z",
       "lastSeenAt": "2026-06-24T09:33:09.115Z"
+    },
+    {
+      "key": "Tinsukia, Assam, IN",
+      "label": "Tinsukia, Assam, IN",
+      "city": "Tinsukia",
+      "region": "Assam",
+      "country": "IN",
+      "latitude": "27.489",
+      "longitude": "95.360",
+      "count": 1,
+      "firstSeenAt": "2026-06-25T10:03:36.982Z",
+      "lastSeenAt": "2026-06-25T10:03:36.982Z"
     }
   ],
   "pages": [
     {
       "key": "/",
       "label": "/",
-      "count": 40,
+      "count": 41,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-06-25T08:58:41.882Z"
+      "lastSeenAt": "2026-06-25T10:03:36.982Z"
     },
     {
       "key": "/Carkem?fbclid=IwZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAEej80NNTR0gtSQxs8FQCVgptvd8GiMc7UM8ba9HXw8j9ctkJx5f4m5OrwM1Q4_aem_pFK-ttBnC7PsWMTvFcAieg",
@@ -151,6 +163,17 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-06-25T10:03:36.982Z",
+      "page": "/",
+      "country": "IN",
+      "continent": "AS",
+      "region": "Assam",
+      "city": "Tinsukia",
+      "timezone": "Asia/Kolkata",
+      "latitude": "27.489",
+      "longitude": "95.360"
+    },
     {
       "visitedAt": "2026-06-25T08:58:41.882Z",
       "page": "/",
