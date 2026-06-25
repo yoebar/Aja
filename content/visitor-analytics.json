@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-25T12:15:05.625Z",
-  "totalVisits": 44,
+  "updatedAt": "2026-06-25T12:29:53.974Z",
+  "totalVisits": 45,
   "countries": [
     {
       "key": "BT",
@@ -15,9 +15,9 @@
       "key": "IN",
       "label": "IN",
       "country": "IN",
-      "count": 7,
+      "count": 8,
       "firstSeenAt": "2026-06-23T05:03:11.022Z",
-      "lastSeenAt": "2026-06-25T10:03:36.982Z"
+      "lastSeenAt": "2026-06-25T12:29:53.974Z"
     },
     {
       "key": "SG",
@@ -144,15 +144,27 @@
       "count": 1,
       "firstSeenAt": "2026-06-25T10:03:36.982Z",
       "lastSeenAt": "2026-06-25T10:03:36.982Z"
+    },
+    {
+      "key": "Kadapa, Andhra Pradesh, IN",
+      "label": "Kadapa, Andhra Pradesh, IN",
+      "city": "Kadapa",
+      "region": "Andhra Pradesh",
+      "country": "IN",
+      "latitude": "14.480",
+      "longitude": "78.823",
+      "count": 1,
+      "firstSeenAt": "2026-06-25T12:29:53.974Z",
+      "lastSeenAt": "2026-06-25T12:29:53.974Z"
     }
   ],
   "pages": [
     {
       "key": "/",
       "label": "/",
-      "count": 43,
+      "count": 44,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-06-25T12:15:05.625Z"
+      "lastSeenAt": "2026-06-25T12:29:53.974Z"
     },
     {
       "key": "/Carkem?fbclid=IwZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAEej80NNTR0gtSQxs8FQCVgptvd8GiMc7UM8ba9HXw8j9ctkJx5f4m5OrwM1Q4_aem_pFK-ttBnC7PsWMTvFcAieg",
@@ -163,6 +175,17 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-06-25T12:29:53.974Z",
+      "page": "/",
+      "country": "IN",
+      "continent": "AS",
+      "region": "Andhra Pradesh",
+      "city": "Kadapa",
+      "timezone": "Asia/Kolkata",
+      "latitude": "14.480",
+      "longitude": "78.823"
+    },
     {
       "visitedAt": "2026-06-25T12:15:05.625Z",
       "page": "/",
