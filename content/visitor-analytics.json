@@ -1,15 +1,15 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-25T12:29:53.974Z",
-  "totalVisits": 45,
+  "updatedAt": "2026-06-25T17:56:46.286Z",
+  "totalVisits": 46,
   "countries": [
     {
       "key": "BT",
       "label": "BT",
       "country": "BT",
-      "count": 31,
+      "count": 32,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-06-25T12:15:05.625Z"
+      "lastSeenAt": "2026-06-25T17:56:46.286Z"
     },
     {
       "key": "IN",
@@ -45,9 +45,9 @@
       "country": "BT",
       "latitude": "27.466",
       "longitude": "89.642",
-      "count": 28,
+      "count": 29,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-06-25T12:15:05.625Z"
+      "lastSeenAt": "2026-06-25T17:56:46.286Z"
     },
     {
       "key": "Singapore, SG",
@@ -162,9 +162,9 @@
     {
       "key": "/",
       "label": "/",
-      "count": 44,
+      "count": 45,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-06-25T12:29:53.974Z"
+      "lastSeenAt": "2026-06-25T17:56:46.286Z"
     },
     {
       "key": "/Carkem?fbclid=IwZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAEej80NNTR0gtSQxs8FQCVgptvd8GiMc7UM8ba9HXw8j9ctkJx5f4m5OrwM1Q4_aem_pFK-ttBnC7PsWMTvFcAieg",
@@ -175,6 +175,17 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-06-25T17:56:46.286Z",
+      "page": "/",
+      "country": "BT",
+      "continent": "AS",
+      "region": "Thimphu District",
+      "city": "Thimphu",
+      "timezone": "Asia/Thimphu",
+      "latitude": "27.466",
+      "longitude": "89.642"
+    },
     {
       "visitedAt": "2026-06-25T12:29:53.974Z",
       "page": "/",
