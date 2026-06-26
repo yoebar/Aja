@@ -5,7 +5,7 @@
       "submittedAt": "2026-06-22T15:08:00+0600",
       "notificationTo": "sales@aja.bt",
       "notificationStatus": "not_configured",
-      "name": "Sample Buyer",
+      "name": "Real Buyer",
       "company": "Test Metals Pvt Ltd",
       "country": "Bhutan",
       "email": "buyer@example.com",
@@ -14,8 +14,9 @@
       "grade": "FeSi 75",
       "quantity": "25 MT",
       "message": "This is a sample contact form record for checking the dashboard table.",
-      "reviewStatus": "reviewed",
-      "reviewedAt": "2026-06-22T09:12:45.948Z"
+      "reviewStatus": "new",
+      "reviewedAt": "",
+      "autoReplyStatus": ""
     }
   ]
 }
