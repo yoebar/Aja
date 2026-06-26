@@ -19,24 +19,6 @@
       "reviewedAt": ""
     },
     {
-      "id": "f18c0528-ecc4-4782-91a1-c18f953f08ab",
-      "submittedAt": "2026-06-26T05:00:27.277Z",
-      "notificationTo": "sales@aja.bt",
-      "notificationStatus": "sent",
-      "autoReplyStatus": "sent",
-      "name": "Jigme",
-      "company": "Jigme",
-      "country": "Bhutan",
-      "email": "jigmethinley@gmail.com",
-      "phone": "+975 17114243",
-      "enquiryType": "Sales enquiry",
-      "grade": "FeSi 70 to 75",
-      "quantity": "1",
-      "message": "test test",
-      "reviewStatus": "new",
-      "reviewedAt": ""
-    },
-    {
       "id": "a6fa94f8-18da-4697-85b3-06d6d382477b",
       "submittedAt": "2026-06-22T15:08:00+0600",
       "notificationTo": "sales@aja.bt",
