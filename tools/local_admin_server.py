@@ -342,7 +342,7 @@ class LocalAdminHandler(SimpleHTTPRequestHandler):
 
         config = read_json(CONTENT_FILES["contact_form"], {})
         submissions = read_json(CONTENT_FILES["contact_submissions"], {"submissions": []})
-        notification_to = config.get("notificationEmail") or config.get("formRecipient") or "sales@aja.pt"
+        notification_to = config.get("notificationEmail") or config.get("formRecipient") or "sales@aja.bt"
 
         record = {
             "id": str(uuid.uuid4()),
