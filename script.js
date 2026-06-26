@@ -36,6 +36,7 @@ const noticeModalTitle = document.querySelector("[data-notice-modal-title]");
 const noticeModalBody = document.querySelector("[data-notice-modal-body]");
 const noticeModalCloseButtons = [...document.querySelectorAll("[data-notice-modal-close]")];
 const companySlideshows = [...document.querySelectorAll("[data-company-slideshow]")];
+const faqItems = [...document.querySelectorAll(".faq-item")];
 const snapTargets = [...document.querySelectorAll("main > section:not(.positioning-strip)")];
 const sectionNavLinks = nav
   ? [...nav.querySelectorAll('a[href^="#"]')].filter((link) => document.querySelector(link.getAttribute("href")))
@@ -330,6 +331,32 @@ function applyTheme(theme) {
 function syncHeader() {
   if (!header) return;
   header.classList.toggle("is-scrolled", window.scrollY > 12);
+}
+
+function initialiseFaqAccordion() {
+  if (faqItems.length === 0) return;
+
+  let openItem = null;
+
+  faqItems.forEach((item) => {
+    if (item.open) {
+      if (openItem) {
+        item.removeAttribute("open");
+      } else {
+        openItem = item;
+      }
+    }
+
+    item.addEventListener("toggle", () => {
+      if (!item.open) return;
+
+      faqItems.forEach((otherItem) => {
+        if (otherItem !== item) {
+          otherItem.removeAttribute("open");
+        }
+      });
+    });
+  });
 }
 
 function syncActiveNav() {
@@ -1463,6 +1490,7 @@ syncSwipeControls();
 populateCountryCallingFields();
 loadSiteContent();
 initialiseCookieConsent();
+initialiseFaqAccordion();
 
 if (themeToggle) {
   themeToggle.addEventListener("click", () => {
