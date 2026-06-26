@@ -614,7 +614,7 @@ function renderContactSubmissions() {
         submission.autoReplyStatus || "pending"
       ].forEach((value) => {
         const cell = document.createElement("td");
-        cell.textContent = value || "";
+        cell.textContent = value ?? "";
         row.append(cell);
       });
       row.append(renderSubmissionActions(submission, detail));
@@ -729,9 +729,10 @@ function analyticsTable(titleText, headers, rows) {
   if (rows.length) {
     rows.forEach((row) => {
       const tableRow = document.createElement("tr");
-      row.forEach((value) => {
+      row.forEach((value, index) => {
         const cell = document.createElement("td");
-        cell.textContent = value || "";
+        cell.dataset.label = headers[index] || "";
+        cell.textContent = value ?? "";
         tableRow.append(cell);
       });
       tbody.append(tableRow);
@@ -749,6 +750,54 @@ function analyticsTable(titleText, headers, rows) {
   tableWrap.append(table);
   section.append(heading, tableWrap);
   return section;
+}
+
+function statusMetricCard(titleText, items = [], state = "ok") {
+  const card = document.createElement("article");
+  card.className = `status-metric-card status-metric-card-${state}`;
+
+  const head = document.createElement("div");
+  head.className = "status-metric-head";
+  const title = document.createElement("h4");
+  title.textContent = titleText;
+  const badge = document.createElement("span");
+  badge.textContent = state === "review" ? "Review" : state === "attention" ? "Attention" : "OK";
+  head.append(title, badge);
+
+  const list = document.createElement("dl");
+  items.forEach((item) => {
+    const term = document.createElement("dt");
+    term.textContent = item.label;
+    const value = document.createElement("dd");
+    value.textContent = String(item.value ?? "");
+    list.append(term, value);
+  });
+
+  card.append(head, list);
+  return card;
+}
+
+function statusMetricGrid(cards = []) {
+  const grid = document.createElement("div");
+  grid.className = "status-metric-grid";
+  grid.append(...cards);
+  return grid;
+}
+
+function reportDisclosure(titleText, children = [], open = false) {
+  const details = document.createElement("details");
+  details.className = "report-disclosure";
+  details.open = open;
+
+  const summary = document.createElement("summary");
+  summary.textContent = titleText;
+
+  const body = document.createElement("div");
+  body.className = "report-disclosure-body";
+  body.append(...children);
+
+  details.append(summary, body);
+  return details;
 }
 
 function textBlock(className, text) {
@@ -1109,25 +1158,32 @@ async function renderEditorStatusReport() {
     analyticsCard("Endpoint checks", `${endpointChecks.filter((item) => item.ok).length}/${endpointChecks.length}`)
   );
   wrapper.append(
-    analyticsTable("Post editor content status", ["Area", "Total", "Open or active", "With media"], postKeys.map((key) => {
-      const items = Array.isArray(content[key]?.items) ? content[key].items : [];
-      return [
-        sections[key].label,
-        items.length,
-        countOpenItems(items),
-        items.filter((item) => mediaTypeFromPost(item) !== "none").length
-      ];
-    })),
-    analyticsTable("Submission status", ["Status", "Count"], [
-      ["New", status.submissionsNew],
-      ["Reviewed", status.submissionsReviewed]
-    ]),
-    analyticsTable("Endpoint health", ["Check", "Result", "Detail"], endpointChecks.map((item) => [
-      item.label,
-      item.ok ? "OK" : "Review",
-      item.detail
-    ])),
-    reportSection("Loaded files", [
+    reportDisclosure("Post editor content status", [
+      statusMetricGrid(postKeys.map((key) => {
+        const items = Array.isArray(content[key]?.items) ? content[key].items : [];
+        return statusMetricCard(sections[key].label, [
+          { label: "Total posts", value: items.length },
+          { label: "Open or active", value: countOpenItems(items) },
+          { label: "With media", value: items.filter((item) => mediaTypeFromPost(item) !== "none").length }
+        ], items.length ? "ok" : "review");
+      }))
+    ], true),
+    reportDisclosure("Submission status", [
+      statusMetricGrid([
+        statusMetricCard("Contact inbox", [
+          { label: "New", value: status.submissionsNew },
+          { label: "Reviewed", value: status.submissionsReviewed },
+          { label: "Total", value: status.submissionsTotal }
+        ], status.submissionsNew ? "attention" : "ok")
+      ])
+    ], true),
+    reportDisclosure("Endpoint health", [
+      statusMetricGrid(endpointChecks.map((item) => statusMetricCard(item.label, [
+        { label: "Result", value: item.ok ? "OK" : "Review" },
+        { label: "Detail", value: item.detail }
+      ], item.ok ? "ok" : "review")))
+    ], true),
+    reportDisclosure("Loaded files", [
       reportList(status.loadedSections.map((key) => `${key}: ${files[key] || "virtual report"}`))
     ]),
     reportTextarea(reportText)
