@@ -24,6 +24,7 @@ IMAGE_EXTENSIONS = {".jpg", ".jpeg", ".png", ".webp", ".gif"}
 PDF_EXTENSIONS = {".pdf"}
 POST_CONTENT_KEYS = {"notices", "vacancies", "tenders"}
 ADMIN_CONTENT_KEYS = {"information", "contact_form", "contact_cards", "contact_submissions", "visitor_analytics"}
+EDITOR_WRITE_KEYS = POST_CONTENT_KEYS | {"contact_form", "contact_submissions"}
 SESSIONS = {}
 CONTENT_FILES = {
     "information": ROOT / "content" / "information.json",
@@ -137,14 +138,15 @@ class LocalAdminHandler(SimpleHTTPRequestHandler):
             return
 
         session = self.current_session()
-        if key not in POST_CONTENT_KEYS:
-            self.send_error(403, "Post editor users can only update advert posts")
+        if key not in EDITOR_WRITE_KEYS:
+            self.send_error(403, "Post editor users cannot update this section")
             return
         current_data = read_json(path, {})
-        data = {
-            **current_data,
-            "items": data.get("items", current_data.get("items", [])),
-        }
+        if key in POST_CONTENT_KEYS:
+            data = {
+                **current_data,
+                "items": data.get("items", current_data.get("items", [])),
+            }
 
         path.write_text(
             json.dumps(data, ensure_ascii=False, indent=2) + "\n",

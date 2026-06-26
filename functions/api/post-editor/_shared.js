@@ -9,7 +9,7 @@ const CONTENT_FILES = {
 
 const POST_ITEM_KEYS = new Set(["notices", "vacancies", "tenders"]);
 const FULL_CONTENT_KEYS = new Set(["contact_form", "contact_submissions", "visitor_analytics"]);
-const EDITOR_WRITE_KEYS = new Set(["notices", "vacancies", "tenders", "contact_form"]);
+const EDITOR_WRITE_KEYS = new Set(["notices", "vacancies", "tenders", "contact_form", "contact_submissions"]);
 
 const IMAGE_EXTENSIONS = new Set([".jpg", ".jpeg", ".png", ".webp", ".gif"]);
 const PDF_EXTENSIONS = new Set([".pdf"]);

@@ -1441,7 +1441,7 @@ async function persistContactSubmissions(options = {}) {
   });
 
   if (!response.ok) {
-    statusLine.textContent = "Submission update failed. Please check the local server.";
+    statusLine.textContent = "Submission update failed. Please check the server connection.";
     return false;
   }
 
@@ -1455,20 +1455,26 @@ async function persistContactSubmissions(options = {}) {
 
 async function updateSubmission(id, updates, options = {}) {
   const submissions = content.contact_submissions?.submissions || [];
+  const previous = [...submissions];
   content.contact_submissions.submissions = submissions.map((submission) => (
     submission.id === id ? { ...submission, ...updates } : submission
   ));
-  if (await persistContactSubmissions(options)) {
-    renderContactSubmissions();
+  if (!await persistContactSubmissions(options)) {
+    content.contact_submissions.submissions = previous;
+    return;
   }
+  renderContactSubmissions();
 }
 
 async function deleteSubmission(id) {
   const submissions = content.contact_submissions?.submissions || [];
+  const previous = [...submissions];
   content.contact_submissions.submissions = submissions.filter((submission) => submission.id !== id);
-  if (await persistContactSubmissions()) {
-    renderContactSubmissions();
+  if (!await persistContactSubmissions()) {
+    content.contact_submissions.submissions = previous;
+    return;
   }
+  renderContactSubmissions();
 }
 
 function formatSubmissionDate(value) {
