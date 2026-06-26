@@ -14,8 +14,8 @@
       "grade": "FeSi 75",
       "quantity": "25 MT",
       "message": "This is a sample contact form record for checking the dashboard table.",
-      "reviewStatus": "reviewed",
-      "reviewedAt": "2026-06-22T09:12:45.948Z",
+      "reviewStatus": "new",
+      "reviewedAt": "",
       "autoReplyStatus": ""
     }
   ]
