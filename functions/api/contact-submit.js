@@ -124,6 +124,59 @@ async function sendAutoReply(record, config, env) {
 }
 
 async function sendEmail(message, env) {
+  if (env.GOOGLE_CLIENT_ID && env.GOOGLE_CLIENT_SECRET && env.GOOGLE_REFRESH_TOKEN && env.AJA_EMAIL_FROM) {
+    return sendGoogleWorkspaceEmail(message, env);
+  }
+
+  if (env.RESEND_API_KEY && env.AJA_EMAIL_FROM) {
+    return sendResendEmail(message, env);
+  }
+
+  return "not_configured";
+}
+
+async function sendGoogleWorkspaceEmail(message, env) {
+  try {
+    const tokenResponse = await fetch("https://oauth2.googleapis.com/token", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      body: new URLSearchParams({
+        client_id: env.GOOGLE_CLIENT_ID,
+        client_secret: env.GOOGLE_CLIENT_SECRET,
+        refresh_token: env.GOOGLE_REFRESH_TOKEN,
+        grant_type: "refresh_token"
+      })
+    });
+
+    if (!tokenResponse.ok) {
+      return "failed";
+    }
+
+    const tokenData = await tokenResponse.json();
+    if (!tokenData.access_token) {
+      return "failed";
+    }
+
+    const response = await fetch("https://gmail.googleapis.com/gmail/v1/users/me/messages/send", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${tokenData.access_token}`,
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        raw: base64UrlEncode(buildMimeMessage(message, env.AJA_EMAIL_FROM))
+      })
+    });
+
+    return response.ok ? "sent" : "failed";
+  } catch {
+    return "failed";
+  }
+}
+
+async function sendResendEmail(message, env) {
   if (!env.RESEND_API_KEY || !env.AJA_EMAIL_FROM) {
     return "not_configured";
   }
@@ -153,6 +206,38 @@ async function sendEmail(message, env) {
   } catch {
     return "failed";
   }
+}
+
+function buildMimeMessage(message, from) {
+  const headers = [
+    `From: ${cleanHeader(from)}`,
+    `To: ${cleanHeader(message.to)}`,
+    `Subject: ${cleanHeader(message.subject)}`,
+    "MIME-Version: 1.0",
+    "Content-Type: text/plain; charset=UTF-8"
+  ];
+
+  if (message.replyTo) {
+    headers.splice(2, 0, `Reply-To: ${cleanHeader(message.replyTo)}`);
+  }
+
+  return `${headers.join("\r\n")}\r\n\r\n${message.text || ""}`;
+}
+
+function base64UrlEncode(value) {
+  const bytes = new TextEncoder().encode(value);
+  let binary = "";
+  bytes.forEach((byte) => {
+    binary += String.fromCharCode(byte);
+  });
+  return btoa(binary)
+    .replaceAll("+", "-")
+    .replaceAll("/", "_")
+    .replaceAll("=", "");
+}
+
+function cleanHeader(value) {
+  return String(value || "").replace(/[\r\n]+/g, " ").trim();
 }
 
 function splitAddresses(value) {

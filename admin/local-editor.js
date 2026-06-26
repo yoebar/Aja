@@ -450,7 +450,7 @@ function renderContactFormSettings() {
     field("Form Intro Text", "formIntro", data.formIntro, { type: "textarea" }),
     field("Default Recipient Email", "formRecipient", data.formRecipient),
     field("Notification Email", "notificationEmail", data.notificationEmail || "sales@aja.bt", {
-      hint: "Server notification target. RESEND_API_KEY and AJA_EMAIL_FROM are required for live email delivery."
+      hint: "Server notification target. Google Workspace Gmail API credentials and AJA_EMAIL_FROM are required for live email delivery."
     }),
     field("Email Subject Prefix", "formSubjectPrefix", data.formSubjectPrefix),
     field("Form Endpoint", "formEndpoint", data.formEndpoint, {
