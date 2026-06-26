@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex">
   <title>Aja Local Admin</title>
-  <link rel="stylesheet" href="local-editor.css?v=20260627-report-print-v2">
+  <link rel="stylesheet" href="local-editor.css?v=20260627-all-tabs-print-v2">
   <script>
     if (!["127.0.0.1", "localhost", ""].includes(window.location.hostname)) {
       window.location.replace("/admin/");
@@ -85,13 +85,16 @@
           <p id="section-kicker">Local content file</p>
           <h2 id="section-title">Information Heading</h2>
         </div>
-        <button type="button" id="save-button">Save changes</button>
+        <div class="editor-head-actions">
+          <button type="button" id="print-section-button" class="small-button">Print tab</button>
+          <button type="button" id="save-button">Save changes</button>
+        </div>
       </div>
       <form id="content-form"></form>
       <p class="status" id="status-line">Changes save to local files only.</p>
     </section>
   </main>
 
-  <script src="local-editor.js?v=20260627-post-editor-scope-v1"></script>
+  <script src="local-editor.js?v=20260627-all-tabs-print-v2"></script>
 </body>
 </html>

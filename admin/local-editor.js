@@ -1,8 +1,10 @@
 const form = document.querySelector("#content-form");
 const saveButton = document.querySelector("#save-button");
+const printSectionButton = document.querySelector("#print-section-button");
 const statusLine = document.querySelector("#status-line");
 const title = document.querySelector("#section-title");
 const kicker = document.querySelector("#section-kicker");
+const editorShell = document.querySelector(".editor");
 const sessionUser = document.querySelector("#session-user");
 const logoutButton = document.querySelector("#logout-button");
 const sectionButtons = [...document.querySelectorAll("[data-section]")];
@@ -916,7 +918,155 @@ function reportList(items) {
   return list;
 }
 
+function reportSummary(items = []) {
+  const list = document.createElement("ul");
+  list.className = "report-summary-list";
+  items.filter(Boolean).forEach((item) => {
+    const row = document.createElement("li");
+    row.textContent = item;
+    list.append(row);
+  });
+  return list;
+}
+
+function reportTable(titleText, headers, rows, options = {}) {
+  const section = document.createElement("section");
+  section.className = `analytics-table-section report-table-section${options.compact ? " report-table-section-compact" : ""}`;
+
+  const heading = document.createElement("h3");
+  heading.textContent = titleText;
+
+  const tableWrap = document.createElement("div");
+  tableWrap.className = "post-table-wrap";
+  const table = document.createElement("table");
+  table.className = "post-table report-table";
+
+  const thead = document.createElement("thead");
+  const headRow = document.createElement("tr");
+  headers.forEach((header) => {
+    const cell = document.createElement("th");
+    cell.textContent = header;
+    headRow.append(cell);
+  });
+  thead.append(headRow);
+
+  const tbody = document.createElement("tbody");
+  if (rows.length) {
+    rows.forEach((row) => {
+      const tableRow = document.createElement("tr");
+      row.forEach((value, index) => {
+        const cell = document.createElement("td");
+        cell.dataset.label = headers[index] || "";
+        if (value instanceof Node) {
+          cell.append(value);
+        } else {
+          cell.textContent = value ?? "";
+          cell.title = String(value ?? "");
+        }
+        tableRow.append(cell);
+      });
+      tbody.append(tableRow);
+    });
+  } else {
+    const emptyRow = document.createElement("tr");
+    const emptyCell = document.createElement("td");
+    emptyCell.colSpan = headers.length;
+    emptyCell.textContent = options.emptyText || "No records yet.";
+    emptyRow.append(emptyCell);
+    tbody.append(emptyRow);
+  }
+
+  table.append(thead, tbody);
+  tableWrap.append(table);
+  section.append(heading, tableWrap);
+  return section;
+}
+
+function reportBadge(text, state = "ok") {
+  const badge = document.createElement("span");
+  badge.className = `report-badge report-badge-${state}`;
+  badge.textContent = text;
+  return badge;
+}
+
+function reportRecommendationList(items = []) {
+  const list = document.createElement("ol");
+  list.className = "report-recommendations";
+  items.filter(Boolean).forEach((item) => {
+    const row = document.createElement("li");
+    row.textContent = item;
+    list.append(row);
+  });
+  return list;
+}
+
 let reportPrintDisclosureState = [];
+let sectionPrintHeader = null;
+let sectionPrintFooter = null;
+let isCurrentSectionPrintPrepared = false;
+
+function ensureSectionPrintChrome() {
+  if (!editorShell) return {};
+
+  if (!sectionPrintHeader) {
+    sectionPrintHeader = document.createElement("header");
+    sectionPrintHeader.className = "section-print-header";
+    sectionPrintHeader.innerHTML = `
+      <p class="report-brand">Aja.bt</p>
+      <h3></h3>
+      <p class="section-print-generated"></p>
+      <p class="section-print-description"></p>
+    `;
+    editorShell.insertBefore(sectionPrintHeader, form);
+  }
+
+  if (!sectionPrintFooter) {
+    sectionPrintFooter = document.createElement("footer");
+    sectionPrintFooter.className = "section-print-footer";
+    sectionPrintFooter.innerHTML = `
+      <span class="section-print-footer-date"></span>
+      <span class="section-print-footer-page"></span>
+    `;
+    editorShell.append(sectionPrintFooter);
+  }
+
+  return { sectionPrintHeader, sectionPrintFooter };
+}
+
+function prepareCurrentSectionPrint() {
+  if (isCurrentSectionPrintPrepared) return;
+
+  const generatedAt = reportGeneratedAt();
+  setReportPrintTimestamp(generatedAt);
+
+  const { sectionPrintHeader: header, sectionPrintFooter: footer } = ensureSectionPrintChrome();
+  const isReportSection = reportSections.has(activeSection);
+
+  if (header) {
+    header.hidden = isReportSection;
+    header.querySelector("h3").textContent = title.textContent || sections[activeSection]?.label || "Report";
+    header.querySelector(".section-print-generated").textContent = `Generated: ${generatedAt}`;
+    header.querySelector(".section-print-description").textContent = sections[activeSection]?.description || "";
+  }
+
+  if (footer) {
+    footer.hidden = isReportSection;
+    footer.querySelector(".section-print-footer-date").textContent = `Generated: ${generatedAt}`;
+    footer.querySelector(".section-print-footer-page").textContent = "A4 portrait";
+  }
+
+  document.body.classList.add("is-printing-section");
+  prepareReportPrint();
+  isCurrentSectionPrintPrepared = true;
+}
+
+function restoreCurrentSectionPrint() {
+  if (!isCurrentSectionPrintPrepared) return;
+
+  restoreReportPrint();
+  document.body.classList.remove("is-printing-section");
+  isCurrentSectionPrintPrepared = false;
+}
 
 function prepareReportPrint() {
   reportPrintDisclosureState = [...document.querySelectorAll(".report-panel .report-disclosure")].map((item) => ({
@@ -962,7 +1112,7 @@ function reportActions(refreshLabel, onRefresh, reportText) {
 
   const print = textIconButton("print", "Print report");
   print.addEventListener("click", () => {
-    prepareReportPrint();
+    prepareCurrentSectionPrint();
     statusLine.textContent = "Opening print dialogue.";
     window.print();
   });
@@ -1115,8 +1265,134 @@ function reportPrintFooter(generatedAt) {
   generated.textContent = `Generated: ${generatedAt}`;
   const page = document.createElement("span");
   page.className = "report-print-page";
+  page.textContent = "A4 portrait";
   footer.append(generated, page);
   return footer;
+}
+
+function analyticsDataPeriod(analytics = {}) {
+  const candidates = [];
+  ["countries", "cities", "pages", "recentVisits"].forEach((key) => {
+    const rows = Array.isArray(analytics[key]) ? analytics[key] : [];
+    rows.forEach((item) => {
+      ["firstSeenAt", "lastSeenAt", "visitedAt"].forEach((dateKey) => {
+        if (item[dateKey]) candidates.push(new Date(item[dateKey]).getTime());
+      });
+    });
+  });
+  const valid = candidates.filter((value) => Number.isFinite(value));
+  if (!valid.length) return "No consented visitor records yet";
+  const start = new Date(Math.min(...valid));
+  const end = new Date(Math.max(...valid));
+  return `${dateOnly(start)} to ${dateOnly(end)}`;
+}
+
+function analyticsExecutiveSummary(analytics = {}, metrics = {}, signals = {}) {
+  const countries = Array.isArray(analytics.countries) ? analytics.countries : [];
+  const pages = Array.isArray(analytics.pages) ? analytics.pages : [];
+  const topCountry = countries[0];
+  const topPage = pages[0];
+  const checksPassed = llmCheckRows(signals).filter((row) => row.ok).length;
+  const totalChecks = llmCheckRows(signals).length;
+  return [
+    `${analytics.totalVisits || 0} consented visits are recorded for ${analyticsDataPeriod(analytics)}.`,
+    topCountry ? `${displayCountry(topCountry.country || topCountry.label)} is the leading visitor country with ${topCountry.count || 0} visits.` : "No country-level visitor pattern is available yet.",
+    topPage ? `${displayTrackedPage(topPage.label || topPage.key || "/")} is the leading page with ${topPage.count || 0} visits.` : "No page-interest pattern is available yet.",
+    metrics.identifiedVisits ? `${metrics.returningVisitors} likely returning visitors are visible from ${metrics.identifiedVisits} identified visits.` : "Unique visitor tracking has started, but older visits cannot be converted into visitor identities.",
+    `LLM readiness is ${checksPassed} of ${totalChecks} checks passed, based on public crawlability, llms.txt, robots.txt, sitemap, schema, and consent-gated tracking checks.`
+  ];
+}
+
+function analyticsRecommendations(analytics = {}, metrics = {}, signals = {}) {
+  const pages = Array.isArray(analytics.pages) ? analytics.pages : [];
+  const homepageVisits = pages.find((item) => displayTrackedPage(item.label || item.key || "/") === "/")?.count || 0;
+  const totalVisits = Number(analytics.totalVisits || 0);
+  return [
+    homepageVisits && totalVisits && homepageVisits / totalVisits > 0.8
+      ? "Strengthen product and enquiry paths from the homepage so visitor interest is not trapped on a single page."
+      : "Review the top pages monthly and use the pattern to decide which content deserves clearer calls to action.",
+    metrics.legacyVisits
+      ? "Keep the limitation note visible because older visits do not have anonymous visitor IDs."
+      : "Use likely unique and repeat rate as directional signals, not exact people counts.",
+    signals.llmsHasBuyingRoute && signals.llmsHasProductContext
+      ? "Keep llms.txt updated whenever product, grade, buying, or contact details change."
+      : "Update llms.txt with product, buying, quotation, and sales contact context.",
+    "Use Search Console separately for real search queries, Google AI feature clicks, and country filters."
+  ];
+}
+
+function llmCheckRows(signals = {}) {
+  return [
+    {
+      check: "Homepage reachable",
+      ok: Boolean(signals.homepageOk),
+      evidence: signals.homepageOk ? "Public homepage responded successfully" : "Homepage request failed",
+      action: signals.homepageOk ? "Monitor" : "Check hosting and homepage response"
+    },
+    {
+      check: "llms.txt reachable",
+      ok: Boolean(signals.llmsOk),
+      evidence: signals.llmsOk ? `${signals.llmsLineCount || 0} populated lines` : "llms.txt request failed",
+      action: signals.llmsOk ? "Keep content current" : "Restore or publish llms.txt"
+    },
+    {
+      check: "robots.txt reachable",
+      ok: Boolean(signals.robotsOk),
+      evidence: signals.robotsOk ? `${signals.allowedAgentsCount || 0} of ${signals.aiAgentsTotal || 0} AI agents listed` : "robots.txt request failed",
+      action: signals.robotsOk ? "Review agent list quarterly" : "Restore or publish robots.txt"
+    },
+    {
+      check: "Sitemap parseable",
+      ok: Boolean(signals.sitemapOk),
+      evidence: signals.sitemapOk ? "XML urlset detected" : "Sitemap missing or not parseable",
+      action: signals.sitemapOk ? "Update when URLs change" : "Repair sitemap.xml"
+    },
+    {
+      check: "Structured data",
+      ok: Boolean(signals.schemaTypes?.length),
+      evidence: signals.schemaTypes?.length ? signals.schemaTypes.join(", ") : "No JSON-LD detected",
+      action: signals.schemaTypes?.length ? "Validate after page edits" : "Add Organisation, WebSite, and product schema"
+    },
+    {
+      check: "Buying context in llms.txt",
+      ok: Boolean(signals.llmsHasBuyingRoute && signals.llmsHasProductContext),
+      evidence: signals.llmsHasBuyingRoute && signals.llmsHasProductContext ? "Product and quotation context found" : "Buying or product context missing",
+      action: signals.llmsHasBuyingRoute && signals.llmsHasProductContext ? "Keep synced with sales details" : "Add product and quotation instructions"
+    },
+    {
+      check: "Admin and API crawl blocking",
+      ok: Boolean(signals.robotsDisallowsAdmin),
+      evidence: signals.robotsDisallowsAdmin ? "Admin and API disallow rules found" : "Admin or API disallow rule missing",
+      action: signals.robotsDisallowsAdmin ? "Monitor" : "Add crawler blocking rules"
+    },
+    {
+      check: "Consent gate",
+      ok: Boolean(signals.trackerOk),
+      evidence: signals.trackerOk ? "Tracking endpoint rejects non-consented posts" : "Consent gate check failed",
+      action: signals.trackerOk ? "Monitor" : "Review visitor tracking endpoint"
+    }
+  ];
+}
+
+function editorStatusExecutiveSummary(status = {}) {
+  const healthyEndpoints = status.endpointChecks.filter((item) => item.ok).length;
+  return [
+    `${status.loadedSections.length} content sections are loaded in ${status.mode}.`,
+    `${status.submissionsNew} new enquiry records need review out of ${status.submissionsTotal} total submissions.`,
+    `${status.postsOpen} advert posts are open or evergreen out of ${status.postsTotal} total advert posts.`,
+    `${healthyEndpoints} of ${status.endpointChecks.length} endpoint checks are healthy.`,
+    status.postsWithMedia ? `${status.postsWithMedia} advert posts have media attached.` : "No advert media is currently attached."
+  ];
+}
+
+function editorStatusRecommendations(status = {}) {
+  const hasEndpointIssue = status.endpointChecks.some((item) => !item.ok);
+  return [
+    status.submissionsNew ? "Review new enquiry records and mark completed items as reviewed." : "Keep the enquiry review status updated after each inbox check.",
+    status.postsOpen ? "Check open advert posts weekly so expired vacancies and tenders do not remain active." : "Add active advert posts when a notice, vacancy, or tender is ready to publish.",
+    hasEndpointIssue ? "Investigate endpoint checks marked for review before publishing content changes." : "Keep endpoint checks healthy before relying on the editor for routine publishing.",
+    "Use the print tab option for a quick A4 audit trail before major website updates."
+  ];
 }
 
 function analyticsReportText(analytics, signals, generatedAt = reportGeneratedAt()) {
@@ -1124,15 +1400,23 @@ function analyticsReportText(analytics, signals, generatedAt = reportGeneratedAt
   const cities = Array.isArray(analytics.cities) ? analytics.cities : [];
   const pages = Array.isArray(analytics.pages) ? analytics.pages : [];
   const metrics = visitorAnalyticsMetrics(analytics);
+  const checkRows = llmCheckRows(signals);
+  const checksPassed = checkRows.filter((row) => row.ok).length;
   const topCountries = countries.slice(0, 5).map((item) => `${displayCountry(item.country || item.label)}: ${item.count || 0}`).join(", ") || "No country records";
   const topCities = cities.slice(0, 5).map((item) => `${item.city || item.label || "Unknown"}: ${item.count || 0}`).join(", ") || "No city records";
   const topPages = pages.slice(0, 5).map((item) => `${displayTrackedPage(item.label || item.key || "/")}: ${item.count || 0}`).join(", ") || "No page records";
+  const summary = analyticsExecutiveSummary(analytics, metrics, signals).map((item) => `- ${item}`).join("\n");
+  const recommendations = analyticsRecommendations(analytics, metrics, signals).map((item, index) => `${index + 1}. ${item}`).join("\n");
 
   return [
     "Aja.bt Analytics and LLM Readiness Report",
     `Generated: ${generatedAt}`,
-    "Meaning: This report shows consented website visits by location and page, plus readiness signals that help search engines and AI assistants understand Aja.bt.",
+    `Data period: ${analyticsDataPeriod(analytics)}`,
+    "Purpose: This report shows consented website visits by location and page, plus readiness signals that help search engines and AI assistants understand Aja.bt.",
     "Limit: It does not show private Search Console traffic, AI answer impressions, sales conversions, or visitors who declined tracking.",
+    "",
+    "Executive summary",
+    summary,
     "",
     "Visitor analytics",
     `Total consented visits: ${analytics.totalVisits || 0}`,
@@ -1147,16 +1431,18 @@ function analyticsReportText(analytics, signals, generatedAt = reportGeneratedAt
     `Top cities: ${topCities}`,
     `Top pages: ${topPages}`,
     "",
+    "Metric definitions",
+    "Likely unique visitors: anonymous consented visitor IDs, excluding older records without visitor IDs.",
+    "Returning visitors: anonymous visitor IDs with more than one visit.",
+    "Repeat rate: repeat visits divided by identified visits.",
+    "LLM checks passed: public technical checks that support AI and search discovery, not actual AI traffic.",
+    "",
     "LLM readiness",
-    `Homepage reachable: ${signals.homepageOk ? "Yes" : "No"}`,
-    `llms.txt reachable: ${signals.llmsOk ? "Yes" : "No"}`,
-    `robots.txt reachable: ${signals.robotsOk ? "Yes" : "No"}`,
-    `Sitemap valid: ${signals.sitemapOk ? "Yes" : "No"}`,
-    `Consent tracking route active: ${signals.trackerOk ? "Yes" : "No"}`,
-    `AI crawler agents explicitly listed: ${signals.allowedAgentsCount} of ${signals.aiAgentsTotal}`,
-    `Structured data types: ${signals.schemaTypes.join(", ") || "None detected"}`,
-    `Buying route in llms.txt: ${signals.llmsHasBuyingRoute ? "Yes" : "No"}`,
-    `Product context in llms.txt: ${signals.llmsHasProductContext ? "Yes" : "No"}`,
+    `Checks passed: ${checksPassed} of ${checkRows.length}`,
+    checkRows.map((row) => `${row.check}: ${row.ok ? "OK" : "Review"} (${row.evidence}). Action: ${row.action}.`).join("\n"),
+    "",
+    "Recommended next actions",
+    recommendations,
     "",
     "Note: direct AI answer-engine impressions are not exposed by the website itself. Google AI feature clicks are measured inside Search Console Performance reports."
   ].join("\n");
@@ -1183,6 +1469,8 @@ async function renderAnalyticsReport() {
   const pages = Array.isArray(analytics.pages) ? analytics.pages : [];
   const metrics = visitorAnalyticsMetrics(analytics);
   const signals = analyseLlmSignals({ home, robots, llms, sitemap, tracker });
+  const checkRows = llmCheckRows(signals);
+  const checksPassed = checkRows.filter((row) => row.ok).length;
   const generatedAt = reportGeneratedAt();
   setReportPrintTimestamp(generatedAt);
   const reportText = analyticsReportText(analytics, signals, generatedAt);
@@ -1192,7 +1480,7 @@ async function renderAnalyticsReport() {
     reportHeader(
       "Analytics and LLM readiness report",
       generatedAt,
-      "This report shows what the website can currently prove from consent-based visitor analytics, page interest, and AI/search readiness checks. It is meant to guide website operations and content decisions, not to replace Search Console or sales reporting."
+      `Data period: ${analyticsDataPeriod(analytics)}. This report shows what the website can currently prove from consent-based visitor analytics, page interest, and AI/search readiness checks.`
     ),
     document.createElement("div")
   );
@@ -1201,19 +1489,13 @@ async function renderAnalyticsReport() {
     analyticsCard("Total visits", analytics.totalVisits || 0),
     analyticsCard("Likely unique", metrics.uniqueVisitors || "Tracking now"),
     analyticsCard("Returning", metrics.returningVisitors),
-    analyticsCard("LLM checks passed", [
-      signals.homepageOk,
-      signals.robotsOk,
-      signals.llmsOk,
-      signals.sitemapOk,
-      signals.trackerOk,
-      signals.schemaTypes.length > 0,
-      signals.llmsHasBuyingRoute,
-      signals.llmsHasProductContext
-    ].filter(Boolean).length),
+    analyticsCard("LLM checks passed", `${checksPassed}/${checkRows.length}`),
     analyticsCard("Repeat rate", metrics.repeatRate)
   );
   wrapper.append(
+    reportSection("Executive summary", [
+      reportSummary(analyticsExecutiveSummary(analytics, metrics, signals))
+    ]),
     reportSection("Visitor summary", [
       analyticsTable("Top countries", ["Country", "Visits", "Last seen"], countries.slice(0, 4).map((item) => [
         displayCountry(item.country || item.label),
@@ -1232,18 +1514,26 @@ async function renderAnalyticsReport() {
         formatSubmissionDate(item.lastSeenAt)
       ]))
     ]),
+    reportSection("Metric definitions", [
+      reportTable("Definitions", ["Metric", "Meaning"], [
+        ["Total visits", "Consent-based visit events recorded by the website."],
+        ["Likely unique", "Anonymous consented visitor IDs, excluding older records without visitor IDs."],
+        ["Returning", "Anonymous visitor IDs with more than one visit."],
+        ["Repeat rate", "Repeat visits divided by identified visits."],
+        ["LLM checks passed", "Technical readiness checks for AI and search discovery, not actual AI traffic."]
+      ], { compact: true })
+    ]),
     reportSection("LLM readiness", [
-      reportList([
-        `Homepage reachable: ${signals.homepageOk ? "yes" : "no"}`,
-        `llms.txt reachable: ${signals.llmsOk ? "yes" : "no"}, ${signals.llmsLineCount} populated lines`,
-        `robots.txt reachable: ${signals.robotsOk ? "yes" : "no"}, ${signals.allowedAgentsCount} AI crawler agents listed`,
-        `Sitemap reachable and parseable: ${signals.sitemapOk ? "yes" : "no"}`,
-        `Structured data detected: ${signals.schemaTypes.join(", ") || "none"}`,
-        `Buying and product context present in llms.txt: ${signals.llmsHasBuyingRoute && signals.llmsHasProductContext ? "yes" : "review needed"}`,
-        `Admin and API blocked from public crawlers: ${signals.robotsDisallowsAdmin ? "yes" : "review needed"}`,
-        `Visitor tracking consent gate active: ${signals.trackerOk ? "yes" : "no"}`
-      ]),
+      reportTable("Readiness checks", ["Check", "Status", "Evidence", "Recommended action"], checkRows.map((row) => [
+        row.check,
+        reportBadge(row.ok ? "OK" : "Review", row.ok ? "ok" : "review"),
+        row.evidence,
+        row.action
+      ])),
       textBlock("table-note", "Search Console is still needed for real search clicks, queries, country filters, and Google AI feature traffic. The website can report readiness signals, not private search impressions.")
+    ]),
+    reportSection("Recommended next actions", [
+      reportRecommendationList(analyticsRecommendations(analytics, metrics, signals))
     ]),
     reportTextarea(reportText),
     reportPrintFooter(generatedAt)
@@ -1259,11 +1549,16 @@ function countOpenItems(items = []) {
 }
 
 function editorStatusReportText(status, generatedAt = reportGeneratedAt()) {
+  const summary = editorStatusExecutiveSummary(status).map((item) => `- ${item}`).join("\n");
+  const recommendations = editorStatusRecommendations(status).map((item, index) => `${index + 1}. ${item}`).join("\n");
   return [
     "Aja.bt Post Editor Status Report",
     `Generated: ${generatedAt}`,
-    "Meaning: This report shows whether the Post Editor can load content, preserve enquiry records, and reach the local or live endpoints needed for daily publishing work.",
+    "Purpose: This report shows whether the Post Editor can load content, preserve enquiry records, and reach the local or live endpoints needed for daily publishing work.",
     "Limit: It is an operational health report, not a public website analytics report.",
+    "",
+    "Executive summary",
+    summary,
     "",
     "Session",
     `User: ${status.user}`,
@@ -1277,7 +1572,10 @@ function editorStatusReportText(status, generatedAt = reportGeneratedAt()) {
     `Posts with media: ${status.postsWithMedia}`,
     "",
     "Endpoint checks",
-    status.endpointChecks.map((item) => `${item.label}: ${item.ok ? "OK" : "Review"} (${item.detail})`).join("\n")
+    status.endpointChecks.map((item) => `${item.label}: ${item.ok ? "OK" : "Review"} (${item.detail})`).join("\n"),
+    "",
+    "Recommended next actions",
+    recommendations
   ].join("\n");
 }
 
@@ -1351,6 +1649,9 @@ async function renderEditorStatusReport() {
     analyticsCard("Endpoint checks", `${endpointChecks.filter((item) => item.ok).length}/${endpointChecks.length}`)
   );
   wrapper.append(
+    reportSection("Executive summary", [
+      reportSummary(editorStatusExecutiveSummary(status))
+    ]),
     reportDisclosure("Post editor content status", [
       statusMetricGrid(postKeys.map((key) => {
         const items = Array.isArray(content[key]?.items) ? content[key].items : [];
@@ -1371,13 +1672,18 @@ async function renderEditorStatusReport() {
       ])
     ], true),
     reportDisclosure("Endpoint health", [
-      statusMetricGrid(endpointChecks.map((item) => statusMetricCard(item.label, [
-        { label: "Result", value: item.ok ? "OK" : "Review" },
-        { label: "Detail", value: item.detail }
-      ], item.ok ? "ok" : "review")))
+      reportTable("Endpoint checks", ["Endpoint", "Status", "Evidence", "Recommended action"], endpointChecks.map((item) => [
+        item.label,
+        reportBadge(item.ok ? "OK" : "Review", item.ok ? "ok" : "review"),
+        item.detail,
+        item.ok ? "Monitor" : "Investigate before publishing changes"
+      ]))
     ], true),
     reportDisclosure("Loaded files", [
       reportList(status.loadedSections.map((key) => `${key}: ${files[key] || "virtual report"}`))
+    ]),
+    reportSection("Recommended next actions", [
+      reportRecommendationList(editorStatusRecommendations(status))
     ]),
     reportTextarea(reportText),
     reportPrintFooter(generatedAt)
@@ -2271,8 +2577,18 @@ sectionButtons.forEach((button) => {
   });
 });
 
-window.addEventListener("beforeprint", prepareReportPrint);
-window.addEventListener("afterprint", restoreReportPrint);
+if (printSectionButton) {
+  printSectionButton.replaceChildren(iconSvg("print"), document.createTextNode("Print tab"));
+  printSectionButton.classList.add("report-icon-text-button");
+  printSectionButton.addEventListener("click", () => {
+    prepareCurrentSectionPrint();
+    statusLine.textContent = "Opening print dialogue.";
+    window.print();
+  });
+}
+
+window.addEventListener("beforeprint", prepareCurrentSectionPrint);
+window.addEventListener("afterprint", restoreCurrentSectionPrint);
 
 saveButton.addEventListener("click", saveCurrentSection);
 logoutButton?.addEventListener("click", logout);

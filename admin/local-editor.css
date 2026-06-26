@@ -195,6 +195,7 @@ body[data-dashboard="post-editor"] .topbar h1::after {
   align-items: center;
   border-bottom: 1px solid var(--line);
   display: flex;
+  gap: 18px;
   justify-content: space-between;
   margin-bottom: 22px;
   padding-bottom: 18px;
@@ -214,6 +215,14 @@ body[data-dashboard="post-editor"] .topbar h1::after {
 
 .editor-head h2 {
   font-size: 26px;
+}
+
+.editor-head-actions {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-end;
 }
 
 #save-button {
@@ -523,6 +532,11 @@ body[data-dashboard="post-editor"] .topbar h1::after {
   display: none;
 }
 
+.section-print-header,
+.section-print-footer {
+  display: none;
+}
+
 .report-section {
   display: grid;
   gap: 10px;
@@ -683,6 +697,75 @@ body[data-dashboard="post-editor"] .topbar h1::after {
 .report-list li {
   color: var(--muted);
   font-size: 13px;
+}
+
+.report-summary-list {
+  background: var(--surface-soft);
+  border: 1px solid var(--line);
+  display: grid;
+  gap: 8px;
+  list-style-position: outside;
+  margin: 0;
+  padding: 14px 18px 14px 34px;
+}
+
+.report-summary-list li {
+  color: var(--ink);
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.report-table-section {
+  grid-column: 1 / -1;
+}
+
+.report-table-section .post-table td {
+  overflow: visible;
+  overflow-wrap: anywhere;
+  text-overflow: clip;
+  white-space: normal;
+}
+
+.report-table .report-badge {
+  margin: 0;
+}
+
+.report-badge {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--line);
+  color: var(--muted);
+  display: inline-flex;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  padding: 5px 8px;
+  text-transform: uppercase;
+}
+
+.report-badge-ok {
+  border-color: rgba(111, 184, 122, 0.42);
+  color: #9bd0a2;
+}
+
+.report-badge-review {
+  border-color: rgba(240, 109, 79, 0.5);
+  color: var(--danger);
+}
+
+.report-recommendations {
+  background: var(--surface-soft);
+  border: 1px solid var(--line);
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 14px 18px 14px 36px;
+}
+
+.report-recommendations li {
+  color: var(--ink);
+  font-size: 14px;
+  line-height: 1.45;
 }
 
 .report-copy-field {
@@ -1182,11 +1265,6 @@ textarea {
       content: var(--report-generated-at);
       font-size: 8pt;
     }
-
-    @bottom-right {
-      content: "Page " counter(page) " of " counter(pages);
-      font-size: 8pt;
-    }
   }
 
   :root {
@@ -1210,7 +1288,8 @@ textarea {
   body {
     background: #fff;
     color: #111;
-    font-size: 8.5pt;
+    font-size: 8.75pt;
+    line-height: 1.35;
   }
 
   .topbar,
@@ -1218,7 +1297,10 @@ textarea {
   .editor-head,
   .report-actions,
   .report-copy-field,
-  .status {
+  .status,
+  button,
+  .post-actions,
+  .item-actions {
     display: none !important;
   }
 
@@ -1236,6 +1318,120 @@ textarea {
     background: #fff;
     border: 0;
     min-height: 0;
+  }
+
+  .field,
+  .item,
+  .confirm-modal-panel,
+  .post-table-wrap,
+  .analytics-panel {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .field,
+  .item {
+    background: #fff;
+    border: 1px solid #d7d7d7;
+    box-shadow: none;
+    margin-bottom: 2mm;
+    padding: 2mm;
+  }
+
+  .field label,
+  .item-head h3,
+  .item h3,
+  .item h4 {
+    color: #111;
+    font-size: 8pt;
+    margin: 0 0 1mm;
+  }
+
+  input,
+  textarea,
+  select {
+    background: #fff !important;
+    border: 0 !important;
+    color: #111 !important;
+    font-size: 8pt !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+  }
+
+  textarea {
+    height: auto !important;
+    min-height: 14mm !important;
+  }
+
+  .post-table-wrap {
+    overflow: visible;
+  }
+
+  .post-table {
+    border-collapse: collapse;
+    display: table;
+    font-size: 7.4pt;
+    min-width: 0;
+    table-layout: fixed;
+    width: 100%;
+  }
+
+  .post-table thead {
+    display: table-header-group;
+  }
+
+  .post-table tbody {
+    display: table-row-group;
+  }
+
+  .post-table tr {
+    background: transparent;
+    border: 0;
+    display: table-row;
+    padding: 0;
+  }
+
+  .post-table th,
+  .post-table td {
+    border-bottom: 1px solid #d7d7d7;
+    color: #111;
+    display: table-cell;
+    line-height: 1.28;
+    overflow: visible;
+    padding: 1.2mm;
+    text-overflow: clip;
+    white-space: normal;
+    word-break: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .post-table td::before {
+    content: none;
+  }
+
+  .section-print-header {
+    background: #fff;
+    border: 1px solid #c9c9c9;
+    display: grid;
+    gap: 1mm;
+    margin-bottom: 3mm;
+    padding: 2.5mm;
+  }
+
+  .section-print-header h3,
+  .section-print-header p {
+    margin: 0;
+  }
+
+  .section-print-header h3 {
+    color: #111;
+    font-size: 14pt;
+  }
+
+  .section-print-generated,
+  .section-print-description {
+    color: #444;
+    font-size: 7.5pt;
   }
 
   .report-panel > * + * {
@@ -1357,7 +1553,8 @@ textarea {
     padding: 1mm;
     text-overflow: clip;
     white-space: normal;
-    word-break: break-word;
+    word-break: normal;
+    overflow-wrap: anywhere;
   }
 
   .analytics-table-section .post-table td::before {
@@ -1392,8 +1589,38 @@ textarea {
     gap: 1mm;
   }
 
-  .report-list li {
+  .report-list li,
+  .report-summary-list li,
+  .report-recommendations li {
     font-size: 7.5pt;
+  }
+
+  .report-summary-list,
+  .report-recommendations,
+  .report-table-section,
+  .report-section > .table-note {
+    grid-column: 1 / -1;
+  }
+
+  .report-summary-list,
+  .report-recommendations {
+    border: 1px solid #c9c9c9;
+    gap: 1mm;
+    padding: 2mm 3mm 2mm 6mm;
+  }
+
+  .report-badge {
+    border-color: #999;
+    color: #111;
+    font-size: 6.4pt;
+    padding: 0.8mm 1.2mm;
+  }
+
+  .report-table .post-table th,
+  .report-table .post-table td,
+  .report-table th,
+  .report-table td {
+    vertical-align: top;
   }
 
   .status-metric-grid {
@@ -1434,7 +1661,23 @@ textarea {
     right: 0;
   }
 
-  .report-print-page::after {
-    content: "Page " counter(page) " of " counter(pages);
+  .section-print-footer {
+    align-items: center;
+    background: #fff;
+    border-top: 1px solid #c9c9c9;
+    bottom: 0;
+    color: #444;
+    display: flex;
+    font-size: 8pt;
+    justify-content: space-between;
+    left: 0;
+    padding-top: 2mm;
+    position: fixed;
+    right: 0;
+  }
+
+  .report-print-page::after,
+  .section-print-footer-page::after {
+    content: none;
   }
 }
