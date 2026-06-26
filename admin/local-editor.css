@@ -445,6 +445,16 @@ body[data-dashboard="post-editor"] .topbar h1::after {
   margin: 0;
 }
 
+.analytics-table-section .post-table {
+  table-layout: fixed;
+}
+
+.analytics-table-section .post-table td {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .report-panel {
   align-content: start;
 }
@@ -860,25 +870,25 @@ textarea {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .report-panel .analytics-table-section .post-table-wrap {
+  .analytics-table-section .post-table-wrap {
     overflow: visible;
   }
 
-  .report-panel .analytics-table-section .post-table {
+  .analytics-table-section .post-table {
     display: block;
     min-width: 0;
   }
 
-  .report-panel .analytics-table-section .post-table thead {
+  .analytics-table-section .post-table thead {
     display: none;
   }
 
-  .report-panel .analytics-table-section .post-table tbody {
+  .analytics-table-section .post-table tbody {
     display: grid;
     gap: 10px;
   }
 
-  .report-panel .analytics-table-section .post-table tr {
+  .analytics-table-section .post-table tr {
     background: var(--surface-soft);
     border: 1px solid var(--line);
     display: grid;
@@ -886,15 +896,18 @@ textarea {
     padding: 12px;
   }
 
-  .report-panel .analytics-table-section .post-table td {
+  .analytics-table-section .post-table td {
     border: 0;
     display: grid;
     gap: 10px;
     grid-template-columns: minmax(96px, 38%) minmax(0, 1fr);
+    overflow: visible;
     padding: 0;
+    text-overflow: clip;
+    white-space: normal;
   }
 
-  .report-panel .analytics-table-section .post-table td::before {
+  .analytics-table-section .post-table td::before {
     color: var(--muted);
     content: attr(data-label);
     font-size: 12px;

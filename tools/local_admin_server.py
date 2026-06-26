@@ -77,7 +77,10 @@ class LocalAdminHandler(SimpleHTTPRequestHandler):
             if not self.require_role({"editor"}, api=True):
                 return
             session = self.current_session()
-            visible_files = {key: CONTENT_FILES[key] for key in POST_CONTENT_KEYS}
+            visible_files = {
+                key: CONTENT_FILES[key]
+                for key in [*sorted(POST_CONTENT_KEYS), "contact_form", "contact_submissions", "visitor_analytics"]
+            }
             self.send_json({
                 key: json.loads(path.read_text(encoding="utf-8"))
                 for key, path in visible_files.items()

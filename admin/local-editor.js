@@ -645,21 +645,44 @@ function renderVisitorAnalytics() {
   const cities = Array.isArray(data.cities) ? data.cities : [];
   const pages = Array.isArray(data.pages) ? data.pages : [];
   const recentVisits = Array.isArray(data.recentVisits) ? data.recentVisits : [];
+  const metrics = visitorAnalyticsMetrics(data);
 
   const wrapper = document.createElement("div");
-  wrapper.className = "analytics-panel";
+  wrapper.className = "analytics-panel report-panel";
 
   const summary = document.createElement("div");
   summary.className = "analytics-summary";
   summary.append(
     analyticsCard("Total visits", data.totalVisits || 0),
-    analyticsCard("Countries", countries.filter((item) => item.key !== "Unknown").length),
-    analyticsCard("Cities", cities.filter((item) => item.key !== "Unknown").length),
+    analyticsCard("Likely unique", metrics.uniqueVisitors || "Tracking now"),
+    analyticsCard("Returning", metrics.returningVisitors),
     analyticsCard("Last update", formatSubmissionDate(data.updatedAt) || "No visits yet")
   );
 
   wrapper.append(summary);
   wrapper.append(
+    reportDisclosure("Visitor identity insight", [
+      statusMetricGrid([
+        statusMetricCard("Uniqueness tracking", [
+          { label: "Identified visits", value: metrics.identifiedVisits },
+          { label: "Likely unique visitors", value: metrics.uniqueVisitors },
+          { label: "Legacy visits", value: metrics.legacyVisits }
+        ], metrics.identifiedVisits ? "ok" : "review"),
+        statusMetricCard("Repeat behaviour", [
+          { label: "Returning visitors", value: metrics.returningVisitors },
+          { label: "Repeat visits", value: metrics.repeatVisits },
+          { label: "Repeat rate", value: metrics.repeatRate }
+        ], metrics.returningVisitors ? "attention" : "ok"),
+        statusMetricCard("Location spread", [
+          { label: "Countries", value: countries.filter((item) => item.key !== "Unknown").length },
+          { label: "Cities", value: cities.filter((item) => item.key !== "Unknown").length },
+          { label: "Recent records", value: recentVisits.length }
+        ])
+      ]),
+      textBlock("table-note", metrics.legacyVisits
+        ? "Older visits were recorded before anonymous visitor IDs were added, so they remain visit events and cannot be converted into unique people."
+        : "Unique and returning visitor counts are based on a consent-only anonymous visitor ID. Raw IP addresses are not stored.")
+    ], true),
     analyticsTable("Visitors by country", ["Country", "Visits", "Last seen"], countries.map((item) => [
       displayCountry(item.country || item.label),
       item.count || 0,
@@ -672,13 +695,13 @@ function renderVisitorAnalytics() {
       formatSubmissionDate(item.lastSeenAt)
     ])),
     analyticsTable("Visited pages", ["Page", "Visits", "Last seen"], pages.map((item) => [
-      item.label || item.key || "/",
+      displayTrackedPage(item.label || item.key || "/"),
       item.count || 0,
       formatSubmissionDate(item.lastSeenAt)
     ])),
     analyticsTable("Recent consented visits", ["Date", "Page", "Country", "City", "Timezone"], recentVisits.map((visit) => [
       formatSubmissionDate(visit.visitedAt),
-      visit.page || "/",
+      displayTrackedPage(visit.page || "/"),
       displayCountry(visit.country),
       [visit.city, visit.region].filter(Boolean).join(", ") || "Unknown",
       visit.timezone || ""
@@ -702,6 +725,51 @@ function analyticsCard(label, value) {
   valueElement.textContent = String(value || 0);
   card.append(titleElement, valueElement);
   return card;
+}
+
+function visitorAnalyticsMetrics(analytics = {}) {
+  const totalVisits = Number(analytics.totalVisits || 0);
+  const visitors = Array.isArray(analytics.visitors) ? analytics.visitors : [];
+  const identifiedVisits = Number(analytics.identifiedVisits || visitors.reduce((total, visitor) => total + Number(visitor.visitCount || 0), 0));
+  const uniqueVisitors = Number(analytics.uniqueVisitors || visitors.length);
+  const returningVisitors = Number(analytics.returningVisitors || visitors.filter((visitor) => Number(visitor.visitCount || 0) > 1).length);
+  const repeatVisits = Number(analytics.repeatVisits || Math.max(0, identifiedVisits - uniqueVisitors));
+  const legacyVisits = Number(analytics.legacyVisits || Math.max(0, totalVisits - identifiedVisits));
+  const repeatRateValue = identifiedVisits ? Math.round((repeatVisits / identifiedVisits) * 100) : 0;
+  return {
+    totalVisits,
+    identifiedVisits,
+    uniqueVisitors,
+    returningVisitors,
+    repeatVisits,
+    legacyVisits,
+    repeatRate: identifiedVisits ? `${repeatRateValue}%` : "Starts now"
+  };
+}
+
+function displayTrackedPage(value) {
+  const page = cleanTrackedPage(value);
+  return page === "/" ? "/" : page;
+}
+
+function cleanTrackedPage(value) {
+  const page = String(value || "/").trim();
+  if (!page.startsWith("/")) return "/";
+  try {
+    const url = new URL(page, "https://aja.bt");
+    const noisyPrefixes = ["utm_", "_ga"];
+    const noisyKeys = new Set(["fbclid", "gclid", "msclkid", "mc_cid", "mc_eid", "igshid"]);
+    [...url.searchParams.keys()].forEach((key) => {
+      const lower = key.toLowerCase();
+      if (noisyKeys.has(lower) || noisyPrefixes.some((prefix) => lower.startsWith(prefix))) {
+        url.searchParams.delete(key);
+      }
+    });
+    const query = url.searchParams.toString();
+    return `${url.pathname}${query ? `?${query}` : ""}`;
+  } catch {
+    return page.split("?")[0] || "/";
+  }
 }
 
 function analyticsTable(titleText, headers, rows) {
@@ -733,6 +801,7 @@ function analyticsTable(titleText, headers, rows) {
         const cell = document.createElement("td");
         cell.dataset.label = headers[index] || "";
         cell.textContent = value ?? "";
+        cell.title = String(value ?? "");
         tableRow.append(cell);
       });
       tbody.append(tableRow);
@@ -958,9 +1027,10 @@ function analyticsReportText(analytics, signals) {
   const countries = Array.isArray(analytics.countries) ? analytics.countries : [];
   const cities = Array.isArray(analytics.cities) ? analytics.cities : [];
   const pages = Array.isArray(analytics.pages) ? analytics.pages : [];
+  const metrics = visitorAnalyticsMetrics(analytics);
   const topCountries = countries.slice(0, 5).map((item) => `${displayCountry(item.country || item.label)}: ${item.count || 0}`).join(", ") || "No country records";
   const topCities = cities.slice(0, 5).map((item) => `${item.city || item.label || "Unknown"}: ${item.count || 0}`).join(", ") || "No city records";
-  const topPages = pages.slice(0, 5).map((item) => `${item.label || item.key || "/"}: ${item.count || 0}`).join(", ") || "No page records";
+  const topPages = pages.slice(0, 5).map((item) => `${displayTrackedPage(item.label || item.key || "/")}: ${item.count || 0}`).join(", ") || "No page records";
 
   return [
     "Aja.bt Analytics and LLM Readiness Report",
@@ -968,6 +1038,12 @@ function analyticsReportText(analytics, signals) {
     "",
     "Visitor analytics",
     `Total consented visits: ${analytics.totalVisits || 0}`,
+    `Identified visits: ${metrics.identifiedVisits}`,
+    `Likely unique visitors: ${metrics.uniqueVisitors || "tracking starts after this update"}`,
+    `Returning visitors: ${metrics.returningVisitors}`,
+    `Repeat visits: ${metrics.repeatVisits}`,
+    `Repeat rate: ${metrics.repeatRate}`,
+    `Legacy visit events without visitor ID: ${metrics.legacyVisits}`,
     `Last update: ${formatSubmissionDate(analytics.updatedAt) || "No visits yet"}`,
     `Top countries: ${topCountries}`,
     `Top cities: ${topCities}`,
@@ -1007,6 +1083,7 @@ async function renderAnalyticsReport() {
   const countries = Array.isArray(analytics.countries) ? analytics.countries : [];
   const cities = Array.isArray(analytics.cities) ? analytics.cities : [];
   const pages = Array.isArray(analytics.pages) ? analytics.pages : [];
+  const metrics = visitorAnalyticsMetrics(analytics);
   const signals = analyseLlmSignals({ home, robots, llms, sitemap, tracker });
   const reportText = analyticsReportText(analytics, signals);
 
@@ -1017,7 +1094,8 @@ async function renderAnalyticsReport() {
   wrapper.children[1].className = "analytics-summary";
   wrapper.children[1].append(
     analyticsCard("Total visits", analytics.totalVisits || 0),
-    analyticsCard("Countries", countries.filter((item) => item.key !== "Unknown").length),
+    analyticsCard("Likely unique", metrics.uniqueVisitors || "Tracking now"),
+    analyticsCard("Returning", metrics.returningVisitors),
     analyticsCard("LLM checks passed", [
       signals.homepageOk,
       signals.robotsOk,
@@ -1028,10 +1106,22 @@ async function renderAnalyticsReport() {
       signals.llmsHasBuyingRoute,
       signals.llmsHasProductContext
     ].filter(Boolean).length),
-    analyticsCard("Last update", formatSubmissionDate(analytics.updatedAt) || "No visits yet")
+    analyticsCard("Repeat rate", metrics.repeatRate)
   );
   wrapper.append(
     reportSection("Visitor summary", [
+      statusMetricGrid([
+        statusMetricCard("Uniqueness tracking", [
+          { label: "Identified visits", value: metrics.identifiedVisits },
+          { label: "Likely unique visitors", value: metrics.uniqueVisitors },
+          { label: "Legacy visits", value: metrics.legacyVisits }
+        ], metrics.identifiedVisits ? "ok" : "review"),
+        statusMetricCard("Repeat behaviour", [
+          { label: "Returning visitors", value: metrics.returningVisitors },
+          { label: "Repeat visits", value: metrics.repeatVisits },
+          { label: "Repeat rate", value: metrics.repeatRate }
+        ], metrics.returningVisitors ? "attention" : "ok")
+      ]),
       analyticsTable("Top countries", ["Country", "Visits", "Last seen"], countries.slice(0, 8).map((item) => [
         displayCountry(item.country || item.label),
         item.count || 0,
@@ -1044,7 +1134,7 @@ async function renderAnalyticsReport() {
         formatSubmissionDate(item.lastSeenAt)
       ])),
       analyticsTable("Top pages", ["Page", "Visits", "Last seen"], pages.slice(0, 8).map((item) => [
-        item.label || item.key || "/",
+        displayTrackedPage(item.label || item.key || "/"),
         item.count || 0,
         formatSubmissionDate(item.lastSeenAt)
       ]))

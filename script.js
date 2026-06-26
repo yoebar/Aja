@@ -60,6 +60,9 @@ let captchaCode = "";
 let noticeLayoutFrame = 0;
 const cookieConsentName = "aja_cookie_consent";
 const visitorTrackedKey = "aja_visitor_tracked";
+const visitorIdCookieName = "aja_visitor_id";
+const visitorLastTrackedKey = "aja_visitor_last_tracked";
+const visitorTrackWindowMs = 30 * 60 * 1000;
 
 const countryCallingCodes = [
   ["Afghanistan", "+93"],
@@ -1199,6 +1202,25 @@ function writeCookie(name, value, days) {
   document.cookie = `${name}=${encodeURIComponent(value)}; Path=/; SameSite=Lax; Max-Age=${maxAge}`;
 }
 
+function clearCookie(name) {
+  document.cookie = `${name}=; Path=/; SameSite=Lax; Max-Age=0`;
+}
+
+function randomVisitorId() {
+  if (window.crypto?.randomUUID) return window.crypto.randomUUID();
+  const values = new Uint32Array(4);
+  window.crypto?.getRandomValues?.(values);
+  return [...values].map((value) => value.toString(16).padStart(8, "0")).join("");
+}
+
+function ensureVisitorId() {
+  const existing = readCookie(visitorIdCookieName);
+  if (existing) return existing;
+  const visitorId = randomVisitorId();
+  writeCookie(visitorIdCookieName, visitorId, 365);
+  return visitorId;
+}
+
 function sessionValue(key) {
   try {
     return window.sessionStorage.getItem(key);
@@ -1215,8 +1237,38 @@ function setSessionValue(key, value) {
   }
 }
 
+function localValue(key) {
+  try {
+    return window.localStorage.getItem(key);
+  } catch {
+    return "";
+  }
+}
+
+function setLocalValue(key, value) {
+  try {
+    window.localStorage.setItem(key, value);
+  } catch {
+    // Visitor tracking still works when local storage is unavailable.
+  }
+}
+
+function shouldTrackVisitorPage(page) {
+  const last = localValue(visitorLastTrackedKey);
+  if (!last) return true;
+  try {
+    const data = JSON.parse(last);
+    const trackedAt = Number(data.trackedAt || 0);
+    if (data.page !== page) return true;
+    return !trackedAt || Date.now() - trackedAt > visitorTrackWindowMs;
+  } catch {
+    return true;
+  }
+}
+
 async function trackVisitorLocation() {
-  if (readCookie(cookieConsentName) !== "accepted" || sessionValue(visitorTrackedKey)) return;
+  const page = `${window.location.pathname}${window.location.search}`;
+  if (readCookie(cookieConsentName) !== "accepted" || sessionValue(visitorTrackedKey) === "pending" || !shouldTrackVisitorPage(page)) return;
 
   setSessionValue(visitorTrackedKey, "pending");
   try {
@@ -1227,12 +1279,14 @@ async function trackVisitorLocation() {
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        page: `${window.location.pathname}${window.location.search}`
+        page,
+        visitorId: ensureVisitorId()
       })
     });
 
     if (response.ok) {
       setSessionValue(visitorTrackedKey, "done");
+      setLocalValue(visitorLastTrackedKey, JSON.stringify({ page, trackedAt: Date.now() }));
     } else {
       setSessionValue(visitorTrackedKey, "");
     }
@@ -1269,6 +1323,8 @@ function initialiseCookieConsent() {
 
   decline.addEventListener("click", () => {
     writeCookie(cookieConsentName, "declined", 180);
+    clearCookie(visitorIdCookieName);
+    setLocalValue(visitorLastTrackedKey, "");
     banner.remove();
   });
 
