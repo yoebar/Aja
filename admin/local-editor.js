@@ -83,10 +83,16 @@ const files = {
 
 const readOnlySections = new Set(["contact_submissions", "visitor_analytics", "analytics_report", "editor_status"]);
 const reportSections = new Set(["analytics_report", "editor_status"]);
+const postEditorSections = new Set(["contact_submissions", "visitor_analytics", "analytics_report", "editor_status", "notices", "vacancies", "tenders"]);
 let content = {};
 let currentUser = null;
 const initialSection = window.location.hash.slice(1);
-let activeSection = sections[initialSection] ? initialSection : sectionButtons[0]?.dataset.section || "information";
+const defaultSection = isPostEditorDashboard ? "notices" : sectionButtons[0]?.dataset.section || "information";
+let activeSection = isSectionAvailable(initialSection) ? initialSection : defaultSection;
+
+function isSectionAvailable(section) {
+  return Boolean(sections[section]) && (!isPostEditorDashboard || postEditorSections.has(section));
+}
 
 function field(label, name, value = "", options = {}) {
   const wrapper = document.createElement("div");
@@ -1065,7 +1071,55 @@ function dateOnly(value) {
   return parsed.toLocaleDateString("en-GB", { year: "numeric", month: "short", day: "numeric" });
 }
 
-function analyticsReportText(analytics, signals) {
+function reportGeneratedAt(date = new Date()) {
+  return date.toLocaleString("en-GB", {
+    day: "2-digit",
+    month: "short",
+    year: "numeric",
+    hour: "2-digit",
+    minute: "2-digit"
+  });
+}
+
+function setReportPrintTimestamp(generatedAt) {
+  document.documentElement.style.setProperty("--report-generated-at", JSON.stringify(`Generated: ${generatedAt}`));
+}
+
+function reportHeader(titleText, generatedAt, descriptionText) {
+  const header = document.createElement("header");
+  header.className = "report-header";
+
+  const brand = document.createElement("p");
+  brand.className = "report-brand";
+  brand.textContent = "Aja.bt";
+
+  const titleElement = document.createElement("h3");
+  titleElement.textContent = titleText;
+
+  const generated = document.createElement("p");
+  generated.className = "report-generated";
+  generated.textContent = `Generated: ${generatedAt}`;
+
+  const description = document.createElement("p");
+  description.className = "report-description";
+  description.textContent = descriptionText;
+
+  header.append(brand, titleElement, generated, description);
+  return header;
+}
+
+function reportPrintFooter(generatedAt) {
+  const footer = document.createElement("footer");
+  footer.className = "report-print-footer";
+  const generated = document.createElement("span");
+  generated.textContent = `Generated: ${generatedAt}`;
+  const page = document.createElement("span");
+  page.className = "report-print-page";
+  footer.append(generated, page);
+  return footer;
+}
+
+function analyticsReportText(analytics, signals, generatedAt = reportGeneratedAt()) {
   const countries = Array.isArray(analytics.countries) ? analytics.countries : [];
   const cities = Array.isArray(analytics.cities) ? analytics.cities : [];
   const pages = Array.isArray(analytics.pages) ? analytics.pages : [];
@@ -1076,7 +1130,9 @@ function analyticsReportText(analytics, signals) {
 
   return [
     "Aja.bt Analytics and LLM Readiness Report",
-    `Generated: ${new Date().toLocaleString("en-GB")}`,
+    `Generated: ${generatedAt}`,
+    "Meaning: This report shows consented website visits by location and page, plus readiness signals that help search engines and AI assistants understand Aja.bt.",
+    "Limit: It does not show private Search Console traffic, AI answer impressions, sales conversions, or visitors who declined tracking.",
     "",
     "Visitor analytics",
     `Total consented visits: ${analytics.totalVisits || 0}`,
@@ -1127,14 +1183,21 @@ async function renderAnalyticsReport() {
   const pages = Array.isArray(analytics.pages) ? analytics.pages : [];
   const metrics = visitorAnalyticsMetrics(analytics);
   const signals = analyseLlmSignals({ home, robots, llms, sitemap, tracker });
-  const reportText = analyticsReportText(analytics, signals);
+  const generatedAt = reportGeneratedAt();
+  setReportPrintTimestamp(generatedAt);
+  const reportText = analyticsReportText(analytics, signals, generatedAt);
 
   wrapper.replaceChildren(
     reportActions("Refresh report", renderAnalyticsReport, reportText),
+    reportHeader(
+      "Analytics and LLM readiness report",
+      generatedAt,
+      "This report shows what the website can currently prove from consent-based visitor analytics, page interest, and AI/search readiness checks. It is meant to guide website operations and content decisions, not to replace Search Console or sales reporting."
+    ),
     document.createElement("div")
   );
-  wrapper.children[1].className = "analytics-summary";
-  wrapper.children[1].append(
+  wrapper.children[2].className = "analytics-summary";
+  wrapper.children[2].append(
     analyticsCard("Total visits", analytics.totalVisits || 0),
     analyticsCard("Likely unique", metrics.uniqueVisitors || "Tracking now"),
     analyticsCard("Returning", metrics.returningVisitors),
@@ -1152,30 +1215,18 @@ async function renderAnalyticsReport() {
   );
   wrapper.append(
     reportSection("Visitor summary", [
-      statusMetricGrid([
-        statusMetricCard("Uniqueness tracking", [
-          { label: "Identified visits", value: metrics.identifiedVisits },
-          { label: "Likely unique visitors", value: metrics.uniqueVisitors },
-          { label: "Legacy visits", value: metrics.legacyVisits }
-        ], metrics.identifiedVisits ? "ok" : "review"),
-        statusMetricCard("Repeat behaviour", [
-          { label: "Returning visitors", value: metrics.returningVisitors },
-          { label: "Repeat visits", value: metrics.repeatVisits },
-          { label: "Repeat rate", value: metrics.repeatRate }
-        ], metrics.returningVisitors ? "attention" : "ok")
-      ]),
-      analyticsTable("Top countries", ["Country", "Visits", "Last seen"], countries.slice(0, 8).map((item) => [
+      analyticsTable("Top countries", ["Country", "Visits", "Last seen"], countries.slice(0, 4).map((item) => [
         displayCountry(item.country || item.label),
         item.count || 0,
         formatSubmissionDate(item.lastSeenAt)
       ])),
-      analyticsTable("Top cities", ["City", "Country", "Visits", "Last seen"], cities.slice(0, 8).map((item) => [
+      analyticsTable("Top cities", ["City", "Country", "Visits", "Last seen"], cities.slice(0, 4).map((item) => [
         item.city || item.label || "Unknown",
         displayCountry(item.country),
         item.count || 0,
         formatSubmissionDate(item.lastSeenAt)
       ])),
-      analyticsTable("Top pages", ["Page", "Visits", "Last seen"], pages.slice(0, 8).map((item) => [
+      analyticsTable("Top pages", ["Page", "Visits", "Last seen"], pages.slice(0, 4).map((item) => [
         displayTrackedPage(item.label || item.key || "/"),
         item.count || 0,
         formatSubmissionDate(item.lastSeenAt)
@@ -1194,7 +1245,8 @@ async function renderAnalyticsReport() {
       ]),
       textBlock("table-note", "Search Console is still needed for real search clicks, queries, country filters, and Google AI feature traffic. The website can report readiness signals, not private search impressions.")
     ]),
-    reportTextarea(reportText)
+    reportTextarea(reportText),
+    reportPrintFooter(generatedAt)
   );
 }
 
@@ -1206,10 +1258,12 @@ function countOpenItems(items = []) {
   }).length;
 }
 
-function editorStatusReportText(status) {
+function editorStatusReportText(status, generatedAt = reportGeneratedAt()) {
   return [
-    "Aja Post Editor Status Report",
-    `Generated: ${new Date().toLocaleString("en-GB")}`,
+    "Aja.bt Post Editor Status Report",
+    `Generated: ${generatedAt}`,
+    "Meaning: This report shows whether the Post Editor can load content, preserve enquiry records, and reach the local or live endpoints needed for daily publishing work.",
+    "Limit: It is an operational health report, not a public website analytics report.",
     "",
     "Session",
     `User: ${status.user}`,
@@ -1276,14 +1330,21 @@ async function renderEditorStatusReport() {
     postsWithMedia: postRows.filter((item) => mediaTypeFromPost(item) !== "none").length,
     endpointChecks
   };
-  const reportText = editorStatusReportText(status);
+  const generatedAt = reportGeneratedAt();
+  setReportPrintTimestamp(generatedAt);
+  const reportText = editorStatusReportText(status, generatedAt);
 
   wrapper.replaceChildren(
     reportActions("Refresh status", renderEditorStatusReport, reportText),
+    reportHeader(
+      "Post Editor status report",
+      generatedAt,
+      "This report explains whether the editor has the content, enquiry records, and API checks needed for routine website publishing. It helps identify operational issues before changing public posts."
+    ),
     document.createElement("div")
   );
-  wrapper.children[1].className = "analytics-summary";
-  wrapper.children[1].append(
+  wrapper.children[2].className = "analytics-summary";
+  wrapper.children[2].append(
     analyticsCard("Loaded sections", status.loadedSections.length),
     analyticsCard("Submissions", status.submissionsTotal),
     analyticsCard("Advert posts", status.postsTotal),
@@ -1318,7 +1379,8 @@ async function renderEditorStatusReport() {
     reportDisclosure("Loaded files", [
       reportList(status.loadedSections.map((key) => `${key}: ${files[key] || "virtual report"}`))
     ]),
-    reportTextarea(reportText)
+    reportTextarea(reportText),
+    reportPrintFooter(generatedAt)
   );
 }
 
@@ -2019,7 +2081,10 @@ function renderContactLine(line, number) {
 }
 
 function updateSection(section) {
-  if (!sections[section]) return;
+  if (!isSectionAvailable(section)) {
+    updateSection(defaultSection);
+    return;
+  }
 
   activeSection = section;
   sectionButtons.forEach((button) => button.classList.toggle("is-active", button.dataset.section === section));
