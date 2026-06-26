@@ -445,6 +445,47 @@ body[data-dashboard="post-editor"] .topbar h1::after {
   margin: 0;
 }
 
+.report-panel {
+  align-content: start;
+}
+
+.report-actions {
+  justify-content: flex-start;
+}
+
+.report-section {
+  display: grid;
+  gap: 12px;
+}
+
+.report-section h3 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.report-list {
+  background: var(--surface-soft);
+  border: 1px solid var(--line);
+  display: grid;
+  gap: 8px;
+  list-style-position: inside;
+  margin: 0;
+  padding: 16px;
+}
+
+.report-list li {
+  color: var(--muted);
+}
+
+.report-copy-field {
+  display: grid;
+  gap: 8px;
+}
+
+.report-copy-field textarea {
+  min-height: 260px;
+}
+
 .form-actions {
   display: flex;
   flex-wrap: wrap;

@@ -37,6 +37,16 @@ const sections = {
     group: "Website details",
     description: "View consent-based visitor location counts from the public website."
   },
+  analytics_report: {
+    label: "Analytics Report",
+    group: "Reports",
+    description: "Generate a live visitor analytics and LLM readiness report."
+  },
+  editor_status: {
+    label: "Editor Status",
+    group: "Reports",
+    description: "View the Post Editor content, session, and endpoint health report."
+  },
   users: {
     label: "Users",
     group: "Admin",
@@ -71,6 +81,8 @@ const files = {
   users: "admin/users.local.json"
 };
 
+const readOnlySections = new Set(["contact_submissions", "visitor_analytics", "analytics_report", "editor_status"]);
+const reportSections = new Set(["analytics_report", "editor_status"]);
 let content = {};
 let currentUser = null;
 const initialSection = window.location.hash.slice(1);
@@ -737,6 +749,389 @@ function analyticsTable(titleText, headers, rows) {
   tableWrap.append(table);
   section.append(heading, tableWrap);
   return section;
+}
+
+function textBlock(className, text) {
+  const element = document.createElement("p");
+  element.className = className;
+  element.textContent = text;
+  return element;
+}
+
+function reportSection(titleText, children = []) {
+  const section = document.createElement("section");
+  section.className = "report-section";
+  const heading = document.createElement("h3");
+  heading.textContent = titleText;
+  section.append(heading, ...children);
+  return section;
+}
+
+function reportList(items) {
+  const list = document.createElement("ul");
+  list.className = "report-list";
+  items.forEach((item) => {
+    const row = document.createElement("li");
+    row.textContent = item;
+    list.append(row);
+  });
+  return list;
+}
+
+function reportActions(refreshLabel, onRefresh, reportText) {
+  const actions = document.createElement("div");
+  actions.className = "form-actions report-actions";
+
+  const refresh = document.createElement("button");
+  refresh.className = "small-button";
+  refresh.type = "button";
+  refresh.textContent = refreshLabel;
+  refresh.addEventListener("click", onRefresh);
+
+  const copy = document.createElement("button");
+  copy.className = "small-button";
+  copy.type = "button";
+  copy.textContent = "Copy report";
+  copy.addEventListener("click", async () => {
+    try {
+      await navigator.clipboard.writeText(reportText);
+      statusLine.textContent = "Report copied.";
+    } catch {
+      statusLine.textContent = "Copy failed. Select the report text and copy it manually.";
+    }
+  });
+
+  actions.append(refresh, copy);
+  return actions;
+}
+
+function reportTextarea(reportText) {
+  const wrapper = document.createElement("div");
+  wrapper.className = "field report-copy-field";
+  const label = document.createElement("label");
+  label.htmlFor = "generatedReportText";
+  label.textContent = "Generated report text";
+  const textarea = document.createElement("textarea");
+  textarea.id = "generatedReportText";
+  textarea.value = reportText;
+  textarea.readOnly = true;
+  textarea.rows = 14;
+  wrapper.append(label, textarea);
+  return wrapper;
+}
+
+async function fetchTextResource(path, options = {}) {
+  const started = performance.now();
+  try {
+    const response = await fetch(path, { cache: "no-store", ...options });
+    const text = await response.text();
+    return {
+      path,
+      ok: response.ok,
+      status: response.status,
+      text,
+      durationMs: Math.round(performance.now() - started)
+    };
+  } catch (error) {
+    return {
+      path,
+      ok: false,
+      status: 0,
+      text: "",
+      durationMs: Math.round(performance.now() - started),
+      error: error.message || "Request failed"
+    };
+  }
+}
+
+async function loadLiveVisitorAnalytics() {
+  const response = await fetchTextResource(`/content/visitor-analytics.json?ts=${Date.now()}`);
+  if (!response.ok) return content.visitor_analytics || {};
+  try {
+    return JSON.parse(response.text);
+  } catch {
+    return content.visitor_analytics || {};
+  }
+}
+
+function analyseLlmSignals(results) {
+  const home = results.home.text || "";
+  const robots = results.robots.text || "";
+  const llms = results.llms.text || "";
+  const sitemap = results.sitemap.text || "";
+  const endpointOk = results.tracker.status === 403 && results.tracker.text.includes("consent_required");
+  const parser = new DOMParser();
+  const documentHtml = parser.parseFromString(home, "text/html");
+  const schemaNodes = [...documentHtml.querySelectorAll('script[type="application/ld+json"]')];
+  const schemaTypes = [];
+
+  schemaNodes.forEach((node) => {
+    try {
+      const data = JSON.parse(node.textContent || "{}");
+      const graph = Array.isArray(data["@graph"]) ? data["@graph"] : [data];
+      graph.forEach((item) => {
+        if (item?.["@type"]) schemaTypes.push(item["@type"]);
+      });
+    } catch {
+      schemaTypes.push("Invalid JSON-LD");
+    }
+  });
+
+  const aiAgents = ["GPTBot", "OAI-SearchBot", "ChatGPT-User", "ClaudeBot", "Claude-Web", "anthropic-ai", "PerplexityBot", "Perplexity-User", "Google-Extended", "Applebot-Extended", "Amazonbot", "Bingbot", "CCBot"];
+  const allowedAgents = aiAgents.filter((agent) => robots.includes(`User-agent: ${agent}`) && robots.includes("Allow: /"));
+  const llmsLines = llms.split("\n").filter((line) => line.trim());
+
+  return {
+    homepageOk: results.home.ok,
+    robotsOk: results.robots.ok,
+    llmsOk: results.llms.ok,
+    sitemapOk: results.sitemap.ok && sitemap.includes("<urlset"),
+    trackerOk: endpointOk,
+    schemaTypes,
+    aiAgentsTotal: aiAgents.length,
+    allowedAgentsCount: allowedAgents.length,
+    llmsLineCount: llmsLines.length,
+    llmsHasBuyingRoute: llms.includes("sales@aja.bt") && llms.includes("quotation"),
+    llmsHasProductContext: llms.includes("Ferro Silicon") && llms.includes("Micro Silica"),
+    llmsHasAssistantNotes: llms.includes("Notes for AI assistants"),
+    robotsDisallowsAdmin: robots.includes("Disallow: /admin/") && robots.includes("Disallow: /api/")
+  };
+}
+
+function dateOnly(value) {
+  if (!value) return "";
+  const parsed = new Date(value);
+  if (Number.isNaN(parsed.getTime())) return String(value);
+  return parsed.toLocaleDateString("en-GB", { year: "numeric", month: "short", day: "numeric" });
+}
+
+function analyticsReportText(analytics, signals) {
+  const countries = Array.isArray(analytics.countries) ? analytics.countries : [];
+  const cities = Array.isArray(analytics.cities) ? analytics.cities : [];
+  const pages = Array.isArray(analytics.pages) ? analytics.pages : [];
+  const topCountries = countries.slice(0, 5).map((item) => `${displayCountry(item.country || item.label)}: ${item.count || 0}`).join(", ") || "No country records";
+  const topCities = cities.slice(0, 5).map((item) => `${item.city || item.label || "Unknown"}: ${item.count || 0}`).join(", ") || "No city records";
+  const topPages = pages.slice(0, 5).map((item) => `${item.label || item.key || "/"}: ${item.count || 0}`).join(", ") || "No page records";
+
+  return [
+    "Aja.bt Analytics and LLM Readiness Report",
+    `Generated: ${new Date().toLocaleString("en-GB")}`,
+    "",
+    "Visitor analytics",
+    `Total consented visits: ${analytics.totalVisits || 0}`,
+    `Last update: ${formatSubmissionDate(analytics.updatedAt) || "No visits yet"}`,
+    `Top countries: ${topCountries}`,
+    `Top cities: ${topCities}`,
+    `Top pages: ${topPages}`,
+    "",
+    "LLM readiness",
+    `Homepage reachable: ${signals.homepageOk ? "Yes" : "No"}`,
+    `llms.txt reachable: ${signals.llmsOk ? "Yes" : "No"}`,
+    `robots.txt reachable: ${signals.robotsOk ? "Yes" : "No"}`,
+    `Sitemap valid: ${signals.sitemapOk ? "Yes" : "No"}`,
+    `Consent tracking route active: ${signals.trackerOk ? "Yes" : "No"}`,
+    `AI crawler agents explicitly listed: ${signals.allowedAgentsCount} of ${signals.aiAgentsTotal}`,
+    `Structured data types: ${signals.schemaTypes.join(", ") || "None detected"}`,
+    `Buying route in llms.txt: ${signals.llmsHasBuyingRoute ? "Yes" : "No"}`,
+    `Product context in llms.txt: ${signals.llmsHasProductContext ? "Yes" : "No"}`,
+    "",
+    "Note: direct AI answer-engine impressions are not exposed by the website itself. Google AI feature clicks are measured inside Search Console Performance reports."
+  ].join("\n");
+}
+
+async function renderAnalyticsReport() {
+  const wrapper = document.createElement("div");
+  wrapper.className = "analytics-panel report-panel";
+  wrapper.append(textBlock("table-note", "Generating live visitor and LLM readiness report..."));
+  form.replaceChildren(wrapper);
+
+  const [analytics, home, robots, llms, sitemap, tracker] = await Promise.all([
+    loadLiveVisitorAnalytics(),
+    fetchTextResource("/"),
+    fetchTextResource("/robots.txt"),
+    fetchTextResource("/llms.txt"),
+    fetchTextResource("/sitemap.xml"),
+    fetchTextResource("/api/visitor-track", { method: "POST" })
+  ]);
+  if (activeSection !== "analytics_report") return;
+
+  const countries = Array.isArray(analytics.countries) ? analytics.countries : [];
+  const cities = Array.isArray(analytics.cities) ? analytics.cities : [];
+  const pages = Array.isArray(analytics.pages) ? analytics.pages : [];
+  const signals = analyseLlmSignals({ home, robots, llms, sitemap, tracker });
+  const reportText = analyticsReportText(analytics, signals);
+
+  wrapper.replaceChildren(
+    reportActions("Refresh report", renderAnalyticsReport, reportText),
+    document.createElement("div")
+  );
+  wrapper.children[1].className = "analytics-summary";
+  wrapper.children[1].append(
+    analyticsCard("Total visits", analytics.totalVisits || 0),
+    analyticsCard("Countries", countries.filter((item) => item.key !== "Unknown").length),
+    analyticsCard("LLM checks passed", [
+      signals.homepageOk,
+      signals.robotsOk,
+      signals.llmsOk,
+      signals.sitemapOk,
+      signals.trackerOk,
+      signals.schemaTypes.length > 0,
+      signals.llmsHasBuyingRoute,
+      signals.llmsHasProductContext
+    ].filter(Boolean).length),
+    analyticsCard("Last update", formatSubmissionDate(analytics.updatedAt) || "No visits yet")
+  );
+  wrapper.append(
+    reportSection("Visitor summary", [
+      analyticsTable("Top countries", ["Country", "Visits", "Last seen"], countries.slice(0, 8).map((item) => [
+        displayCountry(item.country || item.label),
+        item.count || 0,
+        formatSubmissionDate(item.lastSeenAt)
+      ])),
+      analyticsTable("Top cities", ["City", "Country", "Visits", "Last seen"], cities.slice(0, 8).map((item) => [
+        item.city || item.label || "Unknown",
+        displayCountry(item.country),
+        item.count || 0,
+        formatSubmissionDate(item.lastSeenAt)
+      ])),
+      analyticsTable("Top pages", ["Page", "Visits", "Last seen"], pages.slice(0, 8).map((item) => [
+        item.label || item.key || "/",
+        item.count || 0,
+        formatSubmissionDate(item.lastSeenAt)
+      ]))
+    ]),
+    reportSection("LLM readiness", [
+      reportList([
+        `Homepage reachable: ${signals.homepageOk ? "yes" : "no"}`,
+        `llms.txt reachable: ${signals.llmsOk ? "yes" : "no"}, ${signals.llmsLineCount} populated lines`,
+        `robots.txt reachable: ${signals.robotsOk ? "yes" : "no"}, ${signals.allowedAgentsCount} AI crawler agents listed`,
+        `Sitemap reachable and parseable: ${signals.sitemapOk ? "yes" : "no"}`,
+        `Structured data detected: ${signals.schemaTypes.join(", ") || "none"}`,
+        `Buying and product context present in llms.txt: ${signals.llmsHasBuyingRoute && signals.llmsHasProductContext ? "yes" : "review needed"}`,
+        `Admin and API blocked from public crawlers: ${signals.robotsDisallowsAdmin ? "yes" : "review needed"}`,
+        `Visitor tracking consent gate active: ${signals.trackerOk ? "yes" : "no"}`
+      ]),
+      textBlock("table-note", "Search Console is still needed for real search clicks, queries, country filters, and Google AI feature traffic. The website can report readiness signals, not private search impressions.")
+    ]),
+    reportTextarea(reportText)
+  );
+}
+
+function countOpenItems(items = []) {
+  const today = new Date(todayDateValue()).getTime();
+  return items.filter((item) => {
+    if (!item.closingDate) return true;
+    return dateTimeSortValue(item.closingDate) >= today;
+  }).length;
+}
+
+function editorStatusReportText(status) {
+  return [
+    "Aja Post Editor Status Report",
+    `Generated: ${new Date().toLocaleString("en-GB")}`,
+    "",
+    "Session",
+    `User: ${status.user}`,
+    `Mode: ${status.mode}`,
+    `API base: ${status.apiBase}`,
+    "",
+    "Loaded content",
+    `Loaded sections: ${status.loadedSections.join(", ") || "None"}`,
+    `Contact submissions: ${status.submissionsTotal}, reviewed: ${status.submissionsReviewed}, new: ${status.submissionsNew}`,
+    `Advert posts: ${status.postsTotal}, open or evergreen: ${status.postsOpen}`,
+    `Posts with media: ${status.postsWithMedia}`,
+    "",
+    "Endpoint checks",
+    status.endpointChecks.map((item) => `${item.label}: ${item.ok ? "OK" : "Review"} (${item.detail})`).join("\n")
+  ].join("\n");
+}
+
+async function renderEditorStatusReport() {
+  const wrapper = document.createElement("div");
+  wrapper.className = "analytics-panel report-panel";
+  wrapper.append(textBlock("table-note", "Checking Post Editor status..."));
+  form.replaceChildren(wrapper);
+
+  const submissions = Array.isArray(content.contact_submissions?.submissions) ? content.contact_submissions.submissions : [];
+  const postKeys = ["notices", "vacancies", "tenders"];
+  const postRows = postKeys.flatMap((key) => (
+    Array.isArray(content[key]?.items)
+      ? content[key].items.map((item) => ({ ...item, section: sections[key].label }))
+      : []
+  ));
+  const [sessionCheck, filesCheck, trackerCheck] = await Promise.all([
+    fetchTextResource(`${apiBase}/session`),
+    fetchTextResource(`${apiBase}/files`),
+    fetchTextResource("/api/visitor-track", { method: "POST" })
+  ]);
+  if (activeSection !== "editor_status") return;
+  const endpointChecks = [
+    {
+      label: "Session endpoint",
+      ok: sessionCheck.ok,
+      detail: sessionCheck.status ? `HTTP ${sessionCheck.status}` : sessionCheck.error || "No response"
+    },
+    {
+      label: "Files endpoint",
+      ok: filesCheck.ok,
+      detail: filesCheck.status ? `HTTP ${filesCheck.status}` : filesCheck.error || "No response"
+    },
+    {
+      label: "Visitor tracking consent gate",
+      ok: trackerCheck.status === 403 && trackerCheck.text.includes("consent_required"),
+      detail: trackerCheck.status ? `HTTP ${trackerCheck.status}` : trackerCheck.error || "No response"
+    }
+  ];
+  const status = {
+    user: currentUser ? `${currentUser.name || currentUser.username} (${currentUser.role})` : "Unknown",
+    mode: isPostEditorDashboard ? "Live Post Editor" : "Local admin preview",
+    apiBase,
+    loadedSections: Object.keys(content).filter((key) => key !== "users"),
+    submissionsTotal: submissions.length,
+    submissionsReviewed: submissions.filter((item) => item.reviewStatus === "reviewed").length,
+    submissionsNew: submissions.filter((item) => item.reviewStatus !== "reviewed").length,
+    postsTotal: postRows.length,
+    postsOpen: countOpenItems(postRows),
+    postsWithMedia: postRows.filter((item) => mediaTypeFromPost(item) !== "none").length,
+    endpointChecks
+  };
+  const reportText = editorStatusReportText(status);
+
+  wrapper.replaceChildren(
+    reportActions("Refresh status", renderEditorStatusReport, reportText),
+    document.createElement("div")
+  );
+  wrapper.children[1].className = "analytics-summary";
+  wrapper.children[1].append(
+    analyticsCard("Loaded sections", status.loadedSections.length),
+    analyticsCard("Submissions", status.submissionsTotal),
+    analyticsCard("Advert posts", status.postsTotal),
+    analyticsCard("Endpoint checks", `${endpointChecks.filter((item) => item.ok).length}/${endpointChecks.length}`)
+  );
+  wrapper.append(
+    analyticsTable("Post editor content status", ["Area", "Total", "Open or active", "With media"], postKeys.map((key) => {
+      const items = Array.isArray(content[key]?.items) ? content[key].items : [];
+      return [
+        sections[key].label,
+        items.length,
+        countOpenItems(items),
+        items.filter((item) => mediaTypeFromPost(item) !== "none").length
+      ];
+    })),
+    analyticsTable("Submission status", ["Status", "Count"], [
+      ["New", status.submissionsNew],
+      ["Reviewed", status.submissionsReviewed]
+    ]),
+    analyticsTable("Endpoint health", ["Check", "Result", "Detail"], endpointChecks.map((item) => [
+      item.label,
+      item.ok ? "OK" : "Review",
+      item.detail
+    ])),
+    reportSection("Loaded files", [
+      reportList(status.loadedSections.map((key) => `${key}: ${files[key] || "virtual report"}`))
+    ]),
+    reportTextarea(reportText)
+  );
 }
 
 function renderSubmissionActions(submission, detail) {
@@ -1435,9 +1830,9 @@ function updateSection(section) {
   activeSection = section;
   sectionButtons.forEach((button) => button.classList.toggle("is-active", button.dataset.section === section));
   title.textContent = sections[section].label;
-  kicker.textContent = `${sections[section].group} | ${files[section]}`;
+  kicker.textContent = `${sections[section].group} | ${files[section] || "live report"}`;
   statusLine.textContent = sections[section].description;
-  saveButton.hidden = ["contact_submissions", "visitor_analytics"].includes(section);
+  saveButton.hidden = readOnlySections.has(section);
 
   if (section === "information") {
     renderSimple([
@@ -1453,6 +1848,10 @@ function updateSection(section) {
     renderContactSubmissions();
   } else if (section === "visitor_analytics") {
     renderVisitorAnalytics();
+  } else if (section === "analytics_report") {
+    renderAnalyticsReport();
+  } else if (section === "editor_status") {
+    renderEditorStatusReport();
   } else if (section === "users") {
     renderUsers();
   } else if (section === "vacancies") {
@@ -1512,6 +1911,9 @@ function readCurrentSection() {
   if (activeSection === "visitor_analytics") {
     return content.visitor_analytics || {};
   }
+  if (reportSections.has(activeSection)) {
+    return {};
+  }
   if (activeSection === "users") {
     return readUsers();
   }
@@ -1528,7 +1930,7 @@ function readCurrentSection() {
 }
 
 async function saveCurrentSection() {
-  if (["contact_submissions", "visitor_analytics"].includes(activeSection)) return;
+  if (readOnlySections.has(activeSection)) return;
 
   const data = readCurrentSection();
   if (activeSection === "users") {

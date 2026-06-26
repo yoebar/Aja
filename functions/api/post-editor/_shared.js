@@ -9,6 +9,7 @@ const CONTENT_FILES = {
 
 const POST_ITEM_KEYS = new Set(["notices", "vacancies", "tenders"]);
 const FULL_CONTENT_KEYS = new Set(["contact_form", "contact_submissions", "visitor_analytics"]);
+const EDITOR_WRITE_KEYS = new Set(["notices", "vacancies", "tenders", "contact_form"]);
 
 const IMAGE_EXTENSIONS = new Set([".jpg", ".jpeg", ".png", ".webp", ".gif"]);
 const PDF_EXTENSIONS = new Set([".pdf"]);
@@ -128,6 +129,9 @@ export async function savePostItems(key, incomingData, env) {
   const path = getContentPath(key);
   if (!path) {
     return { error: jsonResponse({ ok: false, error: "Unknown post section" }, 400) };
+  }
+  if (!EDITOR_WRITE_KEYS.has(key)) {
+    return { error: jsonResponse({ ok: false, error: "Section is read only" }, 403) };
   }
 
   const current = await githubGetJson(path, env);
