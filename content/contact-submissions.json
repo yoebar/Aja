@@ -1,6 +1,24 @@
 {
   "submissions": [
     {
+      "id": "240913f8-2dd5-471d-931f-b372a54a666e",
+      "submittedAt": "2026-06-26T06:35:08.982Z",
+      "notificationTo": "sales@aja.bt",
+      "notificationStatus": "sent",
+      "autoReplyStatus": "sent",
+      "name": "RAJESH SINGHAL",
+      "company": "DEVSAR ENTERPRISES",
+      "country": "India",
+      "email": "enterprisesdevsar@gmail.com",
+      "phone": "+91 9932412407",
+      "enquiryType": "Tender or supplier enquiry",
+      "grade": "To be discussed",
+      "quantity": "",
+      "message": "Inquiry Regarding Raw Material Requirements and Technical Specifications for Ferro Silicon Production And Other Hardware General requirements",
+      "reviewStatus": "new",
+      "reviewedAt": ""
+    },
+    {
       "id": "f18c0528-ecc4-4782-91a1-c18f953f08ab",
       "submittedAt": "2026-06-26T05:00:27.277Z",
       "notificationTo": "sales@aja.bt",
