@@ -186,6 +186,12 @@ function iconSvg(name) {
       '<path d="M19 6l-1 14H6L5 6"></path>',
       '<path d="M10 11v5"></path>',
       '<path d="M14 11v5"></path>'
+    ],
+    print: [
+      '<path d="M7 8V3h10v5"></path>',
+      '<path d="M7 17H5a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2"></path>',
+      '<path d="M7 14h10v7H7z"></path>',
+      '<path d="M17 12h.01"></path>'
     ]
   };
   const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
@@ -203,6 +209,14 @@ function iconActionButton(icon, label, options = {}) {
   button.setAttribute("aria-label", label);
   button.setAttribute("title", label);
   button.append(iconSvg(icon));
+  return button;
+}
+
+function textIconButton(icon, label) {
+  const button = document.createElement("button");
+  button.className = "small-button report-icon-text-button";
+  button.type = "button";
+  button.append(iconSvg(icon), document.createTextNode(label));
   return button;
 }
 
@@ -896,6 +910,27 @@ function reportList(items) {
   return list;
 }
 
+let reportPrintDisclosureState = [];
+
+function prepareReportPrint() {
+  reportPrintDisclosureState = [...document.querySelectorAll(".report-panel .report-disclosure")].map((item) => ({
+    item,
+    open: item.open
+  }));
+  reportPrintDisclosureState.forEach(({ item }) => {
+    item.open = true;
+  });
+  document.body.classList.add("is-printing-report");
+}
+
+function restoreReportPrint() {
+  reportPrintDisclosureState.forEach(({ item, open }) => {
+    item.open = open;
+  });
+  reportPrintDisclosureState = [];
+  document.body.classList.remove("is-printing-report");
+}
+
 function reportActions(refreshLabel, onRefresh, reportText) {
   const actions = document.createElement("div");
   actions.className = "form-actions report-actions";
@@ -919,7 +954,14 @@ function reportActions(refreshLabel, onRefresh, reportText) {
     }
   });
 
-  actions.append(refresh, copy);
+  const print = textIconButton("print", "Print report");
+  print.addEventListener("click", () => {
+    prepareReportPrint();
+    statusLine.textContent = "Opening print dialogue.";
+    window.print();
+  });
+
+  actions.append(refresh, copy, print);
   return actions;
 }
 
@@ -2163,6 +2205,9 @@ sectionButtons.forEach((button) => {
     updateSection(button.dataset.section);
   });
 });
+
+window.addEventListener("beforeprint", prepareReportPrint);
+window.addEventListener("afterprint", restoreReportPrint);
 
 saveButton.addEventListener("click", saveCurrentSection);
 logoutButton?.addEventListener("click", logout);

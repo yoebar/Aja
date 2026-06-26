@@ -463,6 +463,22 @@ body[data-dashboard="post-editor"] .topbar h1::after {
   justify-content: flex-start;
 }
 
+.report-icon-text-button {
+  align-items: center;
+  display: inline-flex;
+  gap: 8px;
+}
+
+.report-icon-text-button svg {
+  fill: none;
+  height: 18px;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+  width: 18px;
+}
+
 .report-section {
   display: grid;
   gap: 12px;
@@ -1104,4 +1120,176 @@ textarea {
   border-color: var(--accent-soft);
   color: var(--accent-soft);
   outline: 0;
+}
+
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 12mm;
+  }
+
+  :root {
+    --bg: #fff;
+    --surface: #fff;
+    --surface-soft: #fff;
+    --surface-raised: #fff;
+    --ink: #111;
+    --muted: #444;
+    --line: #c9c9c9;
+    --accent: #111;
+    --accent-soft: #111;
+    --danger: #111;
+  }
+
+  * {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  body {
+    background: #fff;
+    color: #111;
+    font-size: 10pt;
+  }
+
+  .topbar,
+  .sidebar,
+  .editor-head,
+  .report-actions,
+  .report-copy-field,
+  .status {
+    display: none !important;
+  }
+
+  .layout,
+  .editor,
+  #content-form,
+  .report-panel {
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  .editor {
+    background: #fff;
+    border: 0;
+    min-height: 0;
+  }
+
+  .report-panel > * + * {
+    margin-top: 10mm;
+  }
+
+  .analytics-summary,
+  .status-metric-grid {
+    display: grid;
+    gap: 4mm;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .analytics-card,
+  .status-metric-card,
+  .report-section,
+  .report-disclosure,
+  .analytics-table-section,
+  .report-list {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .analytics-card,
+  .status-metric-card,
+  .report-disclosure,
+  .report-list {
+    border: 1px solid #c9c9c9;
+    box-shadow: none;
+  }
+
+  .analytics-card,
+  .status-metric-card,
+  .report-list,
+  .report-disclosure-body,
+  .report-disclosure > summary {
+    padding: 4mm;
+  }
+
+  .analytics-card {
+    min-height: 0;
+  }
+
+  .analytics-card strong {
+    color: #111;
+    font-size: 18pt;
+  }
+
+  .analytics-card span,
+  .status-metric-head span,
+  .report-list li,
+  .table-note {
+    color: #444;
+  }
+
+  .report-section {
+    display: grid;
+    gap: 4mm;
+  }
+
+  .report-section h3,
+  .analytics-table-section h3,
+  .report-disclosure > summary {
+    color: #111;
+    font-size: 13pt;
+  }
+
+  .report-disclosure > summary::after {
+    display: none;
+  }
+
+  .report-disclosure-body {
+    border-top: 1px solid #c9c9c9;
+  }
+
+  .analytics-table-section .post-table-wrap {
+    overflow: visible;
+  }
+
+  .analytics-table-section .post-table {
+    display: table;
+    font-size: 9pt;
+    min-width: 0;
+    table-layout: auto;
+    width: 100%;
+  }
+
+  .analytics-table-section .post-table thead {
+    display: table-header-group;
+  }
+
+  .analytics-table-section .post-table tbody {
+    display: table-row-group;
+  }
+
+  .analytics-table-section .post-table tr {
+    background: transparent;
+    border: 0;
+    display: table-row;
+    padding: 0;
+  }
+
+  .analytics-table-section .post-table th,
+  .analytics-table-section .post-table td {
+    border-bottom: 1px solid #d7d7d7;
+    color: #111;
+    display: table-cell;
+    overflow: visible;
+    padding: 2.5mm;
+    text-overflow: clip;
+    white-space: normal;
+    word-break: break-word;
+  }
+
+  .analytics-table-section .post-table td::before {
+    content: none;
+  }
 }
