@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-26T19:46:36.351Z",
-  "totalVisits": 57,
+  "updatedAt": "2026-06-27T13:25:26.670Z",
+  "totalVisits": 58,
   "countries": [
     {
       "key": "BT",
@@ -34,6 +34,14 @@
       "count": 1,
       "firstSeenAt": "2026-06-23T18:49:41.127Z",
       "lastSeenAt": "2026-06-23T18:49:41.127Z"
+    },
+    {
+      "key": "MY",
+      "label": "MY",
+      "country": "MY",
+      "count": 1,
+      "firstSeenAt": "2026-06-27T13:25:26.670Z",
+      "lastSeenAt": "2026-06-27T13:25:26.670Z"
     }
   ],
   "cities": [
@@ -156,15 +164,27 @@
       "count": 1,
       "firstSeenAt": "2026-06-25T12:29:53.974Z",
       "lastSeenAt": "2026-06-25T12:29:53.974Z"
+    },
+    {
+      "key": "Kuching, Sarawak, MY",
+      "label": "Kuching, Sarawak, MY",
+      "city": "Kuching",
+      "region": "Sarawak",
+      "country": "MY",
+      "latitude": "1.548",
+      "longitude": "110.368",
+      "count": 1,
+      "firstSeenAt": "2026-06-27T13:25:26.670Z",
+      "lastSeenAt": "2026-06-27T13:25:26.670Z"
     }
   ],
   "pages": [
     {
       "key": "/",
       "label": "/",
-      "count": 56,
+      "count": 57,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-06-26T19:46:36.351Z"
+      "lastSeenAt": "2026-06-27T13:25:26.670Z"
     },
     {
       "key": "/Carkem?fbclid=IwZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAEej80NNTR0gtSQxs8FQCVgptvd8GiMc7UM8ba9HXw8j9ctkJx5f4m5OrwM1Q4_aem_pFK-ttBnC7PsWMTvFcAieg",
@@ -175,6 +195,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-06-27T13:25:26.670Z",
+      "page": "/",
+      "country": "MY",
+      "continent": "AS",
+      "region": "Sarawak",
+      "city": "Kuching",
+      "timezone": "Asia/Kuching",
+      "latitude": "1.548",
+      "longitude": "110.368",
+      "visitorType": "new",
+      "sessionType": "new",
+      "visitorVisitCount": 1
+    },
     {
       "visitedAt": "2026-06-26T19:46:36.351Z",
       "page": "/",
@@ -820,6 +854,25 @@
   ],
   "visitors": [
     {
+      "key": "80ee21b2a9c915ae9704ee55d936041612f317932be75863c2f156eded741f53",
+      "firstSeenAt": "2026-06-27T13:25:26.670Z",
+      "lastSeenAt": "2026-06-27T13:25:26.670Z",
+      "visitCount": 1,
+      "sessionCount": 1,
+      "firstPage": "/",
+      "lastPage": "/",
+      "firstCountry": "MY",
+      "firstRegion": "Sarawak",
+      "firstCity": "Kuching",
+      "firstTimezone": "Asia/Kuching",
+      "lastCountry": "MY",
+      "lastRegion": "Sarawak",
+      "lastCity": "Kuching",
+      "lastTimezone": "Asia/Kuching",
+      "lastLatitude": "1.548",
+      "lastLongitude": "110.368"
+    },
+    {
       "key": "5d7288c1a832cc20cda6b1a0003b41199232ce26e1671ea7a26ad6d72ec28e0a",
       "firstSeenAt": "2026-06-26T17:59:10.343Z",
       "lastSeenAt": "2026-06-26T19:46:36.351Z",
@@ -877,8 +930,8 @@
       "lastLongitude": "89.642"
     }
   ],
-  "identifiedVisits": 5,
-  "uniqueVisitors": 3,
+  "identifiedVisits": 6,
+  "uniqueVisitors": 4,
   "returningVisitors": 2,
   "repeatVisits": 2,
   "legacyVisits": 52
