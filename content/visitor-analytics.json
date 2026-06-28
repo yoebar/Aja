@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-27T13:25:26.670Z",
-  "totalVisits": 58,
+  "updatedAt": "2026-06-28T18:28:10.984Z",
+  "totalVisits": 59,
   "countries": [
     {
       "key": "BT",
@@ -28,20 +28,20 @@
       "lastSeenAt": "2026-06-24T05:57:52.482Z"
     },
     {
+      "key": "MY",
+      "label": "MY",
+      "country": "MY",
+      "count": 2,
+      "firstSeenAt": "2026-06-27T13:25:26.670Z",
+      "lastSeenAt": "2026-06-28T18:28:10.984Z"
+    },
+    {
       "key": "SE",
       "label": "SE",
       "country": "SE",
       "count": 1,
       "firstSeenAt": "2026-06-23T18:49:41.127Z",
       "lastSeenAt": "2026-06-23T18:49:41.127Z"
-    },
-    {
-      "key": "MY",
-      "label": "MY",
-      "country": "MY",
-      "count": 1,
-      "firstSeenAt": "2026-06-27T13:25:26.670Z",
-      "lastSeenAt": "2026-06-27T13:25:26.670Z"
     }
   ],
   "cities": [
@@ -176,15 +176,27 @@
       "count": 1,
       "firstSeenAt": "2026-06-27T13:25:26.670Z",
       "lastSeenAt": "2026-06-27T13:25:26.670Z"
+    },
+    {
+      "key": "Johor Bahru, Johor, MY",
+      "label": "Johor Bahru, Johor, MY",
+      "city": "Johor Bahru",
+      "region": "Johor",
+      "country": "MY",
+      "latitude": "1.466",
+      "longitude": "103.758",
+      "count": 1,
+      "firstSeenAt": "2026-06-28T18:28:10.984Z",
+      "lastSeenAt": "2026-06-28T18:28:10.984Z"
     }
   ],
   "pages": [
     {
       "key": "/",
       "label": "/",
-      "count": 57,
+      "count": 58,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-06-27T13:25:26.670Z"
+      "lastSeenAt": "2026-06-28T18:28:10.984Z"
     },
     {
       "key": "/Carkem?fbclid=IwZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAEej80NNTR0gtSQxs8FQCVgptvd8GiMc7UM8ba9HXw8j9ctkJx5f4m5OrwM1Q4_aem_pFK-ttBnC7PsWMTvFcAieg",
@@ -195,6 +207,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-06-28T18:28:10.984Z",
+      "page": "/",
+      "country": "MY",
+      "continent": "AS",
+      "region": "Johor",
+      "city": "Johor Bahru",
+      "timezone": "Asia/Kuala_Lumpur",
+      "latitude": "1.466",
+      "longitude": "103.758",
+      "visitorType": "new",
+      "sessionType": "new",
+      "visitorVisitCount": 1
+    },
     {
       "visitedAt": "2026-06-27T13:25:26.670Z",
       "page": "/",
@@ -854,6 +880,25 @@
   ],
   "visitors": [
     {
+      "key": "1ef74479998a74e0c613c443e999671f37c9835aaa08299aaade33d9bcd15242",
+      "firstSeenAt": "2026-06-28T18:28:10.984Z",
+      "lastSeenAt": "2026-06-28T18:28:10.984Z",
+      "visitCount": 1,
+      "sessionCount": 1,
+      "firstPage": "/",
+      "lastPage": "/",
+      "firstCountry": "MY",
+      "firstRegion": "Johor",
+      "firstCity": "Johor Bahru",
+      "firstTimezone": "Asia/Kuala_Lumpur",
+      "lastCountry": "MY",
+      "lastRegion": "Johor",
+      "lastCity": "Johor Bahru",
+      "lastTimezone": "Asia/Kuala_Lumpur",
+      "lastLatitude": "1.466",
+      "lastLongitude": "103.758"
+    },
+    {
       "key": "80ee21b2a9c915ae9704ee55d936041612f317932be75863c2f156eded741f53",
       "firstSeenAt": "2026-06-27T13:25:26.670Z",
       "lastSeenAt": "2026-06-27T13:25:26.670Z",
@@ -930,8 +975,8 @@
       "lastLongitude": "89.642"
     }
   ],
-  "identifiedVisits": 6,
-  "uniqueVisitors": 4,
+  "identifiedVisits": 7,
+  "uniqueVisitors": 5,
   "returningVisitors": 2,
   "repeatVisits": 2,
   "legacyVisits": 52
