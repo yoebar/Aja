@@ -1,15 +1,15 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-29T07:31:35.475Z",
-  "totalVisits": 64,
+  "updatedAt": "2026-06-29T15:37:34.134Z",
+  "totalVisits": 65,
   "countries": [
     {
       "key": "BT",
       "label": "BT",
       "country": "BT",
-      "count": 45,
+      "count": 46,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-06-29T07:23:38.101Z"
+      "lastSeenAt": "2026-06-29T15:37:34.134Z"
     },
     {
       "key": "IN",
@@ -58,6 +58,18 @@
       "lastSeenAt": "2026-06-29T04:35:14.047Z"
     },
     {
+      "key": "Phuntsholing, Chukha, BT",
+      "label": "Phuntsholing, Chukha, BT",
+      "city": "Phuntsholing",
+      "region": "Chukha",
+      "country": "BT",
+      "latitude": "26.852",
+      "longitude": "89.388",
+      "count": 6,
+      "firstSeenAt": "2026-06-24T14:41:27.830Z",
+      "lastSeenAt": "2026-06-29T15:37:34.134Z"
+    },
+    {
       "key": "Singapore, SG",
       "label": "Singapore, SG",
       "city": "Singapore",
@@ -68,18 +80,6 @@
       "count": 5,
       "firstSeenAt": "2026-06-23T17:25:37.923Z",
       "lastSeenAt": "2026-06-24T05:57:52.482Z"
-    },
-    {
-      "key": "Phuntsholing, Chukha, BT",
-      "label": "Phuntsholing, Chukha, BT",
-      "city": "Phuntsholing",
-      "region": "Chukha",
-      "country": "BT",
-      "latitude": "26.852",
-      "longitude": "89.388",
-      "count": 5,
-      "firstSeenAt": "2026-06-24T14:41:27.830Z",
-      "lastSeenAt": "2026-06-29T07:23:38.101Z"
     },
     {
       "key": "Siliguri, West Bengal, IN",
@@ -206,9 +206,9 @@
     {
       "key": "/",
       "label": "/",
-      "count": 63,
+      "count": 64,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-06-29T07:31:35.475Z"
+      "lastSeenAt": "2026-06-29T15:37:34.134Z"
     },
     {
       "key": "/Carkem?fbclid=IwZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAEej80NNTR0gtSQxs8FQCVgptvd8GiMc7UM8ba9HXw8j9ctkJx5f4m5OrwM1Q4_aem_pFK-ttBnC7PsWMTvFcAieg",
@@ -219,6 +219,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-06-29T15:37:34.134Z",
+      "page": "/",
+      "country": "BT",
+      "continent": "AS",
+      "region": "Chukha",
+      "city": "Phuntsholing",
+      "timezone": "Asia/Thimphu",
+      "latitude": "26.852",
+      "longitude": "89.388",
+      "visitorType": "new",
+      "sessionType": "new",
+      "visitorVisitCount": 1
+    },
     {
       "visitedAt": "2026-06-29T07:31:35.475Z",
       "page": "/",
@@ -962,6 +976,25 @@
   ],
   "visitors": [
     {
+      "key": "827beb1bc321a59347508fe8c584b08c5f8682934295cfd9960dcfd612c85e71",
+      "firstSeenAt": "2026-06-29T15:37:34.134Z",
+      "lastSeenAt": "2026-06-29T15:37:34.134Z",
+      "visitCount": 1,
+      "sessionCount": 1,
+      "firstPage": "/",
+      "lastPage": "/",
+      "firstCountry": "BT",
+      "firstRegion": "Chukha",
+      "firstCity": "Phuntsholing",
+      "firstTimezone": "Asia/Thimphu",
+      "lastCountry": "BT",
+      "lastRegion": "Chukha",
+      "lastCity": "Phuntsholing",
+      "lastTimezone": "Asia/Thimphu",
+      "lastLatitude": "26.852",
+      "lastLongitude": "89.388"
+    },
+    {
       "key": "b0284a26c620594d2e378b36426033ec46df6320f9913b51f0b3b99580e08111",
       "firstSeenAt": "2026-06-29T07:31:35.475Z",
       "lastSeenAt": "2026-06-29T07:31:35.475Z",
@@ -1152,8 +1185,8 @@
       "lastLongitude": "89.642"
     }
   ],
-  "identifiedVisits": 12,
-  "uniqueVisitors": 10,
+  "identifiedVisits": 13,
+  "uniqueVisitors": 11,
   "returningVisitors": 2,
   "repeatVisits": 2,
   "legacyVisits": 52
