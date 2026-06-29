@@ -1,15 +1,15 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-29T04:12:04.266Z",
-  "totalVisits": 60,
+  "updatedAt": "2026-06-29T04:35:14.047Z",
+  "totalVisits": 61,
   "countries": [
     {
       "key": "BT",
       "label": "BT",
       "country": "BT",
-      "count": 42,
+      "count": 43,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-06-26T19:46:36.351Z"
+      "lastSeenAt": "2026-06-29T04:35:14.047Z"
     },
     {
       "key": "IN",
@@ -53,9 +53,9 @@
       "country": "BT",
       "latitude": "27.466",
       "longitude": "89.642",
-      "count": 39,
+      "count": 40,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-06-26T19:46:36.351Z"
+      "lastSeenAt": "2026-06-29T04:35:14.047Z"
     },
     {
       "key": "Singapore, SG",
@@ -194,9 +194,9 @@
     {
       "key": "/",
       "label": "/",
-      "count": 59,
+      "count": 60,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-06-29T04:12:04.266Z"
+      "lastSeenAt": "2026-06-29T04:35:14.047Z"
     },
     {
       "key": "/Carkem?fbclid=IwZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAEej80NNTR0gtSQxs8FQCVgptvd8GiMc7UM8ba9HXw8j9ctkJx5f4m5OrwM1Q4_aem_pFK-ttBnC7PsWMTvFcAieg",
@@ -207,6 +207,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-06-29T04:35:14.047Z",
+      "page": "/",
+      "country": "BT",
+      "continent": "AS",
+      "region": "Thimphu District",
+      "city": "Thimphu",
+      "timezone": "Asia/Thimphu",
+      "latitude": "27.466",
+      "longitude": "89.642",
+      "visitorType": "new",
+      "sessionType": "new",
+      "visitorVisitCount": 1
+    },
     {
       "visitedAt": "2026-06-29T04:12:04.266Z",
       "page": "/",
@@ -894,6 +908,25 @@
   ],
   "visitors": [
     {
+      "key": "827495754da41fb7e5980c2b7bda7f6a5b1361b7dc070b8db86ce9e5193a377c",
+      "firstSeenAt": "2026-06-29T04:35:14.047Z",
+      "lastSeenAt": "2026-06-29T04:35:14.047Z",
+      "visitCount": 1,
+      "sessionCount": 1,
+      "firstPage": "/",
+      "lastPage": "/",
+      "firstCountry": "BT",
+      "firstRegion": "Thimphu District",
+      "firstCity": "Thimphu",
+      "firstTimezone": "Asia/Thimphu",
+      "lastCountry": "BT",
+      "lastRegion": "Thimphu District",
+      "lastCity": "Thimphu",
+      "lastTimezone": "Asia/Thimphu",
+      "lastLatitude": "27.466",
+      "lastLongitude": "89.642"
+    },
+    {
       "key": "a04f3e291ce494474e447f8f67030dd1d21c47de302ea75457c2063312d78d27",
       "firstSeenAt": "2026-06-29T04:12:04.266Z",
       "lastSeenAt": "2026-06-29T04:12:04.266Z",
@@ -1008,8 +1041,8 @@
       "lastLongitude": "89.642"
     }
   ],
-  "identifiedVisits": 8,
-  "uniqueVisitors": 6,
+  "identifiedVisits": 9,
+  "uniqueVisitors": 7,
   "returningVisitors": 2,
   "repeatVisits": 2,
   "legacyVisits": 52
