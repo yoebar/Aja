@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-29T15:37:34.134Z",
-  "totalVisits": 65,
+  "updatedAt": "2026-06-30T03:41:36.187Z",
+  "totalVisits": 66,
   "countries": [
     {
       "key": "BT",
@@ -42,6 +42,14 @@
       "count": 1,
       "firstSeenAt": "2026-06-23T18:49:41.127Z",
       "lastSeenAt": "2026-06-23T18:49:41.127Z"
+    },
+    {
+      "key": "HK",
+      "label": "HK",
+      "country": "HK",
+      "count": 1,
+      "firstSeenAt": "2026-06-30T03:41:36.187Z",
+      "lastSeenAt": "2026-06-30T03:41:36.187Z"
     }
   ],
   "cities": [
@@ -200,15 +208,27 @@
       "count": 1,
       "firstSeenAt": "2026-06-29T07:31:35.475Z",
       "lastSeenAt": "2026-06-29T07:31:35.475Z"
+    },
+    {
+      "key": "Kwai Chung, HK",
+      "label": "Kwai Chung, HK",
+      "city": "Kwai Chung",
+      "region": "",
+      "country": "HK",
+      "latitude": "22.368",
+      "longitude": "114.139",
+      "count": 1,
+      "firstSeenAt": "2026-06-30T03:41:36.187Z",
+      "lastSeenAt": "2026-06-30T03:41:36.187Z"
     }
   ],
   "pages": [
     {
       "key": "/",
       "label": "/",
-      "count": 64,
+      "count": 65,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-06-29T15:37:34.134Z"
+      "lastSeenAt": "2026-06-30T03:41:36.187Z"
     },
     {
       "key": "/Carkem?fbclid=IwZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAEej80NNTR0gtSQxs8FQCVgptvd8GiMc7UM8ba9HXw8j9ctkJx5f4m5OrwM1Q4_aem_pFK-ttBnC7PsWMTvFcAieg",
@@ -219,6 +239,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-06-30T03:41:36.187Z",
+      "page": "/",
+      "country": "HK",
+      "continent": "AS",
+      "region": "",
+      "city": "Kwai Chung",
+      "timezone": "Asia/Hong_Kong",
+      "latitude": "22.368",
+      "longitude": "114.139",
+      "visitorType": "new",
+      "sessionType": "new",
+      "visitorVisitCount": 1
+    },
     {
       "visitedAt": "2026-06-29T15:37:34.134Z",
       "page": "/",
@@ -976,6 +1010,25 @@
   ],
   "visitors": [
     {
+      "key": "9a8b3d421696c31be282a8972ec3889ab3caec7d9ae3bbfd7aea69fad3069300",
+      "firstSeenAt": "2026-06-30T03:41:36.187Z",
+      "lastSeenAt": "2026-06-30T03:41:36.187Z",
+      "visitCount": 1,
+      "sessionCount": 1,
+      "firstPage": "/",
+      "lastPage": "/",
+      "firstCountry": "HK",
+      "firstRegion": "",
+      "firstCity": "Kwai Chung",
+      "firstTimezone": "Asia/Hong_Kong",
+      "lastCountry": "HK",
+      "lastRegion": "",
+      "lastCity": "Kwai Chung",
+      "lastTimezone": "Asia/Hong_Kong",
+      "lastLatitude": "22.368",
+      "lastLongitude": "114.139"
+    },
+    {
       "key": "827beb1bc321a59347508fe8c584b08c5f8682934295cfd9960dcfd612c85e71",
       "firstSeenAt": "2026-06-29T15:37:34.134Z",
       "lastSeenAt": "2026-06-29T15:37:34.134Z",
@@ -1185,8 +1238,8 @@
       "lastLongitude": "89.642"
     }
   ],
-  "identifiedVisits": 13,
-  "uniqueVisitors": 11,
+  "identifiedVisits": 14,
+  "uniqueVisitors": 12,
   "returningVisitors": 2,
   "repeatVisits": 2,
   "legacyVisits": 52
