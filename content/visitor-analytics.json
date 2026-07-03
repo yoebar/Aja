@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-02T14:44:18.771Z",
-  "totalVisits": 67,
+  "updatedAt": "2026-07-03T11:11:10.321Z",
+  "totalVisits": 68,
   "countries": [
     {
       "key": "BT",
@@ -50,6 +50,14 @@
       "count": 1,
       "firstSeenAt": "2026-06-30T03:41:36.187Z",
       "lastSeenAt": "2026-06-30T03:41:36.187Z"
+    },
+    {
+      "key": "NP",
+      "label": "NP",
+      "country": "NP",
+      "count": 1,
+      "firstSeenAt": "2026-07-03T11:11:10.321Z",
+      "lastSeenAt": "2026-07-03T11:11:10.321Z"
     }
   ],
   "cities": [
@@ -220,15 +228,27 @@
       "count": 1,
       "firstSeenAt": "2026-06-30T03:41:36.187Z",
       "lastSeenAt": "2026-06-30T03:41:36.187Z"
+    },
+    {
+      "key": "Bhadrapur, Koshi, NP",
+      "label": "Bhadrapur, Koshi, NP",
+      "city": "Bhadrapur",
+      "region": "Koshi",
+      "country": "NP",
+      "latitude": "26.544",
+      "longitude": "88.094",
+      "count": 1,
+      "firstSeenAt": "2026-07-03T11:11:10.321Z",
+      "lastSeenAt": "2026-07-03T11:11:10.321Z"
     }
   ],
   "pages": [
     {
       "key": "/",
       "label": "/",
-      "count": 66,
+      "count": 67,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-07-02T14:44:18.771Z"
+      "lastSeenAt": "2026-07-03T11:11:10.321Z"
     },
     {
       "key": "/Carkem?fbclid=IwZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAEej80NNTR0gtSQxs8FQCVgptvd8GiMc7UM8ba9HXw8j9ctkJx5f4m5OrwM1Q4_aem_pFK-ttBnC7PsWMTvFcAieg",
@@ -239,6 +259,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-07-03T11:11:10.321Z",
+      "page": "/",
+      "country": "NP",
+      "continent": "AS",
+      "region": "Koshi",
+      "city": "Bhadrapur",
+      "timezone": "Asia/Kathmandu",
+      "latitude": "26.544",
+      "longitude": "88.094",
+      "visitorType": "new",
+      "sessionType": "new",
+      "visitorVisitCount": 1
+    },
     {
       "visitedAt": "2026-07-02T14:44:18.771Z",
       "page": "/",
@@ -1024,6 +1058,25 @@
   ],
   "visitors": [
     {
+      "key": "dc881f6c4b74574d8c336aac8327b44a9c2db7d5e5f020d18edad4bae9f7413b",
+      "firstSeenAt": "2026-07-03T11:11:10.321Z",
+      "lastSeenAt": "2026-07-03T11:11:10.321Z",
+      "visitCount": 1,
+      "sessionCount": 1,
+      "firstPage": "/",
+      "lastPage": "/",
+      "firstCountry": "NP",
+      "firstRegion": "Koshi",
+      "firstCity": "Bhadrapur",
+      "firstTimezone": "Asia/Kathmandu",
+      "lastCountry": "NP",
+      "lastRegion": "Koshi",
+      "lastCity": "Bhadrapur",
+      "lastTimezone": "Asia/Kathmandu",
+      "lastLatitude": "26.544",
+      "lastLongitude": "88.094"
+    },
+    {
       "key": "12469214a1ba70662da02f34d101138266b0c6cd7e7db0d0a90e7ff59e4038c2",
       "firstSeenAt": "2026-07-02T14:44:18.771Z",
       "lastSeenAt": "2026-07-02T14:44:18.771Z",
@@ -1271,8 +1324,8 @@
       "lastLongitude": "89.642"
     }
   ],
-  "identifiedVisits": 15,
-  "uniqueVisitors": 13,
+  "identifiedVisits": 16,
+  "uniqueVisitors": 14,
   "returningVisitors": 2,
   "repeatVisits": 2,
   "legacyVisits": 52
