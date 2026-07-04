@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-03T12:53:31.473Z",
-  "totalVisits": 72,
+  "updatedAt": "2026-07-04T10:19:44.593Z",
+  "totalVisits": 73,
   "countries": [
     {
       "key": "BT",
@@ -58,6 +58,14 @@
       "count": 1,
       "firstSeenAt": "2026-06-30T03:41:36.187Z",
       "lastSeenAt": "2026-06-30T03:41:36.187Z"
+    },
+    {
+      "key": "JP",
+      "label": "JP",
+      "country": "JP",
+      "count": 1,
+      "firstSeenAt": "2026-07-04T10:19:44.593Z",
+      "lastSeenAt": "2026-07-04T10:19:44.593Z"
     }
   ],
   "cities": [
@@ -240,15 +248,27 @@
       "count": 1,
       "firstSeenAt": "2026-06-30T03:41:36.187Z",
       "lastSeenAt": "2026-06-30T03:41:36.187Z"
+    },
+    {
+      "key": "Kyoto, Kyoto, JP",
+      "label": "Kyoto, Kyoto, JP",
+      "city": "Kyoto",
+      "region": "Kyoto",
+      "country": "JP",
+      "latitude": "35.021",
+      "longitude": "135.754",
+      "count": 1,
+      "firstSeenAt": "2026-07-04T10:19:44.593Z",
+      "lastSeenAt": "2026-07-04T10:19:44.593Z"
     }
   ],
   "pages": [
     {
       "key": "/",
       "label": "/",
-      "count": 71,
+      "count": 72,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-07-03T12:53:31.473Z"
+      "lastSeenAt": "2026-07-04T10:19:44.593Z"
     },
     {
       "key": "/Carkem?fbclid=IwZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAEej80NNTR0gtSQxs8FQCVgptvd8GiMc7UM8ba9HXw8j9ctkJx5f4m5OrwM1Q4_aem_pFK-ttBnC7PsWMTvFcAieg",
@@ -259,6 +279,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-07-04T10:19:44.593Z",
+      "page": "/",
+      "country": "JP",
+      "continent": "AS",
+      "region": "Kyoto",
+      "city": "Kyoto",
+      "timezone": "Asia/Tokyo",
+      "latitude": "35.021",
+      "longitude": "135.754",
+      "visitorType": "returning",
+      "sessionType": "new",
+      "visitorVisitCount": 3
+    },
     {
       "visitedAt": "2026-07-03T12:53:31.473Z",
       "page": "/",
@@ -1114,6 +1148,25 @@
   ],
   "visitors": [
     {
+      "key": "acc17a467f52d038d9c57f819dd0117c29ed8ef2cf87d458da12d5c191ba3b15",
+      "firstSeenAt": "2026-06-26T05:00:46.905Z",
+      "lastSeenAt": "2026-07-04T10:19:44.593Z",
+      "visitCount": 3,
+      "sessionCount": 3,
+      "firstPage": "/",
+      "lastPage": "/",
+      "firstCountry": "BT",
+      "firstRegion": "Thimphu District",
+      "firstCity": "Thimphu",
+      "firstTimezone": "Asia/Thimphu",
+      "lastCountry": "JP",
+      "lastRegion": "Kyoto",
+      "lastCity": "Kyoto",
+      "lastTimezone": "Asia/Tokyo",
+      "lastLatitude": "35.021",
+      "lastLongitude": "135.754"
+    },
+    {
       "key": "dc881f6c4b74574d8c336aac8327b44a9c2db7d5e5f020d18edad4bae9f7413b",
       "firstSeenAt": "2026-07-03T11:11:10.321Z",
       "lastSeenAt": "2026-07-03T12:53:31.473Z",
@@ -1397,30 +1450,11 @@
       "lastTimezone": "Asia/Kolkata",
       "lastLatitude": "26.710",
       "lastLongitude": "88.429"
-    },
-    {
-      "key": "acc17a467f52d038d9c57f819dd0117c29ed8ef2cf87d458da12d5c191ba3b15",
-      "firstSeenAt": "2026-06-26T05:00:46.905Z",
-      "lastSeenAt": "2026-06-26T17:13:37.049Z",
-      "visitCount": 2,
-      "sessionCount": 2,
-      "firstPage": "/",
-      "lastPage": "/",
-      "firstCountry": "BT",
-      "firstRegion": "Thimphu District",
-      "firstCity": "Thimphu",
-      "firstTimezone": "Asia/Thimphu",
-      "lastCountry": "BT",
-      "lastRegion": "Thimphu District",
-      "lastCity": "Thimphu",
-      "lastTimezone": "Asia/Thimphu",
-      "lastLatitude": "27.466",
-      "lastLongitude": "89.642"
     }
   ],
-  "identifiedVisits": 20,
+  "identifiedVisits": 21,
   "uniqueVisitors": 16,
   "returningVisitors": 3,
-  "repeatVisits": 4,
+  "repeatVisits": 5,
   "legacyVisits": 52
 }
