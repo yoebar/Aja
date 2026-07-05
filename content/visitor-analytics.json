@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-05T00:25:39.681Z",
-  "totalVisits": 74,
+  "updatedAt": "2026-07-05T00:33:17.291Z",
+  "totalVisits": 75,
   "countries": [
     {
       "key": "BT",
@@ -36,20 +36,20 @@
       "lastSeenAt": "2026-07-03T12:53:31.473Z"
     },
     {
+      "key": "JP",
+      "label": "JP",
+      "country": "JP",
+      "count": 3,
+      "firstSeenAt": "2026-07-04T10:19:44.593Z",
+      "lastSeenAt": "2026-07-05T00:33:17.291Z"
+    },
+    {
       "key": "MY",
       "label": "MY",
       "country": "MY",
       "count": 2,
       "firstSeenAt": "2026-06-27T13:25:26.670Z",
       "lastSeenAt": "2026-06-28T18:28:10.984Z"
-    },
-    {
-      "key": "JP",
-      "label": "JP",
-      "country": "JP",
-      "count": 2,
-      "firstSeenAt": "2026-07-04T10:19:44.593Z",
-      "lastSeenAt": "2026-07-05T00:25:39.681Z"
     },
     {
       "key": "SE",
@@ -130,6 +130,18 @@
       "lastSeenAt": "2026-07-03T12:53:31.473Z"
     },
     {
+      "key": "Kyoto, Kyoto, JP",
+      "label": "Kyoto, Kyoto, JP",
+      "city": "Kyoto",
+      "region": "Kyoto",
+      "country": "JP",
+      "latitude": "35.021",
+      "longitude": "135.754",
+      "count": 3,
+      "firstSeenAt": "2026-07-04T10:19:44.593Z",
+      "lastSeenAt": "2026-07-05T00:33:17.291Z"
+    },
+    {
       "key": "Guwahati, Assam, IN",
       "label": "Guwahati, Assam, IN",
       "city": "Guwahati",
@@ -164,18 +176,6 @@
       "count": 2,
       "firstSeenAt": "2026-06-24T09:33:09.115Z",
       "lastSeenAt": "2026-07-03T12:01:48.133Z"
-    },
-    {
-      "key": "Kyoto, Kyoto, JP",
-      "label": "Kyoto, Kyoto, JP",
-      "city": "Kyoto",
-      "region": "Kyoto",
-      "country": "JP",
-      "latitude": "35.021",
-      "longitude": "135.754",
-      "count": 2,
-      "firstSeenAt": "2026-07-04T10:19:44.593Z",
-      "lastSeenAt": "2026-07-05T00:25:39.681Z"
     },
     {
       "key": "Luleå, Norrbotten, SE",
@@ -266,9 +266,9 @@
     {
       "key": "/",
       "label": "/",
-      "count": 73,
+      "count": 74,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-07-05T00:25:39.681Z"
+      "lastSeenAt": "2026-07-05T00:33:17.291Z"
     },
     {
       "key": "/Carkem?fbclid=IwZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAEej80NNTR0gtSQxs8FQCVgptvd8GiMc7UM8ba9HXw8j9ctkJx5f4m5OrwM1Q4_aem_pFK-ttBnC7PsWMTvFcAieg",
@@ -279,6 +279,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-07-05T00:33:17.291Z",
+      "page": "/",
+      "country": "JP",
+      "continent": "AS",
+      "region": "Kyoto",
+      "city": "Kyoto",
+      "timezone": "Asia/Tokyo",
+      "latitude": "35.021",
+      "longitude": "135.754",
+      "visitorType": "legacy",
+      "sessionType": "unknown",
+      "visitorVisitCount": 0
+    },
     {
       "visitedAt": "2026-07-05T00:25:39.681Z",
       "page": "/",
@@ -1470,5 +1484,5 @@
   "uniqueVisitors": 16,
   "returningVisitors": 3,
   "repeatVisits": 6,
-  "legacyVisits": 52
+  "legacyVisits": 53
 }
