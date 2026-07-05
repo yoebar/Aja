@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-05T01:00:11.905Z",
-  "totalVisits": 76,
+  "updatedAt": "2026-07-05T01:01:18.650Z",
+  "totalVisits": 77,
   "countries": [
     {
       "key": "BT",
@@ -31,9 +31,9 @@
       "key": "JP",
       "label": "JP",
       "country": "JP",
-      "count": 4,
+      "count": 5,
       "firstSeenAt": "2026-07-04T10:19:44.593Z",
-      "lastSeenAt": "2026-07-05T01:00:11.905Z"
+      "lastSeenAt": "2026-07-05T01:01:18.650Z"
     },
     {
       "key": "NP",
@@ -106,6 +106,18 @@
       "lastSeenAt": "2026-06-24T05:57:52.482Z"
     },
     {
+      "key": "Kyoto, Kyoto, JP",
+      "label": "Kyoto, Kyoto, JP",
+      "city": "Kyoto",
+      "region": "Kyoto",
+      "country": "JP",
+      "latitude": "35.021",
+      "longitude": "135.754",
+      "count": 5,
+      "firstSeenAt": "2026-07-04T10:19:44.593Z",
+      "lastSeenAt": "2026-07-05T01:01:18.650Z"
+    },
+    {
       "key": "Siliguri, West Bengal, IN",
       "label": "Siliguri, West Bengal, IN",
       "city": "Siliguri",
@@ -116,18 +128,6 @@
       "count": 4,
       "firstSeenAt": "2026-06-23T05:10:53.647Z",
       "lastSeenAt": "2026-07-03T11:11:49.185Z"
-    },
-    {
-      "key": "Kyoto, Kyoto, JP",
-      "label": "Kyoto, Kyoto, JP",
-      "city": "Kyoto",
-      "region": "Kyoto",
-      "country": "JP",
-      "latitude": "35.021",
-      "longitude": "135.754",
-      "count": 4,
-      "firstSeenAt": "2026-07-04T10:19:44.593Z",
-      "lastSeenAt": "2026-07-05T01:00:11.905Z"
     },
     {
       "key": "Bhadrapur, Koshi, NP",
@@ -266,9 +266,9 @@
     {
       "key": "/",
       "label": "/",
-      "count": 75,
+      "count": 76,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-07-05T01:00:11.905Z"
+      "lastSeenAt": "2026-07-05T01:01:18.650Z"
     },
     {
       "key": "/Carkem?fbclid=IwZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAEej80NNTR0gtSQxs8FQCVgptvd8GiMc7UM8ba9HXw8j9ctkJx5f4m5OrwM1Q4_aem_pFK-ttBnC7PsWMTvFcAieg",
@@ -279,6 +279,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-07-05T01:01:18.650Z",
+      "page": "/",
+      "country": "JP",
+      "continent": "AS",
+      "region": "Kyoto",
+      "city": "Kyoto",
+      "timezone": "Asia/Tokyo",
+      "latitude": "35.021",
+      "longitude": "135.754",
+      "visitorType": "returning",
+      "sessionType": "new",
+      "visitorVisitCount": 5
+    },
     {
       "visitedAt": "2026-07-05T01:00:11.905Z",
       "page": "/",
@@ -1190,6 +1204,25 @@
   ],
   "visitors": [
     {
+      "key": "acc17a467f52d038d9c57f819dd0117c29ed8ef2cf87d458da12d5c191ba3b15",
+      "firstSeenAt": "2026-06-26T05:00:46.905Z",
+      "lastSeenAt": "2026-07-05T01:01:18.650Z",
+      "visitCount": 5,
+      "sessionCount": 5,
+      "firstPage": "/",
+      "lastPage": "/",
+      "firstCountry": "BT",
+      "firstRegion": "Thimphu District",
+      "firstCity": "Thimphu",
+      "firstTimezone": "Asia/Thimphu",
+      "lastCountry": "JP",
+      "lastRegion": "Kyoto",
+      "lastCity": "Kyoto",
+      "lastTimezone": "Asia/Tokyo",
+      "lastLatitude": "35.021",
+      "lastLongitude": "135.754"
+    },
+    {
       "key": "b1b619c938c67719f1b3378b22a8db92c826875a566e8fcbce950fd38154e527",
       "firstSeenAt": "2026-07-05T01:00:11.905Z",
       "lastSeenAt": "2026-07-05T01:00:11.905Z",
@@ -1201,25 +1234,6 @@
       "firstRegion": "Kyoto",
       "firstCity": "Kyoto",
       "firstTimezone": "Asia/Tokyo",
-      "lastCountry": "JP",
-      "lastRegion": "Kyoto",
-      "lastCity": "Kyoto",
-      "lastTimezone": "Asia/Tokyo",
-      "lastLatitude": "35.021",
-      "lastLongitude": "135.754"
-    },
-    {
-      "key": "acc17a467f52d038d9c57f819dd0117c29ed8ef2cf87d458da12d5c191ba3b15",
-      "firstSeenAt": "2026-06-26T05:00:46.905Z",
-      "lastSeenAt": "2026-07-05T00:25:39.681Z",
-      "visitCount": 4,
-      "sessionCount": 4,
-      "firstPage": "/",
-      "lastPage": "/",
-      "firstCountry": "BT",
-      "firstRegion": "Thimphu District",
-      "firstCity": "Thimphu",
-      "firstTimezone": "Asia/Thimphu",
       "lastCountry": "JP",
       "lastRegion": "Kyoto",
       "lastCity": "Kyoto",
@@ -1513,9 +1527,9 @@
       "lastLongitude": "88.429"
     }
   ],
-  "identifiedVisits": 23,
+  "identifiedVisits": 24,
   "uniqueVisitors": 17,
   "returningVisitors": 3,
-  "repeatVisits": 6,
+  "repeatVisits": 7,
   "legacyVisits": 53
 }
