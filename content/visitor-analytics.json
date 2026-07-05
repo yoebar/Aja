@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-05T06:51:02.870Z",
-  "totalVisits": 78,
+  "updatedAt": "2026-07-05T06:53:29.625Z",
+  "totalVisits": 79,
   "countries": [
     {
       "key": "BT",
@@ -15,9 +15,9 @@
       "key": "IN",
       "label": "IN",
       "country": "IN",
-      "count": 14,
+      "count": 15,
       "firstSeenAt": "2026-06-23T05:03:11.022Z",
-      "lastSeenAt": "2026-07-05T06:51:02.870Z"
+      "lastSeenAt": "2026-07-05T06:53:29.625Z"
     },
     {
       "key": "SG",
@@ -260,15 +260,27 @@
       "count": 1,
       "firstSeenAt": "2026-06-30T03:41:36.187Z",
       "lastSeenAt": "2026-06-30T03:41:36.187Z"
+    },
+    {
+      "key": "Ahmedabad, Gujarat, IN",
+      "label": "Ahmedabad, Gujarat, IN",
+      "city": "Ahmedabad",
+      "region": "Gujarat",
+      "country": "IN",
+      "latitude": "23.026",
+      "longitude": "72.587",
+      "count": 1,
+      "firstSeenAt": "2026-07-05T06:53:29.625Z",
+      "lastSeenAt": "2026-07-05T06:53:29.625Z"
     }
   ],
   "pages": [
     {
       "key": "/",
       "label": "/",
-      "count": 77,
+      "count": 78,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-07-05T06:51:02.870Z"
+      "lastSeenAt": "2026-07-05T06:53:29.625Z"
     },
     {
       "key": "/Carkem?fbclid=IwZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAEej80NNTR0gtSQxs8FQCVgptvd8GiMc7UM8ba9HXw8j9ctkJx5f4m5OrwM1Q4_aem_pFK-ttBnC7PsWMTvFcAieg",
@@ -279,6 +291,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-07-05T06:53:29.625Z",
+      "page": "/",
+      "country": "IN",
+      "continent": "AS",
+      "region": "Gujarat",
+      "city": "Ahmedabad",
+      "timezone": "Asia/Kolkata",
+      "latitude": "23.026",
+      "longitude": "72.587",
+      "visitorType": "new",
+      "sessionType": "new",
+      "visitorVisitCount": 1
+    },
     {
       "visitedAt": "2026-07-05T06:51:02.870Z",
       "page": "/",
@@ -1218,6 +1244,25 @@
   ],
   "visitors": [
     {
+      "key": "3cdaf5cf0afef2e6281108097c8b489d47e376652fa71ff483f4ae93e5b4af01",
+      "firstSeenAt": "2026-07-05T06:53:29.625Z",
+      "lastSeenAt": "2026-07-05T06:53:29.625Z",
+      "visitCount": 1,
+      "sessionCount": 1,
+      "firstPage": "/",
+      "lastPage": "/",
+      "firstCountry": "IN",
+      "firstRegion": "Gujarat",
+      "firstCity": "Ahmedabad",
+      "firstTimezone": "Asia/Kolkata",
+      "lastCountry": "IN",
+      "lastRegion": "Gujarat",
+      "lastCity": "Ahmedabad",
+      "lastTimezone": "Asia/Kolkata",
+      "lastLatitude": "23.026",
+      "lastLongitude": "72.587"
+    },
+    {
       "key": "c6792c23ea45b5a3dd6d9cafce3a638d6f49f887b50a6e571b17325b764b920a",
       "firstSeenAt": "2026-07-03T11:11:49.185Z",
       "lastSeenAt": "2026-07-05T06:51:02.870Z",
@@ -1541,8 +1586,8 @@
       "lastLongitude": "88.429"
     }
   ],
-  "identifiedVisits": 25,
-  "uniqueVisitors": 17,
+  "identifiedVisits": 26,
+  "uniqueVisitors": 18,
   "returningVisitors": 4,
   "repeatVisits": 8,
   "legacyVisits": 53
