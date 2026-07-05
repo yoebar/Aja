@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-05T00:33:17.291Z",
-  "totalVisits": 75,
+  "updatedAt": "2026-07-05T01:00:11.905Z",
+  "totalVisits": 76,
   "countries": [
     {
       "key": "BT",
@@ -28,20 +28,20 @@
       "lastSeenAt": "2026-06-24T05:57:52.482Z"
     },
     {
+      "key": "JP",
+      "label": "JP",
+      "country": "JP",
+      "count": 4,
+      "firstSeenAt": "2026-07-04T10:19:44.593Z",
+      "lastSeenAt": "2026-07-05T01:00:11.905Z"
+    },
+    {
       "key": "NP",
       "label": "NP",
       "country": "NP",
       "count": 3,
       "firstSeenAt": "2026-07-03T11:11:10.321Z",
       "lastSeenAt": "2026-07-03T12:53:31.473Z"
-    },
-    {
-      "key": "JP",
-      "label": "JP",
-      "country": "JP",
-      "count": 3,
-      "firstSeenAt": "2026-07-04T10:19:44.593Z",
-      "lastSeenAt": "2026-07-05T00:33:17.291Z"
     },
     {
       "key": "MY",
@@ -118,6 +118,18 @@
       "lastSeenAt": "2026-07-03T11:11:49.185Z"
     },
     {
+      "key": "Kyoto, Kyoto, JP",
+      "label": "Kyoto, Kyoto, JP",
+      "city": "Kyoto",
+      "region": "Kyoto",
+      "country": "JP",
+      "latitude": "35.021",
+      "longitude": "135.754",
+      "count": 4,
+      "firstSeenAt": "2026-07-04T10:19:44.593Z",
+      "lastSeenAt": "2026-07-05T01:00:11.905Z"
+    },
+    {
       "key": "Bhadrapur, Koshi, NP",
       "label": "Bhadrapur, Koshi, NP",
       "city": "Bhadrapur",
@@ -128,18 +140,6 @@
       "count": 3,
       "firstSeenAt": "2026-07-03T11:11:10.321Z",
       "lastSeenAt": "2026-07-03T12:53:31.473Z"
-    },
-    {
-      "key": "Kyoto, Kyoto, JP",
-      "label": "Kyoto, Kyoto, JP",
-      "city": "Kyoto",
-      "region": "Kyoto",
-      "country": "JP",
-      "latitude": "35.021",
-      "longitude": "135.754",
-      "count": 3,
-      "firstSeenAt": "2026-07-04T10:19:44.593Z",
-      "lastSeenAt": "2026-07-05T00:33:17.291Z"
     },
     {
       "key": "Guwahati, Assam, IN",
@@ -266,9 +266,9 @@
     {
       "key": "/",
       "label": "/",
-      "count": 74,
+      "count": 75,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-07-05T00:33:17.291Z"
+      "lastSeenAt": "2026-07-05T01:00:11.905Z"
     },
     {
       "key": "/Carkem?fbclid=IwZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAEej80NNTR0gtSQxs8FQCVgptvd8GiMc7UM8ba9HXw8j9ctkJx5f4m5OrwM1Q4_aem_pFK-ttBnC7PsWMTvFcAieg",
@@ -279,6 +279,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-07-05T01:00:11.905Z",
+      "page": "/",
+      "country": "JP",
+      "continent": "AS",
+      "region": "Kyoto",
+      "city": "Kyoto",
+      "timezone": "Asia/Tokyo",
+      "latitude": "35.021",
+      "longitude": "135.754",
+      "visitorType": "new",
+      "sessionType": "new",
+      "visitorVisitCount": 1
+    },
     {
       "visitedAt": "2026-07-05T00:33:17.291Z",
       "page": "/",
@@ -1176,6 +1190,25 @@
   ],
   "visitors": [
     {
+      "key": "b1b619c938c67719f1b3378b22a8db92c826875a566e8fcbce950fd38154e527",
+      "firstSeenAt": "2026-07-05T01:00:11.905Z",
+      "lastSeenAt": "2026-07-05T01:00:11.905Z",
+      "visitCount": 1,
+      "sessionCount": 1,
+      "firstPage": "/",
+      "lastPage": "/",
+      "firstCountry": "JP",
+      "firstRegion": "Kyoto",
+      "firstCity": "Kyoto",
+      "firstTimezone": "Asia/Tokyo",
+      "lastCountry": "JP",
+      "lastRegion": "Kyoto",
+      "lastCity": "Kyoto",
+      "lastTimezone": "Asia/Tokyo",
+      "lastLatitude": "35.021",
+      "lastLongitude": "135.754"
+    },
+    {
       "key": "acc17a467f52d038d9c57f819dd0117c29ed8ef2cf87d458da12d5c191ba3b15",
       "firstSeenAt": "2026-06-26T05:00:46.905Z",
       "lastSeenAt": "2026-07-05T00:25:39.681Z",
@@ -1480,8 +1513,8 @@
       "lastLongitude": "88.429"
     }
   ],
-  "identifiedVisits": 22,
-  "uniqueVisitors": 16,
+  "identifiedVisits": 23,
+  "uniqueVisitors": 17,
   "returningVisitors": 3,
   "repeatVisits": 6,
   "legacyVisits": 53
