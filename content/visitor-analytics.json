@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-06T05:56:05.569Z",
-  "totalVisits": 82,
+  "updatedAt": "2026-07-06T23:45:18.846Z",
+  "totalVisits": 83,
   "countries": [
     {
       "key": "BT",
@@ -66,6 +66,14 @@
       "count": 1,
       "firstSeenAt": "2026-06-30T03:41:36.187Z",
       "lastSeenAt": "2026-06-30T03:41:36.187Z"
+    },
+    {
+      "key": "AU",
+      "label": "AU",
+      "country": "AU",
+      "count": 1,
+      "firstSeenAt": "2026-07-06T23:45:18.846Z",
+      "lastSeenAt": "2026-07-06T23:45:18.846Z"
     }
   ],
   "cities": [
@@ -284,15 +292,27 @@
       "count": 1,
       "firstSeenAt": "2026-07-06T00:46:53.294Z",
       "lastSeenAt": "2026-07-06T00:46:53.294Z"
+    },
+    {
+      "key": "Brisbane, Queensland, AU",
+      "label": "Brisbane, Queensland, AU",
+      "city": "Brisbane",
+      "region": "Queensland",
+      "country": "AU",
+      "latitude": "-27.468",
+      "longitude": "153.028",
+      "count": 1,
+      "firstSeenAt": "2026-07-06T23:45:18.846Z",
+      "lastSeenAt": "2026-07-06T23:45:18.846Z"
     }
   ],
   "pages": [
     {
       "key": "/",
       "label": "/",
-      "count": 81,
+      "count": 82,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-07-06T05:56:05.569Z"
+      "lastSeenAt": "2026-07-06T23:45:18.846Z"
     },
     {
       "key": "/Carkem?fbclid=IwZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAEej80NNTR0gtSQxs8FQCVgptvd8GiMc7UM8ba9HXw8j9ctkJx5f4m5OrwM1Q4_aem_pFK-ttBnC7PsWMTvFcAieg",
@@ -303,6 +323,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-07-06T23:45:18.846Z",
+      "page": "/",
+      "country": "AU",
+      "continent": "OC",
+      "region": "Queensland",
+      "city": "Brisbane",
+      "timezone": "Australia/Brisbane",
+      "latitude": "-27.468",
+      "longitude": "153.028",
+      "visitorType": "returning",
+      "sessionType": "new",
+      "visitorVisitCount": 6
+    },
     {
       "visitedAt": "2026-07-06T05:56:05.569Z",
       "page": "/",
@@ -1261,20 +1295,28 @@
       "timezone": "Asia/Kolkata",
       "latitude": "26.184",
       "longitude": "91.746"
-    },
-    {
-      "visitedAt": "2026-06-23T05:10:53.647Z",
-      "page": "/",
-      "country": "IN",
-      "continent": "AS",
-      "region": "West Bengal",
-      "city": "Siliguri",
-      "timezone": "Asia/Kolkata",
-      "latitude": "26.710",
-      "longitude": "88.429"
     }
   ],
   "visitors": [
+    {
+      "key": "acc17a467f52d038d9c57f819dd0117c29ed8ef2cf87d458da12d5c191ba3b15",
+      "firstSeenAt": "2026-06-26T05:00:46.905Z",
+      "lastSeenAt": "2026-07-06T23:45:18.846Z",
+      "visitCount": 6,
+      "sessionCount": 6,
+      "firstPage": "/",
+      "lastPage": "/",
+      "firstCountry": "BT",
+      "firstRegion": "Thimphu District",
+      "firstCity": "Thimphu",
+      "firstTimezone": "Asia/Thimphu",
+      "lastCountry": "AU",
+      "lastRegion": "Queensland",
+      "lastCity": "Brisbane",
+      "lastTimezone": "Australia/Brisbane",
+      "lastLatitude": "-27.468",
+      "lastLongitude": "153.028"
+    },
     {
       "key": "9851625620a867873ecdf919bb7acb5a65a75faad52313e02ccf29ece83fe1f9",
       "firstSeenAt": "2026-07-06T05:56:05.569Z",
@@ -1369,25 +1411,6 @@
       "lastTimezone": "Asia/Kolkata",
       "lastLatitude": "26.710",
       "lastLongitude": "88.429"
-    },
-    {
-      "key": "acc17a467f52d038d9c57f819dd0117c29ed8ef2cf87d458da12d5c191ba3b15",
-      "firstSeenAt": "2026-06-26T05:00:46.905Z",
-      "lastSeenAt": "2026-07-05T01:01:18.650Z",
-      "visitCount": 5,
-      "sessionCount": 5,
-      "firstPage": "/",
-      "lastPage": "/",
-      "firstCountry": "BT",
-      "firstRegion": "Thimphu District",
-      "firstCity": "Thimphu",
-      "firstTimezone": "Asia/Thimphu",
-      "lastCountry": "JP",
-      "lastRegion": "Kyoto",
-      "lastCity": "Kyoto",
-      "lastTimezone": "Asia/Tokyo",
-      "lastLatitude": "35.021",
-      "lastLongitude": "135.754"
     },
     {
       "key": "b1b619c938c67719f1b3378b22a8db92c826875a566e8fcbce950fd38154e527",
@@ -1656,9 +1679,9 @@
       "lastLongitude": "88.429"
     }
   ],
-  "identifiedVisits": 29,
+  "identifiedVisits": 30,
   "uniqueVisitors": 20,
   "returningVisitors": 5,
-  "repeatVisits": 9,
+  "repeatVisits": 10,
   "legacyVisits": 53
 }
