@@ -1,15 +1,15 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-06T00:46:53.294Z",
-  "totalVisits": 80,
+  "updatedAt": "2026-07-06T05:03:57.247Z",
+  "totalVisits": 81,
   "countries": [
     {
       "key": "BT",
       "label": "BT",
       "country": "BT",
-      "count": 47,
+      "count": 48,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-07-02T14:44:18.771Z"
+      "lastSeenAt": "2026-07-06T05:03:57.247Z"
     },
     {
       "key": "IN",
@@ -77,9 +77,9 @@
       "country": "BT",
       "latitude": "27.466",
       "longitude": "89.642",
-      "count": 41,
+      "count": 42,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-07-02T14:44:18.771Z"
+      "lastSeenAt": "2026-07-06T05:03:57.247Z"
     },
     {
       "key": "Phuntsholing, Chukha, BT",
@@ -290,9 +290,9 @@
     {
       "key": "/",
       "label": "/",
-      "count": 79,
+      "count": 80,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-07-06T00:46:53.294Z"
+      "lastSeenAt": "2026-07-06T05:03:57.247Z"
     },
     {
       "key": "/Carkem?fbclid=IwZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAEej80NNTR0gtSQxs8FQCVgptvd8GiMc7UM8ba9HXw8j9ctkJx5f4m5OrwM1Q4_aem_pFK-ttBnC7PsWMTvFcAieg",
@@ -303,6 +303,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-07-06T05:03:57.247Z",
+      "page": "/",
+      "country": "BT",
+      "continent": "AS",
+      "region": "Thimphu District",
+      "city": "Thimphu",
+      "timezone": "Asia/Thimphu",
+      "latitude": "27.466",
+      "longitude": "89.642",
+      "visitorType": "returning",
+      "sessionType": "new",
+      "visitorVisitCount": 2
+    },
     {
       "visitedAt": "2026-07-06T00:46:53.294Z",
       "page": "/",
@@ -1255,20 +1269,28 @@
       "timezone": "Asia/Kolkata",
       "latitude": "26.184",
       "longitude": "91.746"
-    },
-    {
-      "visitedAt": "2026-06-23T01:34:00.955Z",
-      "page": "/",
-      "country": "BT",
-      "continent": "AS",
-      "region": "Thimphu District",
-      "city": "Thimphu",
-      "timezone": "Asia/Thimphu",
-      "latitude": "27.466",
-      "longitude": "89.642"
     }
   ],
   "visitors": [
+    {
+      "key": "827beb1bc321a59347508fe8c584b08c5f8682934295cfd9960dcfd612c85e71",
+      "firstSeenAt": "2026-06-29T15:37:34.134Z",
+      "lastSeenAt": "2026-07-06T05:03:57.247Z",
+      "visitCount": 2,
+      "sessionCount": 2,
+      "firstPage": "/",
+      "lastPage": "/",
+      "firstCountry": "BT",
+      "firstRegion": "Chukha",
+      "firstCity": "Phuntsholing",
+      "firstTimezone": "Asia/Thimphu",
+      "lastCountry": "BT",
+      "lastRegion": "Thimphu District",
+      "lastCity": "Thimphu",
+      "lastTimezone": "Asia/Thimphu",
+      "lastLatitude": "27.466",
+      "lastLongitude": "89.642"
+    },
     {
       "key": "919b58ddc59220c7c44cea3936393b70b4643202edc2fb5a47535c060d0976d1",
       "firstSeenAt": "2026-07-06T00:46:53.294Z",
@@ -1439,25 +1461,6 @@
       "lastTimezone": "Asia/Hong_Kong",
       "lastLatitude": "22.368",
       "lastLongitude": "114.139"
-    },
-    {
-      "key": "827beb1bc321a59347508fe8c584b08c5f8682934295cfd9960dcfd612c85e71",
-      "firstSeenAt": "2026-06-29T15:37:34.134Z",
-      "lastSeenAt": "2026-06-29T15:37:34.134Z",
-      "visitCount": 1,
-      "sessionCount": 1,
-      "firstPage": "/",
-      "lastPage": "/",
-      "firstCountry": "BT",
-      "firstRegion": "Chukha",
-      "firstCity": "Phuntsholing",
-      "firstTimezone": "Asia/Thimphu",
-      "lastCountry": "BT",
-      "lastRegion": "Chukha",
-      "lastCity": "Phuntsholing",
-      "lastTimezone": "Asia/Thimphu",
-      "lastLatitude": "26.852",
-      "lastLongitude": "89.388"
     },
     {
       "key": "b0284a26c620594d2e378b36426033ec46df6320f9913b51f0b3b99580e08111",
@@ -1631,9 +1634,9 @@
       "lastLongitude": "88.429"
     }
   ],
-  "identifiedVisits": 27,
+  "identifiedVisits": 28,
   "uniqueVisitors": 19,
-  "returningVisitors": 4,
-  "repeatVisits": 8,
+  "returningVisitors": 5,
+  "repeatVisits": 9,
   "legacyVisits": 53
 }
