@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-08T03:34:07.131Z",
-  "totalVisits": 85,
+  "updatedAt": "2026-07-08T09:35:34.529Z",
+  "totalVisits": 86,
   "countries": [
     {
       "key": "BT",
@@ -15,9 +15,9 @@
       "key": "IN",
       "label": "IN",
       "country": "IN",
-      "count": 17,
+      "count": 18,
       "firstSeenAt": "2026-06-23T05:03:11.022Z",
-      "lastSeenAt": "2026-07-07T08:19:18.946Z"
+      "lastSeenAt": "2026-07-08T09:35:34.529Z"
     },
     {
       "key": "JP",
@@ -150,6 +150,18 @@
       "lastSeenAt": "2026-07-03T12:53:31.473Z"
     },
     {
+      "key": "Kolkata, West Bengal, IN",
+      "label": "Kolkata, West Bengal, IN",
+      "city": "Kolkata",
+      "region": "West Bengal",
+      "country": "IN",
+      "latitude": "22.563",
+      "longitude": "88.363",
+      "count": 3,
+      "firstSeenAt": "2026-06-24T09:33:09.115Z",
+      "lastSeenAt": "2026-07-08T09:35:34.529Z"
+    },
+    {
       "key": "Guwahati, Assam, IN",
       "label": "Guwahati, Assam, IN",
       "city": "Guwahati",
@@ -172,18 +184,6 @@
       "count": 2,
       "firstSeenAt": "2026-06-23T12:55:00.057Z",
       "lastSeenAt": "2026-06-23T13:30:04.286Z"
-    },
-    {
-      "key": "Kolkata, West Bengal, IN",
-      "label": "Kolkata, West Bengal, IN",
-      "city": "Kolkata",
-      "region": "West Bengal",
-      "country": "IN",
-      "latitude": "22.563",
-      "longitude": "88.363",
-      "count": 2,
-      "firstSeenAt": "2026-06-24T09:33:09.115Z",
-      "lastSeenAt": "2026-07-03T12:01:48.133Z"
     },
     {
       "key": "Ahmedabad, Gujarat, IN",
@@ -310,9 +310,9 @@
     {
       "key": "/",
       "label": "/",
-      "count": 84,
+      "count": 85,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-07-08T03:34:07.131Z"
+      "lastSeenAt": "2026-07-08T09:35:34.529Z"
     },
     {
       "key": "/Carkem?fbclid=IwZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAEej80NNTR0gtSQxs8FQCVgptvd8GiMc7UM8ba9HXw8j9ctkJx5f4m5OrwM1Q4_aem_pFK-ttBnC7PsWMTvFcAieg",
@@ -323,6 +323,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-07-08T09:35:34.529Z",
+      "page": "/",
+      "country": "IN",
+      "continent": "AS",
+      "region": "West Bengal",
+      "city": "Kolkata",
+      "timezone": "Asia/Kolkata",
+      "latitude": "22.563",
+      "longitude": "88.363",
+      "visitorType": "new",
+      "sessionType": "new",
+      "visitorVisitCount": 1
+    },
     {
       "visitedAt": "2026-07-08T03:34:07.131Z",
       "page": "/",
@@ -1290,20 +1304,28 @@
       "timezone": "Asia/Thimphu",
       "latitude": "27.466",
       "longitude": "89.642"
-    },
-    {
-      "visitedAt": "2026-06-23T08:55:30.509Z",
-      "page": "/",
-      "country": "BT",
-      "continent": "AS",
-      "region": "Thimphu District",
-      "city": "Thimphu",
-      "timezone": "Asia/Thimphu",
-      "latitude": "27.466",
-      "longitude": "89.642"
     }
   ],
   "visitors": [
+    {
+      "key": "7fc0e3e063e690b5229529c7aa4566b68ba2f3a0ecef67a40b641546997d8ed4",
+      "firstSeenAt": "2026-07-08T09:35:34.529Z",
+      "lastSeenAt": "2026-07-08T09:35:34.529Z",
+      "visitCount": 1,
+      "sessionCount": 1,
+      "firstPage": "/",
+      "lastPage": "/",
+      "firstCountry": "IN",
+      "firstRegion": "West Bengal",
+      "firstCity": "Kolkata",
+      "firstTimezone": "Asia/Kolkata",
+      "lastCountry": "IN",
+      "lastRegion": "West Bengal",
+      "lastCity": "Kolkata",
+      "lastTimezone": "Asia/Kolkata",
+      "lastLatitude": "22.563",
+      "lastLongitude": "88.363"
+    },
     {
       "key": "b2475738a4130b8f0800151dfe5e29eb12c0354e44a5860e2de903928e0b9cf2",
       "firstSeenAt": "2026-07-08T03:34:07.131Z",
@@ -1723,8 +1745,8 @@
       "lastLongitude": "88.429"
     }
   ],
-  "identifiedVisits": 32,
-  "uniqueVisitors": 22,
+  "identifiedVisits": 33,
+  "uniqueVisitors": 23,
   "returningVisitors": 5,
   "repeatVisits": 10,
   "legacyVisits": 53
