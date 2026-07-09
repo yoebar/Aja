@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-09T08:13:38.808Z",
-  "totalVisits": 89,
+  "updatedAt": "2026-07-09T15:05:04.813Z",
+  "totalVisits": 90,
   "countries": [
     {
       "key": "BT",
@@ -31,9 +31,9 @@
       "key": "SG",
       "label": "SG",
       "country": "SG",
-      "count": 5,
+      "count": 6,
       "firstSeenAt": "2026-06-23T17:25:37.923Z",
-      "lastSeenAt": "2026-06-24T05:57:52.482Z"
+      "lastSeenAt": "2026-07-09T15:05:04.813Z"
     },
     {
       "key": "NP",
@@ -121,9 +121,9 @@
       "country": "SG",
       "latitude": "1.290",
       "longitude": "103.850",
-      "count": 5,
+      "count": 6,
       "firstSeenAt": "2026-06-23T17:25:37.923Z",
-      "lastSeenAt": "2026-06-24T05:57:52.482Z"
+      "lastSeenAt": "2026-07-09T15:05:04.813Z"
     },
     {
       "key": "Kyoto, Kyoto, JP",
@@ -322,9 +322,9 @@
     {
       "key": "/",
       "label": "/",
-      "count": 88,
+      "count": 89,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-07-09T08:13:38.808Z"
+      "lastSeenAt": "2026-07-09T15:05:04.813Z"
     },
     {
       "key": "/Carkem?fbclid=IwZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAEej80NNTR0gtSQxs8FQCVgptvd8GiMc7UM8ba9HXw8j9ctkJx5f4m5OrwM1Q4_aem_pFK-ttBnC7PsWMTvFcAieg",
@@ -335,6 +335,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-07-09T15:05:04.813Z",
+      "page": "/",
+      "country": "SG",
+      "continent": "AS",
+      "region": "",
+      "city": "Singapore",
+      "timezone": "Asia/Singapore",
+      "latitude": "1.290",
+      "longitude": "103.850",
+      "visitorType": "returning",
+      "sessionType": "new",
+      "visitorVisitCount": 8
+    },
     {
       "visitedAt": "2026-07-09T08:13:38.808Z",
       "page": "/",
@@ -1314,20 +1328,28 @@
       "timezone": "Asia/Thimphu",
       "latitude": "27.466",
       "longitude": "89.642"
-    },
-    {
-      "visitedAt": "2026-06-23T09:42:00.070Z",
-      "page": "/",
-      "country": "BT",
-      "continent": "AS",
-      "region": "Thimphu District",
-      "city": "Thimphu",
-      "timezone": "Asia/Thimphu",
-      "latitude": "27.466",
-      "longitude": "89.642"
     }
   ],
   "visitors": [
+    {
+      "key": "acc17a467f52d038d9c57f819dd0117c29ed8ef2cf87d458da12d5c191ba3b15",
+      "firstSeenAt": "2026-06-26T05:00:46.905Z",
+      "lastSeenAt": "2026-07-09T15:05:04.813Z",
+      "visitCount": 8,
+      "sessionCount": 8,
+      "firstPage": "/",
+      "lastPage": "/",
+      "firstCountry": "BT",
+      "firstRegion": "Thimphu District",
+      "firstCity": "Thimphu",
+      "firstTimezone": "Asia/Thimphu",
+      "lastCountry": "SG",
+      "lastRegion": "",
+      "lastCity": "Singapore",
+      "lastTimezone": "Asia/Singapore",
+      "lastLatitude": "1.290",
+      "lastLongitude": "103.850"
+    },
     {
       "key": "a58ce28e856ebe64b804a74ad43577492560618a51a5073d7f2808ff1ac338d6",
       "firstSeenAt": "2026-07-09T08:13:38.808Z",
@@ -1365,25 +1387,6 @@
       "lastTimezone": "Asia/Tokyo",
       "lastLatitude": "35.083",
       "lastLongitude": "137.150"
-    },
-    {
-      "key": "acc17a467f52d038d9c57f819dd0117c29ed8ef2cf87d458da12d5c191ba3b15",
-      "firstSeenAt": "2026-06-26T05:00:46.905Z",
-      "lastSeenAt": "2026-07-09T00:27:43.260Z",
-      "visitCount": 7,
-      "sessionCount": 7,
-      "firstPage": "/",
-      "lastPage": "/",
-      "firstCountry": "BT",
-      "firstRegion": "Thimphu District",
-      "firstCity": "Thimphu",
-      "firstTimezone": "Asia/Thimphu",
-      "lastCountry": "AU",
-      "lastRegion": "Queensland",
-      "lastCity": "Brisbane",
-      "lastTimezone": "Australia/Brisbane",
-      "lastLatitude": "-27.468",
-      "lastLongitude": "153.028"
     },
     {
       "key": "7fc0e3e063e690b5229529c7aa4566b68ba2f3a0ecef67a40b641546997d8ed4",
@@ -1804,9 +1807,9 @@
       "lastLongitude": "88.429"
     }
   ],
-  "identifiedVisits": 36,
+  "identifiedVisits": 37,
   "uniqueVisitors": 25,
   "returningVisitors": 5,
-  "repeatVisits": 11,
+  "repeatVisits": 12,
   "legacyVisits": 53
 }
