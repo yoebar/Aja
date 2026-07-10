@@ -1,15 +1,15 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-09T15:05:04.813Z",
-  "totalVisits": 90,
+  "updatedAt": "2026-07-10T04:18:26.840Z",
+  "totalVisits": 91,
   "countries": [
     {
       "key": "BT",
       "label": "BT",
       "country": "BT",
-      "count": 50,
+      "count": 51,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-07-09T08:13:38.808Z"
+      "lastSeenAt": "2026-07-10T04:18:26.840Z"
     },
     {
       "key": "IN",
@@ -85,9 +85,9 @@
       "country": "BT",
       "latitude": "27.466",
       "longitude": "89.642",
-      "count": 43,
+      "count": 44,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-07-09T08:13:38.808Z"
+      "lastSeenAt": "2026-07-10T04:18:26.840Z"
     },
     {
       "key": "Phuntsholing, Chukha, BT",
@@ -322,9 +322,9 @@
     {
       "key": "/",
       "label": "/",
-      "count": 89,
+      "count": 90,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-07-09T15:05:04.813Z"
+      "lastSeenAt": "2026-07-10T04:18:26.840Z"
     },
     {
       "key": "/Carkem?fbclid=IwZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAEej80NNTR0gtSQxs8FQCVgptvd8GiMc7UM8ba9HXw8j9ctkJx5f4m5OrwM1Q4_aem_pFK-ttBnC7PsWMTvFcAieg",
@@ -335,6 +335,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-07-10T04:18:26.840Z",
+      "page": "/",
+      "country": "BT",
+      "continent": "AS",
+      "region": "Thimphu District",
+      "city": "Thimphu",
+      "timezone": "Asia/Thimphu",
+      "latitude": "27.466",
+      "longitude": "89.642",
+      "visitorType": "new",
+      "sessionType": "new",
+      "visitorVisitCount": 1
+    },
     {
       "visitedAt": "2026-07-09T15:05:04.813Z",
       "page": "/",
@@ -1317,20 +1331,28 @@
       "timezone": "Asia/Thimphu",
       "latitude": "27.466",
       "longitude": "89.642"
-    },
-    {
-      "visitedAt": "2026-06-23T10:18:43.416Z",
-      "page": "/",
-      "country": "BT",
-      "continent": "AS",
-      "region": "Thimphu District",
-      "city": "Thimphu",
-      "timezone": "Asia/Thimphu",
-      "latitude": "27.466",
-      "longitude": "89.642"
     }
   ],
   "visitors": [
+    {
+      "key": "0d1a08cea5dc11f0709b07c110e2b8c7d8fc7f2ef682bc3083e44d37bf0e66f6",
+      "firstSeenAt": "2026-07-10T04:18:26.840Z",
+      "lastSeenAt": "2026-07-10T04:18:26.840Z",
+      "visitCount": 1,
+      "sessionCount": 1,
+      "firstPage": "/",
+      "lastPage": "/",
+      "firstCountry": "BT",
+      "firstRegion": "Thimphu District",
+      "firstCity": "Thimphu",
+      "firstTimezone": "Asia/Thimphu",
+      "lastCountry": "BT",
+      "lastRegion": "Thimphu District",
+      "lastCity": "Thimphu",
+      "lastTimezone": "Asia/Thimphu",
+      "lastLatitude": "27.466",
+      "lastLongitude": "89.642"
+    },
     {
       "key": "acc17a467f52d038d9c57f819dd0117c29ed8ef2cf87d458da12d5c191ba3b15",
       "firstSeenAt": "2026-06-26T05:00:46.905Z",
@@ -1807,8 +1829,8 @@
       "lastLongitude": "88.429"
     }
   ],
-  "identifiedVisits": 37,
-  "uniqueVisitors": 25,
+  "identifiedVisits": 38,
+  "uniqueVisitors": 26,
   "returningVisitors": 5,
   "repeatVisits": 12,
   "legacyVisits": 53
