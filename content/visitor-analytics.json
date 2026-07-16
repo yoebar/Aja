@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-16T12:13:08.219Z",
-  "totalVisits": 94,
+  "updatedAt": "2026-07-16T12:53:19.938Z",
+  "totalVisits": 95,
   "countries": [
     {
       "key": "BT",
@@ -15,9 +15,9 @@
       "key": "IN",
       "label": "IN",
       "country": "IN",
-      "count": 19,
+      "count": 20,
       "firstSeenAt": "2026-06-23T05:03:11.022Z",
-      "lastSeenAt": "2026-07-16T12:13:08.219Z"
+      "lastSeenAt": "2026-07-16T12:53:19.938Z"
     },
     {
       "key": "JP",
@@ -348,15 +348,27 @@
       "count": 1,
       "firstSeenAt": "2026-07-16T12:13:08.219Z",
       "lastSeenAt": "2026-07-16T12:13:08.219Z"
+    },
+    {
+      "key": "Porbandar, Gujarat, IN",
+      "label": "Porbandar, Gujarat, IN",
+      "city": "Porbandar",
+      "region": "Gujarat",
+      "country": "IN",
+      "latitude": "21.642",
+      "longitude": "69.609",
+      "count": 1,
+      "firstSeenAt": "2026-07-16T12:53:19.938Z",
+      "lastSeenAt": "2026-07-16T12:53:19.938Z"
     }
   ],
   "pages": [
     {
       "key": "/",
       "label": "/",
-      "count": 93,
+      "count": 94,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-07-16T12:13:08.219Z"
+      "lastSeenAt": "2026-07-16T12:53:19.938Z"
     },
     {
       "key": "/Carkem?fbclid=IwZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAEej80NNTR0gtSQxs8FQCVgptvd8GiMc7UM8ba9HXw8j9ctkJx5f4m5OrwM1Q4_aem_pFK-ttBnC7PsWMTvFcAieg",
@@ -367,6 +379,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-07-16T12:53:19.938Z",
+      "page": "/",
+      "country": "IN",
+      "continent": "AS",
+      "region": "Gujarat",
+      "city": "Porbandar",
+      "timezone": "Asia/Kolkata",
+      "latitude": "21.642",
+      "longitude": "69.609",
+      "visitorType": "new",
+      "sessionType": "new",
+      "visitorVisitCount": 1
+    },
     {
       "visitedAt": "2026-07-16T12:13:08.219Z",
       "page": "/",
@@ -1361,20 +1387,28 @@
       "timezone": "Asia/Thimphu",
       "latitude": "27.466",
       "longitude": "89.642"
-    },
-    {
-      "visitedAt": "2026-06-23T11:14:23.378Z",
-      "page": "/",
-      "country": "BT",
-      "continent": "AS",
-      "region": "Thimphu District",
-      "city": "Thimphu",
-      "timezone": "Asia/Thimphu",
-      "latitude": "27.466",
-      "longitude": "89.642"
     }
   ],
   "visitors": [
+    {
+      "key": "efdfe37746675e3fcbb545d792cb8a94fd7921a42c7916af8a4965e8479b4ce1",
+      "firstSeenAt": "2026-07-16T12:53:19.938Z",
+      "lastSeenAt": "2026-07-16T12:53:19.938Z",
+      "visitCount": 1,
+      "sessionCount": 1,
+      "firstPage": "/",
+      "lastPage": "/",
+      "firstCountry": "IN",
+      "firstRegion": "Gujarat",
+      "firstCity": "Porbandar",
+      "firstTimezone": "Asia/Kolkata",
+      "lastCountry": "IN",
+      "lastRegion": "Gujarat",
+      "lastCity": "Porbandar",
+      "lastTimezone": "Asia/Kolkata",
+      "lastLatitude": "21.642",
+      "lastLongitude": "69.609"
+    },
     {
       "key": "65ff36f7d62909b9dba54e9117106268fce9ec9e1b66f3cbb1ec9b21f5e1797b",
       "firstSeenAt": "2026-07-16T12:13:08.219Z",
@@ -1908,8 +1942,8 @@
       "lastLongitude": "88.429"
     }
   ],
-  "identifiedVisits": 41,
-  "uniqueVisitors": 28,
+  "identifiedVisits": 42,
+  "uniqueVisitors": 29,
   "returningVisitors": 6,
   "repeatVisits": 13,
   "legacyVisits": 53
