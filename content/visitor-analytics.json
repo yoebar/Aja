@@ -1,15 +1,15 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-17T12:56:31.057Z",
-  "totalVisits": 97,
+  "updatedAt": "2026-07-18T04:37:24.942Z",
+  "totalVisits": 98,
   "countries": [
     {
       "key": "BT",
       "label": "BT",
       "country": "BT",
-      "count": 52,
+      "count": 53,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-07-10T05:53:56.150Z"
+      "lastSeenAt": "2026-07-18T04:37:24.942Z"
     },
     {
       "key": "IN",
@@ -372,15 +372,27 @@
       "count": 1,
       "firstSeenAt": "2026-07-17T12:56:31.057Z",
       "lastSeenAt": "2026-07-17T12:56:31.057Z"
+    },
+    {
+      "key": "Trashi Yangtse, Trashi Yangste, BT",
+      "label": "Trashi Yangtse, Trashi Yangste, BT",
+      "city": "Trashi Yangtse",
+      "region": "Trashi Yangste",
+      "country": "BT",
+      "latitude": "27.612",
+      "longitude": "91.498",
+      "count": 1,
+      "firstSeenAt": "2026-07-18T04:37:24.942Z",
+      "lastSeenAt": "2026-07-18T04:37:24.942Z"
     }
   ],
   "pages": [
     {
       "key": "/",
       "label": "/",
-      "count": 96,
+      "count": 97,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-07-17T12:56:31.057Z"
+      "lastSeenAt": "2026-07-18T04:37:24.942Z"
     },
     {
       "key": "/Carkem?fbclid=IwZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAEej80NNTR0gtSQxs8FQCVgptvd8GiMc7UM8ba9HXw8j9ctkJx5f4m5OrwM1Q4_aem_pFK-ttBnC7PsWMTvFcAieg",
@@ -391,6 +403,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-07-18T04:37:24.942Z",
+      "page": "/",
+      "country": "BT",
+      "continent": "AS",
+      "region": "Trashi Yangste",
+      "city": "Trashi Yangtse",
+      "timezone": "Asia/Thimphu",
+      "latitude": "27.612",
+      "longitude": "91.498",
+      "visitorType": "new",
+      "sessionType": "new",
+      "visitorVisitCount": 1
+    },
     {
       "visitedAt": "2026-07-17T12:56:31.057Z",
       "page": "/",
@@ -1394,20 +1420,28 @@
       "timezone": "Asia/Singapore",
       "latitude": "1.290",
       "longitude": "103.850"
-    },
-    {
-      "visitedAt": "2026-06-23T13:30:04.286Z",
-      "page": "/",
-      "country": "IN",
-      "continent": "AS",
-      "region": "Telangana",
-      "city": "Hyderabad",
-      "timezone": "Asia/Kolkata",
-      "latitude": "17.384",
-      "longitude": "78.456"
     }
   ],
   "visitors": [
+    {
+      "key": "9fc2695df28892cf2df0a970825103ef623428f44519b7229faaf6371d0dfbe5",
+      "firstSeenAt": "2026-07-18T04:37:24.942Z",
+      "lastSeenAt": "2026-07-18T04:37:24.942Z",
+      "visitCount": 1,
+      "sessionCount": 1,
+      "firstPage": "/",
+      "lastPage": "/",
+      "firstCountry": "BT",
+      "firstRegion": "Trashi Yangste",
+      "firstCity": "Trashi Yangtse",
+      "firstTimezone": "Asia/Thimphu",
+      "lastCountry": "BT",
+      "lastRegion": "Trashi Yangste",
+      "lastCity": "Trashi Yangtse",
+      "lastTimezone": "Asia/Thimphu",
+      "lastLatitude": "27.612",
+      "lastLongitude": "91.498"
+    },
     {
       "key": "772fdcdeddcfbba52664ec8c61986bc0ab1a201dbcbb4a4ed7c35b8a66628182",
       "firstSeenAt": "2026-07-17T12:56:31.057Z",
@@ -1998,8 +2032,8 @@
       "lastLongitude": "88.429"
     }
   ],
-  "identifiedVisits": 44,
-  "uniqueVisitors": 31,
+  "identifiedVisits": 45,
+  "uniqueVisitors": 32,
   "returningVisitors": 6,
   "repeatVisits": 13,
   "legacyVisits": 53
