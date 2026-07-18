@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-18T04:37:24.942Z",
-  "totalVisits": 98,
+  "updatedAt": "2026-07-18T16:34:28.979Z",
+  "totalVisits": 99,
   "countries": [
     {
       "key": "BT",
@@ -15,9 +15,9 @@
       "key": "IN",
       "label": "IN",
       "country": "IN",
-      "count": 22,
+      "count": 23,
       "firstSeenAt": "2026-06-23T05:03:11.022Z",
-      "lastSeenAt": "2026-07-17T12:56:31.057Z"
+      "lastSeenAt": "2026-07-18T16:34:28.979Z"
     },
     {
       "key": "JP",
@@ -98,6 +98,18 @@
       "lastSeenAt": "2026-07-10T05:53:56.150Z"
     },
     {
+      "key": "Siliguri, West Bengal, IN",
+      "label": "Siliguri, West Bengal, IN",
+      "city": "Siliguri",
+      "region": "West Bengal",
+      "country": "IN",
+      "latitude": "26.710",
+      "longitude": "88.429",
+      "count": 8,
+      "firstSeenAt": "2026-06-23T05:10:53.647Z",
+      "lastSeenAt": "2026-07-18T16:34:28.979Z"
+    },
+    {
       "key": "Phuntsholing, Chukha, BT",
       "label": "Phuntsholing, Chukha, BT",
       "city": "Phuntsholing",
@@ -108,18 +120,6 @@
       "count": 7,
       "firstSeenAt": "2026-06-24T14:41:27.830Z",
       "lastSeenAt": "2026-07-08T03:34:07.131Z"
-    },
-    {
-      "key": "Siliguri, West Bengal, IN",
-      "label": "Siliguri, West Bengal, IN",
-      "city": "Siliguri",
-      "region": "West Bengal",
-      "country": "IN",
-      "latitude": "26.710",
-      "longitude": "88.429",
-      "count": 7,
-      "firstSeenAt": "2026-06-23T05:10:53.647Z",
-      "lastSeenAt": "2026-07-17T09:00:14.440Z"
     },
     {
       "key": "Singapore, SG",
@@ -390,9 +390,9 @@
     {
       "key": "/",
       "label": "/",
-      "count": 97,
+      "count": 98,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-07-18T04:37:24.942Z"
+      "lastSeenAt": "2026-07-18T16:34:28.979Z"
     },
     {
       "key": "/Carkem?fbclid=IwZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAEej80NNTR0gtSQxs8FQCVgptvd8GiMc7UM8ba9HXw8j9ctkJx5f4m5OrwM1Q4_aem_pFK-ttBnC7PsWMTvFcAieg",
@@ -403,6 +403,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-07-18T16:34:28.979Z",
+      "page": "/",
+      "country": "IN",
+      "continent": "AS",
+      "region": "West Bengal",
+      "city": "Siliguri",
+      "timezone": "Asia/Kolkata",
+      "latitude": "26.710",
+      "longitude": "88.429",
+      "visitorType": "returning",
+      "sessionType": "new",
+      "visitorVisitCount": 2
+    },
     {
       "visitedAt": "2026-07-18T04:37:24.942Z",
       "page": "/",
@@ -1409,20 +1423,28 @@
       "timezone": "Asia/Thimphu",
       "latitude": "27.466",
       "longitude": "89.642"
-    },
-    {
-      "visitedAt": "2026-06-23T17:25:37.923Z",
-      "page": "/",
-      "country": "SG",
-      "continent": "AS",
-      "region": "",
-      "city": "Singapore",
-      "timezone": "Asia/Singapore",
-      "latitude": "1.290",
-      "longitude": "103.850"
     }
   ],
   "visitors": [
+    {
+      "key": "5e4b548840bafa1b2d8c58426313d999a522827d9a9a289b0fd2669aca81404e",
+      "firstSeenAt": "2026-07-17T09:00:14.440Z",
+      "lastSeenAt": "2026-07-18T16:34:28.979Z",
+      "visitCount": 2,
+      "sessionCount": 2,
+      "firstPage": "/",
+      "lastPage": "/",
+      "firstCountry": "IN",
+      "firstRegion": "West Bengal",
+      "firstCity": "Siliguri",
+      "firstTimezone": "Asia/Kolkata",
+      "lastCountry": "IN",
+      "lastRegion": "West Bengal",
+      "lastCity": "Siliguri",
+      "lastTimezone": "Asia/Kolkata",
+      "lastLatitude": "26.710",
+      "lastLongitude": "88.429"
+    },
     {
       "key": "9fc2695df28892cf2df0a970825103ef623428f44519b7229faaf6371d0dfbe5",
       "firstSeenAt": "2026-07-18T04:37:24.942Z",
@@ -1460,25 +1482,6 @@
       "lastTimezone": "Asia/Kolkata",
       "lastLatitude": "28.995",
       "lastLongitude": "77.019"
-    },
-    {
-      "key": "5e4b548840bafa1b2d8c58426313d999a522827d9a9a289b0fd2669aca81404e",
-      "firstSeenAt": "2026-07-17T09:00:14.440Z",
-      "lastSeenAt": "2026-07-17T09:00:14.440Z",
-      "visitCount": 1,
-      "sessionCount": 1,
-      "firstPage": "/",
-      "lastPage": "/",
-      "firstCountry": "IN",
-      "firstRegion": "West Bengal",
-      "firstCity": "Siliguri",
-      "firstTimezone": "Asia/Kolkata",
-      "lastCountry": "IN",
-      "lastRegion": "West Bengal",
-      "lastCity": "Siliguri",
-      "lastTimezone": "Asia/Kolkata",
-      "lastLatitude": "26.710",
-      "lastLongitude": "88.429"
     },
     {
       "key": "efdfe37746675e3fcbb545d792cb8a94fd7921a42c7916af8a4965e8479b4ce1",
@@ -2032,9 +2035,9 @@
       "lastLongitude": "88.429"
     }
   ],
-  "identifiedVisits": 45,
+  "identifiedVisits": 46,
   "uniqueVisitors": 32,
-  "returningVisitors": 6,
-  "repeatVisits": 13,
+  "returningVisitors": 7,
+  "repeatVisits": 14,
   "legacyVisits": 53
 }
