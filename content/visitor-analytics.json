@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-20T16:26:47.566Z",
-  "totalVisits": 103,
+  "updatedAt": "2026-07-20T16:29:44.898Z",
+  "totalVisits": 104,
   "countries": [
     {
       "key": "BT",
@@ -15,9 +15,9 @@
       "key": "IN",
       "label": "IN",
       "country": "IN",
-      "count": 27,
+      "count": 28,
       "firstSeenAt": "2026-06-23T05:03:11.022Z",
-      "lastSeenAt": "2026-07-20T16:26:47.566Z"
+      "lastSeenAt": "2026-07-20T16:29:44.898Z"
     },
     {
       "key": "JP",
@@ -146,6 +146,18 @@
       "lastSeenAt": "2026-07-05T01:01:18.650Z"
     },
     {
+      "key": "Mumbai, Maharashtra, IN",
+      "label": "Mumbai, Maharashtra, IN",
+      "city": "Mumbai",
+      "region": "Maharashtra",
+      "country": "IN",
+      "latitude": "19.073",
+      "longitude": "72.883",
+      "count": 4,
+      "firstSeenAt": "2026-07-20T16:25:56.732Z",
+      "lastSeenAt": "2026-07-20T16:29:44.898Z"
+    },
+    {
       "key": "Bhadrapur, Koshi, NP",
       "label": "Bhadrapur, Koshi, NP",
       "city": "Bhadrapur",
@@ -168,18 +180,6 @@
       "count": 3,
       "firstSeenAt": "2026-06-24T09:33:09.115Z",
       "lastSeenAt": "2026-07-08T09:35:34.529Z"
-    },
-    {
-      "key": "Mumbai, Maharashtra, IN",
-      "label": "Mumbai, Maharashtra, IN",
-      "city": "Mumbai",
-      "region": "Maharashtra",
-      "country": "IN",
-      "latitude": "19.073",
-      "longitude": "72.883",
-      "count": 3,
-      "firstSeenAt": "2026-07-20T16:25:56.732Z",
-      "lastSeenAt": "2026-07-20T16:26:47.566Z"
     },
     {
       "key": "Guwahati, Assam, IN",
@@ -402,9 +402,9 @@
     {
       "key": "/",
       "label": "/",
-      "count": 101,
+      "count": 102,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-07-20T16:26:47.566Z"
+      "lastSeenAt": "2026-07-20T16:29:44.898Z"
     },
     {
       "key": "/Carkem?fbclid=IwZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAEej80NNTR0gtSQxs8FQCVgptvd8GiMc7UM8ba9HXw8j9ctkJx5f4m5OrwM1Q4_aem_pFK-ttBnC7PsWMTvFcAieg",
@@ -422,6 +422,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-07-20T16:29:44.898Z",
+      "page": "/",
+      "country": "IN",
+      "continent": "AS",
+      "region": "Maharashtra",
+      "city": "Mumbai",
+      "timezone": "Asia/Kolkata",
+      "latitude": "19.073",
+      "longitude": "72.883",
+      "visitorType": "legacy",
+      "sessionType": "unknown",
+      "visitorVisitCount": 0
+    },
     {
       "visitedAt": "2026-07-20T16:26:47.566Z",
       "page": "/",
@@ -1443,17 +1457,6 @@
       "timezone": "Asia/Thimphu",
       "latitude": "27.466",
       "longitude": "89.642"
-    },
-    {
-      "visitedAt": "2026-06-23T18:49:41.127Z",
-      "page": "/Carkem?fbclid=IwZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAEej80NNTR0gtSQxs8FQCVgptvd8GiMc7UM8ba9HXw8j9ctkJx5f4m5OrwM1Q4_aem_pFK-ttBnC7PsWMTvFcAieg",
-      "country": "SE",
-      "continent": "EU",
-      "region": "Norrbotten",
-      "city": "Luleå",
-      "timezone": "Europe/Stockholm",
-      "latitude": "65.584",
-      "longitude": "22.155"
     }
   ],
   "visitors": [
@@ -2070,5 +2073,5 @@
   "uniqueVisitors": 32,
   "returningVisitors": 7,
   "repeatVisits": 18,
-  "legacyVisits": 53
+  "legacyVisits": 54
 }
