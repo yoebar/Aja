@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-18T17:28:40.571Z",
-  "totalVisits": 100,
+  "updatedAt": "2026-07-20T16:25:56.732Z",
+  "totalVisits": 101,
   "countries": [
     {
       "key": "BT",
@@ -15,9 +15,9 @@
       "key": "IN",
       "label": "IN",
       "country": "IN",
-      "count": 24,
+      "count": 25,
       "firstSeenAt": "2026-06-23T05:03:11.022Z",
-      "lastSeenAt": "2026-07-18T17:28:40.571Z"
+      "lastSeenAt": "2026-07-20T16:25:56.732Z"
     },
     {
       "key": "JP",
@@ -384,15 +384,27 @@
       "count": 1,
       "firstSeenAt": "2026-07-18T04:37:24.942Z",
       "lastSeenAt": "2026-07-18T04:37:24.942Z"
+    },
+    {
+      "key": "Mumbai, Maharashtra, IN",
+      "label": "Mumbai, Maharashtra, IN",
+      "city": "Mumbai",
+      "region": "Maharashtra",
+      "country": "IN",
+      "latitude": "19.073",
+      "longitude": "72.883",
+      "count": 1,
+      "firstSeenAt": "2026-07-20T16:25:56.732Z",
+      "lastSeenAt": "2026-07-20T16:25:56.732Z"
     }
   ],
   "pages": [
     {
       "key": "/",
       "label": "/",
-      "count": 99,
+      "count": 100,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-07-18T17:28:40.571Z"
+      "lastSeenAt": "2026-07-20T16:25:56.732Z"
     },
     {
       "key": "/Carkem?fbclid=IwZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAEej80NNTR0gtSQxs8FQCVgptvd8GiMc7UM8ba9HXw8j9ctkJx5f4m5OrwM1Q4_aem_pFK-ttBnC7PsWMTvFcAieg",
@@ -403,6 +415,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-07-20T16:25:56.732Z",
+      "page": "/",
+      "country": "IN",
+      "continent": "AS",
+      "region": "Maharashtra",
+      "city": "Mumbai",
+      "timezone": "Asia/Kolkata",
+      "latitude": "19.073",
+      "longitude": "72.883",
+      "visitorType": "returning",
+      "sessionType": "new",
+      "visitorVisitCount": 9
+    },
     {
       "visitedAt": "2026-07-18T17:28:40.571Z",
       "page": "/",
@@ -1415,20 +1441,28 @@
       "timezone": "Asia/Thimphu",
       "latitude": "27.466",
       "longitude": "89.642"
-    },
-    {
-      "visitedAt": "2026-06-23T17:50:24.551Z",
-      "page": "/",
-      "country": "SG",
-      "continent": "AS",
-      "region": "",
-      "city": "Singapore",
-      "timezone": "Asia/Singapore",
-      "latitude": "1.290",
-      "longitude": "103.850"
     }
   ],
   "visitors": [
+    {
+      "key": "acc17a467f52d038d9c57f819dd0117c29ed8ef2cf87d458da12d5c191ba3b15",
+      "firstSeenAt": "2026-06-26T05:00:46.905Z",
+      "lastSeenAt": "2026-07-20T16:25:56.732Z",
+      "visitCount": 9,
+      "sessionCount": 9,
+      "firstPage": "/",
+      "lastPage": "/",
+      "firstCountry": "BT",
+      "firstRegion": "Thimphu District",
+      "firstCity": "Thimphu",
+      "firstTimezone": "Asia/Thimphu",
+      "lastCountry": "IN",
+      "lastRegion": "Maharashtra",
+      "lastCity": "Mumbai",
+      "lastTimezone": "Asia/Kolkata",
+      "lastLatitude": "19.073",
+      "lastLongitude": "72.883"
+    },
     {
       "key": "5e4b548840bafa1b2d8c58426313d999a522827d9a9a289b0fd2669aca81404e",
       "firstSeenAt": "2026-07-17T09:00:14.440Z",
@@ -1561,25 +1595,6 @@
       "lastTimezone": "Asia/Thimphu",
       "lastLatitude": "27.466",
       "lastLongitude": "89.642"
-    },
-    {
-      "key": "acc17a467f52d038d9c57f819dd0117c29ed8ef2cf87d458da12d5c191ba3b15",
-      "firstSeenAt": "2026-06-26T05:00:46.905Z",
-      "lastSeenAt": "2026-07-09T15:05:04.813Z",
-      "visitCount": 8,
-      "sessionCount": 8,
-      "firstPage": "/",
-      "lastPage": "/",
-      "firstCountry": "BT",
-      "firstRegion": "Thimphu District",
-      "firstCity": "Thimphu",
-      "firstTimezone": "Asia/Thimphu",
-      "lastCountry": "SG",
-      "lastRegion": "",
-      "lastCity": "Singapore",
-      "lastTimezone": "Asia/Singapore",
-      "lastLatitude": "1.290",
-      "lastLongitude": "103.850"
     },
     {
       "key": "a58ce28e856ebe64b804a74ad43577492560618a51a5073d7f2808ff1ac338d6",
@@ -2038,9 +2053,9 @@
       "lastLongitude": "88.429"
     }
   ],
-  "identifiedVisits": 47,
+  "identifiedVisits": 48,
   "uniqueVisitors": 32,
   "returningVisitors": 7,
-  "repeatVisits": 15,
+  "repeatVisits": 16,
   "legacyVisits": 53
 }
