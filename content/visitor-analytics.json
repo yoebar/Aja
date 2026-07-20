@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-20T16:29:44.898Z",
-  "totalVisits": 104,
+  "updatedAt": "2026-07-20T18:36:57.671Z",
+  "totalVisits": 105,
   "countries": [
     {
       "key": "BT",
@@ -82,6 +82,14 @@
       "count": 1,
       "firstSeenAt": "2026-07-16T03:42:47.379Z",
       "lastSeenAt": "2026-07-16T03:42:47.379Z"
+    },
+    {
+      "key": "TH",
+      "label": "TH",
+      "country": "TH",
+      "count": 1,
+      "firstSeenAt": "2026-07-20T18:36:57.671Z",
+      "lastSeenAt": "2026-07-20T18:36:57.671Z"
     }
   ],
   "cities": [
@@ -396,15 +404,27 @@
       "count": 1,
       "firstSeenAt": "2026-07-18T04:37:24.942Z",
       "lastSeenAt": "2026-07-18T04:37:24.942Z"
+    },
+    {
+      "key": "Bangkok, Bangkok, TH",
+      "label": "Bangkok, Bangkok, TH",
+      "city": "Bangkok",
+      "region": "Bangkok",
+      "country": "TH",
+      "latitude": "13.754",
+      "longitude": "100.501",
+      "count": 1,
+      "firstSeenAt": "2026-07-20T18:36:57.671Z",
+      "lastSeenAt": "2026-07-20T18:36:57.671Z"
     }
   ],
   "pages": [
     {
       "key": "/",
       "label": "/",
-      "count": 102,
+      "count": 103,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-07-20T16:29:44.898Z"
+      "lastSeenAt": "2026-07-20T18:36:57.671Z"
     },
     {
       "key": "/Carkem?fbclid=IwZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAEej80NNTR0gtSQxs8FQCVgptvd8GiMc7UM8ba9HXw8j9ctkJx5f4m5OrwM1Q4_aem_pFK-ttBnC7PsWMTvFcAieg",
@@ -422,6 +442,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-07-20T18:36:57.671Z",
+      "page": "/",
+      "country": "TH",
+      "continent": "AS",
+      "region": "Bangkok",
+      "city": "Bangkok",
+      "timezone": "Asia/Bangkok",
+      "latitude": "13.754",
+      "longitude": "100.501",
+      "visitorType": "returning",
+      "sessionType": "new",
+      "visitorVisitCount": 12
+    },
     {
       "visitedAt": "2026-07-20T16:29:44.898Z",
       "page": "/",
@@ -1446,38 +1480,27 @@
       "timezone": "Asia/Singapore",
       "latitude": "1.290",
       "longitude": "103.850"
-    },
-    {
-      "visitedAt": "2026-06-23T18:56:12.906Z",
-      "page": "/",
-      "country": "BT",
-      "continent": "AS",
-      "region": "Thimphu District",
-      "city": "Thimphu",
-      "timezone": "Asia/Thimphu",
-      "latitude": "27.466",
-      "longitude": "89.642"
     }
   ],
   "visitors": [
     {
       "key": "acc17a467f52d038d9c57f819dd0117c29ed8ef2cf87d458da12d5c191ba3b15",
       "firstSeenAt": "2026-06-26T05:00:46.905Z",
-      "lastSeenAt": "2026-07-20T16:26:47.566Z",
-      "visitCount": 11,
-      "sessionCount": 9,
+      "lastSeenAt": "2026-07-20T18:36:57.671Z",
+      "visitCount": 12,
+      "sessionCount": 10,
       "firstPage": "/",
       "lastPage": "/",
       "firstCountry": "BT",
       "firstRegion": "Thimphu District",
       "firstCity": "Thimphu",
       "firstTimezone": "Asia/Thimphu",
-      "lastCountry": "IN",
-      "lastRegion": "Maharashtra",
-      "lastCity": "Mumbai",
-      "lastTimezone": "Asia/Kolkata",
-      "lastLatitude": "19.073",
-      "lastLongitude": "72.883"
+      "lastCountry": "TH",
+      "lastRegion": "Bangkok",
+      "lastCity": "Bangkok",
+      "lastTimezone": "Asia/Bangkok",
+      "lastLatitude": "13.754",
+      "lastLongitude": "100.501"
     },
     {
       "key": "5e4b548840bafa1b2d8c58426313d999a522827d9a9a289b0fd2669aca81404e",
@@ -2069,9 +2092,9 @@
       "lastLongitude": "88.429"
     }
   ],
-  "identifiedVisits": 50,
+  "identifiedVisits": 51,
   "uniqueVisitors": 32,
   "returningVisitors": 7,
-  "repeatVisits": 18,
+  "repeatVisits": 19,
   "legacyVisits": 54
 }
