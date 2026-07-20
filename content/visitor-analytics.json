@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-20T16:26:01.049Z",
-  "totalVisits": 102,
+  "updatedAt": "2026-07-20T16:26:47.566Z",
+  "totalVisits": 103,
   "countries": [
     {
       "key": "BT",
@@ -15,9 +15,9 @@
       "key": "IN",
       "label": "IN",
       "country": "IN",
-      "count": 26,
+      "count": 27,
       "firstSeenAt": "2026-06-23T05:03:11.022Z",
-      "lastSeenAt": "2026-07-20T16:26:01.049Z"
+      "lastSeenAt": "2026-07-20T16:26:47.566Z"
     },
     {
       "key": "JP",
@@ -170,6 +170,18 @@
       "lastSeenAt": "2026-07-08T09:35:34.529Z"
     },
     {
+      "key": "Mumbai, Maharashtra, IN",
+      "label": "Mumbai, Maharashtra, IN",
+      "city": "Mumbai",
+      "region": "Maharashtra",
+      "country": "IN",
+      "latitude": "19.073",
+      "longitude": "72.883",
+      "count": 3,
+      "firstSeenAt": "2026-07-20T16:25:56.732Z",
+      "lastSeenAt": "2026-07-20T16:26:47.566Z"
+    },
+    {
       "key": "Guwahati, Assam, IN",
       "label": "Guwahati, Assam, IN",
       "city": "Guwahati",
@@ -216,18 +228,6 @@
       "count": 2,
       "firstSeenAt": "2026-07-06T23:45:18.846Z",
       "lastSeenAt": "2026-07-09T00:27:43.260Z"
-    },
-    {
-      "key": "Mumbai, Maharashtra, IN",
-      "label": "Mumbai, Maharashtra, IN",
-      "city": "Mumbai",
-      "region": "Maharashtra",
-      "country": "IN",
-      "latitude": "19.073",
-      "longitude": "72.883",
-      "count": 2,
-      "firstSeenAt": "2026-07-20T16:25:56.732Z",
-      "lastSeenAt": "2026-07-20T16:26:01.049Z"
     },
     {
       "key": "Luleå, Norrbotten, SE",
@@ -402,9 +402,9 @@
     {
       "key": "/",
       "label": "/",
-      "count": 100,
+      "count": 101,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-07-20T16:25:56.732Z"
+      "lastSeenAt": "2026-07-20T16:26:47.566Z"
     },
     {
       "key": "/Carkem?fbclid=IwZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAEej80NNTR0gtSQxs8FQCVgptvd8GiMc7UM8ba9HXw8j9ctkJx5f4m5OrwM1Q4_aem_pFK-ttBnC7PsWMTvFcAieg",
@@ -422,6 +422,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-07-20T16:26:47.566Z",
+      "page": "/",
+      "country": "IN",
+      "continent": "AS",
+      "region": "Maharashtra",
+      "city": "Mumbai",
+      "timezone": "Asia/Kolkata",
+      "latitude": "19.073",
+      "longitude": "72.883",
+      "visitorType": "returning",
+      "sessionType": "same",
+      "visitorVisitCount": 11
+    },
     {
       "visitedAt": "2026-07-20T16:26:01.049Z",
       "page": "/dashboard",
@@ -1440,28 +1454,17 @@
       "timezone": "Europe/Stockholm",
       "latitude": "65.584",
       "longitude": "22.155"
-    },
-    {
-      "visitedAt": "2026-06-23T18:02:12.369Z",
-      "page": "/",
-      "country": "SG",
-      "continent": "AS",
-      "region": "",
-      "city": "Singapore",
-      "timezone": "Asia/Singapore",
-      "latitude": "1.290",
-      "longitude": "103.850"
     }
   ],
   "visitors": [
     {
       "key": "acc17a467f52d038d9c57f819dd0117c29ed8ef2cf87d458da12d5c191ba3b15",
       "firstSeenAt": "2026-06-26T05:00:46.905Z",
-      "lastSeenAt": "2026-07-20T16:26:01.049Z",
-      "visitCount": 10,
+      "lastSeenAt": "2026-07-20T16:26:47.566Z",
+      "visitCount": 11,
       "sessionCount": 9,
       "firstPage": "/",
-      "lastPage": "/dashboard",
+      "lastPage": "/",
       "firstCountry": "BT",
       "firstRegion": "Thimphu District",
       "firstCity": "Thimphu",
@@ -2063,9 +2066,9 @@
       "lastLongitude": "88.429"
     }
   ],
-  "identifiedVisits": 49,
+  "identifiedVisits": 50,
   "uniqueVisitors": 32,
   "returningVisitors": 7,
-  "repeatVisits": 17,
+  "repeatVisits": 18,
   "legacyVisits": 53
 }
