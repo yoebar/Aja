@@ -1,15 +1,15 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-21T01:57:55.825Z",
-  "totalVisits": 106,
+  "updatedAt": "2026-07-21T17:20:09.893Z",
+  "totalVisits": 107,
   "countries": [
     {
       "key": "BT",
       "label": "BT",
       "country": "BT",
-      "count": 53,
+      "count": 54,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-07-18T04:37:24.942Z"
+      "lastSeenAt": "2026-07-21T17:20:09.893Z"
     },
     {
       "key": "IN",
@@ -101,9 +101,9 @@
       "country": "BT",
       "latitude": "27.466",
       "longitude": "89.642",
-      "count": 45,
+      "count": 46,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-07-10T05:53:56.150Z"
+      "lastSeenAt": "2026-07-21T17:20:09.893Z"
     },
     {
       "key": "Siliguri, West Bengal, IN",
@@ -422,9 +422,9 @@
     {
       "key": "/",
       "label": "/",
-      "count": 104,
+      "count": 105,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-07-21T01:57:55.825Z"
+      "lastSeenAt": "2026-07-21T17:20:09.893Z"
     },
     {
       "key": "/Carkem?fbclid=IwZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAEej80NNTR0gtSQxs8FQCVgptvd8GiMc7UM8ba9HXw8j9ctkJx5f4m5OrwM1Q4_aem_pFK-ttBnC7PsWMTvFcAieg",
@@ -442,6 +442,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-07-21T17:20:09.893Z",
+      "page": "/",
+      "country": "BT",
+      "continent": "AS",
+      "region": "Thimphu District",
+      "city": "Thimphu",
+      "timezone": "Asia/Thimphu",
+      "latitude": "27.466",
+      "longitude": "89.642",
+      "visitorType": "returning",
+      "sessionType": "new",
+      "visitorVisitCount": 13
+    },
     {
       "visitedAt": "2026-07-21T01:57:55.825Z",
       "page": "/",
@@ -1472,20 +1486,28 @@
       "timezone": "Asia/Singapore",
       "latitude": "1.290",
       "longitude": "103.850"
-    },
-    {
-      "visitedAt": "2026-06-24T05:11:44.313Z",
-      "page": "/",
-      "country": "BT",
-      "continent": "AS",
-      "region": "Thimphu District",
-      "city": "Thimphu",
-      "timezone": "Asia/Thimphu",
-      "latitude": "27.466",
-      "longitude": "89.642"
     }
   ],
   "visitors": [
+    {
+      "key": "acc17a467f52d038d9c57f819dd0117c29ed8ef2cf87d458da12d5c191ba3b15",
+      "firstSeenAt": "2026-06-26T05:00:46.905Z",
+      "lastSeenAt": "2026-07-21T17:20:09.893Z",
+      "visitCount": 13,
+      "sessionCount": 11,
+      "firstPage": "/",
+      "lastPage": "/",
+      "firstCountry": "BT",
+      "firstRegion": "Thimphu District",
+      "firstCity": "Thimphu",
+      "firstTimezone": "Asia/Thimphu",
+      "lastCountry": "BT",
+      "lastRegion": "Thimphu District",
+      "lastCity": "Thimphu",
+      "lastTimezone": "Asia/Thimphu",
+      "lastLatitude": "27.466",
+      "lastLongitude": "89.642"
+    },
     {
       "key": "8ad982797f215f17fe6386073fc18b8d1ac7e5c3786537983ce620635fd7abef",
       "firstSeenAt": "2026-07-21T01:57:55.825Z",
@@ -1504,25 +1526,6 @@
       "lastTimezone": "America/Los_Angeles",
       "lastLatitude": "34.052",
       "lastLongitude": "-118.244"
-    },
-    {
-      "key": "acc17a467f52d038d9c57f819dd0117c29ed8ef2cf87d458da12d5c191ba3b15",
-      "firstSeenAt": "2026-06-26T05:00:46.905Z",
-      "lastSeenAt": "2026-07-20T18:36:57.671Z",
-      "visitCount": 12,
-      "sessionCount": 10,
-      "firstPage": "/",
-      "lastPage": "/",
-      "firstCountry": "BT",
-      "firstRegion": "Thimphu District",
-      "firstCity": "Thimphu",
-      "firstTimezone": "Asia/Thimphu",
-      "lastCountry": "TH",
-      "lastRegion": "Bangkok",
-      "lastCity": "Bangkok",
-      "lastTimezone": "Asia/Bangkok",
-      "lastLatitude": "13.754",
-      "lastLongitude": "100.501"
     },
     {
       "key": "5e4b548840bafa1b2d8c58426313d999a522827d9a9a289b0fd2669aca81404e",
@@ -2114,9 +2117,9 @@
       "lastLongitude": "88.429"
     }
   ],
-  "identifiedVisits": 52,
+  "identifiedVisits": 53,
   "uniqueVisitors": 33,
   "returningVisitors": 7,
-  "repeatVisits": 19,
+  "repeatVisits": 20,
   "legacyVisits": 54
 }
