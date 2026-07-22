@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-21T17:20:09.893Z",
-  "totalVisits": 107,
+  "updatedAt": "2026-07-22T01:29:13.573Z",
+  "totalVisits": 108,
   "countries": [
     {
       "key": "BT",
@@ -31,9 +31,9 @@
       "key": "SG",
       "label": "SG",
       "country": "SG",
-      "count": 6,
+      "count": 7,
       "firstSeenAt": "2026-06-23T17:25:37.923Z",
-      "lastSeenAt": "2026-07-09T15:05:04.813Z"
+      "lastSeenAt": "2026-07-22T01:29:13.573Z"
     },
     {
       "key": "NP",
@@ -137,9 +137,9 @@
       "country": "SG",
       "latitude": "1.290",
       "longitude": "103.850",
-      "count": 6,
+      "count": 7,
       "firstSeenAt": "2026-06-23T17:25:37.923Z",
-      "lastSeenAt": "2026-07-09T15:05:04.813Z"
+      "lastSeenAt": "2026-07-22T01:29:13.573Z"
     },
     {
       "key": "Kyoto, Kyoto, JP",
@@ -422,9 +422,9 @@
     {
       "key": "/",
       "label": "/",
-      "count": 105,
+      "count": 106,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-07-21T17:20:09.893Z"
+      "lastSeenAt": "2026-07-22T01:29:13.573Z"
     },
     {
       "key": "/Carkem?fbclid=IwZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAEej80NNTR0gtSQxs8FQCVgptvd8GiMc7UM8ba9HXw8j9ctkJx5f4m5OrwM1Q4_aem_pFK-ttBnC7PsWMTvFcAieg",
@@ -442,6 +442,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-07-22T01:29:13.573Z",
+      "page": "/",
+      "country": "SG",
+      "continent": "AS",
+      "region": "",
+      "city": "Singapore",
+      "timezone": "Asia/Singapore",
+      "latitude": "1.290",
+      "longitude": "103.850",
+      "visitorType": "returning",
+      "sessionType": "new",
+      "visitorVisitCount": 2
+    },
     {
       "visitedAt": "2026-07-21T17:20:09.893Z",
       "page": "/",
@@ -1475,20 +1489,28 @@
       "timezone": "Asia/Kolkata",
       "latitude": "22.563",
       "longitude": "88.363"
-    },
-    {
-      "visitedAt": "2026-06-24T05:57:52.482Z",
-      "page": "/",
-      "country": "SG",
-      "continent": "AS",
-      "region": "",
-      "city": "Singapore",
-      "timezone": "Asia/Singapore",
-      "latitude": "1.290",
-      "longitude": "103.850"
     }
   ],
   "visitors": [
+    {
+      "key": "8ad982797f215f17fe6386073fc18b8d1ac7e5c3786537983ce620635fd7abef",
+      "firstSeenAt": "2026-07-21T01:57:55.825Z",
+      "lastSeenAt": "2026-07-22T01:29:13.573Z",
+      "visitCount": 2,
+      "sessionCount": 2,
+      "firstPage": "/",
+      "lastPage": "/",
+      "firstCountry": "US",
+      "firstRegion": "California",
+      "firstCity": "Los Angeles",
+      "firstTimezone": "America/Los_Angeles",
+      "lastCountry": "SG",
+      "lastRegion": "",
+      "lastCity": "Singapore",
+      "lastTimezone": "Asia/Singapore",
+      "lastLatitude": "1.290",
+      "lastLongitude": "103.850"
+    },
     {
       "key": "acc17a467f52d038d9c57f819dd0117c29ed8ef2cf87d458da12d5c191ba3b15",
       "firstSeenAt": "2026-06-26T05:00:46.905Z",
@@ -1507,25 +1529,6 @@
       "lastTimezone": "Asia/Thimphu",
       "lastLatitude": "27.466",
       "lastLongitude": "89.642"
-    },
-    {
-      "key": "8ad982797f215f17fe6386073fc18b8d1ac7e5c3786537983ce620635fd7abef",
-      "firstSeenAt": "2026-07-21T01:57:55.825Z",
-      "lastSeenAt": "2026-07-21T01:57:55.825Z",
-      "visitCount": 1,
-      "sessionCount": 1,
-      "firstPage": "/",
-      "lastPage": "/",
-      "firstCountry": "US",
-      "firstRegion": "California",
-      "firstCity": "Los Angeles",
-      "firstTimezone": "America/Los_Angeles",
-      "lastCountry": "US",
-      "lastRegion": "California",
-      "lastCity": "Los Angeles",
-      "lastTimezone": "America/Los_Angeles",
-      "lastLatitude": "34.052",
-      "lastLongitude": "-118.244"
     },
     {
       "key": "5e4b548840bafa1b2d8c58426313d999a522827d9a9a289b0fd2669aca81404e",
@@ -2117,9 +2120,9 @@
       "lastLongitude": "88.429"
     }
   ],
-  "identifiedVisits": 53,
+  "identifiedVisits": 54,
   "uniqueVisitors": 33,
-  "returningVisitors": 7,
-  "repeatVisits": 20,
+  "returningVisitors": 8,
+  "repeatVisits": 21,
   "legacyVisits": 54
 }
