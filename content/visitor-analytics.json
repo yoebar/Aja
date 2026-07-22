@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-22T01:29:13.573Z",
-  "totalVisits": 108,
+  "updatedAt": "2026-07-22T02:13:04.992Z",
+  "totalVisits": 109,
   "countries": [
     {
       "key": "BT",
@@ -90,6 +90,14 @@
       "count": 1,
       "firstSeenAt": "2026-07-20T18:36:57.671Z",
       "lastSeenAt": "2026-07-20T18:36:57.671Z"
+    },
+    {
+      "key": "IE",
+      "label": "IE",
+      "country": "IE",
+      "count": 1,
+      "firstSeenAt": "2026-07-22T02:13:04.992Z",
+      "lastSeenAt": "2026-07-22T02:13:04.992Z"
     }
   ],
   "cities": [
@@ -416,6 +424,18 @@
       "count": 1,
       "firstSeenAt": "2026-07-20T18:36:57.671Z",
       "lastSeenAt": "2026-07-20T18:36:57.671Z"
+    },
+    {
+      "key": "Clonee, Leinster, IE",
+      "label": "Clonee, Leinster, IE",
+      "city": "Clonee",
+      "region": "Leinster",
+      "country": "IE",
+      "latitude": "53.412",
+      "longitude": "-6.444",
+      "count": 1,
+      "firstSeenAt": "2026-07-22T02:13:04.992Z",
+      "lastSeenAt": "2026-07-22T02:13:04.992Z"
     }
   ],
   "pages": [
@@ -439,9 +459,30 @@
       "count": 1,
       "firstSeenAt": "2026-07-20T16:26:01.049Z",
       "lastSeenAt": "2026-07-20T16:26:01.049Z"
+    },
+    {
+      "key": "/TT",
+      "label": "/TT",
+      "count": 1,
+      "firstSeenAt": "2026-07-22T02:13:04.992Z",
+      "lastSeenAt": "2026-07-22T02:13:04.992Z"
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-07-22T02:13:04.992Z",
+      "page": "/TT",
+      "country": "IE",
+      "continent": "EU",
+      "region": "Leinster",
+      "city": "Clonee",
+      "timezone": "Europe/Dublin",
+      "latitude": "53.412",
+      "longitude": "-6.444",
+      "visitorType": "new",
+      "sessionType": "new",
+      "visitorVisitCount": 1
+    },
     {
       "visitedAt": "2026-07-22T01:29:13.573Z",
       "page": "/",
@@ -1478,20 +1519,28 @@
       "timezone": "Asia/Thimphu",
       "latitude": "26.852",
       "longitude": "89.388"
-    },
-    {
-      "visitedAt": "2026-06-24T09:33:09.115Z",
-      "page": "/",
-      "country": "IN",
-      "continent": "AS",
-      "region": "West Bengal",
-      "city": "Kolkata",
-      "timezone": "Asia/Kolkata",
-      "latitude": "22.563",
-      "longitude": "88.363"
     }
   ],
   "visitors": [
+    {
+      "key": "48f961a87c1c439a234a421124f9681b348a6ad49bff97c263eae71bf512b709",
+      "firstSeenAt": "2026-07-22T02:13:04.992Z",
+      "lastSeenAt": "2026-07-22T02:13:04.992Z",
+      "visitCount": 1,
+      "sessionCount": 1,
+      "firstPage": "/TT",
+      "lastPage": "/TT",
+      "firstCountry": "IE",
+      "firstRegion": "Leinster",
+      "firstCity": "Clonee",
+      "firstTimezone": "Europe/Dublin",
+      "lastCountry": "IE",
+      "lastRegion": "Leinster",
+      "lastCity": "Clonee",
+      "lastTimezone": "Europe/Dublin",
+      "lastLatitude": "53.412",
+      "lastLongitude": "-6.444"
+    },
     {
       "key": "8ad982797f215f17fe6386073fc18b8d1ac7e5c3786537983ce620635fd7abef",
       "firstSeenAt": "2026-07-21T01:57:55.825Z",
@@ -2120,8 +2169,8 @@
       "lastLongitude": "88.429"
     }
   ],
-  "identifiedVisits": 54,
-  "uniqueVisitors": 33,
+  "identifiedVisits": 55,
+  "uniqueVisitors": 34,
   "returningVisitors": 8,
   "repeatVisits": 21,
   "legacyVisits": 54
