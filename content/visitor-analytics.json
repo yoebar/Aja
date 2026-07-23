@@ -1,15 +1,15 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-22T02:13:04.992Z",
-  "totalVisits": 109,
+  "updatedAt": "2026-07-23T13:00:54.386Z",
+  "totalVisits": 110,
   "countries": [
     {
       "key": "BT",
       "label": "BT",
       "country": "BT",
-      "count": 54,
+      "count": 55,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-07-21T17:20:09.893Z"
+      "lastSeenAt": "2026-07-23T13:00:54.386Z"
     },
     {
       "key": "IN",
@@ -109,9 +109,9 @@
       "country": "BT",
       "latitude": "27.466",
       "longitude": "89.642",
-      "count": 46,
+      "count": 47,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-07-21T17:20:09.893Z"
+      "lastSeenAt": "2026-07-23T13:00:54.386Z"
     },
     {
       "key": "Siliguri, West Bengal, IN",
@@ -442,9 +442,9 @@
     {
       "key": "/",
       "label": "/",
-      "count": 106,
+      "count": 107,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-07-22T01:29:13.573Z"
+      "lastSeenAt": "2026-07-23T13:00:54.386Z"
     },
     {
       "key": "/Carkem?fbclid=IwZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAEej80NNTR0gtSQxs8FQCVgptvd8GiMc7UM8ba9HXw8j9ctkJx5f4m5OrwM1Q4_aem_pFK-ttBnC7PsWMTvFcAieg",
@@ -469,6 +469,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-07-23T13:00:54.386Z",
+      "page": "/",
+      "country": "BT",
+      "continent": "AS",
+      "region": "Thimphu District",
+      "city": "Thimphu",
+      "timezone": "Asia/Thimphu",
+      "latitude": "27.466",
+      "longitude": "89.642",
+      "visitorType": "new",
+      "sessionType": "new",
+      "visitorVisitCount": 1
+    },
     {
       "visitedAt": "2026-07-22T02:13:04.992Z",
       "page": "/TT",
@@ -1508,20 +1522,28 @@
       "timezone": "Asia/Thimphu",
       "latitude": "27.466",
       "longitude": "89.642"
-    },
-    {
-      "visitedAt": "2026-06-24T14:41:27.830Z",
-      "page": "/",
-      "country": "BT",
-      "continent": "AS",
-      "region": "Chukha",
-      "city": "Phuntsholing",
-      "timezone": "Asia/Thimphu",
-      "latitude": "26.852",
-      "longitude": "89.388"
     }
   ],
   "visitors": [
+    {
+      "key": "100b3ef4bceff68a0a1786a0c42c4f7d782fc06aad1f55e006c4da8964fb35a2",
+      "firstSeenAt": "2026-07-23T13:00:54.386Z",
+      "lastSeenAt": "2026-07-23T13:00:54.386Z",
+      "visitCount": 1,
+      "sessionCount": 1,
+      "firstPage": "/",
+      "lastPage": "/",
+      "firstCountry": "BT",
+      "firstRegion": "Thimphu District",
+      "firstCity": "Thimphu",
+      "firstTimezone": "Asia/Thimphu",
+      "lastCountry": "BT",
+      "lastRegion": "Thimphu District",
+      "lastCity": "Thimphu",
+      "lastTimezone": "Asia/Thimphu",
+      "lastLatitude": "27.466",
+      "lastLongitude": "89.642"
+    },
     {
       "key": "48f961a87c1c439a234a421124f9681b348a6ad49bff97c263eae71bf512b709",
       "firstSeenAt": "2026-07-22T02:13:04.992Z",
@@ -2169,8 +2191,8 @@
       "lastLongitude": "88.429"
     }
   ],
-  "identifiedVisits": 55,
-  "uniqueVisitors": 34,
+  "identifiedVisits": 56,
+  "uniqueVisitors": 35,
   "returningVisitors": 8,
   "repeatVisits": 21,
   "legacyVisits": 54
