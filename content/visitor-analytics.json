@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-25T11:48:42.350Z",
-  "totalVisits": 113,
+  "updatedAt": "2026-07-25T15:17:06.740Z",
+  "totalVisits": 114,
   "countries": [
     {
       "key": "BT",
@@ -15,9 +15,9 @@
       "key": "IN",
       "label": "IN",
       "country": "IN",
-      "count": 29,
+      "count": 30,
       "firstSeenAt": "2026-06-23T05:03:11.022Z",
-      "lastSeenAt": "2026-07-25T11:48:42.350Z"
+      "lastSeenAt": "2026-07-25T15:17:06.740Z"
     },
     {
       "key": "JP",
@@ -258,6 +258,18 @@
       "lastSeenAt": "2026-07-21T01:57:55.825Z"
     },
     {
+      "key": "Warangal, Telangana, IN",
+      "label": "Warangal, Telangana, IN",
+      "city": "Warangal",
+      "region": "Telangana",
+      "country": "IN",
+      "latitude": "18.000",
+      "longitude": "79.583",
+      "count": 2,
+      "firstSeenAt": "2026-07-25T11:48:42.350Z",
+      "lastSeenAt": "2026-07-25T15:17:06.740Z"
+    },
+    {
       "key": "Luleå, Norrbotten, SE",
       "label": "Luleå, Norrbotten, SE",
       "city": "Luleå",
@@ -448,27 +460,15 @@
       "count": 1,
       "firstSeenAt": "2026-07-24T13:55:20.331Z",
       "lastSeenAt": "2026-07-24T13:55:20.331Z"
-    },
-    {
-      "key": "Warangal, Telangana, IN",
-      "label": "Warangal, Telangana, IN",
-      "city": "Warangal",
-      "region": "Telangana",
-      "country": "IN",
-      "latitude": "18.000",
-      "longitude": "79.583",
-      "count": 1,
-      "firstSeenAt": "2026-07-25T11:48:42.350Z",
-      "lastSeenAt": "2026-07-25T11:48:42.350Z"
     }
   ],
   "pages": [
     {
       "key": "/",
       "label": "/",
-      "count": 110,
+      "count": 111,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-07-25T11:48:42.350Z"
+      "lastSeenAt": "2026-07-25T15:17:06.740Z"
     },
     {
       "key": "/Carkem?fbclid=IwZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAEej80NNTR0gtSQxs8FQCVgptvd8GiMc7UM8ba9HXw8j9ctkJx5f4m5OrwM1Q4_aem_pFK-ttBnC7PsWMTvFcAieg",
@@ -493,6 +493,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-07-25T15:17:06.740Z",
+      "page": "/",
+      "country": "IN",
+      "continent": "AS",
+      "region": "Telangana",
+      "city": "Warangal",
+      "timezone": "Asia/Kolkata",
+      "latitude": "18.000",
+      "longitude": "79.583",
+      "visitorType": "returning",
+      "sessionType": "new",
+      "visitorVisitCount": 2
+    },
     {
       "visitedAt": "2026-07-25T11:48:42.350Z",
       "page": "/",
@@ -1544,26 +1558,15 @@
       "timezone": "Asia/Thimphu",
       "latitude": "27.466",
       "longitude": "89.642"
-    },
-    {
-      "visitedAt": "2026-06-25T03:02:48.123Z",
-      "page": "/",
-      "country": "BT",
-      "continent": "AS",
-      "region": "Chukha",
-      "city": "Phuntsholing",
-      "timezone": "Asia/Thimphu",
-      "latitude": "26.852",
-      "longitude": "89.388"
     }
   ],
   "visitors": [
     {
       "key": "f8e3c2c6fdcd2889080404594ffaecec6f6e075ef6b7a0b7ced4ab0f575d850c",
       "firstSeenAt": "2026-07-25T11:48:42.350Z",
-      "lastSeenAt": "2026-07-25T11:48:42.350Z",
-      "visitCount": 1,
-      "sessionCount": 1,
+      "lastSeenAt": "2026-07-25T15:17:06.740Z",
+      "visitCount": 2,
+      "sessionCount": 2,
       "firstPage": "/",
       "lastPage": "/",
       "firstCountry": "IN",
@@ -2243,9 +2246,9 @@
       "lastLongitude": "88.429"
     }
   ],
-  "identifiedVisits": 59,
+  "identifiedVisits": 60,
   "uniqueVisitors": 36,
-  "returningVisitors": 9,
-  "repeatVisits": 23,
+  "returningVisitors": 10,
+  "repeatVisits": 24,
   "legacyVisits": 54
 }
