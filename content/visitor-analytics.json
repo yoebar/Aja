@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-24T13:55:20.331Z",
-  "totalVisits": 112,
+  "updatedAt": "2026-07-25T11:48:42.350Z",
+  "totalVisits": 113,
   "countries": [
     {
       "key": "BT",
@@ -15,9 +15,9 @@
       "key": "IN",
       "label": "IN",
       "country": "IN",
-      "count": 28,
+      "count": 29,
       "firstSeenAt": "2026-06-23T05:03:11.022Z",
-      "lastSeenAt": "2026-07-20T16:29:44.898Z"
+      "lastSeenAt": "2026-07-25T11:48:42.350Z"
     },
     {
       "key": "JP",
@@ -448,15 +448,27 @@
       "count": 1,
       "firstSeenAt": "2026-07-24T13:55:20.331Z",
       "lastSeenAt": "2026-07-24T13:55:20.331Z"
+    },
+    {
+      "key": "Warangal, Telangana, IN",
+      "label": "Warangal, Telangana, IN",
+      "city": "Warangal",
+      "region": "Telangana",
+      "country": "IN",
+      "latitude": "18.000",
+      "longitude": "79.583",
+      "count": 1,
+      "firstSeenAt": "2026-07-25T11:48:42.350Z",
+      "lastSeenAt": "2026-07-25T11:48:42.350Z"
     }
   ],
   "pages": [
     {
       "key": "/",
       "label": "/",
-      "count": 109,
+      "count": 110,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-07-24T13:55:20.331Z"
+      "lastSeenAt": "2026-07-25T11:48:42.350Z"
     },
     {
       "key": "/Carkem?fbclid=IwZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAEej80NNTR0gtSQxs8FQCVgptvd8GiMc7UM8ba9HXw8j9ctkJx5f4m5OrwM1Q4_aem_pFK-ttBnC7PsWMTvFcAieg",
@@ -481,6 +493,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-07-25T11:48:42.350Z",
+      "page": "/",
+      "country": "IN",
+      "continent": "AS",
+      "region": "Telangana",
+      "city": "Warangal",
+      "timezone": "Asia/Kolkata",
+      "latitude": "18.000",
+      "longitude": "79.583",
+      "visitorType": "new",
+      "sessionType": "new",
+      "visitorVisitCount": 1
+    },
     {
       "visitedAt": "2026-07-24T13:55:20.331Z",
       "page": "/",
@@ -1529,20 +1555,28 @@
       "timezone": "Asia/Thimphu",
       "latitude": "26.852",
       "longitude": "89.388"
-    },
-    {
-      "visitedAt": "2026-06-25T02:11:22.507Z",
-      "page": "/",
-      "country": "BT",
-      "continent": "AS",
-      "region": "Thimphu District",
-      "city": "Thimphu",
-      "timezone": "Asia/Thimphu",
-      "latitude": "27.466",
-      "longitude": "89.642"
     }
   ],
   "visitors": [
+    {
+      "key": "f8e3c2c6fdcd2889080404594ffaecec6f6e075ef6b7a0b7ced4ab0f575d850c",
+      "firstSeenAt": "2026-07-25T11:48:42.350Z",
+      "lastSeenAt": "2026-07-25T11:48:42.350Z",
+      "visitCount": 1,
+      "sessionCount": 1,
+      "firstPage": "/",
+      "lastPage": "/",
+      "firstCountry": "IN",
+      "firstRegion": "Telangana",
+      "firstCity": "Warangal",
+      "firstTimezone": "Asia/Kolkata",
+      "lastCountry": "IN",
+      "lastRegion": "Telangana",
+      "lastCity": "Warangal",
+      "lastTimezone": "Asia/Kolkata",
+      "lastLatitude": "18.000",
+      "lastLongitude": "79.583"
+    },
     {
       "key": "acc17a467f52d038d9c57f819dd0117c29ed8ef2cf87d458da12d5c191ba3b15",
       "firstSeenAt": "2026-06-26T05:00:46.905Z",
@@ -2209,8 +2243,8 @@
       "lastLongitude": "88.429"
     }
   ],
-  "identifiedVisits": 58,
-  "uniqueVisitors": 35,
+  "identifiedVisits": 59,
+  "uniqueVisitors": 36,
   "returningVisitors": 9,
   "repeatVisits": 23,
   "legacyVisits": 54
