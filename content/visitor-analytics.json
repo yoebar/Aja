@@ -1,15 +1,15 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-25T15:17:06.740Z",
-  "totalVisits": 114,
+  "updatedAt": "2026-07-26T03:27:50.296Z",
+  "totalVisits": 115,
   "countries": [
     {
       "key": "BT",
       "label": "BT",
       "country": "BT",
-      "count": 57,
+      "count": 58,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-07-24T13:55:20.331Z"
+      "lastSeenAt": "2026-07-26T03:27:50.296Z"
     },
     {
       "key": "IN",
@@ -460,15 +460,27 @@
       "count": 1,
       "firstSeenAt": "2026-07-24T13:55:20.331Z",
       "lastSeenAt": "2026-07-24T13:55:20.331Z"
+    },
+    {
+      "key": "Samtse, Samtse District, BT",
+      "label": "Samtse, Samtse District, BT",
+      "city": "Samtse",
+      "region": "Samtse District",
+      "country": "BT",
+      "latitude": "26.899",
+      "longitude": "89.100",
+      "count": 1,
+      "firstSeenAt": "2026-07-26T03:27:50.296Z",
+      "lastSeenAt": "2026-07-26T03:27:50.296Z"
     }
   ],
   "pages": [
     {
       "key": "/",
       "label": "/",
-      "count": 111,
+      "count": 112,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-07-25T15:17:06.740Z"
+      "lastSeenAt": "2026-07-26T03:27:50.296Z"
     },
     {
       "key": "/Carkem?fbclid=IwZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAEej80NNTR0gtSQxs8FQCVgptvd8GiMc7UM8ba9HXw8j9ctkJx5f4m5OrwM1Q4_aem_pFK-ttBnC7PsWMTvFcAieg",
@@ -493,6 +505,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-07-26T03:27:50.296Z",
+      "page": "/",
+      "country": "BT",
+      "continent": "AS",
+      "region": "Samtse District",
+      "city": "Samtse",
+      "timezone": "Asia/Thimphu",
+      "latitude": "26.899",
+      "longitude": "89.100",
+      "visitorType": "new",
+      "sessionType": "new",
+      "visitorVisitCount": 1
+    },
     {
       "visitedAt": "2026-07-25T15:17:06.740Z",
       "page": "/",
@@ -1547,20 +1573,28 @@
       "timezone": "Asia/Thimphu",
       "latitude": "27.466",
       "longitude": "89.642"
-    },
-    {
-      "visitedAt": "2026-06-25T03:07:28.495Z",
-      "page": "/",
-      "country": "BT",
-      "continent": "AS",
-      "region": "Thimphu District",
-      "city": "Thimphu",
-      "timezone": "Asia/Thimphu",
-      "latitude": "27.466",
-      "longitude": "89.642"
     }
   ],
   "visitors": [
+    {
+      "key": "d195746ec186ee31044df5fbc36815819c3f11bb5e961c69dc5d385d9081e7ba",
+      "firstSeenAt": "2026-07-26T03:27:50.296Z",
+      "lastSeenAt": "2026-07-26T03:27:50.296Z",
+      "visitCount": 1,
+      "sessionCount": 1,
+      "firstPage": "/",
+      "lastPage": "/",
+      "firstCountry": "BT",
+      "firstRegion": "Samtse District",
+      "firstCity": "Samtse",
+      "firstTimezone": "Asia/Thimphu",
+      "lastCountry": "BT",
+      "lastRegion": "Samtse District",
+      "lastCity": "Samtse",
+      "lastTimezone": "Asia/Thimphu",
+      "lastLatitude": "26.899",
+      "lastLongitude": "89.100"
+    },
     {
       "key": "f8e3c2c6fdcd2889080404594ffaecec6f6e075ef6b7a0b7ced4ab0f575d850c",
       "firstSeenAt": "2026-07-25T11:48:42.350Z",
@@ -2246,8 +2280,8 @@
       "lastLongitude": "88.429"
     }
   ],
-  "identifiedVisits": 60,
-  "uniqueVisitors": 36,
+  "identifiedVisits": 61,
+  "uniqueVisitors": 37,
   "returningVisitors": 10,
   "repeatVisits": 24,
   "legacyVisits": 54
