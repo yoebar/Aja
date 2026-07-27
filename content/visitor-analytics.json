@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-26T03:27:50.296Z",
-  "totalVisits": 115,
+  "updatedAt": "2026-07-27T08:13:30.267Z",
+  "totalVisits": 116,
   "countries": [
     {
       "key": "BT",
@@ -15,9 +15,9 @@
       "key": "IN",
       "label": "IN",
       "country": "IN",
-      "count": 30,
+      "count": 31,
       "firstSeenAt": "2026-06-23T05:03:11.022Z",
-      "lastSeenAt": "2026-07-25T15:17:06.740Z"
+      "lastSeenAt": "2026-07-27T08:13:30.267Z"
     },
     {
       "key": "JP",
@@ -205,9 +205,9 @@
       "country": "IN",
       "latitude": "26.184",
       "longitude": "91.746",
-      "count": 2,
+      "count": 3,
       "firstSeenAt": "2026-06-23T05:03:11.022Z",
-      "lastSeenAt": "2026-06-23T05:36:24.975Z"
+      "lastSeenAt": "2026-07-27T08:13:30.267Z"
     },
     {
       "key": "Hyderabad, Telangana, IN",
@@ -478,9 +478,9 @@
     {
       "key": "/",
       "label": "/",
-      "count": 112,
+      "count": 113,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-07-26T03:27:50.296Z"
+      "lastSeenAt": "2026-07-27T08:13:30.267Z"
     },
     {
       "key": "/Carkem?fbclid=IwZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAEej80NNTR0gtSQxs8FQCVgptvd8GiMc7UM8ba9HXw8j9ctkJx5f4m5OrwM1Q4_aem_pFK-ttBnC7PsWMTvFcAieg",
@@ -505,6 +505,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-07-27T08:13:30.267Z",
+      "page": "/",
+      "country": "IN",
+      "continent": "AS",
+      "region": "Assam",
+      "city": "Guwahati",
+      "timezone": "Asia/Kolkata",
+      "latitude": "26.184",
+      "longitude": "91.746",
+      "visitorType": "new",
+      "sessionType": "new",
+      "visitorVisitCount": 1
+    },
     {
       "visitedAt": "2026-07-26T03:27:50.296Z",
       "page": "/",
@@ -1562,20 +1576,28 @@
       "timezone": "Asia/Thimphu",
       "latitude": "27.466",
       "longitude": "89.642"
-    },
-    {
-      "visitedAt": "2026-06-25T03:08:56.938Z",
-      "page": "/",
-      "country": "BT",
-      "continent": "AS",
-      "region": "Thimphu District",
-      "city": "Thimphu",
-      "timezone": "Asia/Thimphu",
-      "latitude": "27.466",
-      "longitude": "89.642"
     }
   ],
   "visitors": [
+    {
+      "key": "e7cad484cd1259dda3ec08cd7c35a234837e6b185f435ca3f0e08bc775543b6c",
+      "firstSeenAt": "2026-07-27T08:13:30.267Z",
+      "lastSeenAt": "2026-07-27T08:13:30.267Z",
+      "visitCount": 1,
+      "sessionCount": 1,
+      "firstPage": "/",
+      "lastPage": "/",
+      "firstCountry": "IN",
+      "firstRegion": "Assam",
+      "firstCity": "Guwahati",
+      "firstTimezone": "Asia/Kolkata",
+      "lastCountry": "IN",
+      "lastRegion": "Assam",
+      "lastCity": "Guwahati",
+      "lastTimezone": "Asia/Kolkata",
+      "lastLatitude": "26.184",
+      "lastLongitude": "91.746"
+    },
     {
       "key": "d195746ec186ee31044df5fbc36815819c3f11bb5e961c69dc5d385d9081e7ba",
       "firstSeenAt": "2026-07-26T03:27:50.296Z",
@@ -2280,8 +2302,8 @@
       "lastLongitude": "88.429"
     }
   ],
-  "identifiedVisits": 61,
-  "uniqueVisitors": 37,
+  "identifiedVisits": 62,
+  "uniqueVisitors": 38,
   "returningVisitors": 10,
   "repeatVisits": 24,
   "legacyVisits": 54
