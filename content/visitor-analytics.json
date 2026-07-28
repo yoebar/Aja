@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-28T11:22:16.328Z",
-  "totalVisits": 117,
+  "updatedAt": "2026-07-28T11:51:04.107Z",
+  "totalVisits": 118,
   "countries": [
     {
       "key": "BT",
@@ -44,6 +44,14 @@
       "lastSeenAt": "2026-07-03T12:53:31.473Z"
     },
     {
+      "key": "US",
+      "label": "US",
+      "country": "US",
+      "count": 3,
+      "firstSeenAt": "2026-07-16T03:42:47.379Z",
+      "lastSeenAt": "2026-07-28T11:51:04.107Z"
+    },
+    {
       "key": "MY",
       "label": "MY",
       "country": "MY",
@@ -58,14 +66,6 @@
       "count": 2,
       "firstSeenAt": "2026-07-06T23:45:18.846Z",
       "lastSeenAt": "2026-07-09T00:27:43.260Z"
-    },
-    {
-      "key": "US",
-      "label": "US",
-      "country": "US",
-      "count": 2,
-      "firstSeenAt": "2026-07-16T03:42:47.379Z",
-      "lastSeenAt": "2026-07-21T01:57:55.825Z"
     },
     {
       "key": "SE",
@@ -472,6 +472,18 @@
       "count": 1,
       "firstSeenAt": "2026-07-26T03:27:50.296Z",
       "lastSeenAt": "2026-07-26T03:27:50.296Z"
+    },
+    {
+      "key": "Prineville, Oregon, US",
+      "label": "Prineville, Oregon, US",
+      "city": "Prineville",
+      "region": "Oregon",
+      "country": "US",
+      "latitude": "44.300",
+      "longitude": "-120.834",
+      "count": 1,
+      "firstSeenAt": "2026-07-28T11:51:04.107Z",
+      "lastSeenAt": "2026-07-28T11:51:04.107Z"
     }
   ],
   "pages": [
@@ -502,9 +514,30 @@
       "count": 1,
       "firstSeenAt": "2026-07-22T02:13:04.992Z",
       "lastSeenAt": "2026-07-22T02:13:04.992Z"
+    },
+    {
+      "key": "/mahar",
+      "label": "/mahar",
+      "count": 1,
+      "firstSeenAt": "2026-07-28T11:51:04.107Z",
+      "lastSeenAt": "2026-07-28T11:51:04.107Z"
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-07-28T11:51:04.107Z",
+      "page": "/mahar",
+      "country": "US",
+      "continent": "NA",
+      "region": "Oregon",
+      "city": "Prineville",
+      "timezone": "America/Los_Angeles",
+      "latitude": "44.300",
+      "longitude": "-120.834",
+      "visitorType": "new",
+      "sessionType": "new",
+      "visitorVisitCount": 1
+    },
     {
       "visitedAt": "2026-07-28T11:22:16.328Z",
       "page": "/",
@@ -1568,20 +1601,28 @@
       "timezone": "Asia/Thimphu",
       "latitude": "27.466",
       "longitude": "89.642"
-    },
-    {
-      "visitedAt": "2026-06-25T03:33:24.482Z",
-      "page": "/",
-      "country": "BT",
-      "continent": "AS",
-      "region": "Chukha",
-      "city": "Phuntsholing",
-      "timezone": "Asia/Thimphu",
-      "latitude": "26.852",
-      "longitude": "89.388"
     }
   ],
   "visitors": [
+    {
+      "key": "760ae8f87faebcad2b9cf54340d53ba01ececc562e9accfcf0d7f287118a015d",
+      "firstSeenAt": "2026-07-28T11:51:04.107Z",
+      "lastSeenAt": "2026-07-28T11:51:04.107Z",
+      "visitCount": 1,
+      "sessionCount": 1,
+      "firstPage": "/mahar",
+      "lastPage": "/mahar",
+      "firstCountry": "US",
+      "firstRegion": "Oregon",
+      "firstCity": "Prineville",
+      "firstTimezone": "America/Los_Angeles",
+      "lastCountry": "US",
+      "lastRegion": "Oregon",
+      "lastCity": "Prineville",
+      "lastTimezone": "America/Los_Angeles",
+      "lastLatitude": "44.300",
+      "lastLongitude": "-120.834"
+    },
     {
       "key": "50b9d9ac88bce7a1611b6ba300a846c4f662045da6a6881825ec1ea23dacca11",
       "firstSeenAt": "2026-07-28T11:22:16.328Z",
@@ -2324,8 +2365,8 @@
       "lastLongitude": "88.429"
     }
   ],
-  "identifiedVisits": 63,
-  "uniqueVisitors": 39,
+  "identifiedVisits": 64,
+  "uniqueVisitors": 40,
   "returningVisitors": 10,
   "repeatVisits": 24,
   "legacyVisits": 54
