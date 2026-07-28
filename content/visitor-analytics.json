@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-28T11:51:13.661Z",
-  "totalVisits": 119,
+  "updatedAt": "2026-07-28T11:51:18.572Z",
+  "totalVisits": 120,
   "countries": [
     {
       "key": "BT",
@@ -39,9 +39,9 @@
       "key": "US",
       "label": "US",
       "country": "US",
-      "count": 4,
+      "count": 5,
       "firstSeenAt": "2026-07-16T03:42:47.379Z",
-      "lastSeenAt": "2026-07-28T11:51:13.661Z"
+      "lastSeenAt": "2026-07-28T11:51:18.572Z"
     },
     {
       "key": "NP",
@@ -282,6 +282,18 @@
       "lastSeenAt": "2026-07-28T11:22:16.328Z"
     },
     {
+      "key": "Boardman, Oregon, US",
+      "label": "Boardman, Oregon, US",
+      "city": "Boardman",
+      "region": "Oregon",
+      "country": "US",
+      "latitude": "45.840",
+      "longitude": "-119.701",
+      "count": 2,
+      "firstSeenAt": "2026-07-28T11:51:13.661Z",
+      "lastSeenAt": "2026-07-28T11:51:18.572Z"
+    },
+    {
       "key": "Luleå, Norrbotten, SE",
       "label": "Luleå, Norrbotten, SE",
       "city": "Luleå",
@@ -484,18 +496,6 @@
       "count": 1,
       "firstSeenAt": "2026-07-28T11:51:04.107Z",
       "lastSeenAt": "2026-07-28T11:51:04.107Z"
-    },
-    {
-      "key": "Boardman, Oregon, US",
-      "label": "Boardman, Oregon, US",
-      "city": "Boardman",
-      "region": "Oregon",
-      "country": "US",
-      "latitude": "45.840",
-      "longitude": "-119.701",
-      "count": 1,
-      "firstSeenAt": "2026-07-28T11:51:13.661Z",
-      "lastSeenAt": "2026-07-28T11:51:13.661Z"
     }
   ],
   "pages": [
@@ -509,9 +509,9 @@
     {
       "key": "/mahar",
       "label": "/mahar",
-      "count": 2,
+      "count": 3,
       "firstSeenAt": "2026-07-28T11:51:04.107Z",
-      "lastSeenAt": "2026-07-28T11:51:13.661Z"
+      "lastSeenAt": "2026-07-28T11:51:18.572Z"
     },
     {
       "key": "/Carkem?fbclid=IwZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAEej80NNTR0gtSQxs8FQCVgptvd8GiMc7UM8ba9HXw8j9ctkJx5f4m5OrwM1Q4_aem_pFK-ttBnC7PsWMTvFcAieg",
@@ -536,6 +536,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-07-28T11:51:18.572Z",
+      "page": "/mahar",
+      "country": "US",
+      "continent": "NA",
+      "region": "Oregon",
+      "city": "Boardman",
+      "timezone": "America/Los_Angeles",
+      "latitude": "45.840",
+      "longitude": "-119.701",
+      "visitorType": "new",
+      "sessionType": "new",
+      "visitorVisitCount": 1
+    },
     {
       "visitedAt": "2026-07-28T11:51:13.661Z",
       "page": "/mahar",
@@ -1605,20 +1619,28 @@
       "timezone": "Asia/Thimphu",
       "latitude": "27.466",
       "longitude": "89.642"
-    },
-    {
-      "visitedAt": "2026-06-25T04:14:56.370Z",
-      "page": "/",
-      "country": "BT",
-      "continent": "AS",
-      "region": "Thimphu District",
-      "city": "Thimphu",
-      "timezone": "Asia/Thimphu",
-      "latitude": "27.466",
-      "longitude": "89.642"
     }
   ],
   "visitors": [
+    {
+      "key": "987c92efdcf98598ee9121afa067a5d147be84a02e254cf8af9354ad4e772675",
+      "firstSeenAt": "2026-07-28T11:51:18.572Z",
+      "lastSeenAt": "2026-07-28T11:51:18.572Z",
+      "visitCount": 1,
+      "sessionCount": 1,
+      "firstPage": "/mahar",
+      "lastPage": "/mahar",
+      "firstCountry": "US",
+      "firstRegion": "Oregon",
+      "firstCity": "Boardman",
+      "firstTimezone": "America/Los_Angeles",
+      "lastCountry": "US",
+      "lastRegion": "Oregon",
+      "lastCity": "Boardman",
+      "lastTimezone": "America/Los_Angeles",
+      "lastLatitude": "45.840",
+      "lastLongitude": "-119.701"
+    },
     {
       "key": "8cd4e9024b9d72ef94e7dcf1f408ee95a2ce36f6707b6a45b85e422478c24726",
       "firstSeenAt": "2026-07-28T11:51:13.661Z",
@@ -2399,8 +2421,8 @@
       "lastLongitude": "88.429"
     }
   ],
-  "identifiedVisits": 65,
-  "uniqueVisitors": 41,
+  "identifiedVisits": 66,
+  "uniqueVisitors": 42,
   "returningVisitors": 10,
   "repeatVisits": 24,
   "legacyVisits": 54
