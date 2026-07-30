@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-30T04:14:22.563Z",
-  "totalVisits": 123,
+  "updatedAt": "2026-07-30T10:29:22.901Z",
+  "totalVisits": 124,
   "countries": [
     {
       "key": "BT",
@@ -68,6 +68,14 @@
       "lastSeenAt": "2026-07-09T00:27:43.260Z"
     },
     {
+      "key": "ID",
+      "label": "ID",
+      "country": "ID",
+      "count": 2,
+      "firstSeenAt": "2026-07-30T04:14:22.563Z",
+      "lastSeenAt": "2026-07-30T10:29:22.901Z"
+    },
+    {
       "key": "SE",
       "label": "SE",
       "country": "SE",
@@ -98,14 +106,6 @@
       "count": 1,
       "firstSeenAt": "2026-07-22T02:13:04.992Z",
       "lastSeenAt": "2026-07-22T02:13:04.992Z"
-    },
-    {
-      "key": "ID",
-      "label": "ID",
-      "country": "ID",
-      "count": 1,
-      "firstSeenAt": "2026-07-30T04:14:22.563Z",
-      "lastSeenAt": "2026-07-30T04:14:22.563Z"
     }
   ],
   "cities": [
@@ -300,6 +300,18 @@
       "count": 2,
       "firstSeenAt": "2026-07-28T11:51:13.661Z",
       "lastSeenAt": "2026-07-28T11:51:18.572Z"
+    },
+    {
+      "key": "Jakarta, Jakarta, ID",
+      "label": "Jakarta, Jakarta, ID",
+      "city": "Jakarta",
+      "region": "Jakarta",
+      "country": "ID",
+      "latitude": "-6.215",
+      "longitude": "106.845",
+      "count": 2,
+      "firstSeenAt": "2026-07-30T04:14:22.563Z",
+      "lastSeenAt": "2026-07-30T10:29:22.901Z"
     },
     {
       "key": "Luleå, Norrbotten, SE",
@@ -516,27 +528,15 @@
       "count": 1,
       "firstSeenAt": "2026-07-28T11:51:37.512Z",
       "lastSeenAt": "2026-07-28T11:51:37.512Z"
-    },
-    {
-      "key": "Jakarta, Jakarta, ID",
-      "label": "Jakarta, Jakarta, ID",
-      "city": "Jakarta",
-      "region": "Jakarta",
-      "country": "ID",
-      "latitude": "-6.215",
-      "longitude": "106.845",
-      "count": 1,
-      "firstSeenAt": "2026-07-30T04:14:22.563Z",
-      "lastSeenAt": "2026-07-30T04:14:22.563Z"
     }
   ],
   "pages": [
     {
       "key": "/",
       "label": "/",
-      "count": 116,
+      "count": 117,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-07-30T04:14:22.563Z"
+      "lastSeenAt": "2026-07-30T10:29:22.901Z"
     },
     {
       "key": "/mahar",
@@ -568,6 +568,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-07-30T10:29:22.901Z",
+      "page": "/",
+      "country": "ID",
+      "continent": "AS",
+      "region": "Jakarta",
+      "city": "Jakarta",
+      "timezone": "Asia/Jakarta",
+      "latitude": "-6.215",
+      "longitude": "106.845",
+      "visitorType": "returning",
+      "sessionType": "new",
+      "visitorVisitCount": 2
+    },
     {
       "visitedAt": "2026-07-30T04:14:22.563Z",
       "page": "/",
@@ -1649,26 +1663,15 @@
       "timezone": "Asia/Kolkata",
       "latitude": "14.480",
       "longitude": "78.823"
-    },
-    {
-      "visitedAt": "2026-06-25T12:15:05.625Z",
-      "page": "/",
-      "country": "BT",
-      "continent": "AS",
-      "region": "Thimphu District",
-      "city": "Thimphu",
-      "timezone": "Asia/Thimphu",
-      "latitude": "27.466",
-      "longitude": "89.642"
     }
   ],
   "visitors": [
     {
       "key": "ce042250dfb401ad54bfe4ac1ff62cc8f348c9d142015b493e0df10b40538767",
       "firstSeenAt": "2026-07-30T04:14:22.563Z",
-      "lastSeenAt": "2026-07-30T04:14:22.563Z",
-      "visitCount": 1,
-      "sessionCount": 1,
+      "lastSeenAt": "2026-07-30T10:29:22.901Z",
+      "visitCount": 2,
+      "sessionCount": 2,
       "firstPage": "/",
       "lastPage": "/",
       "firstCountry": "ID",
@@ -2500,9 +2503,9 @@
       "lastLongitude": "88.429"
     }
   ],
-  "identifiedVisits": 69,
+  "identifiedVisits": 70,
   "uniqueVisitors": 44,
-  "returningVisitors": 11,
-  "repeatVisits": 25,
+  "returningVisitors": 12,
+  "repeatVisits": 26,
   "legacyVisits": 54
 }
