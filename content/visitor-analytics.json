@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-30T10:29:22.901Z",
-  "totalVisits": 124,
+  "updatedAt": "2026-07-30T12:51:48.554Z",
+  "totalVisits": 125,
   "countries": [
     {
       "key": "BT",
@@ -15,9 +15,9 @@
       "key": "IN",
       "label": "IN",
       "country": "IN",
-      "count": 32,
+      "count": 33,
       "firstSeenAt": "2026-06-23T05:03:11.022Z",
-      "lastSeenAt": "2026-07-28T11:22:16.328Z"
+      "lastSeenAt": "2026-07-30T12:51:48.554Z"
     },
     {
       "key": "JP",
@@ -528,15 +528,27 @@
       "count": 1,
       "firstSeenAt": "2026-07-28T11:51:37.512Z",
       "lastSeenAt": "2026-07-28T11:51:37.512Z"
+    },
+    {
+      "key": "Rājkot, Gujarat, IN",
+      "label": "Rājkot, Gujarat, IN",
+      "city": "Rājkot",
+      "region": "Gujarat",
+      "country": "IN",
+      "latitude": "22.292",
+      "longitude": "70.793",
+      "count": 1,
+      "firstSeenAt": "2026-07-30T12:51:48.554Z",
+      "lastSeenAt": "2026-07-30T12:51:48.554Z"
     }
   ],
   "pages": [
     {
       "key": "/",
       "label": "/",
-      "count": 117,
+      "count": 118,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-07-30T10:29:22.901Z"
+      "lastSeenAt": "2026-07-30T12:51:48.554Z"
     },
     {
       "key": "/mahar",
@@ -568,6 +580,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-07-30T12:51:48.554Z",
+      "page": "/",
+      "country": "IN",
+      "continent": "AS",
+      "region": "Gujarat",
+      "city": "Rājkot",
+      "timezone": "Asia/Kolkata",
+      "latitude": "22.292",
+      "longitude": "70.793",
+      "visitorType": "new",
+      "sessionType": "new",
+      "visitorVisitCount": 1
+    },
     {
       "visitedAt": "2026-07-30T10:29:22.901Z",
       "page": "/",
@@ -1652,20 +1678,28 @@
       "timezone": "Asia/Thimphu",
       "latitude": "27.466",
       "longitude": "89.642"
-    },
-    {
-      "visitedAt": "2026-06-25T12:29:53.974Z",
-      "page": "/",
-      "country": "IN",
-      "continent": "AS",
-      "region": "Andhra Pradesh",
-      "city": "Kadapa",
-      "timezone": "Asia/Kolkata",
-      "latitude": "14.480",
-      "longitude": "78.823"
     }
   ],
   "visitors": [
+    {
+      "key": "359c90bb9e2e7635917aacc16335a57c9ebfee29e9241fbf598042cbea276ca1",
+      "firstSeenAt": "2026-07-30T12:51:48.554Z",
+      "lastSeenAt": "2026-07-30T12:51:48.554Z",
+      "visitCount": 1,
+      "sessionCount": 1,
+      "firstPage": "/",
+      "lastPage": "/",
+      "firstCountry": "IN",
+      "firstRegion": "Gujarat",
+      "firstCity": "Rājkot",
+      "firstTimezone": "Asia/Kolkata",
+      "lastCountry": "IN",
+      "lastRegion": "Gujarat",
+      "lastCity": "Rājkot",
+      "lastTimezone": "Asia/Kolkata",
+      "lastLatitude": "22.292",
+      "lastLongitude": "70.793"
+    },
     {
       "key": "ce042250dfb401ad54bfe4ac1ff62cc8f348c9d142015b493e0df10b40538767",
       "firstSeenAt": "2026-07-30T04:14:22.563Z",
@@ -2503,8 +2537,8 @@
       "lastLongitude": "88.429"
     }
   ],
-  "identifiedVisits": 70,
-  "uniqueVisitors": 44,
+  "identifiedVisits": 71,
+  "uniqueVisitors": 45,
   "returningVisitors": 12,
   "repeatVisits": 26,
   "legacyVisits": 54
