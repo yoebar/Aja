@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-28T16:26:09.324Z",
-  "totalVisits": 122,
+  "updatedAt": "2026-07-30T04:14:22.563Z",
+  "totalVisits": 123,
   "countries": [
     {
       "key": "BT",
@@ -98,6 +98,14 @@
       "count": 1,
       "firstSeenAt": "2026-07-22T02:13:04.992Z",
       "lastSeenAt": "2026-07-22T02:13:04.992Z"
+    },
+    {
+      "key": "ID",
+      "label": "ID",
+      "country": "ID",
+      "count": 1,
+      "firstSeenAt": "2026-07-30T04:14:22.563Z",
+      "lastSeenAt": "2026-07-30T04:14:22.563Z"
     }
   ],
   "cities": [
@@ -508,15 +516,27 @@
       "count": 1,
       "firstSeenAt": "2026-07-28T11:51:37.512Z",
       "lastSeenAt": "2026-07-28T11:51:37.512Z"
+    },
+    {
+      "key": "Jakarta, Jakarta, ID",
+      "label": "Jakarta, Jakarta, ID",
+      "city": "Jakarta",
+      "region": "Jakarta",
+      "country": "ID",
+      "latitude": "-6.215",
+      "longitude": "106.845",
+      "count": 1,
+      "firstSeenAt": "2026-07-30T04:14:22.563Z",
+      "lastSeenAt": "2026-07-30T04:14:22.563Z"
     }
   ],
   "pages": [
     {
       "key": "/",
       "label": "/",
-      "count": 115,
+      "count": 116,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-07-28T16:26:09.324Z"
+      "lastSeenAt": "2026-07-30T04:14:22.563Z"
     },
     {
       "key": "/mahar",
@@ -548,6 +568,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-07-30T04:14:22.563Z",
+      "page": "/",
+      "country": "ID",
+      "continent": "AS",
+      "region": "Jakarta",
+      "city": "Jakarta",
+      "timezone": "Asia/Jakarta",
+      "latitude": "-6.215",
+      "longitude": "106.845",
+      "visitorType": "new",
+      "sessionType": "new",
+      "visitorVisitCount": 1
+    },
     {
       "visitedAt": "2026-07-28T16:26:09.324Z",
       "page": "/",
@@ -1626,20 +1660,28 @@
       "timezone": "Asia/Thimphu",
       "latitude": "27.466",
       "longitude": "89.642"
-    },
-    {
-      "visitedAt": "2026-06-25T10:26:26.693Z",
-      "page": "/",
-      "country": "BT",
-      "continent": "AS",
-      "region": "Thimphu District",
-      "city": "Thimphu",
-      "timezone": "Asia/Thimphu",
-      "latitude": "27.466",
-      "longitude": "89.642"
     }
   ],
   "visitors": [
+    {
+      "key": "ce042250dfb401ad54bfe4ac1ff62cc8f348c9d142015b493e0df10b40538767",
+      "firstSeenAt": "2026-07-30T04:14:22.563Z",
+      "lastSeenAt": "2026-07-30T04:14:22.563Z",
+      "visitCount": 1,
+      "sessionCount": 1,
+      "firstPage": "/",
+      "lastPage": "/",
+      "firstCountry": "ID",
+      "firstRegion": "Jakarta",
+      "firstCity": "Jakarta",
+      "firstTimezone": "Asia/Jakarta",
+      "lastCountry": "ID",
+      "lastRegion": "Jakarta",
+      "lastCity": "Jakarta",
+      "lastTimezone": "Asia/Jakarta",
+      "lastLatitude": "-6.215",
+      "lastLongitude": "106.845"
+    },
     {
       "key": "d195746ec186ee31044df5fbc36815819c3f11bb5e961c69dc5d385d9081e7ba",
       "firstSeenAt": "2026-07-26T03:27:50.296Z",
@@ -2458,8 +2500,8 @@
       "lastLongitude": "88.429"
     }
   ],
-  "identifiedVisits": 68,
-  "uniqueVisitors": 43,
+  "identifiedVisits": 69,
+  "uniqueVisitors": 44,
   "returningVisitors": 11,
   "repeatVisits": 25,
   "legacyVisits": 54
