@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-31T04:16:42.945Z",
-  "totalVisits": 126,
+  "updatedAt": "2026-07-31T11:05:41.783Z",
+  "totalVisits": 127,
   "countries": [
     {
       "key": "BT",
@@ -15,9 +15,9 @@
       "key": "IN",
       "label": "IN",
       "country": "IN",
-      "count": 33,
+      "count": 34,
       "firstSeenAt": "2026-06-23T05:03:11.022Z",
-      "lastSeenAt": "2026-07-30T12:51:48.554Z"
+      "lastSeenAt": "2026-07-31T11:05:41.783Z"
     },
     {
       "key": "JP",
@@ -540,15 +540,27 @@
       "count": 1,
       "firstSeenAt": "2026-07-30T12:51:48.554Z",
       "lastSeenAt": "2026-07-30T12:51:48.554Z"
+    },
+    {
+      "key": "Virār, Maharashtra, IN",
+      "label": "Virār, Maharashtra, IN",
+      "city": "Virār",
+      "region": "Maharashtra",
+      "country": "IN",
+      "latitude": "19.456",
+      "longitude": "72.811",
+      "count": 1,
+      "firstSeenAt": "2026-07-31T11:05:41.783Z",
+      "lastSeenAt": "2026-07-31T11:05:41.783Z"
     }
   ],
   "pages": [
     {
       "key": "/",
       "label": "/",
-      "count": 119,
+      "count": 120,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-07-31T04:16:42.945Z"
+      "lastSeenAt": "2026-07-31T11:05:41.783Z"
     },
     {
       "key": "/mahar",
@@ -580,6 +592,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-07-31T11:05:41.783Z",
+      "page": "/",
+      "country": "IN",
+      "continent": "AS",
+      "region": "Maharashtra",
+      "city": "Virār",
+      "timezone": "Asia/Kolkata",
+      "latitude": "19.456",
+      "longitude": "72.811",
+      "visitorType": "new",
+      "sessionType": "new",
+      "visitorVisitCount": 1
+    },
     {
       "visitedAt": "2026-07-31T04:16:42.945Z",
       "page": "/",
@@ -1670,20 +1696,28 @@
       "timezone": "Asia/Thimphu",
       "latitude": "27.466",
       "longitude": "89.642"
-    },
-    {
-      "visitedAt": "2026-06-25T17:56:56.052Z",
-      "page": "/",
-      "country": "BT",
-      "continent": "AS",
-      "region": "Thimphu District",
-      "city": "Thimphu",
-      "timezone": "Asia/Thimphu",
-      "latitude": "27.466",
-      "longitude": "89.642"
     }
   ],
   "visitors": [
+    {
+      "key": "849ea24851b5cd19198e8face84175c2a1b6ecfe70190568906d5180b11ac9d5",
+      "firstSeenAt": "2026-07-31T11:05:41.783Z",
+      "lastSeenAt": "2026-07-31T11:05:41.783Z",
+      "visitCount": 1,
+      "sessionCount": 1,
+      "firstPage": "/",
+      "lastPage": "/",
+      "firstCountry": "IN",
+      "firstRegion": "Maharashtra",
+      "firstCity": "Virār",
+      "firstTimezone": "Asia/Kolkata",
+      "lastCountry": "IN",
+      "lastRegion": "Maharashtra",
+      "lastCity": "Virār",
+      "lastTimezone": "Asia/Kolkata",
+      "lastLatitude": "19.456",
+      "lastLongitude": "72.811"
+    },
     {
       "key": "acc17a467f52d038d9c57f819dd0117c29ed8ef2cf87d458da12d5c191ba3b15",
       "firstSeenAt": "2026-06-26T05:00:46.905Z",
@@ -2540,8 +2574,8 @@
       "lastLongitude": "88.429"
     }
   ],
-  "identifiedVisits": 72,
-  "uniqueVisitors": 45,
+  "identifiedVisits": 73,
+  "uniqueVisitors": 46,
   "returningVisitors": 12,
   "repeatVisits": 27,
   "legacyVisits": 54
