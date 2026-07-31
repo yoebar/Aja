@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-31T12:20:40.837Z",
-  "totalVisits": 129,
+  "updatedAt": "2026-07-31T12:31:40.446Z",
+  "totalVisits": 130,
   "countries": [
     {
       "key": "BT",
@@ -15,9 +15,9 @@
       "key": "IN",
       "label": "IN",
       "country": "IN",
-      "count": 36,
+      "count": 37,
       "firstSeenAt": "2026-06-23T05:03:11.022Z",
-      "lastSeenAt": "2026-07-31T12:20:40.837Z"
+      "lastSeenAt": "2026-07-31T12:31:40.446Z"
     },
     {
       "key": "JP",
@@ -552,15 +552,27 @@
       "count": 1,
       "firstSeenAt": "2026-07-31T11:05:41.783Z",
       "lastSeenAt": "2026-07-31T11:05:41.783Z"
+    },
+    {
+      "key": "Kātoya, West Bengal, IN",
+      "label": "Kātoya, West Bengal, IN",
+      "city": "Kātoya",
+      "region": "West Bengal",
+      "country": "IN",
+      "latitude": "23.646",
+      "longitude": "88.133",
+      "count": 1,
+      "firstSeenAt": "2026-07-31T12:31:40.446Z",
+      "lastSeenAt": "2026-07-31T12:31:40.446Z"
     }
   ],
   "pages": [
     {
       "key": "/",
       "label": "/",
-      "count": 122,
+      "count": 123,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-07-31T12:20:40.837Z"
+      "lastSeenAt": "2026-07-31T12:31:40.446Z"
     },
     {
       "key": "/mahar",
@@ -592,6 +604,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-07-31T12:31:40.446Z",
+      "page": "/",
+      "country": "IN",
+      "continent": "AS",
+      "region": "West Bengal",
+      "city": "Kātoya",
+      "timezone": "Asia/Kolkata",
+      "latitude": "23.646",
+      "longitude": "88.133",
+      "visitorType": "new",
+      "sessionType": "new",
+      "visitorVisitCount": 1
+    },
     {
       "visitedAt": "2026-07-31T12:20:40.837Z",
       "page": "/",
@@ -1691,20 +1717,28 @@
       "timezone": "Asia/Thimphu",
       "latitude": "27.466",
       "longitude": "89.642"
-    },
-    {
-      "visitedAt": "2026-06-26T02:06:03.974Z",
-      "page": "/",
-      "country": "BT",
-      "continent": "AS",
-      "region": "Thimphu District",
-      "city": "Thimphu",
-      "timezone": "Asia/Thimphu",
-      "latitude": "27.466",
-      "longitude": "89.642"
     }
   ],
   "visitors": [
+    {
+      "key": "faba36ea570eca6e4be450e8f4753f1d7b0f379eea438d2c9c65fbf4dd175cba",
+      "firstSeenAt": "2026-07-31T12:31:40.446Z",
+      "lastSeenAt": "2026-07-31T12:31:40.446Z",
+      "visitCount": 1,
+      "sessionCount": 1,
+      "firstPage": "/",
+      "lastPage": "/",
+      "firstCountry": "IN",
+      "firstRegion": "West Bengal",
+      "firstCity": "Kātoya",
+      "firstTimezone": "Asia/Kolkata",
+      "lastCountry": "IN",
+      "lastRegion": "West Bengal",
+      "lastCity": "Kātoya",
+      "lastTimezone": "Asia/Kolkata",
+      "lastLatitude": "23.646",
+      "lastLongitude": "88.133"
+    },
     {
       "key": "a4e073baee6a65d6f129ed47f7fef8aaca6185f47927a0d363c3c8813c6dcb7c",
       "firstSeenAt": "2026-06-26T18:02:25.104Z",
@@ -2599,8 +2633,8 @@
       "lastLongitude": "89.642"
     }
   ],
-  "identifiedVisits": 75,
-  "uniqueVisitors": 47,
+  "identifiedVisits": 76,
+  "uniqueVisitors": 48,
   "returningVisitors": 13,
   "repeatVisits": 28,
   "legacyVisits": 54
