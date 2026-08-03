@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-03T10:28:26.618Z",
-  "totalVisits": 133,
+  "updatedAt": "2026-08-03T12:43:04.035Z",
+  "totalVisits": 134,
   "countries": [
     {
       "key": "BT",
@@ -15,9 +15,9 @@
       "key": "IN",
       "label": "IN",
       "country": "IN",
-      "count": 38,
+      "count": 39,
       "firstSeenAt": "2026-06-23T05:03:11.022Z",
-      "lastSeenAt": "2026-08-02T09:55:14.506Z"
+      "lastSeenAt": "2026-08-03T12:43:04.035Z"
     },
     {
       "key": "JP",
@@ -564,15 +564,27 @@
       "count": 1,
       "firstSeenAt": "2026-07-31T12:31:40.446Z",
       "lastSeenAt": "2026-07-31T12:31:40.446Z"
+    },
+    {
+      "key": "Delhi, Delhi, IN",
+      "label": "Delhi, Delhi, IN",
+      "city": "Delhi",
+      "region": "Delhi",
+      "country": "IN",
+      "latitude": "28.652",
+      "longitude": "77.231",
+      "count": 1,
+      "firstSeenAt": "2026-08-03T12:43:04.035Z",
+      "lastSeenAt": "2026-08-03T12:43:04.035Z"
     }
   ],
   "pages": [
     {
       "key": "/",
       "label": "/",
-      "count": 126,
+      "count": 127,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-08-03T10:28:26.618Z"
+      "lastSeenAt": "2026-08-03T12:43:04.035Z"
     },
     {
       "key": "/mahar",
@@ -604,6 +616,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-08-03T12:43:04.035Z",
+      "page": "/",
+      "country": "IN",
+      "continent": "AS",
+      "region": "Delhi",
+      "city": "Delhi",
+      "timezone": "Asia/Kolkata",
+      "latitude": "28.652",
+      "longitude": "77.231",
+      "visitorType": "new",
+      "sessionType": "new",
+      "visitorVisitCount": 1
+    },
     {
       "visitedAt": "2026-08-03T10:28:26.618Z",
       "page": "/",
@@ -1709,23 +1735,28 @@
       "visitorType": "new",
       "sessionType": "new",
       "visitorVisitCount": 1
-    },
-    {
-      "visitedAt": "2026-06-26T17:13:37.049Z",
-      "page": "/",
-      "country": "BT",
-      "continent": "AS",
-      "region": "Thimphu District",
-      "city": "Thimphu",
-      "timezone": "Asia/Thimphu",
-      "latitude": "27.466",
-      "longitude": "89.642",
-      "visitorType": "returning",
-      "sessionType": "new",
-      "visitorVisitCount": 2
     }
   ],
   "visitors": [
+    {
+      "key": "7c7e71a355a912b89e965b10f81bc89404ae0f70ba5cce6591557d4a2b06550c",
+      "firstSeenAt": "2026-08-03T12:43:04.035Z",
+      "lastSeenAt": "2026-08-03T12:43:04.035Z",
+      "visitCount": 1,
+      "sessionCount": 1,
+      "firstPage": "/",
+      "lastPage": "/",
+      "firstCountry": "IN",
+      "firstRegion": "Delhi",
+      "firstCity": "Delhi",
+      "firstTimezone": "Asia/Kolkata",
+      "lastCountry": "IN",
+      "lastRegion": "Delhi",
+      "lastCity": "Delhi",
+      "lastTimezone": "Asia/Kolkata",
+      "lastLatitude": "28.652",
+      "lastLongitude": "77.231"
+    },
     {
       "key": "cf59210b6c89df71c9da815336cf8dbae6e547425a7c604742f5e181417f4121",
       "firstSeenAt": "2026-08-03T10:28:26.618Z",
@@ -2677,8 +2708,8 @@
       "lastLongitude": "89.642"
     }
   ],
-  "identifiedVisits": 79,
-  "uniqueVisitors": 50,
+  "identifiedVisits": 80,
+  "uniqueVisitors": 51,
   "returningVisitors": 13,
   "repeatVisits": 29,
   "legacyVisits": 54
