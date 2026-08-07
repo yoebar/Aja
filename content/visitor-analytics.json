@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-07T07:31:34.994Z",
-  "totalVisits": 140,
+  "updatedAt": "2026-08-07T08:57:42.013Z",
+  "totalVisits": 141,
   "countries": [
     {
       "key": "BT",
@@ -39,9 +39,9 @@
       "key": "US",
       "label": "US",
       "country": "US",
-      "count": 6,
+      "count": 7,
       "firstSeenAt": "2026-07-16T03:42:47.379Z",
-      "lastSeenAt": "2026-07-28T11:51:37.512Z"
+      "lastSeenAt": "2026-08-07T08:57:42.013Z"
     },
     {
       "key": "NP",
@@ -588,6 +588,18 @@
       "count": 1,
       "firstSeenAt": "2026-08-07T04:45:48.800Z",
       "lastSeenAt": "2026-08-07T04:45:48.800Z"
+    },
+    {
+      "key": "Altoona, Iowa, US",
+      "label": "Altoona, Iowa, US",
+      "city": "Altoona",
+      "region": "Iowa",
+      "country": "US",
+      "latitude": "41.644",
+      "longitude": "-93.465",
+      "count": 1,
+      "firstSeenAt": "2026-08-07T08:57:42.013Z",
+      "lastSeenAt": "2026-08-07T08:57:42.013Z"
     }
   ],
   "pages": [
@@ -625,9 +637,30 @@
       "count": 1,
       "firstSeenAt": "2026-07-22T02:13:04.992Z",
       "lastSeenAt": "2026-07-22T02:13:04.992Z"
+    },
+    {
+      "key": "/Tt",
+      "label": "/Tt",
+      "count": 1,
+      "firstSeenAt": "2026-08-07T08:57:42.013Z",
+      "lastSeenAt": "2026-08-07T08:57:42.013Z"
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-08-07T08:57:42.013Z",
+      "page": "/Tt",
+      "country": "US",
+      "continent": "NA",
+      "region": "Iowa",
+      "city": "Altoona",
+      "timezone": "America/Chicago",
+      "latitude": "41.644",
+      "longitude": "-93.465",
+      "visitorType": "new",
+      "sessionType": "new",
+      "visitorVisitCount": 1
+    },
     {
       "visitedAt": "2026-08-07T07:31:34.994Z",
       "page": "/",
@@ -1733,23 +1766,28 @@
       "visitorType": "new",
       "sessionType": "new",
       "visitorVisitCount": 1
-    },
-    {
-      "visitedAt": "2026-06-29T04:35:14.047Z",
-      "page": "/",
-      "country": "BT",
-      "continent": "AS",
-      "region": "Thimphu District",
-      "city": "Thimphu",
-      "timezone": "Asia/Thimphu",
-      "latitude": "27.466",
-      "longitude": "89.642",
-      "visitorType": "new",
-      "sessionType": "new",
-      "visitorVisitCount": 1
     }
   ],
   "visitors": [
+    {
+      "key": "b4ac4a05a4d9d212fca2be9664e2638b64059e8307cb1a73a6a2c8873a788e6e",
+      "firstSeenAt": "2026-08-07T08:57:42.013Z",
+      "lastSeenAt": "2026-08-07T08:57:42.013Z",
+      "visitCount": 1,
+      "sessionCount": 1,
+      "firstPage": "/Tt",
+      "lastPage": "/Tt",
+      "firstCountry": "US",
+      "firstRegion": "Iowa",
+      "firstCity": "Altoona",
+      "firstTimezone": "America/Chicago",
+      "lastCountry": "US",
+      "lastRegion": "Iowa",
+      "lastCity": "Altoona",
+      "lastTimezone": "America/Chicago",
+      "lastLatitude": "41.644",
+      "lastLongitude": "-93.465"
+    },
     {
       "key": "540a2251468366053574bb5cc17c629820f4bd9a96ea0c652393c3f12952d77c",
       "firstSeenAt": "2026-08-07T07:31:34.994Z",
@@ -2758,8 +2796,8 @@
       "lastLongitude": "89.642"
     }
   ],
-  "identifiedVisits": 86,
-  "uniqueVisitors": 53,
+  "identifiedVisits": 87,
+  "uniqueVisitors": 54,
   "returningVisitors": 15,
   "repeatVisits": 33,
   "legacyVisits": 54
