@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-07T08:57:42.013Z",
-  "totalVisits": 141,
+  "updatedAt": "2026-08-07T20:48:14.811Z",
+  "totalVisits": 142,
   "countries": [
     {
       "key": "BT",
@@ -15,9 +15,9 @@
       "key": "IN",
       "label": "IN",
       "country": "IN",
-      "count": 40,
+      "count": 41,
       "firstSeenAt": "2026-06-23T05:03:11.022Z",
-      "lastSeenAt": "2026-08-07T04:45:48.800Z"
+      "lastSeenAt": "2026-08-07T20:48:14.811Z"
     },
     {
       "key": "JP",
@@ -600,15 +600,27 @@
       "count": 1,
       "firstSeenAt": "2026-08-07T08:57:42.013Z",
       "lastSeenAt": "2026-08-07T08:57:42.013Z"
+    },
+    {
+      "key": "Indore, Madhya Pradesh, IN",
+      "label": "Indore, Madhya Pradesh, IN",
+      "city": "Indore",
+      "region": "Madhya Pradesh",
+      "country": "IN",
+      "latitude": "22.718",
+      "longitude": "75.833",
+      "count": 1,
+      "firstSeenAt": "2026-08-07T20:48:14.811Z",
+      "lastSeenAt": "2026-08-07T20:48:14.811Z"
     }
   ],
   "pages": [
     {
       "key": "/",
       "label": "/",
-      "count": 133,
+      "count": 134,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-08-07T07:31:34.994Z"
+      "lastSeenAt": "2026-08-07T20:48:14.811Z"
     },
     {
       "key": "/mahar",
@@ -647,6 +659,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-08-07T20:48:14.811Z",
+      "page": "/",
+      "country": "IN",
+      "continent": "AS",
+      "region": "Madhya Pradesh",
+      "city": "Indore",
+      "timezone": "Asia/Kolkata",
+      "latitude": "22.718",
+      "longitude": "75.833",
+      "visitorType": "returning",
+      "sessionType": "new",
+      "visitorVisitCount": 3
+    },
     {
       "visitedAt": "2026-08-07T08:57:42.013Z",
       "page": "/Tt",
@@ -1752,23 +1778,28 @@
       "visitorType": "new",
       "sessionType": "new",
       "visitorVisitCount": 1
-    },
-    {
-      "visitedAt": "2026-06-29T04:50:46.468Z",
-      "page": "/",
-      "country": "BT",
-      "continent": "AS",
-      "region": "Chukha",
-      "city": "Phuntsholing",
-      "timezone": "Asia/Thimphu",
-      "latitude": "26.852",
-      "longitude": "89.388",
-      "visitorType": "new",
-      "sessionType": "new",
-      "visitorVisitCount": 1
     }
   ],
   "visitors": [
+    {
+      "key": "849ea24851b5cd19198e8face84175c2a1b6ecfe70190568906d5180b11ac9d5",
+      "firstSeenAt": "2026-07-31T11:05:41.783Z",
+      "lastSeenAt": "2026-08-07T20:48:14.811Z",
+      "visitCount": 3,
+      "sessionCount": 3,
+      "firstPage": "/",
+      "lastPage": "/",
+      "firstCountry": "IN",
+      "firstRegion": "Maharashtra",
+      "firstCity": "Virār",
+      "firstTimezone": "Asia/Kolkata",
+      "lastCountry": "IN",
+      "lastRegion": "Madhya Pradesh",
+      "lastCity": "Indore",
+      "lastTimezone": "Asia/Kolkata",
+      "lastLatitude": "22.718",
+      "lastLongitude": "75.833"
+    },
     {
       "key": "b4ac4a05a4d9d212fca2be9664e2638b64059e8307cb1a73a6a2c8873a788e6e",
       "firstSeenAt": "2026-08-07T08:57:42.013Z",
@@ -1806,25 +1837,6 @@
       "lastTimezone": "Asia/Thimphu",
       "lastLatitude": "27.466",
       "lastLongitude": "89.642"
-    },
-    {
-      "key": "849ea24851b5cd19198e8face84175c2a1b6ecfe70190568906d5180b11ac9d5",
-      "firstSeenAt": "2026-07-31T11:05:41.783Z",
-      "lastSeenAt": "2026-08-07T04:45:48.800Z",
-      "visitCount": 2,
-      "sessionCount": 2,
-      "firstPage": "/",
-      "lastPage": "/",
-      "firstCountry": "IN",
-      "firstRegion": "Maharashtra",
-      "firstCity": "Virār",
-      "firstTimezone": "Asia/Kolkata",
-      "lastCountry": "IN",
-      "lastRegion": "Maharashtra",
-      "lastCity": "Pune",
-      "lastTimezone": "Asia/Kolkata",
-      "lastLatitude": "18.520",
-      "lastLongitude": "73.855"
     },
     {
       "key": "de74bf9608a11d67eee01bc52c7f7a99fda4ca060fc03f41f11e5c6c7a81c4ae",
@@ -2796,9 +2808,9 @@
       "lastLongitude": "89.642"
     }
   ],
-  "identifiedVisits": 87,
+  "identifiedVisits": 88,
   "uniqueVisitors": 54,
   "returningVisitors": 15,
-  "repeatVisits": 33,
+  "repeatVisits": 34,
   "legacyVisits": 54
 }
