@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-08T04:00:36.979Z",
-  "totalVisits": 143,
+  "updatedAt": "2026-08-09T14:27:42.576Z",
+  "totalVisits": 144,
   "countries": [
     {
       "key": "BT",
@@ -20,6 +20,14 @@
       "lastSeenAt": "2026-08-08T04:00:36.979Z"
     },
     {
+      "key": "US",
+      "label": "US",
+      "country": "US",
+      "count": 8,
+      "firstSeenAt": "2026-07-16T03:42:47.379Z",
+      "lastSeenAt": "2026-08-09T14:27:42.576Z"
+    },
+    {
       "key": "JP",
       "label": "JP",
       "country": "JP",
@@ -34,14 +42,6 @@
       "count": 7,
       "firstSeenAt": "2026-06-23T17:25:37.923Z",
       "lastSeenAt": "2026-07-22T01:29:13.573Z"
-    },
-    {
-      "key": "US",
-      "label": "US",
-      "country": "US",
-      "count": 7,
-      "firstSeenAt": "2026-07-16T03:42:47.379Z",
-      "lastSeenAt": "2026-08-07T08:57:42.013Z"
     },
     {
       "key": "NP",
@@ -612,15 +612,27 @@
       "count": 1,
       "firstSeenAt": "2026-08-07T20:48:14.811Z",
       "lastSeenAt": "2026-08-07T20:48:14.811Z"
+    },
+    {
+      "key": "Gallatin, Tennessee, US",
+      "label": "Gallatin, Tennessee, US",
+      "city": "Gallatin",
+      "region": "Tennessee",
+      "country": "US",
+      "latitude": "36.388",
+      "longitude": "-86.447",
+      "count": 1,
+      "firstSeenAt": "2026-08-09T14:27:42.576Z",
+      "lastSeenAt": "2026-08-09T14:27:42.576Z"
     }
   ],
   "pages": [
     {
       "key": "/",
       "label": "/",
-      "count": 135,
+      "count": 136,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-08-08T04:00:36.979Z"
+      "lastSeenAt": "2026-08-09T14:27:42.576Z"
     },
     {
       "key": "/mahar",
@@ -659,6 +671,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-08-09T14:27:42.576Z",
+      "page": "/",
+      "country": "US",
+      "continent": "NA",
+      "region": "Tennessee",
+      "city": "Gallatin",
+      "timezone": "America/Chicago",
+      "latitude": "36.388",
+      "longitude": "-86.447",
+      "visitorType": "new",
+      "sessionType": "new",
+      "visitorVisitCount": 1
+    },
     {
       "visitedAt": "2026-08-08T04:00:36.979Z",
       "page": "/",
@@ -1764,23 +1790,28 @@
       "visitorType": "new",
       "sessionType": "new",
       "visitorVisitCount": 1
-    },
-    {
-      "visitedAt": "2026-06-29T07:31:35.475Z",
-      "page": "/",
-      "country": "IN",
-      "continent": "AS",
-      "region": "Andhra Pradesh",
-      "city": "Nellore",
-      "timezone": "Asia/Kolkata",
-      "latitude": "14.450",
-      "longitude": "79.987",
-      "visitorType": "new",
-      "sessionType": "new",
-      "visitorVisitCount": 1
     }
   ],
   "visitors": [
+    {
+      "key": "2d173dd9ec735a61e88e6a427476eb52798ed727b2d555a0c229f6182300524d",
+      "firstSeenAt": "2026-08-09T14:27:42.576Z",
+      "lastSeenAt": "2026-08-09T14:27:42.576Z",
+      "visitCount": 1,
+      "sessionCount": 1,
+      "firstPage": "/",
+      "lastPage": "/",
+      "firstCountry": "US",
+      "firstRegion": "Tennessee",
+      "firstCity": "Gallatin",
+      "firstTimezone": "America/Chicago",
+      "lastCountry": "US",
+      "lastRegion": "Tennessee",
+      "lastCity": "Gallatin",
+      "lastTimezone": "America/Chicago",
+      "lastLatitude": "36.388",
+      "lastLongitude": "-86.447"
+    },
     {
       "key": "c97026b326948276641d6b42fc3949fba477ac304f796571d82d34f31951b101",
       "firstSeenAt": "2026-08-08T04:00:36.979Z",
@@ -2827,8 +2858,8 @@
       "lastLongitude": "89.642"
     }
   ],
-  "identifiedVisits": 89,
-  "uniqueVisitors": 55,
+  "identifiedVisits": 90,
+  "uniqueVisitors": 56,
   "returningVisitors": 15,
   "repeatVisits": 34,
   "legacyVisits": 54
