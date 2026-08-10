@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-10T06:15:23.847Z",
-  "totalVisits": 145,
+  "updatedAt": "2026-08-10T10:17:12.252Z",
+  "totalVisits": 146,
   "countries": [
     {
       "key": "BT",
@@ -23,9 +23,9 @@
       "key": "US",
       "label": "US",
       "country": "US",
-      "count": 8,
+      "count": 9,
       "firstSeenAt": "2026-07-16T03:42:47.379Z",
-      "lastSeenAt": "2026-08-09T14:27:42.576Z"
+      "lastSeenAt": "2026-08-10T10:17:12.252Z"
     },
     {
       "key": "JP",
@@ -314,6 +314,18 @@
       "lastSeenAt": "2026-07-30T10:29:22.901Z"
     },
     {
+      "key": "Forest City, North Carolina, US",
+      "label": "Forest City, North Carolina, US",
+      "city": "Forest City",
+      "region": "North Carolina",
+      "country": "US",
+      "latitude": "35.334",
+      "longitude": "-81.865",
+      "count": 2,
+      "firstSeenAt": "2026-07-28T11:51:37.512Z",
+      "lastSeenAt": "2026-08-10T10:17:12.252Z"
+    },
+    {
       "key": "Luleå, Norrbotten, SE",
       "label": "Luleå, Norrbotten, SE",
       "city": "Luleå",
@@ -518,18 +530,6 @@
       "lastSeenAt": "2026-07-28T11:51:04.107Z"
     },
     {
-      "key": "Forest City, North Carolina, US",
-      "label": "Forest City, North Carolina, US",
-      "city": "Forest City",
-      "region": "North Carolina",
-      "country": "US",
-      "latitude": "35.334",
-      "longitude": "-81.865",
-      "count": 1,
-      "firstSeenAt": "2026-07-28T11:51:37.512Z",
-      "lastSeenAt": "2026-07-28T11:51:37.512Z"
-    },
-    {
       "key": "Rājkot, Gujarat, IN",
       "label": "Rājkot, Gujarat, IN",
       "city": "Rājkot",
@@ -680,9 +680,30 @@
       "count": 1,
       "firstSeenAt": "2026-08-07T08:57:42.013Z",
       "lastSeenAt": "2026-08-07T08:57:42.013Z"
+    },
+    {
+      "key": "/tt",
+      "label": "/tt",
+      "count": 1,
+      "firstSeenAt": "2026-08-10T10:17:12.252Z",
+      "lastSeenAt": "2026-08-10T10:17:12.252Z"
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-08-10T10:17:12.252Z",
+      "page": "/tt",
+      "country": "US",
+      "continent": "NA",
+      "region": "North Carolina",
+      "city": "Forest City",
+      "timezone": "America/New_York",
+      "latitude": "35.334",
+      "longitude": "-81.865",
+      "visitorType": "new",
+      "sessionType": "new",
+      "visitorVisitCount": 1
+    },
     {
       "visitedAt": "2026-08-10T06:15:23.847Z",
       "page": "/",
@@ -1788,23 +1809,28 @@
       "visitorType": "new",
       "sessionType": "new",
       "visitorVisitCount": 1
-    },
-    {
-      "visitedAt": "2026-06-30T03:41:36.187Z",
-      "page": "/",
-      "country": "HK",
-      "continent": "AS",
-      "region": "",
-      "city": "Kwai Chung",
-      "timezone": "Asia/Hong_Kong",
-      "latitude": "22.368",
-      "longitude": "114.139",
-      "visitorType": "new",
-      "sessionType": "new",
-      "visitorVisitCount": 1
     }
   ],
   "visitors": [
+    {
+      "key": "4f1fd5fca1a6482dd4ed33ea6e0d843361aa07027fb1ffd70d17f82f18e1949d",
+      "firstSeenAt": "2026-08-10T10:17:12.252Z",
+      "lastSeenAt": "2026-08-10T10:17:12.252Z",
+      "visitCount": 1,
+      "sessionCount": 1,
+      "firstPage": "/tt",
+      "lastPage": "/tt",
+      "firstCountry": "US",
+      "firstRegion": "North Carolina",
+      "firstCity": "Forest City",
+      "firstTimezone": "America/New_York",
+      "lastCountry": "US",
+      "lastRegion": "North Carolina",
+      "lastCity": "Forest City",
+      "lastTimezone": "America/New_York",
+      "lastLatitude": "35.334",
+      "lastLongitude": "-81.865"
+    },
     {
       "key": "6c438fa4dd88de99cacc5166078c29b0f897f245cdbc462c0e1b80b17d357215",
       "firstSeenAt": "2026-08-10T06:15:23.847Z",
@@ -2889,8 +2915,8 @@
       "lastLongitude": "89.642"
     }
   ],
-  "identifiedVisits": 91,
-  "uniqueVisitors": 57,
+  "identifiedVisits": 92,
+  "uniqueVisitors": 58,
   "returningVisitors": 15,
   "repeatVisits": 34,
   "legacyVisits": 54
