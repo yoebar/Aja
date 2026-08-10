@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-09T14:27:42.576Z",
-  "totalVisits": 144,
+  "updatedAt": "2026-08-10T06:15:23.847Z",
+  "totalVisits": 145,
   "countries": [
     {
       "key": "BT",
@@ -15,9 +15,9 @@
       "key": "IN",
       "label": "IN",
       "country": "IN",
-      "count": 42,
+      "count": 43,
       "firstSeenAt": "2026-06-23T05:03:11.022Z",
-      "lastSeenAt": "2026-08-08T04:00:36.979Z"
+      "lastSeenAt": "2026-08-10T06:15:23.847Z"
     },
     {
       "key": "US",
@@ -624,15 +624,27 @@
       "count": 1,
       "firstSeenAt": "2026-08-09T14:27:42.576Z",
       "lastSeenAt": "2026-08-09T14:27:42.576Z"
+    },
+    {
+      "key": "Salem, Tamil Nadu, IN",
+      "label": "Salem, Tamil Nadu, IN",
+      "city": "Salem",
+      "region": "Tamil Nadu",
+      "country": "IN",
+      "latitude": "11.654",
+      "longitude": "78.155",
+      "count": 1,
+      "firstSeenAt": "2026-08-10T06:15:23.847Z",
+      "lastSeenAt": "2026-08-10T06:15:23.847Z"
     }
   ],
   "pages": [
     {
       "key": "/",
       "label": "/",
-      "count": 136,
+      "count": 137,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-08-09T14:27:42.576Z"
+      "lastSeenAt": "2026-08-10T06:15:23.847Z"
     },
     {
       "key": "/mahar",
@@ -671,6 +683,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-08-10T06:15:23.847Z",
+      "page": "/",
+      "country": "IN",
+      "continent": "AS",
+      "region": "Tamil Nadu",
+      "city": "Salem",
+      "timezone": "Asia/Kolkata",
+      "latitude": "11.654",
+      "longitude": "78.155",
+      "visitorType": "new",
+      "sessionType": "new",
+      "visitorVisitCount": 1
+    },
     {
       "visitedAt": "2026-08-09T14:27:42.576Z",
       "page": "/",
@@ -1776,23 +1802,28 @@
       "visitorType": "new",
       "sessionType": "new",
       "visitorVisitCount": 1
-    },
-    {
-      "visitedAt": "2026-06-29T15:37:34.134Z",
-      "page": "/",
-      "country": "BT",
-      "continent": "AS",
-      "region": "Chukha",
-      "city": "Phuntsholing",
-      "timezone": "Asia/Thimphu",
-      "latitude": "26.852",
-      "longitude": "89.388",
-      "visitorType": "new",
-      "sessionType": "new",
-      "visitorVisitCount": 1
     }
   ],
   "visitors": [
+    {
+      "key": "6c438fa4dd88de99cacc5166078c29b0f897f245cdbc462c0e1b80b17d357215",
+      "firstSeenAt": "2026-08-10T06:15:23.847Z",
+      "lastSeenAt": "2026-08-10T06:15:23.847Z",
+      "visitCount": 1,
+      "sessionCount": 1,
+      "firstPage": "/",
+      "lastPage": "/",
+      "firstCountry": "IN",
+      "firstRegion": "Tamil Nadu",
+      "firstCity": "Salem",
+      "firstTimezone": "Asia/Kolkata",
+      "lastCountry": "IN",
+      "lastRegion": "Tamil Nadu",
+      "lastCity": "Salem",
+      "lastTimezone": "Asia/Kolkata",
+      "lastLatitude": "11.654",
+      "lastLongitude": "78.155"
+    },
     {
       "key": "2d173dd9ec735a61e88e6a427476eb52798ed727b2d555a0c229f6182300524d",
       "firstSeenAt": "2026-08-09T14:27:42.576Z",
@@ -2858,8 +2889,8 @@
       "lastLongitude": "89.642"
     }
   ],
-  "identifiedVisits": 90,
-  "uniqueVisitors": 56,
+  "identifiedVisits": 91,
+  "uniqueVisitors": 57,
   "returningVisitors": 15,
   "repeatVisits": 34,
   "legacyVisits": 54
