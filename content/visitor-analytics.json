@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-10T10:17:12.252Z",
-  "totalVisits": 146,
+  "updatedAt": "2026-08-11T16:50:03.622Z",
+  "totalVisits": 147,
   "countries": [
     {
       "key": "BT",
@@ -23,9 +23,9 @@
       "key": "US",
       "label": "US",
       "country": "US",
-      "count": 9,
+      "count": 10,
       "firstSeenAt": "2026-07-16T03:42:47.379Z",
-      "lastSeenAt": "2026-08-10T10:17:12.252Z"
+      "lastSeenAt": "2026-08-11T16:50:03.622Z"
     },
     {
       "key": "JP",
@@ -326,6 +326,18 @@
       "lastSeenAt": "2026-08-10T10:17:12.252Z"
     },
     {
+      "key": "Prineville, Oregon, US",
+      "label": "Prineville, Oregon, US",
+      "city": "Prineville",
+      "region": "Oregon",
+      "country": "US",
+      "latitude": "44.300",
+      "longitude": "-120.834",
+      "count": 2,
+      "firstSeenAt": "2026-07-28T11:51:04.107Z",
+      "lastSeenAt": "2026-08-11T16:50:03.622Z"
+    },
+    {
       "key": "Luleå, Norrbotten, SE",
       "label": "Luleå, Norrbotten, SE",
       "city": "Luleå",
@@ -518,18 +530,6 @@
       "lastSeenAt": "2026-07-26T03:27:50.296Z"
     },
     {
-      "key": "Prineville, Oregon, US",
-      "label": "Prineville, Oregon, US",
-      "city": "Prineville",
-      "region": "Oregon",
-      "country": "US",
-      "latitude": "44.300",
-      "longitude": "-120.834",
-      "count": 1,
-      "firstSeenAt": "2026-07-28T11:51:04.107Z",
-      "lastSeenAt": "2026-07-28T11:51:04.107Z"
-    },
-    {
       "key": "Rājkot, Gujarat, IN",
       "label": "Rājkot, Gujarat, IN",
       "city": "Rājkot",
@@ -687,9 +687,30 @@
       "count": 1,
       "firstSeenAt": "2026-08-10T10:17:12.252Z",
       "lastSeenAt": "2026-08-10T10:17:12.252Z"
+    },
+    {
+      "key": "/Carkem",
+      "label": "/Carkem",
+      "count": 1,
+      "firstSeenAt": "2026-08-11T16:50:03.622Z",
+      "lastSeenAt": "2026-08-11T16:50:03.622Z"
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-08-11T16:50:03.622Z",
+      "page": "/Carkem",
+      "country": "US",
+      "continent": "NA",
+      "region": "Oregon",
+      "city": "Prineville",
+      "timezone": "America/Los_Angeles",
+      "latitude": "44.300",
+      "longitude": "-120.834",
+      "visitorType": "new",
+      "sessionType": "new",
+      "visitorVisitCount": 1
+    },
     {
       "visitedAt": "2026-08-10T10:17:12.252Z",
       "page": "/tt",
@@ -1795,23 +1816,28 @@
       "visitorType": "new",
       "sessionType": "new",
       "visitorVisitCount": 1
-    },
-    {
-      "visitedAt": "2026-07-02T14:44:18.771Z",
-      "page": "/",
-      "country": "BT",
-      "continent": "AS",
-      "region": "Thimphu District",
-      "city": "Thimphu",
-      "timezone": "Asia/Thimphu",
-      "latitude": "27.466",
-      "longitude": "89.642",
-      "visitorType": "new",
-      "sessionType": "new",
-      "visitorVisitCount": 1
     }
   ],
   "visitors": [
+    {
+      "key": "6cb94613c10fa30eb2479dba129b4642f19934b522a74e9bebbcd121f6a567cc",
+      "firstSeenAt": "2026-08-11T16:50:03.622Z",
+      "lastSeenAt": "2026-08-11T16:50:03.622Z",
+      "visitCount": 1,
+      "sessionCount": 1,
+      "firstPage": "/Carkem",
+      "lastPage": "/Carkem",
+      "firstCountry": "US",
+      "firstRegion": "Oregon",
+      "firstCity": "Prineville",
+      "firstTimezone": "America/Los_Angeles",
+      "lastCountry": "US",
+      "lastRegion": "Oregon",
+      "lastCity": "Prineville",
+      "lastTimezone": "America/Los_Angeles",
+      "lastLatitude": "44.300",
+      "lastLongitude": "-120.834"
+    },
     {
       "key": "4f1fd5fca1a6482dd4ed33ea6e0d843361aa07027fb1ffd70d17f82f18e1949d",
       "firstSeenAt": "2026-08-10T10:17:12.252Z",
@@ -2915,8 +2941,8 @@
       "lastLongitude": "89.642"
     }
   ],
-  "identifiedVisits": 92,
-  "uniqueVisitors": 58,
+  "identifiedVisits": 93,
+  "uniqueVisitors": 59,
   "returningVisitors": 15,
   "repeatVisits": 34,
   "legacyVisits": 54
