@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-12T09:08:44.286Z",
-  "totalVisits": 148,
+  "updatedAt": "2026-08-13T03:51:01.200Z",
+  "totalVisits": 149,
   "countries": [
     {
       "key": "BT",
@@ -15,9 +15,9 @@
       "key": "IN",
       "label": "IN",
       "country": "IN",
-      "count": 44,
+      "count": 45,
       "firstSeenAt": "2026-06-23T05:03:11.022Z",
-      "lastSeenAt": "2026-08-12T09:08:44.286Z"
+      "lastSeenAt": "2026-08-13T03:51:01.200Z"
     },
     {
       "key": "US",
@@ -648,15 +648,27 @@
       "count": 1,
       "firstSeenAt": "2026-08-12T09:08:44.286Z",
       "lastSeenAt": "2026-08-12T09:08:44.286Z"
+    },
+    {
+      "key": "Durgapur, West Bengal, IN",
+      "label": "Durgapur, West Bengal, IN",
+      "city": "Durgapur",
+      "region": "West Bengal",
+      "country": "IN",
+      "latitude": "23.516",
+      "longitude": "87.308",
+      "count": 1,
+      "firstSeenAt": "2026-08-13T03:51:01.200Z",
+      "lastSeenAt": "2026-08-13T03:51:01.200Z"
     }
   ],
   "pages": [
     {
       "key": "/",
       "label": "/",
-      "count": 138,
+      "count": 139,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-08-12T09:08:44.286Z"
+      "lastSeenAt": "2026-08-13T03:51:01.200Z"
     },
     {
       "key": "/mahar",
@@ -709,6 +721,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-08-13T03:51:01.200Z",
+      "page": "/",
+      "country": "IN",
+      "continent": "AS",
+      "region": "West Bengal",
+      "city": "Durgapur",
+      "timezone": "Asia/Kolkata",
+      "latitude": "23.516",
+      "longitude": "87.308",
+      "visitorType": "new",
+      "sessionType": "new",
+      "visitorVisitCount": 1
+    },
     {
       "visitedAt": "2026-08-12T09:08:44.286Z",
       "page": "/",
@@ -1814,23 +1840,28 @@
       "visitorType": "returning",
       "sessionType": "new",
       "visitorVisitCount": 2
-    },
-    {
-      "visitedAt": "2026-07-03T11:11:49.185Z",
-      "page": "/",
-      "country": "IN",
-      "continent": "AS",
-      "region": "West Bengal",
-      "city": "Siliguri",
-      "timezone": "Asia/Kolkata",
-      "latitude": "26.710",
-      "longitude": "88.429",
-      "visitorType": "new",
-      "sessionType": "new",
-      "visitorVisitCount": 1
     }
   ],
   "visitors": [
+    {
+      "key": "cca62e4d70394f7005ec5166fb38ec32d6bde7b1481243d0b4e72b2091677761",
+      "firstSeenAt": "2026-08-13T03:51:01.200Z",
+      "lastSeenAt": "2026-08-13T03:51:01.200Z",
+      "visitCount": 1,
+      "sessionCount": 1,
+      "firstPage": "/",
+      "lastPage": "/",
+      "firstCountry": "IN",
+      "firstRegion": "West Bengal",
+      "firstCity": "Durgapur",
+      "firstTimezone": "Asia/Kolkata",
+      "lastCountry": "IN",
+      "lastRegion": "West Bengal",
+      "lastCity": "Durgapur",
+      "lastTimezone": "Asia/Kolkata",
+      "lastLatitude": "23.516",
+      "lastLongitude": "87.308"
+    },
     {
       "key": "828c6abf036ef739c64758eb7af5d421aa8d363ada206bfe0c9dea105bf713ce",
       "firstSeenAt": "2026-08-12T09:08:44.286Z",
@@ -2972,8 +3003,8 @@
       "lastLongitude": "89.642"
     }
   ],
-  "identifiedVisits": 94,
-  "uniqueVisitors": 60,
+  "identifiedVisits": 95,
+  "uniqueVisitors": 61,
   "returningVisitors": 15,
   "repeatVisits": 34,
   "legacyVisits": 54
