@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-13T03:51:01.200Z",
-  "totalVisits": 149,
+  "updatedAt": "2026-08-14T02:07:39.461Z",
+  "totalVisits": 150,
   "countries": [
     {
       "key": "BT",
@@ -15,9 +15,9 @@
       "key": "IN",
       "label": "IN",
       "country": "IN",
-      "count": 45,
+      "count": 46,
       "firstSeenAt": "2026-06-23T05:03:11.022Z",
-      "lastSeenAt": "2026-08-13T03:51:01.200Z"
+      "lastSeenAt": "2026-08-14T02:07:39.461Z"
     },
     {
       "key": "US",
@@ -165,9 +165,9 @@
       "country": "IN",
       "latitude": "22.563",
       "longitude": "88.363",
-      "count": 6,
+      "count": 7,
       "firstSeenAt": "2026-06-24T09:33:09.115Z",
-      "lastSeenAt": "2026-08-02T09:55:14.506Z"
+      "lastSeenAt": "2026-08-14T02:07:39.461Z"
     },
     {
       "key": "Kyoto, Kyoto, JP",
@@ -666,9 +666,9 @@
     {
       "key": "/",
       "label": "/",
-      "count": 139,
+      "count": 140,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-08-13T03:51:01.200Z"
+      "lastSeenAt": "2026-08-14T02:07:39.461Z"
     },
     {
       "key": "/mahar",
@@ -721,6 +721,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-08-14T02:07:39.461Z",
+      "page": "/",
+      "country": "IN",
+      "continent": "AS",
+      "region": "West Bengal",
+      "city": "Kolkata",
+      "timezone": "Asia/Kolkata",
+      "latitude": "22.563",
+      "longitude": "88.363",
+      "visitorType": "new",
+      "sessionType": "new",
+      "visitorVisitCount": 1
+    },
     {
       "visitedAt": "2026-08-13T03:51:01.200Z",
       "page": "/",
@@ -1826,23 +1840,28 @@
       "visitorType": "new",
       "sessionType": "new",
       "visitorVisitCount": 1
-    },
-    {
-      "visitedAt": "2026-07-03T11:52:08.486Z",
-      "page": "/",
-      "country": "NP",
-      "continent": "AS",
-      "region": "Koshi",
-      "city": "Bhadrapur",
-      "timezone": "Asia/Kathmandu",
-      "latitude": "26.544",
-      "longitude": "88.094",
-      "visitorType": "returning",
-      "sessionType": "new",
-      "visitorVisitCount": 2
     }
   ],
   "visitors": [
+    {
+      "key": "a95eeb2eed44f029113bc403a5943db779185cd8aac83e13d006cfb5f3ef94cd",
+      "firstSeenAt": "2026-08-14T02:07:39.461Z",
+      "lastSeenAt": "2026-08-14T02:07:39.461Z",
+      "visitCount": 1,
+      "sessionCount": 1,
+      "firstPage": "/",
+      "lastPage": "/",
+      "firstCountry": "IN",
+      "firstRegion": "West Bengal",
+      "firstCity": "Kolkata",
+      "firstTimezone": "Asia/Kolkata",
+      "lastCountry": "IN",
+      "lastRegion": "West Bengal",
+      "lastCity": "Kolkata",
+      "lastTimezone": "Asia/Kolkata",
+      "lastLatitude": "22.563",
+      "lastLongitude": "88.363"
+    },
     {
       "key": "cca62e4d70394f7005ec5166fb38ec32d6bde7b1481243d0b4e72b2091677761",
       "firstSeenAt": "2026-08-13T03:51:01.200Z",
@@ -3003,8 +3022,8 @@
       "lastLongitude": "89.642"
     }
   ],
-  "identifiedVisits": 95,
-  "uniqueVisitors": 61,
+  "identifiedVisits": 96,
+  "uniqueVisitors": 62,
   "returningVisitors": 15,
   "repeatVisits": 34,
   "legacyVisits": 54
