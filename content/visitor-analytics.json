@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-17T09:33:34.853Z",
-  "totalVisits": 155,
+  "updatedAt": "2026-08-17T16:35:27.859Z",
+  "totalVisits": 156,
   "countries": [
     {
       "key": "BT",
@@ -114,6 +114,14 @@
       "count": 1,
       "firstSeenAt": "2026-08-17T06:52:31.120Z",
       "lastSeenAt": "2026-08-17T06:52:31.120Z"
+    },
+    {
+      "key": "DE",
+      "label": "DE",
+      "country": "DE",
+      "count": 1,
+      "firstSeenAt": "2026-08-17T16:35:27.859Z",
+      "lastSeenAt": "2026-08-17T16:35:27.859Z"
     }
   ],
   "cities": [
@@ -680,15 +688,27 @@
       "count": 1,
       "firstSeenAt": "2026-08-17T06:52:31.120Z",
       "lastSeenAt": "2026-08-17T06:52:31.120Z"
+    },
+    {
+      "key": "Vaterstetten, Bavaria, DE",
+      "label": "Vaterstetten, Bavaria, DE",
+      "city": "Vaterstetten",
+      "region": "Bavaria",
+      "country": "DE",
+      "latitude": "48.105",
+      "longitude": "11.768",
+      "count": 1,
+      "firstSeenAt": "2026-08-17T16:35:27.859Z",
+      "lastSeenAt": "2026-08-17T16:35:27.859Z"
     }
   ],
   "pages": [
     {
       "key": "/",
       "label": "/",
-      "count": 145,
+      "count": 146,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-08-17T09:33:34.853Z"
+      "lastSeenAt": "2026-08-17T16:35:27.859Z"
     },
     {
       "key": "/mahar",
@@ -741,6 +761,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-08-17T16:35:27.859Z",
+      "page": "/",
+      "country": "DE",
+      "continent": "EU",
+      "region": "Bavaria",
+      "city": "Vaterstetten",
+      "timezone": "Europe/Berlin",
+      "latitude": "48.105",
+      "longitude": "11.768",
+      "visitorType": "new",
+      "sessionType": "new",
+      "visitorVisitCount": 1
+    },
     {
       "visitedAt": "2026-08-17T09:33:34.853Z",
       "page": "/",
@@ -1846,23 +1880,28 @@
       "visitorType": "returning",
       "sessionType": "new",
       "visitorVisitCount": 5
-    },
-    {
-      "visitedAt": "2026-07-05T01:00:11.905Z",
-      "page": "/",
-      "country": "JP",
-      "continent": "AS",
-      "region": "Kyoto",
-      "city": "Kyoto",
-      "timezone": "Asia/Tokyo",
-      "latitude": "35.021",
-      "longitude": "135.754",
-      "visitorType": "new",
-      "sessionType": "new",
-      "visitorVisitCount": 1
     }
   ],
   "visitors": [
+    {
+      "key": "7e4d1c4c67d0b2ab5fa47ae36659b26e75c8498009984696413eb889a11dca87",
+      "firstSeenAt": "2026-08-17T16:35:27.859Z",
+      "lastSeenAt": "2026-08-17T16:35:27.859Z",
+      "visitCount": 1,
+      "sessionCount": 1,
+      "firstPage": "/",
+      "lastPage": "/",
+      "firstCountry": "DE",
+      "firstRegion": "Bavaria",
+      "firstCity": "Vaterstetten",
+      "firstTimezone": "Europe/Berlin",
+      "lastCountry": "DE",
+      "lastRegion": "Bavaria",
+      "lastCity": "Vaterstetten",
+      "lastTimezone": "Europe/Berlin",
+      "lastLatitude": "48.105",
+      "lastLongitude": "11.768"
+    },
     {
       "key": "89f3ce624daaf0f9df54000a599fb03e70c289b21e012c0bba00d79ed54a70c3",
       "firstSeenAt": "2026-08-17T09:33:34.853Z",
@@ -3137,8 +3176,8 @@
       "lastLongitude": "89.642"
     }
   ],
-  "identifiedVisits": 101,
-  "uniqueVisitors": 67,
+  "identifiedVisits": 102,
+  "uniqueVisitors": 68,
   "returningVisitors": 15,
   "repeatVisits": 34,
   "legacyVisits": 54
