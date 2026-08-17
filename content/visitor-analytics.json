@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-17T06:49:38.034Z",
-  "totalVisits": 153,
+  "updatedAt": "2026-08-17T06:52:31.120Z",
+  "totalVisits": 154,
   "countries": [
     {
       "key": "BT",
@@ -106,6 +106,14 @@
       "count": 1,
       "firstSeenAt": "2026-07-22T02:13:04.992Z",
       "lastSeenAt": "2026-07-22T02:13:04.992Z"
+    },
+    {
+      "key": "KR",
+      "label": "KR",
+      "country": "KR",
+      "count": 1,
+      "firstSeenAt": "2026-08-17T06:52:31.120Z",
+      "lastSeenAt": "2026-08-17T06:52:31.120Z"
     }
   ],
   "cities": [
@@ -660,15 +668,27 @@
       "count": 1,
       "firstSeenAt": "2026-08-13T03:51:01.200Z",
       "lastSeenAt": "2026-08-13T03:51:01.200Z"
+    },
+    {
+      "key": "Incheon, Incheon, KR",
+      "label": "Incheon, Incheon, KR",
+      "city": "Incheon",
+      "region": "Incheon",
+      "country": "KR",
+      "latitude": "37.456",
+      "longitude": "126.705",
+      "count": 1,
+      "firstSeenAt": "2026-08-17T06:52:31.120Z",
+      "lastSeenAt": "2026-08-17T06:52:31.120Z"
     }
   ],
   "pages": [
     {
       "key": "/",
       "label": "/",
-      "count": 143,
+      "count": 144,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-08-17T06:49:38.034Z"
+      "lastSeenAt": "2026-08-17T06:52:31.120Z"
     },
     {
       "key": "/mahar",
@@ -721,6 +741,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-08-17T06:52:31.120Z",
+      "page": "/",
+      "country": "KR",
+      "continent": "AS",
+      "region": "Incheon",
+      "city": "Incheon",
+      "timezone": "Asia/Seoul",
+      "latitude": "37.456",
+      "longitude": "126.705",
+      "visitorType": "new",
+      "sessionType": "new",
+      "visitorVisitCount": 1
+    },
     {
       "visitedAt": "2026-08-17T06:49:38.034Z",
       "page": "/",
@@ -1826,23 +1860,28 @@
       "visitorType": "legacy",
       "sessionType": "unknown",
       "visitorVisitCount": 0
-    },
-    {
-      "visitedAt": "2026-07-05T00:25:39.681Z",
-      "page": "/",
-      "country": "JP",
-      "continent": "AS",
-      "region": "Kyoto",
-      "city": "Kyoto",
-      "timezone": "Asia/Tokyo",
-      "latitude": "35.021",
-      "longitude": "135.754",
-      "visitorType": "returning",
-      "sessionType": "new",
-      "visitorVisitCount": 4
     }
   ],
   "visitors": [
+    {
+      "key": "274b2865011c945bec461851410690bb8147260c55d83e9d2203ca88b412b783",
+      "firstSeenAt": "2026-08-17T06:52:31.120Z",
+      "lastSeenAt": "2026-08-17T06:52:31.120Z",
+      "visitCount": 1,
+      "sessionCount": 1,
+      "firstPage": "/",
+      "lastPage": "/",
+      "firstCountry": "KR",
+      "firstRegion": "Incheon",
+      "firstCity": "Incheon",
+      "firstTimezone": "Asia/Seoul",
+      "lastCountry": "KR",
+      "lastRegion": "Incheon",
+      "lastCity": "Incheon",
+      "lastTimezone": "Asia/Seoul",
+      "lastLatitude": "37.456",
+      "lastLongitude": "126.705"
+    },
     {
       "key": "3aaf58a7d556ec5efef6c3cd966d55be138d62ac440a1870eed377818e0e9ba9",
       "firstSeenAt": "2026-08-17T06:49:38.034Z",
@@ -3079,8 +3118,8 @@
       "lastLongitude": "89.642"
     }
   ],
-  "identifiedVisits": 99,
-  "uniqueVisitors": 65,
+  "identifiedVisits": 100,
+  "uniqueVisitors": 66,
   "returningVisitors": 15,
   "repeatVisits": 34,
   "legacyVisits": 54
