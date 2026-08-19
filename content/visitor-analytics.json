@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-17T16:35:27.859Z",
-  "totalVisits": 156,
+  "updatedAt": "2026-08-19T06:21:32.381Z",
+  "totalVisits": 157,
   "countries": [
     {
       "key": "BT",
@@ -76,6 +76,14 @@
       "lastSeenAt": "2026-07-30T10:29:22.901Z"
     },
     {
+      "key": "DE",
+      "label": "DE",
+      "country": "DE",
+      "count": 2,
+      "firstSeenAt": "2026-08-17T16:35:27.859Z",
+      "lastSeenAt": "2026-08-19T06:21:32.381Z"
+    },
+    {
       "key": "SE",
       "label": "SE",
       "country": "SE",
@@ -114,14 +122,6 @@
       "count": 1,
       "firstSeenAt": "2026-08-17T06:52:31.120Z",
       "lastSeenAt": "2026-08-17T06:52:31.120Z"
-    },
-    {
-      "key": "DE",
-      "label": "DE",
-      "country": "DE",
-      "count": 1,
-      "firstSeenAt": "2026-08-17T16:35:27.859Z",
-      "lastSeenAt": "2026-08-17T16:35:27.859Z"
     }
   ],
   "cities": [
@@ -700,15 +700,27 @@
       "count": 1,
       "firstSeenAt": "2026-08-17T16:35:27.859Z",
       "lastSeenAt": "2026-08-17T16:35:27.859Z"
+    },
+    {
+      "key": "Frankfurt am Main, Hesse, DE",
+      "label": "Frankfurt am Main, Hesse, DE",
+      "city": "Frankfurt am Main",
+      "region": "Hesse",
+      "country": "DE",
+      "latitude": "50.116",
+      "longitude": "8.684",
+      "count": 1,
+      "firstSeenAt": "2026-08-19T06:21:32.381Z",
+      "lastSeenAt": "2026-08-19T06:21:32.381Z"
     }
   ],
   "pages": [
     {
       "key": "/",
       "label": "/",
-      "count": 146,
+      "count": 147,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-08-17T16:35:27.859Z"
+      "lastSeenAt": "2026-08-19T06:21:32.381Z"
     },
     {
       "key": "/mahar",
@@ -761,6 +773,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-08-19T06:21:32.381Z",
+      "page": "/",
+      "country": "DE",
+      "continent": "EU",
+      "region": "Hesse",
+      "city": "Frankfurt am Main",
+      "timezone": "Europe/Berlin",
+      "latitude": "50.116",
+      "longitude": "8.684",
+      "visitorType": "new",
+      "sessionType": "new",
+      "visitorVisitCount": 1
+    },
     {
       "visitedAt": "2026-08-17T16:35:27.859Z",
       "page": "/",
@@ -1866,23 +1892,28 @@
       "visitorType": "returning",
       "sessionType": "new",
       "visitorVisitCount": 2
-    },
-    {
-      "visitedAt": "2026-07-05T01:01:18.650Z",
-      "page": "/",
-      "country": "JP",
-      "continent": "AS",
-      "region": "Kyoto",
-      "city": "Kyoto",
-      "timezone": "Asia/Tokyo",
-      "latitude": "35.021",
-      "longitude": "135.754",
-      "visitorType": "returning",
-      "sessionType": "new",
-      "visitorVisitCount": 5
     }
   ],
   "visitors": [
+    {
+      "key": "cb5857477583b21d1ce1263d95f8afe36fd77837d11256e88092e2f6f54c368d",
+      "firstSeenAt": "2026-08-19T06:21:32.381Z",
+      "lastSeenAt": "2026-08-19T06:21:32.381Z",
+      "visitCount": 1,
+      "sessionCount": 1,
+      "firstPage": "/",
+      "lastPage": "/",
+      "firstCountry": "DE",
+      "firstRegion": "Hesse",
+      "firstCity": "Frankfurt am Main",
+      "firstTimezone": "Europe/Berlin",
+      "lastCountry": "DE",
+      "lastRegion": "Hesse",
+      "lastCity": "Frankfurt am Main",
+      "lastTimezone": "Europe/Berlin",
+      "lastLatitude": "50.116",
+      "lastLongitude": "8.684"
+    },
     {
       "key": "7e4d1c4c67d0b2ab5fa47ae36659b26e75c8498009984696413eb889a11dca87",
       "firstSeenAt": "2026-08-17T16:35:27.859Z",
@@ -3176,8 +3207,8 @@
       "lastLongitude": "89.642"
     }
   ],
-  "identifiedVisits": 102,
-  "uniqueVisitors": 68,
+  "identifiedVisits": 103,
+  "uniqueVisitors": 69,
   "returningVisitors": 15,
   "repeatVisits": 34,
   "legacyVisits": 54
