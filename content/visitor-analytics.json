@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-19T06:21:32.381Z",
-  "totalVisits": 157,
+  "updatedAt": "2026-08-19T10:04:09.389Z",
+  "totalVisits": 158,
   "countries": [
     {
       "key": "BT",
@@ -15,9 +15,9 @@
       "key": "IN",
       "label": "IN",
       "country": "IN",
-      "count": 47,
+      "count": 48,
       "firstSeenAt": "2026-06-23T05:03:11.022Z",
-      "lastSeenAt": "2026-08-16T08:35:04.159Z"
+      "lastSeenAt": "2026-08-19T10:04:09.389Z"
     },
     {
       "key": "US",
@@ -205,9 +205,9 @@
       "country": "IN",
       "latitude": "19.073",
       "longitude": "72.883",
-      "count": 4,
+      "count": 5,
       "firstSeenAt": "2026-07-20T16:25:56.732Z",
-      "lastSeenAt": "2026-07-20T16:29:44.898Z"
+      "lastSeenAt": "2026-08-19T10:04:09.389Z"
     },
     {
       "key": "Bhadrapur, Koshi, NP",
@@ -718,9 +718,9 @@
     {
       "key": "/",
       "label": "/",
-      "count": 147,
+      "count": 148,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-08-19T06:21:32.381Z"
+      "lastSeenAt": "2026-08-19T10:04:09.389Z"
     },
     {
       "key": "/mahar",
@@ -773,6 +773,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-08-19T10:04:09.389Z",
+      "page": "/",
+      "country": "IN",
+      "continent": "AS",
+      "region": "Maharashtra",
+      "city": "Mumbai",
+      "timezone": "Asia/Kolkata",
+      "latitude": "19.073",
+      "longitude": "72.883",
+      "visitorType": "new",
+      "sessionType": "new",
+      "visitorVisitCount": 1
+    },
     {
       "visitedAt": "2026-08-19T06:21:32.381Z",
       "page": "/",
@@ -1878,23 +1892,28 @@
       "visitorType": "new",
       "sessionType": "new",
       "visitorVisitCount": 1
-    },
-    {
-      "visitedAt": "2026-07-05T06:51:02.870Z",
-      "page": "/",
-      "country": "IN",
-      "continent": "AS",
-      "region": "West Bengal",
-      "city": "Siliguri",
-      "timezone": "Asia/Kolkata",
-      "latitude": "26.710",
-      "longitude": "88.429",
-      "visitorType": "returning",
-      "sessionType": "new",
-      "visitorVisitCount": 2
     }
   ],
   "visitors": [
+    {
+      "key": "085bc8758cddea9c06e7031b3cef63f7b3cbe73a5f673befa7a729d93f098923",
+      "firstSeenAt": "2026-08-19T10:04:09.389Z",
+      "lastSeenAt": "2026-08-19T10:04:09.389Z",
+      "visitCount": 1,
+      "sessionCount": 1,
+      "firstPage": "/",
+      "lastPage": "/",
+      "firstCountry": "IN",
+      "firstRegion": "Maharashtra",
+      "firstCity": "Mumbai",
+      "firstTimezone": "Asia/Kolkata",
+      "lastCountry": "IN",
+      "lastRegion": "Maharashtra",
+      "lastCity": "Mumbai",
+      "lastTimezone": "Asia/Kolkata",
+      "lastLatitude": "19.073",
+      "lastLongitude": "72.883"
+    },
     {
       "key": "cb5857477583b21d1ce1263d95f8afe36fd77837d11256e88092e2f6f54c368d",
       "firstSeenAt": "2026-08-19T06:21:32.381Z",
@@ -3207,8 +3226,8 @@
       "lastLongitude": "89.642"
     }
   ],
-  "identifiedVisits": 103,
-  "uniqueVisitors": 69,
+  "identifiedVisits": 104,
+  "uniqueVisitors": 70,
   "returningVisitors": 15,
   "repeatVisits": 34,
   "legacyVisits": 54
