@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-24T09:00:17.376Z",
-  "totalVisits": 160,
+  "updatedAt": "2026-08-24T10:01:44.339Z",
+  "totalVisits": 161,
   "countries": [
     {
       "key": "BT",
@@ -130,6 +130,14 @@
       "count": 1,
       "firstSeenAt": "2026-08-22T11:42:46.857Z",
       "lastSeenAt": "2026-08-22T11:42:46.857Z"
+    },
+    {
+      "key": "ZM",
+      "label": "ZM",
+      "country": "ZM",
+      "count": 1,
+      "firstSeenAt": "2026-08-24T10:01:44.339Z",
+      "lastSeenAt": "2026-08-24T10:01:44.339Z"
     }
   ],
   "cities": [
@@ -732,15 +740,27 @@
       "count": 1,
       "firstSeenAt": "2026-08-22T11:42:46.857Z",
       "lastSeenAt": "2026-08-22T11:42:46.857Z"
+    },
+    {
+      "key": "Lusaka, Lusaka Province, ZM",
+      "label": "Lusaka, Lusaka Province, ZM",
+      "city": "Lusaka",
+      "region": "Lusaka Province",
+      "country": "ZM",
+      "latitude": "-15.407",
+      "longitude": "28.287",
+      "count": 1,
+      "firstSeenAt": "2026-08-24T10:01:44.339Z",
+      "lastSeenAt": "2026-08-24T10:01:44.339Z"
     }
   ],
   "pages": [
     {
       "key": "/",
       "label": "/",
-      "count": 150,
+      "count": 151,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-08-24T09:00:17.376Z"
+      "lastSeenAt": "2026-08-24T10:01:44.339Z"
     },
     {
       "key": "/mahar",
@@ -793,6 +813,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-08-24T10:01:44.339Z",
+      "page": "/",
+      "country": "ZM",
+      "continent": "AF",
+      "region": "Lusaka Province",
+      "city": "Lusaka",
+      "timezone": "Africa/Lusaka",
+      "latitude": "-15.407",
+      "longitude": "28.287",
+      "visitorType": "new",
+      "sessionType": "new",
+      "visitorVisitCount": 1
+    },
     {
       "visitedAt": "2026-08-24T09:00:17.376Z",
       "page": "/",
@@ -1898,23 +1932,28 @@
       "visitorType": "new",
       "sessionType": "new",
       "visitorVisitCount": 1
-    },
-    {
-      "visitedAt": "2026-07-06T05:03:57.247Z",
-      "page": "/",
-      "country": "BT",
-      "continent": "AS",
-      "region": "Thimphu District",
-      "city": "Thimphu",
-      "timezone": "Asia/Thimphu",
-      "latitude": "27.466",
-      "longitude": "89.642",
-      "visitorType": "returning",
-      "sessionType": "new",
-      "visitorVisitCount": 2
     }
   ],
   "visitors": [
+    {
+      "key": "f765cb8079dc45bbecfaa4f515d10b37d1e2c234b6c9f40fa07a9c203e6bc34f",
+      "firstSeenAt": "2026-08-24T10:01:44.339Z",
+      "lastSeenAt": "2026-08-24T10:01:44.339Z",
+      "visitCount": 1,
+      "sessionCount": 1,
+      "firstPage": "/",
+      "lastPage": "/",
+      "firstCountry": "ZM",
+      "firstRegion": "Lusaka Province",
+      "firstCity": "Lusaka",
+      "firstTimezone": "Africa/Lusaka",
+      "lastCountry": "ZM",
+      "lastRegion": "Lusaka Province",
+      "lastCity": "Lusaka",
+      "lastTimezone": "Africa/Lusaka",
+      "lastLatitude": "-15.407",
+      "lastLongitude": "28.287"
+    },
     {
       "key": "25bc997b44e7281cc3da0257710c0f95a8aedc70c88ad88f974ec9400a479b68",
       "firstSeenAt": "2026-08-24T09:00:17.376Z",
@@ -3265,8 +3304,8 @@
       "lastLongitude": "89.642"
     }
   ],
-  "identifiedVisits": 106,
-  "uniqueVisitors": 71,
+  "identifiedVisits": 107,
+  "uniqueVisitors": 72,
   "returningVisitors": 16,
   "repeatVisits": 35,
   "legacyVisits": 54
