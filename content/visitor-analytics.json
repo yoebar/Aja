@@ -1,15 +1,15 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-24T10:01:44.339Z",
-  "totalVisits": 161,
+  "updatedAt": "2026-08-25T04:25:12.676Z",
+  "totalVisits": 162,
   "countries": [
     {
       "key": "BT",
       "label": "BT",
       "country": "BT",
-      "count": 71,
+      "count": 72,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-08-24T09:00:17.376Z"
+      "lastSeenAt": "2026-08-25T04:25:12.676Z"
     },
     {
       "key": "IN",
@@ -752,15 +752,27 @@
       "count": 1,
       "firstSeenAt": "2026-08-24T10:01:44.339Z",
       "lastSeenAt": "2026-08-24T10:01:44.339Z"
+    },
+    {
+      "key": "Laya, Gasa, BT",
+      "label": "Laya, Gasa, BT",
+      "city": "Laya",
+      "region": "Gasa",
+      "country": "BT",
+      "latitude": "28.061",
+      "longitude": "89.683",
+      "count": 1,
+      "firstSeenAt": "2026-08-25T04:25:12.676Z",
+      "lastSeenAt": "2026-08-25T04:25:12.676Z"
     }
   ],
   "pages": [
     {
       "key": "/",
       "label": "/",
-      "count": 151,
+      "count": 152,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-08-24T10:01:44.339Z"
+      "lastSeenAt": "2026-08-25T04:25:12.676Z"
     },
     {
       "key": "/mahar",
@@ -813,6 +825,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-08-25T04:25:12.676Z",
+      "page": "/",
+      "country": "BT",
+      "continent": "AS",
+      "region": "Gasa",
+      "city": "Laya",
+      "timezone": "Asia/Thimphu",
+      "latitude": "28.061",
+      "longitude": "89.683",
+      "visitorType": "new",
+      "sessionType": "new",
+      "visitorVisitCount": 1
+    },
     {
       "visitedAt": "2026-08-24T10:01:44.339Z",
       "page": "/",
@@ -1918,23 +1944,28 @@
       "visitorType": "returning",
       "sessionType": "new",
       "visitorVisitCount": 6
-    },
-    {
-      "visitedAt": "2026-07-06T05:56:05.569Z",
-      "page": "/",
-      "country": "IN",
-      "continent": "AS",
-      "region": "West Bengal",
-      "city": "Siliguri",
-      "timezone": "Asia/Kolkata",
-      "latitude": "26.710",
-      "longitude": "88.429",
-      "visitorType": "new",
-      "sessionType": "new",
-      "visitorVisitCount": 1
     }
   ],
   "visitors": [
+    {
+      "key": "86e1110709eb182291c50f5d4a08ff29855bb80c65e097212f60789d9a1cac95",
+      "firstSeenAt": "2026-08-25T04:25:12.676Z",
+      "lastSeenAt": "2026-08-25T04:25:12.676Z",
+      "visitCount": 1,
+      "sessionCount": 1,
+      "firstPage": "/",
+      "lastPage": "/",
+      "firstCountry": "BT",
+      "firstRegion": "Gasa",
+      "firstCity": "Laya",
+      "firstTimezone": "Asia/Thimphu",
+      "lastCountry": "BT",
+      "lastRegion": "Gasa",
+      "lastCity": "Laya",
+      "lastTimezone": "Asia/Thimphu",
+      "lastLatitude": "28.061",
+      "lastLongitude": "89.683"
+    },
     {
       "key": "f765cb8079dc45bbecfaa4f515d10b37d1e2c234b6c9f40fa07a9c203e6bc34f",
       "firstSeenAt": "2026-08-24T10:01:44.339Z",
@@ -3304,8 +3335,8 @@
       "lastLongitude": "89.642"
     }
   ],
-  "identifiedVisits": 107,
-  "uniqueVisitors": 72,
+  "identifiedVisits": 108,
+  "uniqueVisitors": 73,
   "returningVisitors": 16,
   "repeatVisits": 35,
   "legacyVisits": 54
