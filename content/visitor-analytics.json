@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-26T06:57:10.022Z",
-  "totalVisits": 163,
+  "updatedAt": "2026-08-28T01:24:48.713Z",
+  "totalVisits": 164,
   "countries": [
     {
       "key": "BT",
@@ -52,6 +52,14 @@
       "lastSeenAt": "2026-07-03T12:53:31.473Z"
     },
     {
+      "key": "ID",
+      "label": "ID",
+      "country": "ID",
+      "count": 3,
+      "firstSeenAt": "2026-07-30T04:14:22.563Z",
+      "lastSeenAt": "2026-08-28T01:24:48.713Z"
+    },
+    {
       "key": "MY",
       "label": "MY",
       "country": "MY",
@@ -66,14 +74,6 @@
       "count": 2,
       "firstSeenAt": "2026-07-06T23:45:18.846Z",
       "lastSeenAt": "2026-07-09T00:27:43.260Z"
-    },
-    {
-      "key": "ID",
-      "label": "ID",
-      "country": "ID",
-      "count": 2,
-      "firstSeenAt": "2026-07-30T04:14:22.563Z",
-      "lastSeenAt": "2026-07-30T10:29:22.901Z"
     },
     {
       "key": "DE",
@@ -776,15 +776,27 @@
       "count": 1,
       "firstSeenAt": "2026-08-26T06:57:10.022Z",
       "lastSeenAt": "2026-08-26T06:57:10.022Z"
+    },
+    {
+      "key": "Denpasar, Bali, ID",
+      "label": "Denpasar, Bali, ID",
+      "city": "Denpasar",
+      "region": "Bali",
+      "country": "ID",
+      "latitude": "-8.650",
+      "longitude": "115.217",
+      "count": 1,
+      "firstSeenAt": "2026-08-28T01:24:48.713Z",
+      "lastSeenAt": "2026-08-28T01:24:48.713Z"
     }
   ],
   "pages": [
     {
       "key": "/",
       "label": "/",
-      "count": 152,
+      "count": 153,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-08-25T04:25:12.676Z"
+      "lastSeenAt": "2026-08-28T01:24:48.713Z"
     },
     {
       "key": "/mahar",
@@ -837,6 +849,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-08-28T01:24:48.713Z",
+      "page": "/",
+      "country": "ID",
+      "continent": "AS",
+      "region": "Bali",
+      "city": "Denpasar",
+      "timezone": "Asia/Makassar",
+      "latitude": "-8.650",
+      "longitude": "115.217",
+      "visitorType": "new",
+      "sessionType": "new",
+      "visitorVisitCount": 1
+    },
     {
       "visitedAt": "2026-08-26T06:57:10.022Z",
       "page": "/TT",
@@ -1942,23 +1968,28 @@
       "visitorType": "new",
       "sessionType": "new",
       "visitorVisitCount": 1
-    },
-    {
-      "visitedAt": "2026-07-07T08:19:18.946Z",
-      "page": "/",
-      "country": "IN",
-      "continent": "AS",
-      "region": "Gujarat",
-      "city": "Ahmedabad",
-      "timezone": "Asia/Kolkata",
-      "latitude": "23.026",
-      "longitude": "72.587",
-      "visitorType": "new",
-      "sessionType": "new",
-      "visitorVisitCount": 1
     }
   ],
   "visitors": [
+    {
+      "key": "45459cccd7fca2544c2fc412b9cd6eef253ca60f21e32bf0b3a66434e8e0075e",
+      "firstSeenAt": "2026-08-28T01:24:48.713Z",
+      "lastSeenAt": "2026-08-28T01:24:48.713Z",
+      "visitCount": 1,
+      "sessionCount": 1,
+      "firstPage": "/",
+      "lastPage": "/",
+      "firstCountry": "ID",
+      "firstRegion": "Bali",
+      "firstCity": "Denpasar",
+      "firstTimezone": "Asia/Makassar",
+      "lastCountry": "ID",
+      "lastRegion": "Bali",
+      "lastCity": "Denpasar",
+      "lastTimezone": "Asia/Makassar",
+      "lastLatitude": "-8.650",
+      "lastLongitude": "115.217"
+    },
     {
       "key": "3f93a84cf76673dd3a26f5b9e48c2d757ce54fd2a5299debf2d6c8bf6bfdc89d",
       "firstSeenAt": "2026-08-26T06:57:10.022Z",
@@ -3366,8 +3397,8 @@
       "lastLongitude": "89.642"
     }
   ],
-  "identifiedVisits": 109,
-  "uniqueVisitors": 74,
+  "identifiedVisits": 110,
+  "uniqueVisitors": 75,
   "returningVisitors": 16,
   "repeatVisits": 35,
   "legacyVisits": 54
