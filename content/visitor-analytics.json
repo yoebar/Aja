@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-30T17:58:18.212Z",
-  "totalVisits": 167,
+  "updatedAt": "2026-08-30T21:01:56.583Z",
+  "totalVisits": 168,
   "countries": [
     {
       "key": "BT",
@@ -15,9 +15,9 @@
       "key": "IN",
       "label": "IN",
       "country": "IN",
-      "count": 50,
+      "count": 51,
       "firstSeenAt": "2026-06-23T05:03:11.022Z",
-      "lastSeenAt": "2026-08-30T17:58:18.212Z"
+      "lastSeenAt": "2026-08-30T21:01:56.583Z"
     },
     {
       "key": "US",
@@ -382,6 +382,18 @@
       "lastSeenAt": "2026-08-28T07:02:07.658Z"
     },
     {
+      "key": "Indore, Madhya Pradesh, IN",
+      "label": "Indore, Madhya Pradesh, IN",
+      "city": "Indore",
+      "region": "Madhya Pradesh",
+      "country": "IN",
+      "latitude": "22.718",
+      "longitude": "75.833",
+      "count": 2,
+      "firstSeenAt": "2026-08-07T20:48:14.811Z",
+      "lastSeenAt": "2026-08-30T21:01:56.583Z"
+    },
+    {
       "key": "Luleå, Norrbotten, SE",
       "label": "Luleå, Norrbotten, SE",
       "city": "Luleå",
@@ -634,18 +646,6 @@
       "lastSeenAt": "2026-08-07T08:57:42.013Z"
     },
     {
-      "key": "Indore, Madhya Pradesh, IN",
-      "label": "Indore, Madhya Pradesh, IN",
-      "city": "Indore",
-      "region": "Madhya Pradesh",
-      "country": "IN",
-      "latitude": "22.718",
-      "longitude": "75.833",
-      "count": 1,
-      "firstSeenAt": "2026-08-07T20:48:14.811Z",
-      "lastSeenAt": "2026-08-07T20:48:14.811Z"
-    },
-    {
       "key": "Gallatin, Tennessee, US",
       "label": "Gallatin, Tennessee, US",
       "city": "Gallatin",
@@ -794,9 +794,9 @@
     {
       "key": "/",
       "label": "/",
-      "count": 156,
+      "count": 157,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-08-30T17:58:18.212Z"
+      "lastSeenAt": "2026-08-30T21:01:56.583Z"
     },
     {
       "key": "/mahar",
@@ -849,6 +849,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-08-30T21:01:56.583Z",
+      "page": "/",
+      "country": "IN",
+      "continent": "AS",
+      "region": "Madhya Pradesh",
+      "city": "Indore",
+      "timezone": "Asia/Kolkata",
+      "latitude": "22.718",
+      "longitude": "75.833",
+      "visitorType": "new",
+      "sessionType": "new",
+      "visitorVisitCount": 1
+    },
     {
       "visitedAt": "2026-08-30T17:58:18.212Z",
       "page": "/",
@@ -1954,23 +1968,28 @@
       "visitorType": "new",
       "sessionType": "new",
       "visitorVisitCount": 1
-    },
-    {
-      "visitedAt": "2026-07-09T03:04:46.368Z",
-      "page": "/",
-      "country": "JP",
-      "continent": "AS",
-      "region": "Aichi",
-      "city": "Toyota",
-      "timezone": "Asia/Tokyo",
-      "latitude": "35.083",
-      "longitude": "137.150",
-      "visitorType": "new",
-      "sessionType": "new",
-      "visitorVisitCount": 1
     }
   ],
   "visitors": [
+    {
+      "key": "6159ace4bc73e81380c2cb17e87dbbd9724b702fea152185f088e6128dba38c9",
+      "firstSeenAt": "2026-08-30T21:01:56.583Z",
+      "lastSeenAt": "2026-08-30T21:01:56.583Z",
+      "visitCount": 1,
+      "sessionCount": 1,
+      "firstPage": "/",
+      "lastPage": "/",
+      "firstCountry": "IN",
+      "firstRegion": "Madhya Pradesh",
+      "firstCity": "Indore",
+      "firstTimezone": "Asia/Kolkata",
+      "lastCountry": "IN",
+      "lastRegion": "Madhya Pradesh",
+      "lastCity": "Indore",
+      "lastTimezone": "Asia/Kolkata",
+      "lastLatitude": "22.718",
+      "lastLongitude": "75.833"
+    },
     {
       "key": "90989501c2ffce93c8d4fddce0dec204829b04084293125712ec4781cc1daa45",
       "firstSeenAt": "2026-08-30T17:58:18.212Z",
@@ -3454,8 +3473,8 @@
       "lastLongitude": "89.642"
     }
   ],
-  "identifiedVisits": 113,
-  "uniqueVisitors": 78,
+  "identifiedVisits": 114,
+  "uniqueVisitors": 79,
   "returningVisitors": 16,
   "repeatVisits": 35,
   "legacyVisits": 54
