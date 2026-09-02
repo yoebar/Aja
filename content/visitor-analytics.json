@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-02T03:02:11.133Z",
-  "totalVisits": 170,
+  "updatedAt": "2026-09-02T03:50:56.305Z",
+  "totalVisits": 171,
   "countries": [
     {
       "key": "BT",
@@ -15,9 +15,9 @@
       "key": "IN",
       "label": "IN",
       "country": "IN",
-      "count": 51,
+      "count": 52,
       "firstSeenAt": "2026-06-23T05:03:11.022Z",
-      "lastSeenAt": "2026-08-30T21:01:56.583Z"
+      "lastSeenAt": "2026-09-02T03:50:56.305Z"
     },
     {
       "key": "US",
@@ -173,9 +173,9 @@
       "country": "IN",
       "latitude": "26.710",
       "longitude": "88.429",
-      "count": 12,
+      "count": 13,
       "firstSeenAt": "2026-06-23T05:10:53.647Z",
-      "lastSeenAt": "2026-08-30T17:58:18.212Z"
+      "lastSeenAt": "2026-09-02T03:50:56.305Z"
     },
     {
       "key": "Singapore, SG",
@@ -794,9 +794,9 @@
     {
       "key": "/",
       "label": "/",
-      "count": 159,
+      "count": 160,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-09-02T03:02:11.133Z"
+      "lastSeenAt": "2026-09-02T03:50:56.305Z"
     },
     {
       "key": "/mahar",
@@ -849,6 +849,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-09-02T03:50:56.305Z",
+      "page": "/",
+      "country": "IN",
+      "continent": "AS",
+      "region": "West Bengal",
+      "city": "Siliguri",
+      "timezone": "Asia/Kolkata",
+      "latitude": "26.710",
+      "longitude": "88.429",
+      "visitorType": "new",
+      "sessionType": "new",
+      "visitorVisitCount": 1
+    },
     {
       "visitedAt": "2026-09-02T03:02:11.133Z",
       "page": "/",
@@ -1954,23 +1968,28 @@
       "visitorType": "returning",
       "sessionType": "new",
       "visitorVisitCount": 2
-    },
-    {
-      "visitedAt": "2026-07-10T04:18:26.840Z",
-      "page": "/",
-      "country": "BT",
-      "continent": "AS",
-      "region": "Thimphu District",
-      "city": "Thimphu",
-      "timezone": "Asia/Thimphu",
-      "latitude": "27.466",
-      "longitude": "89.642",
-      "visitorType": "new",
-      "sessionType": "new",
-      "visitorVisitCount": 1
     }
   ],
   "visitors": [
+    {
+      "key": "6460e6922f83c83501845f211daf5e0a710d4ebfe405bca92e150dd414fde041",
+      "firstSeenAt": "2026-09-02T03:50:56.305Z",
+      "lastSeenAt": "2026-09-02T03:50:56.305Z",
+      "visitCount": 1,
+      "sessionCount": 1,
+      "firstPage": "/",
+      "lastPage": "/",
+      "firstCountry": "IN",
+      "firstRegion": "West Bengal",
+      "firstCity": "Siliguri",
+      "firstTimezone": "Asia/Kolkata",
+      "lastCountry": "IN",
+      "lastRegion": "West Bengal",
+      "lastCity": "Siliguri",
+      "lastTimezone": "Asia/Kolkata",
+      "lastLatitude": "26.710",
+      "lastLongitude": "88.429"
+    },
     {
       "key": "cdc07eacd16891fdc5d8293bce253a254d928afd6d3c55112034d5ac33cea4d1",
       "firstSeenAt": "2026-09-02T03:02:11.133Z",
@@ -3511,8 +3530,8 @@
       "lastLongitude": "89.642"
     }
   ],
-  "identifiedVisits": 116,
-  "uniqueVisitors": 81,
+  "identifiedVisits": 117,
+  "uniqueVisitors": 82,
   "returningVisitors": 16,
   "repeatVisits": 35,
   "legacyVisits": 54
