@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-01T12:17:29.822Z",
-  "totalVisits": 169,
+  "updatedAt": "2026-09-02T03:02:11.133Z",
+  "totalVisits": 170,
   "countries": [
     {
       "key": "BT",
@@ -23,9 +23,9 @@
       "key": "US",
       "label": "US",
       "country": "US",
-      "count": 11,
+      "count": 12,
       "firstSeenAt": "2026-07-16T03:42:47.379Z",
-      "lastSeenAt": "2026-08-26T06:57:10.022Z"
+      "lastSeenAt": "2026-09-02T03:02:11.133Z"
     },
     {
       "key": "JP",
@@ -250,6 +250,18 @@
       "lastSeenAt": "2026-07-27T08:13:30.267Z"
     },
     {
+      "key": "Los Angeles, California, US",
+      "label": "Los Angeles, California, US",
+      "city": "Los Angeles",
+      "region": "California",
+      "country": "US",
+      "latitude": "34.052",
+      "longitude": "-118.244",
+      "count": 3,
+      "firstSeenAt": "2026-07-16T03:42:47.379Z",
+      "lastSeenAt": "2026-09-02T03:02:11.133Z"
+    },
+    {
       "key": "Hyderabad, Telangana, IN",
       "label": "Hyderabad, Telangana, IN",
       "city": "Hyderabad",
@@ -284,18 +296,6 @@
       "count": 2,
       "firstSeenAt": "2026-07-06T23:45:18.846Z",
       "lastSeenAt": "2026-07-09T00:27:43.260Z"
-    },
-    {
-      "key": "Los Angeles, California, US",
-      "label": "Los Angeles, California, US",
-      "city": "Los Angeles",
-      "region": "California",
-      "country": "US",
-      "latitude": "34.052",
-      "longitude": "-118.244",
-      "count": 2,
-      "firstSeenAt": "2026-07-16T03:42:47.379Z",
-      "lastSeenAt": "2026-07-21T01:57:55.825Z"
     },
     {
       "key": "Warangal, Telangana, IN",
@@ -794,9 +794,9 @@
     {
       "key": "/",
       "label": "/",
-      "count": 158,
+      "count": 159,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-09-01T12:17:29.822Z"
+      "lastSeenAt": "2026-09-02T03:02:11.133Z"
     },
     {
       "key": "/mahar",
@@ -849,6 +849,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-09-02T03:02:11.133Z",
+      "page": "/",
+      "country": "US",
+      "continent": "NA",
+      "region": "California",
+      "city": "Los Angeles",
+      "timezone": "America/Los_Angeles",
+      "latitude": "34.052",
+      "longitude": "-118.244",
+      "visitorType": "new",
+      "sessionType": "new",
+      "visitorVisitCount": 1
+    },
     {
       "visitedAt": "2026-09-01T12:17:29.822Z",
       "page": "/",
@@ -1954,23 +1968,28 @@
       "visitorType": "new",
       "sessionType": "new",
       "visitorVisitCount": 1
-    },
-    {
-      "visitedAt": "2026-07-09T15:05:04.813Z",
-      "page": "/",
-      "country": "SG",
-      "continent": "AS",
-      "region": "",
-      "city": "Singapore",
-      "timezone": "Asia/Singapore",
-      "latitude": "1.290",
-      "longitude": "103.850",
-      "visitorType": "returning",
-      "sessionType": "new",
-      "visitorVisitCount": 8
     }
   ],
   "visitors": [
+    {
+      "key": "cdc07eacd16891fdc5d8293bce253a254d928afd6d3c55112034d5ac33cea4d1",
+      "firstSeenAt": "2026-09-02T03:02:11.133Z",
+      "lastSeenAt": "2026-09-02T03:02:11.133Z",
+      "visitCount": 1,
+      "sessionCount": 1,
+      "firstPage": "/",
+      "lastPage": "/",
+      "firstCountry": "US",
+      "firstRegion": "California",
+      "firstCity": "Los Angeles",
+      "firstTimezone": "America/Los_Angeles",
+      "lastCountry": "US",
+      "lastRegion": "California",
+      "lastCity": "Los Angeles",
+      "lastTimezone": "America/Los_Angeles",
+      "lastLatitude": "34.052",
+      "lastLongitude": "-118.244"
+    },
     {
       "key": "e8f9962eec55102ea64b99588b1f1719e7b7bfdc2622b4683577622c6f0f6e6b",
       "firstSeenAt": "2026-09-01T12:17:29.822Z",
@@ -3492,8 +3511,8 @@
       "lastLongitude": "89.642"
     }
   ],
-  "identifiedVisits": 115,
-  "uniqueVisitors": 80,
+  "identifiedVisits": 116,
+  "uniqueVisitors": 81,
   "returningVisitors": 16,
   "repeatVisits": 35,
   "legacyVisits": 54
