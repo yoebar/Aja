@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-03T13:15:21.667Z",
-  "totalVisits": 173,
+  "updatedAt": "2026-09-03T15:16:21.856Z",
+  "totalVisits": 174,
   "countries": [
     {
       "key": "BT",
@@ -44,20 +44,20 @@
       "lastSeenAt": "2026-07-22T01:29:13.573Z"
     },
     {
+      "key": "ID",
+      "label": "ID",
+      "country": "ID",
+      "count": 4,
+      "firstSeenAt": "2026-07-30T04:14:22.563Z",
+      "lastSeenAt": "2026-09-03T15:16:21.856Z"
+    },
+    {
       "key": "NP",
       "label": "NP",
       "country": "NP",
       "count": 3,
       "firstSeenAt": "2026-07-03T11:11:10.321Z",
       "lastSeenAt": "2026-07-03T12:53:31.473Z"
-    },
-    {
-      "key": "ID",
-      "label": "ID",
-      "country": "ID",
-      "count": 3,
-      "firstSeenAt": "2026-07-30T04:14:22.563Z",
-      "lastSeenAt": "2026-08-28T01:24:48.713Z"
     },
     {
       "key": "MY",
@@ -788,15 +788,27 @@
       "count": 1,
       "firstSeenAt": "2026-08-28T01:24:48.713Z",
       "lastSeenAt": "2026-08-28T01:24:48.713Z"
+    },
+    {
+      "key": "Malang, East Java, ID",
+      "label": "Malang, East Java, ID",
+      "city": "Malang",
+      "region": "East Java",
+      "country": "ID",
+      "latitude": "-7.980",
+      "longitude": "112.630",
+      "count": 1,
+      "firstSeenAt": "2026-09-03T15:16:21.856Z",
+      "lastSeenAt": "2026-09-03T15:16:21.856Z"
     }
   ],
   "pages": [
     {
       "key": "/",
       "label": "/",
-      "count": 162,
+      "count": 163,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-09-03T13:15:21.667Z"
+      "lastSeenAt": "2026-09-03T15:16:21.856Z"
     },
     {
       "key": "/mahar",
@@ -849,6 +861,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-09-03T15:16:21.856Z",
+      "page": "/",
+      "country": "ID",
+      "continent": "AS",
+      "region": "East Java",
+      "city": "Malang",
+      "timezone": "Asia/Jakarta",
+      "latitude": "-7.980",
+      "longitude": "112.630",
+      "visitorType": "new",
+      "sessionType": "new",
+      "visitorVisitCount": 1
+    },
     {
       "visitedAt": "2026-09-03T13:15:21.667Z",
       "page": "/",
@@ -1954,23 +1980,28 @@
       "visitorType": "new",
       "sessionType": "new",
       "visitorVisitCount": 1
-    },
-    {
-      "visitedAt": "2026-07-16T12:13:08.219Z",
-      "page": "/",
-      "country": "IN",
-      "continent": "AS",
-      "region": "Assam",
-      "city": "Dispur",
-      "timezone": "Asia/Kolkata",
-      "latitude": "26.136",
-      "longitude": "91.801",
-      "visitorType": "new",
-      "sessionType": "new",
-      "visitorVisitCount": 1
     }
   ],
   "visitors": [
+    {
+      "key": "ffa49d5fe24baf3233097ea09051f295ff8b88836f409dd491f3c8f687b06ec1",
+      "firstSeenAt": "2026-09-03T15:16:21.856Z",
+      "lastSeenAt": "2026-09-03T15:16:21.856Z",
+      "visitCount": 1,
+      "sessionCount": 1,
+      "firstPage": "/",
+      "lastPage": "/",
+      "firstCountry": "ID",
+      "firstRegion": "East Java",
+      "firstCity": "Malang",
+      "firstTimezone": "Asia/Jakarta",
+      "lastCountry": "ID",
+      "lastRegion": "East Java",
+      "lastCity": "Malang",
+      "lastTimezone": "Asia/Jakarta",
+      "lastLatitude": "-7.980",
+      "lastLongitude": "112.630"
+    },
     {
       "key": "fd281a229f57484b7b504372372fce46be2f5805b0fedea805f365491583f86f",
       "firstSeenAt": "2026-09-03T13:15:21.667Z",
@@ -3549,8 +3580,8 @@
       "lastLongitude": "89.642"
     }
   ],
-  "identifiedVisits": 119,
-  "uniqueVisitors": 83,
+  "identifiedVisits": 120,
+  "uniqueVisitors": 84,
   "returningVisitors": 17,
   "repeatVisits": 36,
   "legacyVisits": 54
