@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-03T10:47:24.883Z",
-  "totalVisits": 172,
+  "updatedAt": "2026-09-03T13:15:21.667Z",
+  "totalVisits": 173,
   "countries": [
     {
       "key": "BT",
@@ -15,9 +15,9 @@
       "key": "IN",
       "label": "IN",
       "country": "IN",
-      "count": 53,
+      "count": 54,
       "firstSeenAt": "2026-06-23T05:03:11.022Z",
-      "lastSeenAt": "2026-09-03T10:47:24.883Z"
+      "lastSeenAt": "2026-09-03T13:15:21.667Z"
     },
     {
       "key": "US",
@@ -161,9 +161,9 @@
       "country": "IN",
       "latitude": "26.710",
       "longitude": "88.429",
-      "count": 14,
+      "count": 15,
       "firstSeenAt": "2026-06-23T05:10:53.647Z",
-      "lastSeenAt": "2026-09-03T10:47:24.883Z"
+      "lastSeenAt": "2026-09-03T13:15:21.667Z"
     },
     {
       "key": "Phuntsholing, Chukha, BT",
@@ -794,9 +794,9 @@
     {
       "key": "/",
       "label": "/",
-      "count": 161,
+      "count": 162,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-09-03T10:47:24.883Z"
+      "lastSeenAt": "2026-09-03T13:15:21.667Z"
     },
     {
       "key": "/mahar",
@@ -849,6 +849,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-09-03T13:15:21.667Z",
+      "page": "/",
+      "country": "IN",
+      "continent": "AS",
+      "region": "West Bengal",
+      "city": "Siliguri",
+      "timezone": "Asia/Kolkata",
+      "latitude": "26.710",
+      "longitude": "88.429",
+      "visitorType": "new",
+      "sessionType": "new",
+      "visitorVisitCount": 1
+    },
     {
       "visitedAt": "2026-09-03T10:47:24.883Z",
       "page": "/",
@@ -1954,23 +1968,28 @@
       "visitorType": "new",
       "sessionType": "new",
       "visitorVisitCount": 1
-    },
-    {
-      "visitedAt": "2026-07-16T03:42:47.379Z",
-      "page": "/",
-      "country": "US",
-      "continent": "NA",
-      "region": "California",
-      "city": "Los Angeles",
-      "timezone": "America/Los_Angeles",
-      "latitude": "34.052",
-      "longitude": "-118.244",
-      "visitorType": "new",
-      "sessionType": "new",
-      "visitorVisitCount": 1
     }
   ],
   "visitors": [
+    {
+      "key": "fd281a229f57484b7b504372372fce46be2f5805b0fedea805f365491583f86f",
+      "firstSeenAt": "2026-09-03T13:15:21.667Z",
+      "lastSeenAt": "2026-09-03T13:15:21.667Z",
+      "visitCount": 1,
+      "sessionCount": 1,
+      "firstPage": "/",
+      "lastPage": "/",
+      "firstCountry": "IN",
+      "firstRegion": "West Bengal",
+      "firstCity": "Siliguri",
+      "firstTimezone": "Asia/Kolkata",
+      "lastCountry": "IN",
+      "lastRegion": "West Bengal",
+      "lastCity": "Siliguri",
+      "lastTimezone": "Asia/Kolkata",
+      "lastLatitude": "26.710",
+      "lastLongitude": "88.429"
+    },
     {
       "key": "7bc2e5892e32f7160c9dceda779de2b6fa5112c113d6f6b537423e37131fb2fc",
       "firstSeenAt": "2026-07-31T11:58:41.814Z",
@@ -3530,8 +3549,8 @@
       "lastLongitude": "89.642"
     }
   ],
-  "identifiedVisits": 118,
-  "uniqueVisitors": 82,
+  "identifiedVisits": 119,
+  "uniqueVisitors": 83,
   "returningVisitors": 17,
   "repeatVisits": 36,
   "legacyVisits": 54
