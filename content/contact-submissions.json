@@ -1,6 +1,24 @@
 {
   "submissions": [
     {
+      "id": "87f1e2f2-4a1d-47a7-a36e-064274e627bc",
+      "submittedAt": "2026-09-05T08:02:45.783Z",
+      "notificationTo": "sales@aja.bt",
+      "notificationStatus": "sent",
+      "autoReplyStatus": "sent",
+      "name": "Sanjay Maskara",
+      "company": "Nav Durga Enterprise",
+      "country": "Bhutan",
+      "email": "navdurgasanjaymaskara@gmail.com",
+      "phone": "+91 9831272457",
+      "enquiryType": "Sales enquiry",
+      "grade": "FeSi 70 to 75",
+      "quantity": "90",
+      "message": "Need Quotation for FeSi - 70%, Szie- 10-60/10-100MM \r\n\r\nPackaging- 40kg gunny bag. \r\n\r\nQty- 90 MT for now.",
+      "reviewStatus": "new",
+      "reviewedAt": ""
+    },
+    {
       "id": "3d5dc022-15dc-4f9b-ba8e-fd6264e63809",
       "submittedAt": "2026-08-27T05:12:01.777Z",
       "notificationTo": "sales@aja.bt",
