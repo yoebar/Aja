@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-03T15:16:21.856Z",
-  "totalVisits": 174,
+  "updatedAt": "2026-09-07T10:21:18.006Z",
+  "totalVisits": 175,
   "countries": [
     {
       "key": "BT",
@@ -31,9 +31,9 @@
       "key": "JP",
       "label": "JP",
       "country": "JP",
-      "count": 7,
+      "count": 8,
       "firstSeenAt": "2026-07-04T10:19:44.593Z",
-      "lastSeenAt": "2026-07-09T03:04:46.368Z"
+      "lastSeenAt": "2026-09-07T10:21:18.006Z"
     },
     {
       "key": "SG",
@@ -800,15 +800,27 @@
       "count": 1,
       "firstSeenAt": "2026-09-03T15:16:21.856Z",
       "lastSeenAt": "2026-09-03T15:16:21.856Z"
+    },
+    {
+      "key": "Tokyo, Tokyo, JP",
+      "label": "Tokyo, Tokyo, JP",
+      "city": "Tokyo",
+      "region": "Tokyo",
+      "country": "JP",
+      "latitude": "35.690",
+      "longitude": "139.692",
+      "count": 1,
+      "firstSeenAt": "2026-09-07T10:21:18.006Z",
+      "lastSeenAt": "2026-09-07T10:21:18.006Z"
     }
   ],
   "pages": [
     {
       "key": "/",
       "label": "/",
-      "count": 163,
+      "count": 164,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-09-03T15:16:21.856Z"
+      "lastSeenAt": "2026-09-07T10:21:18.006Z"
     },
     {
       "key": "/mahar",
@@ -861,6 +873,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-09-07T10:21:18.006Z",
+      "page": "/",
+      "country": "JP",
+      "continent": "AS",
+      "region": "Tokyo",
+      "city": "Tokyo",
+      "timezone": "Asia/Tokyo",
+      "latitude": "35.690",
+      "longitude": "139.692",
+      "visitorType": "new",
+      "sessionType": "new",
+      "visitorVisitCount": 1
+    },
     {
       "visitedAt": "2026-09-03T15:16:21.856Z",
       "page": "/",
@@ -1966,23 +1992,28 @@
       "visitorType": "new",
       "sessionType": "new",
       "visitorVisitCount": 1
-    },
-    {
-      "visitedAt": "2026-07-16T12:53:19.938Z",
-      "page": "/",
-      "country": "IN",
-      "continent": "AS",
-      "region": "Gujarat",
-      "city": "Porbandar",
-      "timezone": "Asia/Kolkata",
-      "latitude": "21.642",
-      "longitude": "69.609",
-      "visitorType": "new",
-      "sessionType": "new",
-      "visitorVisitCount": 1
     }
   ],
   "visitors": [
+    {
+      "key": "34e2cf5fcc2d12c8a10c741631cad486d82409cf8e6d80eca9baf3d28da96d21",
+      "firstSeenAt": "2026-09-07T10:21:18.006Z",
+      "lastSeenAt": "2026-09-07T10:21:18.006Z",
+      "visitCount": 1,
+      "sessionCount": 1,
+      "firstPage": "/",
+      "lastPage": "/",
+      "firstCountry": "JP",
+      "firstRegion": "Tokyo",
+      "firstCity": "Tokyo",
+      "firstTimezone": "Asia/Tokyo",
+      "lastCountry": "JP",
+      "lastRegion": "Tokyo",
+      "lastCity": "Tokyo",
+      "lastTimezone": "Asia/Tokyo",
+      "lastLatitude": "35.690",
+      "lastLongitude": "139.692"
+    },
     {
       "key": "ffa49d5fe24baf3233097ea09051f295ff8b88836f409dd491f3c8f687b06ec1",
       "firstSeenAt": "2026-09-03T15:16:21.856Z",
@@ -3580,8 +3611,8 @@
       "lastLongitude": "89.642"
     }
   ],
-  "identifiedVisits": 120,
-  "uniqueVisitors": 84,
+  "identifiedVisits": 121,
+  "uniqueVisitors": 85,
   "returningVisitors": 17,
   "repeatVisits": 36,
   "legacyVisits": 54
