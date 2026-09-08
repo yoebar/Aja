@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-07T10:21:18.006Z",
-  "totalVisits": 175,
+  "updatedAt": "2026-09-08T15:13:19.684Z",
+  "totalVisits": 176,
   "countries": [
     {
       "key": "BT",
@@ -23,9 +23,9 @@
       "key": "US",
       "label": "US",
       "country": "US",
-      "count": 12,
+      "count": 13,
       "firstSeenAt": "2026-07-16T03:42:47.379Z",
-      "lastSeenAt": "2026-09-02T03:02:11.133Z"
+      "lastSeenAt": "2026-09-08T15:13:19.684Z"
     },
     {
       "key": "JP",
@@ -262,6 +262,18 @@
       "lastSeenAt": "2026-09-02T03:02:11.133Z"
     },
     {
+      "key": "Prineville, Oregon, US",
+      "label": "Prineville, Oregon, US",
+      "city": "Prineville",
+      "region": "Oregon",
+      "country": "US",
+      "latitude": "44.300",
+      "longitude": "-120.834",
+      "count": 3,
+      "firstSeenAt": "2026-07-28T11:51:04.107Z",
+      "lastSeenAt": "2026-09-08T15:13:19.684Z"
+    },
+    {
       "key": "Hyderabad, Telangana, IN",
       "label": "Hyderabad, Telangana, IN",
       "city": "Hyderabad",
@@ -356,18 +368,6 @@
       "count": 2,
       "firstSeenAt": "2026-07-28T11:51:37.512Z",
       "lastSeenAt": "2026-08-10T10:17:12.252Z"
-    },
-    {
-      "key": "Prineville, Oregon, US",
-      "label": "Prineville, Oregon, US",
-      "city": "Prineville",
-      "region": "Oregon",
-      "country": "US",
-      "latitude": "44.300",
-      "longitude": "-120.834",
-      "count": 2,
-      "firstSeenAt": "2026-07-28T11:51:04.107Z",
-      "lastSeenAt": "2026-08-11T16:50:03.622Z"
     },
     {
       "key": "Pune, Maharashtra, IN",
@@ -832,9 +832,9 @@
     {
       "key": "/TT",
       "label": "/TT",
-      "count": 2,
+      "count": 3,
       "firstSeenAt": "2026-07-22T02:13:04.992Z",
-      "lastSeenAt": "2026-08-26T06:57:10.022Z"
+      "lastSeenAt": "2026-09-08T15:13:19.684Z"
     },
     {
       "key": "/Carkem?fbclid=IwZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAEej80NNTR0gtSQxs8FQCVgptvd8GiMc7UM8ba9HXw8j9ctkJx5f4m5OrwM1Q4_aem_pFK-ttBnC7PsWMTvFcAieg",
@@ -873,6 +873,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-09-08T15:13:19.684Z",
+      "page": "/TT",
+      "country": "US",
+      "continent": "NA",
+      "region": "Oregon",
+      "city": "Prineville",
+      "timezone": "America/Los_Angeles",
+      "latitude": "44.300",
+      "longitude": "-120.834",
+      "visitorType": "new",
+      "sessionType": "new",
+      "visitorVisitCount": 1
+    },
     {
       "visitedAt": "2026-09-07T10:21:18.006Z",
       "page": "/",
@@ -1978,23 +1992,28 @@
       "visitorType": "new",
       "sessionType": "new",
       "visitorVisitCount": 1
-    },
-    {
-      "visitedAt": "2026-07-17T09:00:14.440Z",
-      "page": "/",
-      "country": "IN",
-      "continent": "AS",
-      "region": "West Bengal",
-      "city": "Siliguri",
-      "timezone": "Asia/Kolkata",
-      "latitude": "26.710",
-      "longitude": "88.429",
-      "visitorType": "new",
-      "sessionType": "new",
-      "visitorVisitCount": 1
     }
   ],
   "visitors": [
+    {
+      "key": "6b5569233c645a4b438028f93de74d99645b29c950fea7c2a15f7abb62841d74",
+      "firstSeenAt": "2026-09-08T15:13:19.684Z",
+      "lastSeenAt": "2026-09-08T15:13:19.684Z",
+      "visitCount": 1,
+      "sessionCount": 1,
+      "firstPage": "/TT",
+      "lastPage": "/TT",
+      "firstCountry": "US",
+      "firstRegion": "Oregon",
+      "firstCity": "Prineville",
+      "firstTimezone": "America/Los_Angeles",
+      "lastCountry": "US",
+      "lastRegion": "Oregon",
+      "lastCity": "Prineville",
+      "lastTimezone": "America/Los_Angeles",
+      "lastLatitude": "44.300",
+      "lastLongitude": "-120.834"
+    },
     {
       "key": "34e2cf5fcc2d12c8a10c741631cad486d82409cf8e6d80eca9baf3d28da96d21",
       "firstSeenAt": "2026-09-07T10:21:18.006Z",
@@ -3611,8 +3630,8 @@
       "lastLongitude": "89.642"
     }
   ],
-  "identifiedVisits": 121,
-  "uniqueVisitors": 85,
+  "identifiedVisits": 122,
+  "uniqueVisitors": 86,
   "returningVisitors": 17,
   "repeatVisits": 36,
   "legacyVisits": 54
