@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-09T03:57:20.958Z",
-  "totalVisits": 177,
+  "updatedAt": "2026-09-09T13:11:45.252Z",
+  "totalVisits": 178,
   "countries": [
     {
       "key": "BT",
@@ -15,9 +15,9 @@
       "key": "IN",
       "label": "IN",
       "country": "IN",
-      "count": 55,
+      "count": 56,
       "firstSeenAt": "2026-06-23T05:03:11.022Z",
-      "lastSeenAt": "2026-09-09T03:57:20.958Z"
+      "lastSeenAt": "2026-09-09T13:11:45.252Z"
     },
     {
       "key": "US",
@@ -202,6 +202,18 @@
       "lastSeenAt": "2026-08-14T02:07:39.461Z"
     },
     {
+      "key": "Mumbai, Maharashtra, IN",
+      "label": "Mumbai, Maharashtra, IN",
+      "city": "Mumbai",
+      "region": "Maharashtra",
+      "country": "IN",
+      "latitude": "19.073",
+      "longitude": "72.883",
+      "count": 6,
+      "firstSeenAt": "2026-07-20T16:25:56.732Z",
+      "lastSeenAt": "2026-09-09T13:11:45.252Z"
+    },
+    {
       "key": "Kyoto, Kyoto, JP",
       "label": "Kyoto, Kyoto, JP",
       "city": "Kyoto",
@@ -212,18 +224,6 @@
       "count": 5,
       "firstSeenAt": "2026-07-04T10:19:44.593Z",
       "lastSeenAt": "2026-07-05T01:01:18.650Z"
-    },
-    {
-      "key": "Mumbai, Maharashtra, IN",
-      "label": "Mumbai, Maharashtra, IN",
-      "city": "Mumbai",
-      "region": "Maharashtra",
-      "country": "IN",
-      "latitude": "19.073",
-      "longitude": "72.883",
-      "count": 5,
-      "firstSeenAt": "2026-07-20T16:25:56.732Z",
-      "lastSeenAt": "2026-08-19T10:04:09.389Z"
     },
     {
       "key": "Bhadrapur, Koshi, NP",
@@ -818,9 +818,9 @@
     {
       "key": "/",
       "label": "/",
-      "count": 165,
+      "count": 166,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-09-09T03:57:20.958Z"
+      "lastSeenAt": "2026-09-09T13:11:45.252Z"
     },
     {
       "key": "/mahar",
@@ -873,6 +873,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-09-09T13:11:45.252Z",
+      "page": "/",
+      "country": "IN",
+      "continent": "AS",
+      "region": "Maharashtra",
+      "city": "Mumbai",
+      "timezone": "Asia/Kolkata",
+      "latitude": "19.073",
+      "longitude": "72.883",
+      "visitorType": "new",
+      "sessionType": "new",
+      "visitorVisitCount": 1
+    },
     {
       "visitedAt": "2026-09-09T03:57:20.958Z",
       "page": "/",
@@ -1978,23 +1992,28 @@
       "visitorType": "returning",
       "sessionType": "new",
       "visitorVisitCount": 2
-    },
-    {
-      "visitedAt": "2026-07-18T04:37:24.942Z",
-      "page": "/",
-      "country": "BT",
-      "continent": "AS",
-      "region": "Trashi Yangste",
-      "city": "Trashi Yangtse",
-      "timezone": "Asia/Thimphu",
-      "latitude": "27.612",
-      "longitude": "91.498",
-      "visitorType": "new",
-      "sessionType": "new",
-      "visitorVisitCount": 1
     }
   ],
   "visitors": [
+    {
+      "key": "a689896bd46dc834094dd3d6672d95565f7f32e47febfa273e54da5fd66c6513",
+      "firstSeenAt": "2026-09-09T13:11:45.252Z",
+      "lastSeenAt": "2026-09-09T13:11:45.252Z",
+      "visitCount": 1,
+      "sessionCount": 1,
+      "firstPage": "/",
+      "lastPage": "/",
+      "firstCountry": "IN",
+      "firstRegion": "Maharashtra",
+      "firstCity": "Mumbai",
+      "firstTimezone": "Asia/Kolkata",
+      "lastCountry": "IN",
+      "lastRegion": "Maharashtra",
+      "lastCity": "Mumbai",
+      "lastTimezone": "Asia/Kolkata",
+      "lastLatitude": "19.073",
+      "lastLongitude": "72.883"
+    },
     {
       "key": "13c4384ba314cc7f289362ab20e327f538cede777c5c8cd94b933d0bc435ab22",
       "firstSeenAt": "2026-09-09T03:57:20.958Z",
@@ -3649,8 +3668,8 @@
       "lastLongitude": "89.642"
     }
   ],
-  "identifiedVisits": 123,
-  "uniqueVisitors": 87,
+  "identifiedVisits": 124,
+  "uniqueVisitors": 88,
   "returningVisitors": 17,
   "repeatVisits": 36,
   "legacyVisits": 54
