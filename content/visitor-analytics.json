@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-10T07:41:00.138Z",
-  "totalVisits": 180,
+  "updatedAt": "2026-09-10T16:27:36.479Z",
+  "totalVisits": 181,
   "countries": [
     {
       "key": "BT",
@@ -15,9 +15,9 @@
       "key": "IN",
       "label": "IN",
       "country": "IN",
-      "count": 57,
+      "count": 58,
       "firstSeenAt": "2026-06-23T05:03:11.022Z",
-      "lastSeenAt": "2026-09-09T19:52:14.896Z"
+      "lastSeenAt": "2026-09-10T16:27:36.479Z"
     },
     {
       "key": "US",
@@ -812,15 +812,27 @@
       "count": 1,
       "firstSeenAt": "2026-09-07T10:21:18.006Z",
       "lastSeenAt": "2026-09-07T10:21:18.006Z"
+    },
+    {
+      "key": "Bhubaneswar, Odisha, IN",
+      "label": "Bhubaneswar, Odisha, IN",
+      "city": "Bhubaneswar",
+      "region": "Odisha",
+      "country": "IN",
+      "latitude": "20.272",
+      "longitude": "85.834",
+      "count": 1,
+      "firstSeenAt": "2026-09-10T16:27:36.479Z",
+      "lastSeenAt": "2026-09-10T16:27:36.479Z"
     }
   ],
   "pages": [
     {
       "key": "/",
       "label": "/",
-      "count": 168,
+      "count": 169,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-09-10T07:41:00.138Z"
+      "lastSeenAt": "2026-09-10T16:27:36.479Z"
     },
     {
       "key": "/mahar",
@@ -873,6 +885,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-09-10T16:27:36.479Z",
+      "page": "/",
+      "country": "IN",
+      "continent": "AS",
+      "region": "Odisha",
+      "city": "Bhubaneswar",
+      "timezone": "Asia/Kolkata",
+      "latitude": "20.272",
+      "longitude": "85.834",
+      "visitorType": "new",
+      "sessionType": "new",
+      "visitorVisitCount": 1
+    },
     {
       "visitedAt": "2026-09-10T07:41:00.138Z",
       "page": "/",
@@ -1978,23 +2004,28 @@
       "visitorType": "returning",
       "sessionType": "same",
       "visitorVisitCount": 10
-    },
-    {
-      "visitedAt": "2026-07-20T16:25:56.732Z",
-      "page": "/",
-      "country": "IN",
-      "continent": "AS",
-      "region": "Maharashtra",
-      "city": "Mumbai",
-      "timezone": "Asia/Kolkata",
-      "latitude": "19.073",
-      "longitude": "72.883",
-      "visitorType": "returning",
-      "sessionType": "new",
-      "visitorVisitCount": 9
     }
   ],
   "visitors": [
+    {
+      "key": "89d0131a3baf9cf7445601f6724a957fd8ba2fbb951592cf53b1391f8b59bc19",
+      "firstSeenAt": "2026-09-10T16:27:36.479Z",
+      "lastSeenAt": "2026-09-10T16:27:36.479Z",
+      "visitCount": 1,
+      "sessionCount": 1,
+      "firstPage": "/",
+      "lastPage": "/",
+      "firstCountry": "IN",
+      "firstRegion": "Odisha",
+      "firstCity": "Bhubaneswar",
+      "firstTimezone": "Asia/Kolkata",
+      "lastCountry": "IN",
+      "lastRegion": "Odisha",
+      "lastCity": "Bhubaneswar",
+      "lastTimezone": "Asia/Kolkata",
+      "lastLatitude": "20.272",
+      "lastLongitude": "85.834"
+    },
     {
       "key": "7d61bc3cb3e66da01648074e362c7a03b550d6adc75d75fe321e201c04042e95",
       "firstSeenAt": "2026-09-10T07:41:00.138Z",
@@ -3706,8 +3737,8 @@
       "lastLongitude": "89.642"
     }
   ],
-  "identifiedVisits": 126,
-  "uniqueVisitors": 90,
+  "identifiedVisits": 127,
+  "uniqueVisitors": 91,
   "returningVisitors": 17,
   "repeatVisits": 36,
   "legacyVisits": 54
