@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-10T16:27:36.479Z",
-  "totalVisits": 181,
+  "updatedAt": "2026-09-11T11:44:16.061Z",
+  "totalVisits": 182,
   "countries": [
     {
       "key": "BT",
@@ -15,9 +15,9 @@
       "key": "IN",
       "label": "IN",
       "country": "IN",
-      "count": 58,
+      "count": 59,
       "firstSeenAt": "2026-06-23T05:03:11.022Z",
-      "lastSeenAt": "2026-09-10T16:27:36.479Z"
+      "lastSeenAt": "2026-09-11T11:44:16.061Z"
     },
     {
       "key": "US",
@@ -274,6 +274,18 @@
       "lastSeenAt": "2026-09-08T15:13:19.684Z"
     },
     {
+      "key": "Pune, Maharashtra, IN",
+      "label": "Pune, Maharashtra, IN",
+      "city": "Pune",
+      "region": "Maharashtra",
+      "country": "IN",
+      "latitude": "18.520",
+      "longitude": "73.855",
+      "count": 3,
+      "firstSeenAt": "2026-08-07T04:45:48.800Z",
+      "lastSeenAt": "2026-09-11T11:44:16.061Z"
+    },
+    {
       "key": "Hyderabad, Telangana, IN",
       "label": "Hyderabad, Telangana, IN",
       "city": "Hyderabad",
@@ -368,18 +380,6 @@
       "count": 2,
       "firstSeenAt": "2026-07-28T11:51:37.512Z",
       "lastSeenAt": "2026-08-10T10:17:12.252Z"
-    },
-    {
-      "key": "Pune, Maharashtra, IN",
-      "label": "Pune, Maharashtra, IN",
-      "city": "Pune",
-      "region": "Maharashtra",
-      "country": "IN",
-      "latitude": "18.520",
-      "longitude": "73.855",
-      "count": 2,
-      "firstSeenAt": "2026-08-07T04:45:48.800Z",
-      "lastSeenAt": "2026-08-28T07:02:07.658Z"
     },
     {
       "key": "Indore, Madhya Pradesh, IN",
@@ -830,9 +830,9 @@
     {
       "key": "/",
       "label": "/",
-      "count": 169,
+      "count": 170,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-09-10T16:27:36.479Z"
+      "lastSeenAt": "2026-09-11T11:44:16.061Z"
     },
     {
       "key": "/mahar",
@@ -885,6 +885,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-09-11T11:44:16.061Z",
+      "page": "/",
+      "country": "IN",
+      "continent": "AS",
+      "region": "Maharashtra",
+      "city": "Pune",
+      "timezone": "Asia/Kolkata",
+      "latitude": "18.520",
+      "longitude": "73.855",
+      "visitorType": "new",
+      "sessionType": "new",
+      "visitorVisitCount": 1
+    },
     {
       "visitedAt": "2026-09-10T16:27:36.479Z",
       "page": "/",
@@ -1990,23 +2004,28 @@
       "visitorType": "returning",
       "sessionType": "same",
       "visitorVisitCount": 11
-    },
-    {
-      "visitedAt": "2026-07-20T16:26:01.049Z",
-      "page": "/dashboard",
-      "country": "IN",
-      "continent": "AS",
-      "region": "Maharashtra",
-      "city": "Mumbai",
-      "timezone": "Asia/Kolkata",
-      "latitude": "19.073",
-      "longitude": "72.883",
-      "visitorType": "returning",
-      "sessionType": "same",
-      "visitorVisitCount": 10
     }
   ],
   "visitors": [
+    {
+      "key": "446cf008dddb14561e22fbe72427ebcfbcb9405219a12a156a299178bbe44f18",
+      "firstSeenAt": "2026-09-11T11:44:16.061Z",
+      "lastSeenAt": "2026-09-11T11:44:16.061Z",
+      "visitCount": 1,
+      "sessionCount": 1,
+      "firstPage": "/",
+      "lastPage": "/",
+      "firstCountry": "IN",
+      "firstRegion": "Maharashtra",
+      "firstCity": "Pune",
+      "firstTimezone": "Asia/Kolkata",
+      "lastCountry": "IN",
+      "lastRegion": "Maharashtra",
+      "lastCity": "Pune",
+      "lastTimezone": "Asia/Kolkata",
+      "lastLatitude": "18.520",
+      "lastLongitude": "73.855"
+    },
     {
       "key": "89d0131a3baf9cf7445601f6724a957fd8ba2fbb951592cf53b1391f8b59bc19",
       "firstSeenAt": "2026-09-10T16:27:36.479Z",
@@ -3737,8 +3756,8 @@
       "lastLongitude": "89.642"
     }
   ],
-  "identifiedVisits": 127,
-  "uniqueVisitors": 91,
+  "identifiedVisits": 128,
+  "uniqueVisitors": 92,
   "returningVisitors": 17,
   "repeatVisits": 36,
   "legacyVisits": 54
