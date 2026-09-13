@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-11T11:44:16.061Z",
-  "totalVisits": 182,
+  "updatedAt": "2026-09-13T22:13:48.257Z",
+  "totalVisits": 183,
   "countries": [
     {
       "key": "BT",
@@ -15,9 +15,9 @@
       "key": "IN",
       "label": "IN",
       "country": "IN",
-      "count": 59,
+      "count": 60,
       "firstSeenAt": "2026-06-23T05:03:11.022Z",
-      "lastSeenAt": "2026-09-11T11:44:16.061Z"
+      "lastSeenAt": "2026-09-13T22:13:48.257Z"
     },
     {
       "key": "US",
@@ -178,6 +178,18 @@
       "lastSeenAt": "2026-09-10T07:41:00.138Z"
     },
     {
+      "key": "Kolkata, West Bengal, IN",
+      "label": "Kolkata, West Bengal, IN",
+      "city": "Kolkata",
+      "region": "West Bengal",
+      "country": "IN",
+      "latitude": "22.563",
+      "longitude": "88.363",
+      "count": 8,
+      "firstSeenAt": "2026-06-24T09:33:09.115Z",
+      "lastSeenAt": "2026-09-13T22:13:48.257Z"
+    },
+    {
       "key": "Singapore, SG",
       "label": "Singapore, SG",
       "city": "Singapore",
@@ -188,18 +200,6 @@
       "count": 7,
       "firstSeenAt": "2026-06-23T17:25:37.923Z",
       "lastSeenAt": "2026-07-22T01:29:13.573Z"
-    },
-    {
-      "key": "Kolkata, West Bengal, IN",
-      "label": "Kolkata, West Bengal, IN",
-      "city": "Kolkata",
-      "region": "West Bengal",
-      "country": "IN",
-      "latitude": "22.563",
-      "longitude": "88.363",
-      "count": 7,
-      "firstSeenAt": "2026-06-24T09:33:09.115Z",
-      "lastSeenAt": "2026-08-14T02:07:39.461Z"
     },
     {
       "key": "Mumbai, Maharashtra, IN",
@@ -830,9 +830,9 @@
     {
       "key": "/",
       "label": "/",
-      "count": 170,
+      "count": 171,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-09-11T11:44:16.061Z"
+      "lastSeenAt": "2026-09-13T22:13:48.257Z"
     },
     {
       "key": "/mahar",
@@ -885,6 +885,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-09-13T22:13:48.257Z",
+      "page": "/",
+      "country": "IN",
+      "continent": "AS",
+      "region": "West Bengal",
+      "city": "Kolkata",
+      "timezone": "Asia/Kolkata",
+      "latitude": "22.563",
+      "longitude": "88.363",
+      "visitorType": "new",
+      "sessionType": "new",
+      "visitorVisitCount": 1
+    },
     {
       "visitedAt": "2026-09-11T11:44:16.061Z",
       "page": "/",
@@ -1990,23 +2004,28 @@
       "visitorType": "legacy",
       "sessionType": "unknown",
       "visitorVisitCount": 0
-    },
-    {
-      "visitedAt": "2026-07-20T16:26:47.566Z",
-      "page": "/",
-      "country": "IN",
-      "continent": "AS",
-      "region": "Maharashtra",
-      "city": "Mumbai",
-      "timezone": "Asia/Kolkata",
-      "latitude": "19.073",
-      "longitude": "72.883",
-      "visitorType": "returning",
-      "sessionType": "same",
-      "visitorVisitCount": 11
     }
   ],
   "visitors": [
+    {
+      "key": "11d148338ed3ad30c248a2c7c7aeb42eb40f4197dcae402fb81158f1e6bcf875",
+      "firstSeenAt": "2026-09-13T22:13:48.257Z",
+      "lastSeenAt": "2026-09-13T22:13:48.257Z",
+      "visitCount": 1,
+      "sessionCount": 1,
+      "firstPage": "/",
+      "lastPage": "/",
+      "firstCountry": "IN",
+      "firstRegion": "West Bengal",
+      "firstCity": "Kolkata",
+      "firstTimezone": "Asia/Kolkata",
+      "lastCountry": "IN",
+      "lastRegion": "West Bengal",
+      "lastCity": "Kolkata",
+      "lastTimezone": "Asia/Kolkata",
+      "lastLatitude": "22.563",
+      "lastLongitude": "88.363"
+    },
     {
       "key": "446cf008dddb14561e22fbe72427ebcfbcb9405219a12a156a299178bbe44f18",
       "firstSeenAt": "2026-09-11T11:44:16.061Z",
@@ -3756,8 +3775,8 @@
       "lastLongitude": "89.642"
     }
   ],
-  "identifiedVisits": 128,
-  "uniqueVisitors": 92,
+  "identifiedVisits": 129,
+  "uniqueVisitors": 93,
   "returningVisitors": 17,
   "repeatVisits": 36,
   "legacyVisits": 54
