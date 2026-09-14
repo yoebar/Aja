@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-13T22:13:48.257Z",
-  "totalVisits": 183,
+  "updatedAt": "2026-09-14T00:55:55.826Z",
+  "totalVisits": 184,
   "countries": [
     {
       "key": "BT",
@@ -84,20 +84,20 @@
       "lastSeenAt": "2026-08-19T06:21:32.381Z"
     },
     {
+      "key": "HK",
+      "label": "HK",
+      "country": "HK",
+      "count": 2,
+      "firstSeenAt": "2026-06-30T03:41:36.187Z",
+      "lastSeenAt": "2026-09-14T00:55:55.826Z"
+    },
+    {
       "key": "SE",
       "label": "SE",
       "country": "SE",
       "count": 1,
       "firstSeenAt": "2026-06-23T18:49:41.127Z",
       "lastSeenAt": "2026-06-23T18:49:41.127Z"
-    },
-    {
-      "key": "HK",
-      "label": "HK",
-      "country": "HK",
-      "count": 1,
-      "firstSeenAt": "2026-06-30T03:41:36.187Z",
-      "lastSeenAt": "2026-06-30T03:41:36.187Z"
     },
     {
       "key": "TH",
@@ -824,15 +824,27 @@
       "count": 1,
       "firstSeenAt": "2026-09-10T16:27:36.479Z",
       "lastSeenAt": "2026-09-10T16:27:36.479Z"
+    },
+    {
+      "key": "Hong Kong, HK",
+      "label": "Hong Kong, HK",
+      "city": "Hong Kong",
+      "region": "",
+      "country": "HK",
+      "latitude": "22.278",
+      "longitude": "114.175",
+      "count": 1,
+      "firstSeenAt": "2026-09-14T00:55:55.826Z",
+      "lastSeenAt": "2026-09-14T00:55:55.826Z"
     }
   ],
   "pages": [
     {
       "key": "/",
       "label": "/",
-      "count": 171,
+      "count": 172,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-09-13T22:13:48.257Z"
+      "lastSeenAt": "2026-09-14T00:55:55.826Z"
     },
     {
       "key": "/mahar",
@@ -885,6 +897,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-09-14T00:55:55.826Z",
+      "page": "/",
+      "country": "HK",
+      "continent": "AS",
+      "region": "",
+      "city": "Hong Kong",
+      "timezone": "Asia/Hong_Kong",
+      "latitude": "22.278",
+      "longitude": "114.175",
+      "visitorType": "returning",
+      "sessionType": "new",
+      "visitorVisitCount": 2
+    },
     {
       "visitedAt": "2026-09-13T22:13:48.257Z",
       "page": "/",
@@ -1990,23 +2016,28 @@
       "visitorType": "returning",
       "sessionType": "new",
       "visitorVisitCount": 12
-    },
-    {
-      "visitedAt": "2026-07-20T16:29:44.898Z",
-      "page": "/",
-      "country": "IN",
-      "continent": "AS",
-      "region": "Maharashtra",
-      "city": "Mumbai",
-      "timezone": "Asia/Kolkata",
-      "latitude": "19.073",
-      "longitude": "72.883",
-      "visitorType": "legacy",
-      "sessionType": "unknown",
-      "visitorVisitCount": 0
     }
   ],
   "visitors": [
+    {
+      "key": "cb5857477583b21d1ce1263d95f8afe36fd77837d11256e88092e2f6f54c368d",
+      "firstSeenAt": "2026-08-19T06:21:32.381Z",
+      "lastSeenAt": "2026-09-14T00:55:55.826Z",
+      "visitCount": 2,
+      "sessionCount": 2,
+      "firstPage": "/",
+      "lastPage": "/",
+      "firstCountry": "DE",
+      "firstRegion": "Hesse",
+      "firstCity": "Frankfurt am Main",
+      "firstTimezone": "Europe/Berlin",
+      "lastCountry": "HK",
+      "lastRegion": "",
+      "lastCity": "Hong Kong",
+      "lastTimezone": "Asia/Hong_Kong",
+      "lastLatitude": "22.278",
+      "lastLongitude": "114.175"
+    },
     {
       "key": "11d148338ed3ad30c248a2c7c7aeb42eb40f4197dcae402fb81158f1e6bcf875",
       "firstSeenAt": "2026-09-13T22:13:48.257Z",
@@ -2500,25 +2531,6 @@
       "lastTimezone": "Asia/Kolkata",
       "lastLatitude": "19.073",
       "lastLongitude": "72.883"
-    },
-    {
-      "key": "cb5857477583b21d1ce1263d95f8afe36fd77837d11256e88092e2f6f54c368d",
-      "firstSeenAt": "2026-08-19T06:21:32.381Z",
-      "lastSeenAt": "2026-08-19T06:21:32.381Z",
-      "visitCount": 1,
-      "sessionCount": 1,
-      "firstPage": "/",
-      "lastPage": "/",
-      "firstCountry": "DE",
-      "firstRegion": "Hesse",
-      "firstCity": "Frankfurt am Main",
-      "firstTimezone": "Europe/Berlin",
-      "lastCountry": "DE",
-      "lastRegion": "Hesse",
-      "lastCity": "Frankfurt am Main",
-      "lastTimezone": "Europe/Berlin",
-      "lastLatitude": "50.116",
-      "lastLongitude": "8.684"
     },
     {
       "key": "89f3ce624daaf0f9df54000a599fb03e70c289b21e012c0bba00d79ed54a70c3",
@@ -3775,9 +3787,9 @@
       "lastLongitude": "89.642"
     }
   ],
-  "identifiedVisits": 129,
+  "identifiedVisits": 130,
   "uniqueVisitors": 93,
-  "returningVisitors": 17,
-  "repeatVisits": 36,
+  "returningVisitors": 18,
+  "repeatVisits": 37,
   "legacyVisits": 54
 }
