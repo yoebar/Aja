@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-17T02:55:09.883Z",
-  "totalVisits": 185,
+  "updatedAt": "2026-09-18T02:47:49.177Z",
+  "totalVisits": 186,
   "countries": [
     {
       "key": "BT",
@@ -15,9 +15,9 @@
       "key": "IN",
       "label": "IN",
       "country": "IN",
-      "count": 61,
+      "count": 62,
       "firstSeenAt": "2026-06-23T05:03:11.022Z",
-      "lastSeenAt": "2026-09-17T02:55:09.883Z"
+      "lastSeenAt": "2026-09-18T02:47:49.177Z"
     },
     {
       "key": "US",
@@ -836,15 +836,27 @@
       "count": 1,
       "firstSeenAt": "2026-09-14T00:55:55.826Z",
       "lastSeenAt": "2026-09-14T00:55:55.826Z"
+    },
+    {
+      "key": "Panjim, Goa, IN",
+      "label": "Panjim, Goa, IN",
+      "city": "Panjim",
+      "region": "Goa",
+      "country": "IN",
+      "latitude": "15.496",
+      "longitude": "73.826",
+      "count": 1,
+      "firstSeenAt": "2026-09-18T02:47:49.177Z",
+      "lastSeenAt": "2026-09-18T02:47:49.177Z"
     }
   ],
   "pages": [
     {
       "key": "/",
       "label": "/",
-      "count": 173,
+      "count": 174,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-09-17T02:55:09.883Z"
+      "lastSeenAt": "2026-09-18T02:47:49.177Z"
     },
     {
       "key": "/mahar",
@@ -897,6 +909,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-09-18T02:47:49.177Z",
+      "page": "/",
+      "country": "IN",
+      "continent": "AS",
+      "region": "Goa",
+      "city": "Panjim",
+      "timezone": "Asia/Kolkata",
+      "latitude": "15.496",
+      "longitude": "73.826",
+      "visitorType": "new",
+      "sessionType": "new",
+      "visitorVisitCount": 1
+    },
     {
       "visitedAt": "2026-09-17T02:55:09.883Z",
       "page": "/",
@@ -2002,23 +2028,28 @@
       "visitorType": "returning",
       "sessionType": "new",
       "visitorVisitCount": 13
-    },
-    {
-      "visitedAt": "2026-07-21T01:57:55.825Z",
-      "page": "/",
-      "country": "US",
-      "continent": "NA",
-      "region": "California",
-      "city": "Los Angeles",
-      "timezone": "America/Los_Angeles",
-      "latitude": "34.052",
-      "longitude": "-118.244",
-      "visitorType": "new",
-      "sessionType": "new",
-      "visitorVisitCount": 1
     }
   ],
   "visitors": [
+    {
+      "key": "6d5bae5930a9beb4ad0c2a7e21f8597286486c797f9db35aca324df9d01bdecc",
+      "firstSeenAt": "2026-09-18T02:47:49.177Z",
+      "lastSeenAt": "2026-09-18T02:47:49.177Z",
+      "visitCount": 1,
+      "sessionCount": 1,
+      "firstPage": "/",
+      "lastPage": "/",
+      "firstCountry": "IN",
+      "firstRegion": "Goa",
+      "firstCity": "Panjim",
+      "firstTimezone": "Asia/Kolkata",
+      "lastCountry": "IN",
+      "lastRegion": "Goa",
+      "lastCity": "Panjim",
+      "lastTimezone": "Asia/Kolkata",
+      "lastLatitude": "15.496",
+      "lastLongitude": "73.826"
+    },
     {
       "key": "0d38375cfcaba6efda344de1972d013456d738292c7758d28142b6578b18873e",
       "firstSeenAt": "2026-09-17T02:55:09.883Z",
@@ -3806,8 +3837,8 @@
       "lastLongitude": "89.642"
     }
   ],
-  "identifiedVisits": 131,
-  "uniqueVisitors": 94,
+  "identifiedVisits": 132,
+  "uniqueVisitors": 95,
   "returningVisitors": 18,
   "repeatVisits": 37,
   "legacyVisits": 54
