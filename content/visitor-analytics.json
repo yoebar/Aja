@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-18T02:47:49.177Z",
-  "totalVisits": 186,
+  "updatedAt": "2026-09-19T12:22:02.182Z",
+  "totalVisits": 187,
   "countries": [
     {
       "key": "BT",
@@ -92,6 +92,14 @@
       "lastSeenAt": "2026-09-14T00:55:55.826Z"
     },
     {
+      "key": "IE",
+      "label": "IE",
+      "country": "IE",
+      "count": 2,
+      "firstSeenAt": "2026-07-22T02:13:04.992Z",
+      "lastSeenAt": "2026-09-19T12:22:02.182Z"
+    },
+    {
       "key": "SE",
       "label": "SE",
       "country": "SE",
@@ -106,14 +114,6 @@
       "count": 1,
       "firstSeenAt": "2026-07-20T18:36:57.671Z",
       "lastSeenAt": "2026-07-20T18:36:57.671Z"
-    },
-    {
-      "key": "IE",
-      "label": "IE",
-      "country": "IE",
-      "count": 1,
-      "firstSeenAt": "2026-07-22T02:13:04.992Z",
-      "lastSeenAt": "2026-07-22T02:13:04.992Z"
     },
     {
       "key": "KR",
@@ -394,6 +394,18 @@
       "lastSeenAt": "2026-08-30T21:01:56.583Z"
     },
     {
+      "key": "Clonee, Leinster, IE",
+      "label": "Clonee, Leinster, IE",
+      "city": "Clonee",
+      "region": "Leinster",
+      "country": "IE",
+      "latitude": "53.412",
+      "longitude": "-6.444",
+      "count": 2,
+      "firstSeenAt": "2026-07-22T02:13:04.992Z",
+      "lastSeenAt": "2026-09-19T12:22:02.182Z"
+    },
+    {
       "key": "Luleå, Norrbotten, SE",
       "label": "Luleå, Norrbotten, SE",
       "city": "Luleå",
@@ -548,18 +560,6 @@
       "count": 1,
       "firstSeenAt": "2026-07-20T18:36:57.671Z",
       "lastSeenAt": "2026-07-20T18:36:57.671Z"
-    },
-    {
-      "key": "Clonee, Leinster, IE",
-      "label": "Clonee, Leinster, IE",
-      "city": "Clonee",
-      "region": "Leinster",
-      "country": "IE",
-      "latitude": "53.412",
-      "longitude": "-6.444",
-      "count": 1,
-      "firstSeenAt": "2026-07-22T02:13:04.992Z",
-      "lastSeenAt": "2026-07-22T02:13:04.992Z"
     },
     {
       "key": "Wangdue Phodrang, Wangdi Phodrang, BT",
@@ -854,9 +854,9 @@
     {
       "key": "/",
       "label": "/",
-      "count": 174,
+      "count": 175,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-09-18T02:47:49.177Z"
+      "lastSeenAt": "2026-09-19T12:22:02.182Z"
     },
     {
       "key": "/mahar",
@@ -909,6 +909,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-09-19T12:22:02.182Z",
+      "page": "/",
+      "country": "IE",
+      "continent": "EU",
+      "region": "Leinster",
+      "city": "Clonee",
+      "timezone": "Europe/Dublin",
+      "latitude": "53.412",
+      "longitude": "-6.444",
+      "visitorType": "new",
+      "sessionType": "new",
+      "visitorVisitCount": 1
+    },
     {
       "visitedAt": "2026-09-18T02:47:49.177Z",
       "page": "/",
@@ -2014,23 +2028,28 @@
       "visitorType": "returning",
       "sessionType": "new",
       "visitorVisitCount": 2
-    },
-    {
-      "visitedAt": "2026-07-21T17:20:09.893Z",
-      "page": "/",
-      "country": "BT",
-      "continent": "AS",
-      "region": "Thimphu District",
-      "city": "Thimphu",
-      "timezone": "Asia/Thimphu",
-      "latitude": "27.466",
-      "longitude": "89.642",
-      "visitorType": "returning",
-      "sessionType": "new",
-      "visitorVisitCount": 13
     }
   ],
   "visitors": [
+    {
+      "key": "2119b654fc73af5545e86c51baafeb2df1a0f9bc0d2d4bebc1e9a5ecdb7db73f",
+      "firstSeenAt": "2026-09-19T12:22:02.182Z",
+      "lastSeenAt": "2026-09-19T12:22:02.182Z",
+      "visitCount": 1,
+      "sessionCount": 1,
+      "firstPage": "/",
+      "lastPage": "/",
+      "firstCountry": "IE",
+      "firstRegion": "Leinster",
+      "firstCity": "Clonee",
+      "firstTimezone": "Europe/Dublin",
+      "lastCountry": "IE",
+      "lastRegion": "Leinster",
+      "lastCity": "Clonee",
+      "lastTimezone": "Europe/Dublin",
+      "lastLatitude": "53.412",
+      "lastLongitude": "-6.444"
+    },
     {
       "key": "6d5bae5930a9beb4ad0c2a7e21f8597286486c797f9db35aca324df9d01bdecc",
       "firstSeenAt": "2026-09-18T02:47:49.177Z",
@@ -3837,8 +3856,8 @@
       "lastLongitude": "89.642"
     }
   ],
-  "identifiedVisits": 132,
-  "uniqueVisitors": 95,
+  "identifiedVisits": 133,
+  "uniqueVisitors": 96,
   "returningVisitors": 18,
   "repeatVisits": 37,
   "legacyVisits": 54
