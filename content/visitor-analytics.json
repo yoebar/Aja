@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-19T12:22:02.182Z",
-  "totalVisits": 187,
+  "updatedAt": "2026-09-21T08:28:57.205Z",
+  "totalVisits": 188,
   "countries": [
     {
       "key": "BT",
@@ -15,9 +15,9 @@
       "key": "IN",
       "label": "IN",
       "country": "IN",
-      "count": 62,
+      "count": 63,
       "firstSeenAt": "2026-06-23T05:03:11.022Z",
-      "lastSeenAt": "2026-09-18T02:47:49.177Z"
+      "lastSeenAt": "2026-09-21T08:28:57.205Z"
     },
     {
       "key": "US",
@@ -848,15 +848,27 @@
       "count": 1,
       "firstSeenAt": "2026-09-18T02:47:49.177Z",
       "lastSeenAt": "2026-09-18T02:47:49.177Z"
+    },
+    {
+      "key": "Jorhat, Assam, IN",
+      "label": "Jorhat, Assam, IN",
+      "city": "Jorhat",
+      "region": "Assam",
+      "country": "IN",
+      "latitude": "26.758",
+      "longitude": "94.203",
+      "count": 1,
+      "firstSeenAt": "2026-09-21T08:28:57.205Z",
+      "lastSeenAt": "2026-09-21T08:28:57.205Z"
     }
   ],
   "pages": [
     {
       "key": "/",
       "label": "/",
-      "count": 175,
+      "count": 176,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-09-19T12:22:02.182Z"
+      "lastSeenAt": "2026-09-21T08:28:57.205Z"
     },
     {
       "key": "/mahar",
@@ -909,6 +921,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-09-21T08:28:57.205Z",
+      "page": "/",
+      "country": "IN",
+      "continent": "AS",
+      "region": "Assam",
+      "city": "Jorhat",
+      "timezone": "Asia/Kolkata",
+      "latitude": "26.758",
+      "longitude": "94.203",
+      "visitorType": "new",
+      "sessionType": "new",
+      "visitorVisitCount": 1
+    },
     {
       "visitedAt": "2026-09-19T12:22:02.182Z",
       "page": "/",
@@ -2014,23 +2040,28 @@
       "visitorType": "new",
       "sessionType": "new",
       "visitorVisitCount": 1
-    },
-    {
-      "visitedAt": "2026-07-22T01:29:13.573Z",
-      "page": "/",
-      "country": "SG",
-      "continent": "AS",
-      "region": "",
-      "city": "Singapore",
-      "timezone": "Asia/Singapore",
-      "latitude": "1.290",
-      "longitude": "103.850",
-      "visitorType": "returning",
-      "sessionType": "new",
-      "visitorVisitCount": 2
     }
   ],
   "visitors": [
+    {
+      "key": "4ca7fc2fe64b967217e1f4c34d9cfd095cfe6140cd1c3a09f82e9fa8a7f9898a",
+      "firstSeenAt": "2026-09-21T08:28:57.205Z",
+      "lastSeenAt": "2026-09-21T08:28:57.205Z",
+      "visitCount": 1,
+      "sessionCount": 1,
+      "firstPage": "/",
+      "lastPage": "/",
+      "firstCountry": "IN",
+      "firstRegion": "Assam",
+      "firstCity": "Jorhat",
+      "firstTimezone": "Asia/Kolkata",
+      "lastCountry": "IN",
+      "lastRegion": "Assam",
+      "lastCity": "Jorhat",
+      "lastTimezone": "Asia/Kolkata",
+      "lastLatitude": "26.758",
+      "lastLongitude": "94.203"
+    },
     {
       "key": "2119b654fc73af5545e86c51baafeb2df1a0f9bc0d2d4bebc1e9a5ecdb7db73f",
       "firstSeenAt": "2026-09-19T12:22:02.182Z",
@@ -3856,8 +3887,8 @@
       "lastLongitude": "89.642"
     }
   ],
-  "identifiedVisits": 133,
-  "uniqueVisitors": 96,
+  "identifiedVisits": 134,
+  "uniqueVisitors": 97,
   "returningVisitors": 18,
   "repeatVisits": 37,
   "legacyVisits": 54
