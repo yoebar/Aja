@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-22T14:48:28.377Z",
-  "totalVisits": 189,
+  "updatedAt": "2026-09-22T14:48:33.340Z",
+  "totalVisits": 190,
   "countries": [
     {
       "key": "BT",
@@ -103,9 +103,9 @@
       "key": "SE",
       "label": "SE",
       "country": "SE",
-      "count": 1,
+      "count": 2,
       "firstSeenAt": "2026-06-23T18:49:41.127Z",
-      "lastSeenAt": "2026-06-23T18:49:41.127Z"
+      "lastSeenAt": "2026-09-22T14:48:33.340Z"
     },
     {
       "key": "TH",
@@ -413,9 +413,9 @@
       "country": "SE",
       "latitude": "65.584",
       "longitude": "22.155",
-      "count": 1,
+      "count": 2,
       "firstSeenAt": "2026-06-23T18:49:41.127Z",
-      "lastSeenAt": "2026-06-23T18:49:41.127Z"
+      "lastSeenAt": "2026-09-22T14:48:33.340Z"
     },
     {
       "key": "Tinsukia, Assam, IN",
@@ -866,9 +866,9 @@
     {
       "key": "/",
       "label": "/",
-      "count": 177,
+      "count": 178,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-09-22T14:48:28.377Z"
+      "lastSeenAt": "2026-09-22T14:48:33.340Z"
     },
     {
       "key": "/mahar",
@@ -921,6 +921,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-09-22T14:48:33.340Z",
+      "page": "/",
+      "country": "SE",
+      "continent": "EU",
+      "region": "Norrbotten",
+      "city": "Luleå",
+      "timezone": "Europe/Stockholm",
+      "latitude": "65.584",
+      "longitude": "22.155",
+      "visitorType": "new",
+      "sessionType": "new",
+      "visitorVisitCount": 1
+    },
     {
       "visitedAt": "2026-09-22T14:48:28.377Z",
       "page": "/",
@@ -2026,23 +2040,28 @@
       "visitorType": "returning",
       "sessionType": "new",
       "visitorVisitCount": 2
-    },
-    {
-      "visitedAt": "2026-07-23T13:00:54.386Z",
-      "page": "/",
-      "country": "BT",
-      "continent": "AS",
-      "region": "Thimphu District",
-      "city": "Thimphu",
-      "timezone": "Asia/Thimphu",
-      "latitude": "27.466",
-      "longitude": "89.642",
-      "visitorType": "new",
-      "sessionType": "new",
-      "visitorVisitCount": 1
     }
   ],
   "visitors": [
+    {
+      "key": "fe1dc5ee0d347f1e5b2876702a540e1cdbc386271c99385b6f40027b4b8552c2",
+      "firstSeenAt": "2026-09-22T14:48:33.340Z",
+      "lastSeenAt": "2026-09-22T14:48:33.340Z",
+      "visitCount": 1,
+      "sessionCount": 1,
+      "firstPage": "/",
+      "lastPage": "/",
+      "firstCountry": "SE",
+      "firstRegion": "Norrbotten",
+      "firstCity": "Luleå",
+      "firstTimezone": "Europe/Stockholm",
+      "lastCountry": "SE",
+      "lastRegion": "Norrbotten",
+      "lastCity": "Luleå",
+      "lastTimezone": "Europe/Stockholm",
+      "lastLatitude": "65.584",
+      "lastLongitude": "22.155"
+    },
     {
       "key": "5fe45d8ae5a247439916e0dd8a4b660e91d5a958bf1712e2c665710b6b40c457",
       "firstSeenAt": "2026-09-22T14:48:28.377Z",
@@ -3906,8 +3925,8 @@
       "lastLongitude": "89.642"
     }
   ],
-  "identifiedVisits": 135,
-  "uniqueVisitors": 98,
+  "identifiedVisits": 136,
+  "uniqueVisitors": 99,
   "returningVisitors": 18,
   "repeatVisits": 37,
   "legacyVisits": 54
