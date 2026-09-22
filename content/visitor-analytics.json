@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-21T08:28:57.205Z",
-  "totalVisits": 188,
+  "updatedAt": "2026-09-22T14:48:28.377Z",
+  "totalVisits": 189,
   "countries": [
     {
       "key": "BT",
@@ -23,9 +23,9 @@
       "key": "US",
       "label": "US",
       "country": "US",
-      "count": 13,
+      "count": 14,
       "firstSeenAt": "2026-07-16T03:42:47.379Z",
-      "lastSeenAt": "2026-09-08T15:13:19.684Z"
+      "lastSeenAt": "2026-09-22T14:48:28.377Z"
     },
     {
       "key": "JP",
@@ -238,6 +238,18 @@
       "lastSeenAt": "2026-09-09T19:52:14.896Z"
     },
     {
+      "key": "Prineville, Oregon, US",
+      "label": "Prineville, Oregon, US",
+      "city": "Prineville",
+      "region": "Oregon",
+      "country": "US",
+      "latitude": "44.300",
+      "longitude": "-120.834",
+      "count": 4,
+      "firstSeenAt": "2026-07-28T11:51:04.107Z",
+      "lastSeenAt": "2026-09-22T14:48:28.377Z"
+    },
+    {
       "key": "Bhadrapur, Koshi, NP",
       "label": "Bhadrapur, Koshi, NP",
       "city": "Bhadrapur",
@@ -260,18 +272,6 @@
       "count": 3,
       "firstSeenAt": "2026-07-16T03:42:47.379Z",
       "lastSeenAt": "2026-09-02T03:02:11.133Z"
-    },
-    {
-      "key": "Prineville, Oregon, US",
-      "label": "Prineville, Oregon, US",
-      "city": "Prineville",
-      "region": "Oregon",
-      "country": "US",
-      "latitude": "44.300",
-      "longitude": "-120.834",
-      "count": 3,
-      "firstSeenAt": "2026-07-28T11:51:04.107Z",
-      "lastSeenAt": "2026-09-08T15:13:19.684Z"
     },
     {
       "key": "Pune, Maharashtra, IN",
@@ -866,9 +866,9 @@
     {
       "key": "/",
       "label": "/",
-      "count": 176,
+      "count": 177,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-09-21T08:28:57.205Z"
+      "lastSeenAt": "2026-09-22T14:48:28.377Z"
     },
     {
       "key": "/mahar",
@@ -921,6 +921,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-09-22T14:48:28.377Z",
+      "page": "/",
+      "country": "US",
+      "continent": "NA",
+      "region": "Oregon",
+      "city": "Prineville",
+      "timezone": "America/Los_Angeles",
+      "latitude": "44.300",
+      "longitude": "-120.834",
+      "visitorType": "new",
+      "sessionType": "new",
+      "visitorVisitCount": 1
+    },
     {
       "visitedAt": "2026-09-21T08:28:57.205Z",
       "page": "/",
@@ -2026,23 +2040,28 @@
       "visitorType": "new",
       "sessionType": "new",
       "visitorVisitCount": 1
-    },
-    {
-      "visitedAt": "2026-07-22T02:13:04.992Z",
-      "page": "/TT",
-      "country": "IE",
-      "continent": "EU",
-      "region": "Leinster",
-      "city": "Clonee",
-      "timezone": "Europe/Dublin",
-      "latitude": "53.412",
-      "longitude": "-6.444",
-      "visitorType": "new",
-      "sessionType": "new",
-      "visitorVisitCount": 1
     }
   ],
   "visitors": [
+    {
+      "key": "5fe45d8ae5a247439916e0dd8a4b660e91d5a958bf1712e2c665710b6b40c457",
+      "firstSeenAt": "2026-09-22T14:48:28.377Z",
+      "lastSeenAt": "2026-09-22T14:48:28.377Z",
+      "visitCount": 1,
+      "sessionCount": 1,
+      "firstPage": "/",
+      "lastPage": "/",
+      "firstCountry": "US",
+      "firstRegion": "Oregon",
+      "firstCity": "Prineville",
+      "firstTimezone": "America/Los_Angeles",
+      "lastCountry": "US",
+      "lastRegion": "Oregon",
+      "lastCity": "Prineville",
+      "lastTimezone": "America/Los_Angeles",
+      "lastLatitude": "44.300",
+      "lastLongitude": "-120.834"
+    },
     {
       "key": "4ca7fc2fe64b967217e1f4c34d9cfd095cfe6140cd1c3a09f82e9fa8a7f9898a",
       "firstSeenAt": "2026-09-21T08:28:57.205Z",
@@ -3887,8 +3906,8 @@
       "lastLongitude": "89.642"
     }
   ],
-  "identifiedVisits": 134,
-  "uniqueVisitors": 97,
+  "identifiedVisits": 135,
+  "uniqueVisitors": 98,
   "returningVisitors": 18,
   "repeatVisits": 37,
   "legacyVisits": 54
