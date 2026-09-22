@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-22T14:48:33.340Z",
-  "totalVisits": 190,
+  "updatedAt": "2026-09-22T17:24:15.476Z",
+  "totalVisits": 191,
   "countries": [
     {
       "key": "BT",
@@ -15,9 +15,9 @@
       "key": "IN",
       "label": "IN",
       "country": "IN",
-      "count": 63,
+      "count": 64,
       "firstSeenAt": "2026-06-23T05:03:11.022Z",
-      "lastSeenAt": "2026-09-21T08:28:57.205Z"
+      "lastSeenAt": "2026-09-22T17:24:15.476Z"
     },
     {
       "key": "US",
@@ -860,15 +860,27 @@
       "count": 1,
       "firstSeenAt": "2026-09-21T08:28:57.205Z",
       "lastSeenAt": "2026-09-21T08:28:57.205Z"
+    },
+    {
+      "key": "Duliajan, Assam, IN",
+      "label": "Duliajan, Assam, IN",
+      "city": "Duliajan",
+      "region": "Assam",
+      "country": "IN",
+      "latitude": "27.360",
+      "longitude": "95.318",
+      "count": 1,
+      "firstSeenAt": "2026-09-22T17:24:15.476Z",
+      "lastSeenAt": "2026-09-22T17:24:15.476Z"
     }
   ],
   "pages": [
     {
       "key": "/",
       "label": "/",
-      "count": 178,
+      "count": 179,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-09-22T14:48:33.340Z"
+      "lastSeenAt": "2026-09-22T17:24:15.476Z"
     },
     {
       "key": "/mahar",
@@ -921,6 +933,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-09-22T17:24:15.476Z",
+      "page": "/",
+      "country": "IN",
+      "continent": "AS",
+      "region": "Assam",
+      "city": "Duliajan",
+      "timezone": "Asia/Kolkata",
+      "latitude": "27.360",
+      "longitude": "95.318",
+      "visitorType": "new",
+      "sessionType": "new",
+      "visitorVisitCount": 1
+    },
     {
       "visitedAt": "2026-09-22T14:48:33.340Z",
       "page": "/",
@@ -2026,23 +2052,28 @@
       "visitorType": "returning",
       "sessionType": "new",
       "visitorVisitCount": 14
-    },
-    {
-      "visitedAt": "2026-07-23T15:38:36.167Z",
-      "page": "/",
-      "country": "BT",
-      "continent": "AS",
-      "region": "Thimphu District",
-      "city": "Thimphu",
-      "timezone": "Asia/Thimphu",
-      "latitude": "27.466",
-      "longitude": "89.642",
-      "visitorType": "returning",
-      "sessionType": "new",
-      "visitorVisitCount": 2
     }
   ],
   "visitors": [
+    {
+      "key": "d837983972b1ad076554934e9c49cc64ca1dc13ea7bb53eaa287ed699b3cf237",
+      "firstSeenAt": "2026-09-22T17:24:15.476Z",
+      "lastSeenAt": "2026-09-22T17:24:15.476Z",
+      "visitCount": 1,
+      "sessionCount": 1,
+      "firstPage": "/",
+      "lastPage": "/",
+      "firstCountry": "IN",
+      "firstRegion": "Assam",
+      "firstCity": "Duliajan",
+      "firstTimezone": "Asia/Kolkata",
+      "lastCountry": "IN",
+      "lastRegion": "Assam",
+      "lastCity": "Duliajan",
+      "lastTimezone": "Asia/Kolkata",
+      "lastLatitude": "27.360",
+      "lastLongitude": "95.318"
+    },
     {
       "key": "fe1dc5ee0d347f1e5b2876702a540e1cdbc386271c99385b6f40027b4b8552c2",
       "firstSeenAt": "2026-09-22T14:48:33.340Z",
@@ -3925,8 +3956,8 @@
       "lastLongitude": "89.642"
     }
   ],
-  "identifiedVisits": 136,
-  "uniqueVisitors": 99,
+  "identifiedVisits": 137,
+  "uniqueVisitors": 100,
   "returningVisitors": 18,
   "repeatVisits": 37,
   "legacyVisits": 54
