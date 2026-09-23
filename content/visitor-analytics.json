@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-22T17:24:15.476Z",
-  "totalVisits": 191,
+  "updatedAt": "2026-09-23T08:20:01.066Z",
+  "totalVisits": 192,
   "countries": [
     {
       "key": "BT",
@@ -138,6 +138,14 @@
       "count": 1,
       "firstSeenAt": "2026-08-24T10:01:44.339Z",
       "lastSeenAt": "2026-08-24T10:01:44.339Z"
+    },
+    {
+      "key": "BD",
+      "label": "BD",
+      "country": "BD",
+      "count": 1,
+      "firstSeenAt": "2026-09-23T08:20:01.066Z",
+      "lastSeenAt": "2026-09-23T08:20:01.066Z"
     }
   ],
   "cities": [
@@ -872,15 +880,27 @@
       "count": 1,
       "firstSeenAt": "2026-09-22T17:24:15.476Z",
       "lastSeenAt": "2026-09-22T17:24:15.476Z"
+    },
+    {
+      "key": "Dhaka, Dhaka Division, BD",
+      "label": "Dhaka, Dhaka Division, BD",
+      "city": "Dhaka",
+      "region": "Dhaka Division",
+      "country": "BD",
+      "latitude": "23.710",
+      "longitude": "90.407",
+      "count": 1,
+      "firstSeenAt": "2026-09-23T08:20:01.066Z",
+      "lastSeenAt": "2026-09-23T08:20:01.066Z"
     }
   ],
   "pages": [
     {
       "key": "/",
       "label": "/",
-      "count": 179,
+      "count": 180,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-09-22T17:24:15.476Z"
+      "lastSeenAt": "2026-09-23T08:20:01.066Z"
     },
     {
       "key": "/mahar",
@@ -933,6 +953,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-09-23T08:20:01.066Z",
+      "page": "/",
+      "country": "BD",
+      "continent": "AS",
+      "region": "Dhaka Division",
+      "city": "Dhaka",
+      "timezone": "Asia/Dhaka",
+      "latitude": "23.710",
+      "longitude": "90.407",
+      "visitorType": "new",
+      "sessionType": "new",
+      "visitorVisitCount": 1
+    },
     {
       "visitedAt": "2026-09-22T17:24:15.476Z",
       "page": "/",
@@ -2038,23 +2072,28 @@
       "visitorType": "new",
       "sessionType": "new",
       "visitorVisitCount": 1
-    },
-    {
-      "visitedAt": "2026-07-24T13:55:20.331Z",
-      "page": "/",
-      "country": "BT",
-      "continent": "AS",
-      "region": "Wangdi Phodrang",
-      "city": "Wangdue Phodrang",
-      "timezone": "Asia/Thimphu",
-      "latitude": "27.486",
-      "longitude": "89.899",
-      "visitorType": "returning",
-      "sessionType": "new",
-      "visitorVisitCount": 14
     }
   ],
   "visitors": [
+    {
+      "key": "214ff3e55c6d62159403058a964b799e6bd661a610a3c8d09e35308f24a7a0e9",
+      "firstSeenAt": "2026-09-23T08:20:01.066Z",
+      "lastSeenAt": "2026-09-23T08:20:01.066Z",
+      "visitCount": 1,
+      "sessionCount": 1,
+      "firstPage": "/",
+      "lastPage": "/",
+      "firstCountry": "BD",
+      "firstRegion": "Dhaka Division",
+      "firstCity": "Dhaka",
+      "firstTimezone": "Asia/Dhaka",
+      "lastCountry": "BD",
+      "lastRegion": "Dhaka Division",
+      "lastCity": "Dhaka",
+      "lastTimezone": "Asia/Dhaka",
+      "lastLatitude": "23.710",
+      "lastLongitude": "90.407"
+    },
     {
       "key": "d837983972b1ad076554934e9c49cc64ca1dc13ea7bb53eaa287ed699b3cf237",
       "firstSeenAt": "2026-09-22T17:24:15.476Z",
@@ -3956,8 +3995,8 @@
       "lastLongitude": "89.642"
     }
   ],
-  "identifiedVisits": 137,
-  "uniqueVisitors": 100,
+  "identifiedVisits": 138,
+  "uniqueVisitors": 101,
   "returningVisitors": 18,
   "repeatVisits": 37,
   "legacyVisits": 54
