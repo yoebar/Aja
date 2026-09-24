@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-23T08:20:01.066Z",
-  "totalVisits": 192,
+  "updatedAt": "2026-09-24T19:23:39.479Z",
+  "totalVisits": 193,
   "countries": [
     {
       "key": "BT",
@@ -15,9 +15,9 @@
       "key": "IN",
       "label": "IN",
       "country": "IN",
-      "count": 64,
+      "count": 65,
       "firstSeenAt": "2026-06-23T05:03:11.022Z",
-      "lastSeenAt": "2026-09-22T17:24:15.476Z"
+      "lastSeenAt": "2026-09-24T19:23:39.479Z"
     },
     {
       "key": "US",
@@ -892,15 +892,27 @@
       "count": 1,
       "firstSeenAt": "2026-09-23T08:20:01.066Z",
       "lastSeenAt": "2026-09-23T08:20:01.066Z"
+    },
+    {
+      "key": "Jodhpur, Rajasthan, IN",
+      "label": "Jodhpur, Rajasthan, IN",
+      "city": "Jodhpur",
+      "region": "Rajasthan",
+      "country": "IN",
+      "latitude": "26.268",
+      "longitude": "73.006",
+      "count": 1,
+      "firstSeenAt": "2026-09-24T19:23:39.479Z",
+      "lastSeenAt": "2026-09-24T19:23:39.479Z"
     }
   ],
   "pages": [
     {
       "key": "/",
       "label": "/",
-      "count": 180,
+      "count": 181,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-09-23T08:20:01.066Z"
+      "lastSeenAt": "2026-09-24T19:23:39.479Z"
     },
     {
       "key": "/mahar",
@@ -953,6 +965,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-09-24T19:23:39.479Z",
+      "page": "/",
+      "country": "IN",
+      "continent": "AS",
+      "region": "Rajasthan",
+      "city": "Jodhpur",
+      "timezone": "Asia/Kolkata",
+      "latitude": "26.268",
+      "longitude": "73.006",
+      "visitorType": "new",
+      "sessionType": "new",
+      "visitorVisitCount": 1
+    },
     {
       "visitedAt": "2026-09-23T08:20:01.066Z",
       "page": "/",
@@ -2058,23 +2084,28 @@
       "visitorType": "returning",
       "sessionType": "new",
       "visitorVisitCount": 2
-    },
-    {
-      "visitedAt": "2026-07-25T11:48:42.350Z",
-      "page": "/",
-      "country": "IN",
-      "continent": "AS",
-      "region": "Telangana",
-      "city": "Warangal",
-      "timezone": "Asia/Kolkata",
-      "latitude": "18.000",
-      "longitude": "79.583",
-      "visitorType": "new",
-      "sessionType": "new",
-      "visitorVisitCount": 1
     }
   ],
   "visitors": [
+    {
+      "key": "07d14eee6b9ae83b5ed71623c99bcc7074bcc1fa9374a26bd1e8d82021597e91",
+      "firstSeenAt": "2026-09-24T19:23:39.479Z",
+      "lastSeenAt": "2026-09-24T19:23:39.479Z",
+      "visitCount": 1,
+      "sessionCount": 1,
+      "firstPage": "/",
+      "lastPage": "/",
+      "firstCountry": "IN",
+      "firstRegion": "Rajasthan",
+      "firstCity": "Jodhpur",
+      "firstTimezone": "Asia/Kolkata",
+      "lastCountry": "IN",
+      "lastRegion": "Rajasthan",
+      "lastCity": "Jodhpur",
+      "lastTimezone": "Asia/Kolkata",
+      "lastLatitude": "26.268",
+      "lastLongitude": "73.006"
+    },
     {
       "key": "214ff3e55c6d62159403058a964b799e6bd661a610a3c8d09e35308f24a7a0e9",
       "firstSeenAt": "2026-09-23T08:20:01.066Z",
@@ -3995,8 +4026,8 @@
       "lastLongitude": "89.642"
     }
   ],
-  "identifiedVisits": 138,
-  "uniqueVisitors": 101,
+  "identifiedVisits": 139,
+  "uniqueVisitors": 102,
   "returningVisitors": 18,
   "repeatVisits": 37,
   "legacyVisits": 54
