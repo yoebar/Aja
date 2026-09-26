@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-24T19:23:39.479Z",
-  "totalVisits": 193,
+  "updatedAt": "2026-09-26T20:59:30.386Z",
+  "totalVisits": 194,
   "countries": [
     {
       "key": "BT",
@@ -15,9 +15,9 @@
       "key": "IN",
       "label": "IN",
       "country": "IN",
-      "count": 65,
+      "count": 66,
       "firstSeenAt": "2026-06-23T05:03:11.022Z",
-      "lastSeenAt": "2026-09-24T19:23:39.479Z"
+      "lastSeenAt": "2026-09-26T20:59:30.386Z"
     },
     {
       "key": "US",
@@ -904,15 +904,27 @@
       "count": 1,
       "firstSeenAt": "2026-09-24T19:23:39.479Z",
       "lastSeenAt": "2026-09-24T19:23:39.479Z"
+    },
+    {
+      "key": "Naikanidihi, Odisha, IN",
+      "label": "Naikanidihi, Odisha, IN",
+      "city": "Naikanidihi",
+      "region": "Odisha",
+      "country": "IN",
+      "latitude": "20.989",
+      "longitude": "86.809",
+      "count": 1,
+      "firstSeenAt": "2026-09-26T20:59:30.386Z",
+      "lastSeenAt": "2026-09-26T20:59:30.386Z"
     }
   ],
   "pages": [
     {
       "key": "/",
       "label": "/",
-      "count": 181,
+      "count": 182,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-09-24T19:23:39.479Z"
+      "lastSeenAt": "2026-09-26T20:59:30.386Z"
     },
     {
       "key": "/mahar",
@@ -965,6 +977,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-09-26T20:59:30.386Z",
+      "page": "/",
+      "country": "IN",
+      "continent": "AS",
+      "region": "Odisha",
+      "city": "Naikanidihi",
+      "timezone": "Asia/Kolkata",
+      "latitude": "20.989",
+      "longitude": "86.809",
+      "visitorType": "returning",
+      "sessionType": "new",
+      "visitorVisitCount": 2
+    },
     {
       "visitedAt": "2026-09-24T19:23:39.479Z",
       "page": "/",
@@ -2070,23 +2096,28 @@
       "visitorType": "new",
       "sessionType": "new",
       "visitorVisitCount": 1
-    },
-    {
-      "visitedAt": "2026-07-25T15:17:06.740Z",
-      "page": "/",
-      "country": "IN",
-      "continent": "AS",
-      "region": "Telangana",
-      "city": "Warangal",
-      "timezone": "Asia/Kolkata",
-      "latitude": "18.000",
-      "longitude": "79.583",
-      "visitorType": "returning",
-      "sessionType": "new",
-      "visitorVisitCount": 2
     }
   ],
   "visitors": [
+    {
+      "key": "89d0131a3baf9cf7445601f6724a957fd8ba2fbb951592cf53b1391f8b59bc19",
+      "firstSeenAt": "2026-09-10T16:27:36.479Z",
+      "lastSeenAt": "2026-09-26T20:59:30.386Z",
+      "visitCount": 2,
+      "sessionCount": 2,
+      "firstPage": "/",
+      "lastPage": "/",
+      "firstCountry": "IN",
+      "firstRegion": "Odisha",
+      "firstCity": "Bhubaneswar",
+      "firstTimezone": "Asia/Kolkata",
+      "lastCountry": "IN",
+      "lastRegion": "Odisha",
+      "lastCity": "Naikanidihi",
+      "lastTimezone": "Asia/Kolkata",
+      "lastLatitude": "20.989",
+      "lastLongitude": "86.809"
+    },
     {
       "key": "07d14eee6b9ae83b5ed71623c99bcc7074bcc1fa9374a26bd1e8d82021597e91",
       "firstSeenAt": "2026-09-24T19:23:39.479Z",
@@ -2314,25 +2345,6 @@
       "lastTimezone": "Asia/Kolkata",
       "lastLatitude": "18.520",
       "lastLongitude": "73.855"
-    },
-    {
-      "key": "89d0131a3baf9cf7445601f6724a957fd8ba2fbb951592cf53b1391f8b59bc19",
-      "firstSeenAt": "2026-09-10T16:27:36.479Z",
-      "lastSeenAt": "2026-09-10T16:27:36.479Z",
-      "visitCount": 1,
-      "sessionCount": 1,
-      "firstPage": "/",
-      "lastPage": "/",
-      "firstCountry": "IN",
-      "firstRegion": "Odisha",
-      "firstCity": "Bhubaneswar",
-      "firstTimezone": "Asia/Kolkata",
-      "lastCountry": "IN",
-      "lastRegion": "Odisha",
-      "lastCity": "Bhubaneswar",
-      "lastTimezone": "Asia/Kolkata",
-      "lastLatitude": "20.272",
-      "lastLongitude": "85.834"
     },
     {
       "key": "7d61bc3cb3e66da01648074e362c7a03b550d6adc75d75fe321e201c04042e95",
@@ -4026,9 +4038,9 @@
       "lastLongitude": "89.642"
     }
   ],
-  "identifiedVisits": 139,
+  "identifiedVisits": 140,
   "uniqueVisitors": 102,
-  "returningVisitors": 18,
-  "repeatVisits": 37,
+  "returningVisitors": 19,
+  "repeatVisits": 38,
   "legacyVisits": 54
 }
