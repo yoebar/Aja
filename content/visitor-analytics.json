@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-26T20:59:30.386Z",
-  "totalVisits": 194,
+  "updatedAt": "2026-09-27T20:29:25.385Z",
+  "totalVisits": 195,
   "countries": [
     {
       "key": "BT",
@@ -15,9 +15,9 @@
       "key": "IN",
       "label": "IN",
       "country": "IN",
-      "count": 66,
+      "count": 67,
       "firstSeenAt": "2026-06-23T05:03:11.022Z",
-      "lastSeenAt": "2026-09-26T20:59:30.386Z"
+      "lastSeenAt": "2026-09-27T20:29:25.385Z"
     },
     {
       "key": "US",
@@ -294,6 +294,18 @@
       "lastSeenAt": "2026-09-11T11:44:16.061Z"
     },
     {
+      "key": "Indore, Madhya Pradesh, IN",
+      "label": "Indore, Madhya Pradesh, IN",
+      "city": "Indore",
+      "region": "Madhya Pradesh",
+      "country": "IN",
+      "latitude": "22.718",
+      "longitude": "75.833",
+      "count": 3,
+      "firstSeenAt": "2026-08-07T20:48:14.811Z",
+      "lastSeenAt": "2026-09-27T20:29:25.385Z"
+    },
+    {
       "key": "Hyderabad, Telangana, IN",
       "label": "Hyderabad, Telangana, IN",
       "city": "Hyderabad",
@@ -388,18 +400,6 @@
       "count": 2,
       "firstSeenAt": "2026-07-28T11:51:37.512Z",
       "lastSeenAt": "2026-08-10T10:17:12.252Z"
-    },
-    {
-      "key": "Indore, Madhya Pradesh, IN",
-      "label": "Indore, Madhya Pradesh, IN",
-      "city": "Indore",
-      "region": "Madhya Pradesh",
-      "country": "IN",
-      "latitude": "22.718",
-      "longitude": "75.833",
-      "count": 2,
-      "firstSeenAt": "2026-08-07T20:48:14.811Z",
-      "lastSeenAt": "2026-08-30T21:01:56.583Z"
     },
     {
       "key": "Clonee, Leinster, IE",
@@ -922,9 +922,9 @@
     {
       "key": "/",
       "label": "/",
-      "count": 182,
+      "count": 183,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-09-26T20:59:30.386Z"
+      "lastSeenAt": "2026-09-27T20:29:25.385Z"
     },
     {
       "key": "/mahar",
@@ -977,6 +977,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-09-27T20:29:25.385Z",
+      "page": "/",
+      "country": "IN",
+      "continent": "AS",
+      "region": "Madhya Pradesh",
+      "city": "Indore",
+      "timezone": "Asia/Kolkata",
+      "latitude": "22.718",
+      "longitude": "75.833",
+      "visitorType": "returning",
+      "sessionType": "new",
+      "visitorVisitCount": 2
+    },
     {
       "visitedAt": "2026-09-26T20:59:30.386Z",
       "page": "/",
@@ -2082,23 +2096,28 @@
       "visitorType": "new",
       "sessionType": "new",
       "visitorVisitCount": 1
-    },
-    {
-      "visitedAt": "2026-07-26T03:27:50.296Z",
-      "page": "/",
-      "country": "BT",
-      "continent": "AS",
-      "region": "Samtse District",
-      "city": "Samtse",
-      "timezone": "Asia/Thimphu",
-      "latitude": "26.899",
-      "longitude": "89.100",
-      "visitorType": "new",
-      "sessionType": "new",
-      "visitorVisitCount": 1
     }
   ],
   "visitors": [
+    {
+      "key": "6159ace4bc73e81380c2cb17e87dbbd9724b702fea152185f088e6128dba38c9",
+      "firstSeenAt": "2026-08-30T21:01:56.583Z",
+      "lastSeenAt": "2026-09-27T20:29:25.385Z",
+      "visitCount": 2,
+      "sessionCount": 2,
+      "firstPage": "/",
+      "lastPage": "/",
+      "firstCountry": "IN",
+      "firstRegion": "Madhya Pradesh",
+      "firstCity": "Indore",
+      "firstTimezone": "Asia/Kolkata",
+      "lastCountry": "IN",
+      "lastRegion": "Madhya Pradesh",
+      "lastCity": "Indore",
+      "lastTimezone": "Asia/Kolkata",
+      "lastLatitude": "22.718",
+      "lastLongitude": "75.833"
+    },
     {
       "key": "89d0131a3baf9cf7445601f6724a957fd8ba2fbb951592cf53b1391f8b59bc19",
       "firstSeenAt": "2026-09-10T16:27:36.479Z",
@@ -2573,25 +2592,6 @@
       "lastTimezone": "Asia/Thimphu",
       "lastLatitude": "26.852",
       "lastLongitude": "89.388"
-    },
-    {
-      "key": "6159ace4bc73e81380c2cb17e87dbbd9724b702fea152185f088e6128dba38c9",
-      "firstSeenAt": "2026-08-30T21:01:56.583Z",
-      "lastSeenAt": "2026-08-30T21:01:56.583Z",
-      "visitCount": 1,
-      "sessionCount": 1,
-      "firstPage": "/",
-      "lastPage": "/",
-      "firstCountry": "IN",
-      "firstRegion": "Madhya Pradesh",
-      "firstCity": "Indore",
-      "firstTimezone": "Asia/Kolkata",
-      "lastCountry": "IN",
-      "lastRegion": "Madhya Pradesh",
-      "lastCity": "Indore",
-      "lastTimezone": "Asia/Kolkata",
-      "lastLatitude": "22.718",
-      "lastLongitude": "75.833"
     },
     {
       "key": "90989501c2ffce93c8d4fddce0dec204829b04084293125712ec4781cc1daa45",
@@ -4038,9 +4038,9 @@
       "lastLongitude": "89.642"
     }
   ],
-  "identifiedVisits": 140,
+  "identifiedVisits": 141,
   "uniqueVisitors": 102,
-  "returningVisitors": 19,
-  "repeatVisits": 38,
+  "returningVisitors": 20,
+  "repeatVisits": 39,
   "legacyVisits": 54
 }
