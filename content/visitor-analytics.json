@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-29T13:15:51.237Z",
-  "totalVisits": 197,
+  "updatedAt": "2026-09-29T16:27:44.507Z",
+  "totalVisits": 198,
   "countries": [
     {
       "key": "BT",
@@ -15,9 +15,9 @@
       "key": "IN",
       "label": "IN",
       "country": "IN",
-      "count": 67,
+      "count": 68,
       "firstSeenAt": "2026-06-23T05:03:11.022Z",
-      "lastSeenAt": "2026-09-27T20:29:25.385Z"
+      "lastSeenAt": "2026-09-29T16:27:44.507Z"
     },
     {
       "key": "US",
@@ -215,11 +215,11 @@
       "city": "Mumbai",
       "region": "Maharashtra",
       "country": "IN",
-      "latitude": "19.073",
-      "longitude": "72.883",
-      "count": 6,
+      "latitude": "18.981",
+      "longitude": "72.834",
+      "count": 7,
       "firstSeenAt": "2026-07-20T16:25:56.732Z",
-      "lastSeenAt": "2026-09-09T13:11:45.252Z"
+      "lastSeenAt": "2026-09-29T16:27:44.507Z"
     },
     {
       "key": "Kyoto, Kyoto, JP",
@@ -934,9 +934,9 @@
     {
       "key": "/",
       "label": "/",
-      "count": 185,
+      "count": 186,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-09-29T13:15:51.237Z"
+      "lastSeenAt": "2026-09-29T16:27:44.507Z"
     },
     {
       "key": "/mahar",
@@ -989,6 +989,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-09-29T16:27:44.507Z",
+      "page": "/",
+      "country": "IN",
+      "continent": "AS",
+      "region": "Maharashtra",
+      "city": "Mumbai",
+      "timezone": "Asia/Kolkata",
+      "latitude": "18.981",
+      "longitude": "72.834",
+      "visitorType": "new",
+      "sessionType": "new",
+      "visitorVisitCount": 1
+    },
     {
       "visitedAt": "2026-09-29T13:15:51.237Z",
       "page": "/",
@@ -2094,23 +2108,28 @@
       "visitorType": "new",
       "sessionType": "new",
       "visitorVisitCount": 1
-    },
-    {
-      "visitedAt": "2026-07-28T11:51:04.107Z",
-      "page": "/mahar",
-      "country": "US",
-      "continent": "NA",
-      "region": "Oregon",
-      "city": "Prineville",
-      "timezone": "America/Los_Angeles",
-      "latitude": "44.300",
-      "longitude": "-120.834",
-      "visitorType": "new",
-      "sessionType": "new",
-      "visitorVisitCount": 1
     }
   ],
   "visitors": [
+    {
+      "key": "bbfcd364785212f7b86ef519e176e0c1de67f7a2fb849d1139c382820acd4ece",
+      "firstSeenAt": "2026-09-29T16:27:44.507Z",
+      "lastSeenAt": "2026-09-29T16:27:44.507Z",
+      "visitCount": 1,
+      "sessionCount": 1,
+      "firstPage": "/",
+      "lastPage": "/",
+      "firstCountry": "IN",
+      "firstRegion": "Maharashtra",
+      "firstCity": "Mumbai",
+      "firstTimezone": "Asia/Kolkata",
+      "lastCountry": "IN",
+      "lastRegion": "Maharashtra",
+      "lastCity": "Mumbai",
+      "lastTimezone": "Asia/Kolkata",
+      "lastLatitude": "18.981",
+      "lastLongitude": "72.834"
+    },
     {
       "key": "1d37abc57f1baa549ac77816079d7d405d602f3d46d21d96d365f4f8bf3a2c04",
       "firstSeenAt": "2026-09-29T13:15:51.237Z",
@@ -4088,8 +4107,8 @@
       "lastLongitude": "89.642"
     }
   ],
-  "identifiedVisits": 143,
-  "uniqueVisitors": 104,
+  "identifiedVisits": 144,
+  "uniqueVisitors": 105,
   "returningVisitors": 20,
   "repeatVisits": 39,
   "legacyVisits": 54
