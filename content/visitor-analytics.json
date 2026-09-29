@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-27T20:29:25.385Z",
-  "totalVisits": 195,
+  "updatedAt": "2026-09-29T03:59:40.616Z",
+  "totalVisits": 196,
   "countries": [
     {
       "key": "BT",
@@ -23,9 +23,9 @@
       "key": "US",
       "label": "US",
       "country": "US",
-      "count": 14,
+      "count": 15,
       "firstSeenAt": "2026-07-16T03:42:47.379Z",
-      "lastSeenAt": "2026-09-22T14:48:28.377Z"
+      "lastSeenAt": "2026-09-29T03:59:40.616Z"
     },
     {
       "key": "JP",
@@ -916,15 +916,27 @@
       "count": 1,
       "firstSeenAt": "2026-09-26T20:59:30.386Z",
       "lastSeenAt": "2026-09-26T20:59:30.386Z"
+    },
+    {
+      "key": "Santa Clara, California, US",
+      "label": "Santa Clara, California, US",
+      "city": "Santa Clara",
+      "region": "California",
+      "country": "US",
+      "latitude": "37.392",
+      "longitude": "-121.962",
+      "count": 1,
+      "firstSeenAt": "2026-09-29T03:59:40.616Z",
+      "lastSeenAt": "2026-09-29T03:59:40.616Z"
     }
   ],
   "pages": [
     {
       "key": "/",
       "label": "/",
-      "count": 183,
+      "count": 184,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-09-27T20:29:25.385Z"
+      "lastSeenAt": "2026-09-29T03:59:40.616Z"
     },
     {
       "key": "/mahar",
@@ -977,6 +989,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-09-29T03:59:40.616Z",
+      "page": "/",
+      "country": "US",
+      "continent": "NA",
+      "region": "California",
+      "city": "Santa Clara",
+      "timezone": "America/Los_Angeles",
+      "latitude": "37.392",
+      "longitude": "-121.962",
+      "visitorType": "new",
+      "sessionType": "new",
+      "visitorVisitCount": 1
+    },
     {
       "visitedAt": "2026-09-27T20:29:25.385Z",
       "page": "/",
@@ -2082,23 +2108,28 @@
       "visitorType": "new",
       "sessionType": "new",
       "visitorVisitCount": 1
-    },
-    {
-      "visitedAt": "2026-07-27T08:13:30.267Z",
-      "page": "/",
-      "country": "IN",
-      "continent": "AS",
-      "region": "Assam",
-      "city": "Guwahati",
-      "timezone": "Asia/Kolkata",
-      "latitude": "26.184",
-      "longitude": "91.746",
-      "visitorType": "new",
-      "sessionType": "new",
-      "visitorVisitCount": 1
     }
   ],
   "visitors": [
+    {
+      "key": "98f6f2f44c60e265a2dc97e9a62c9603fe4ecf12dc0fe95fb04163bb311ddf26",
+      "firstSeenAt": "2026-09-29T03:59:40.616Z",
+      "lastSeenAt": "2026-09-29T03:59:40.616Z",
+      "visitCount": 1,
+      "sessionCount": 1,
+      "firstPage": "/",
+      "lastPage": "/",
+      "firstCountry": "US",
+      "firstRegion": "California",
+      "firstCity": "Santa Clara",
+      "firstTimezone": "America/Los_Angeles",
+      "lastCountry": "US",
+      "lastRegion": "California",
+      "lastCity": "Santa Clara",
+      "lastTimezone": "America/Los_Angeles",
+      "lastLatitude": "37.392",
+      "lastLongitude": "-121.962"
+    },
     {
       "key": "6159ace4bc73e81380c2cb17e87dbbd9724b702fea152185f088e6128dba38c9",
       "firstSeenAt": "2026-08-30T21:01:56.583Z",
@@ -4038,8 +4069,8 @@
       "lastLongitude": "89.642"
     }
   ],
-  "identifiedVisits": 141,
-  "uniqueVisitors": 102,
+  "identifiedVisits": 142,
+  "uniqueVisitors": 103,
   "returningVisitors": 20,
   "repeatVisits": 39,
   "legacyVisits": 54
