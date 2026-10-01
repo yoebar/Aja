@@ -1,15 +1,15 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-30T10:19:27.431Z",
-  "totalVisits": 199,
+  "updatedAt": "2026-10-01T06:18:54.908Z",
+  "totalVisits": 200,
   "countries": [
     {
       "key": "BT",
       "label": "BT",
       "country": "BT",
-      "count": 77,
+      "count": 78,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-09-30T10:19:27.431Z"
+      "lastSeenAt": "2026-10-01T06:18:54.908Z"
     },
     {
       "key": "IN",
@@ -157,9 +157,9 @@
       "country": "BT",
       "latitude": "27.466",
       "longitude": "89.642",
-      "count": 58,
+      "count": 59,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-09-30T10:19:27.431Z"
+      "lastSeenAt": "2026-10-01T06:18:54.908Z"
     },
     {
       "key": "Siliguri, West Bengal, IN",
@@ -934,9 +934,9 @@
     {
       "key": "/",
       "label": "/",
-      "count": 187,
+      "count": 188,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-09-30T10:19:27.431Z"
+      "lastSeenAt": "2026-10-01T06:18:54.908Z"
     },
     {
       "key": "/mahar",
@@ -989,6 +989,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-10-01T06:18:54.908Z",
+      "page": "/",
+      "country": "BT",
+      "continent": "AS",
+      "region": "Thimphu District",
+      "city": "Thimphu",
+      "timezone": "Asia/Thimphu",
+      "latitude": "27.466",
+      "longitude": "89.642",
+      "visitorType": "returning",
+      "sessionType": "new",
+      "visitorVisitCount": 2
+    },
     {
       "visitedAt": "2026-09-30T10:19:27.431Z",
       "page": "/",
@@ -2094,29 +2108,15 @@
       "visitorType": "new",
       "sessionType": "new",
       "visitorVisitCount": 1
-    },
-    {
-      "visitedAt": "2026-07-28T11:51:18.572Z",
-      "page": "/mahar",
-      "country": "US",
-      "continent": "NA",
-      "region": "Oregon",
-      "city": "Boardman",
-      "timezone": "America/Los_Angeles",
-      "latitude": "45.840",
-      "longitude": "-119.701",
-      "visitorType": "new",
-      "sessionType": "new",
-      "visitorVisitCount": 1
     }
   ],
   "visitors": [
     {
       "key": "b45440d564634b97c2685b627e85e7672527c116f0d5f2a7b71ff133b33ebac7",
       "firstSeenAt": "2026-09-30T10:19:27.431Z",
-      "lastSeenAt": "2026-09-30T10:19:27.431Z",
-      "visitCount": 1,
-      "sessionCount": 1,
+      "lastSeenAt": "2026-10-01T06:18:54.908Z",
+      "visitCount": 2,
+      "sessionCount": 2,
       "firstPage": "/",
       "lastPage": "/",
       "firstCountry": "BT",
@@ -4126,9 +4126,9 @@
       "lastLongitude": "89.642"
     }
   ],
-  "identifiedVisits": 145,
+  "identifiedVisits": 146,
   "uniqueVisitors": 106,
-  "returningVisitors": 20,
-  "repeatVisits": 39,
+  "returningVisitors": 21,
+  "repeatVisits": 40,
   "legacyVisits": 54
 }
