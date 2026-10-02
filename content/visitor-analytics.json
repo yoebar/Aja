@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-01T07:19:35.923Z",
-  "totalVisits": 201,
+  "updatedAt": "2026-10-02T05:32:33.166Z",
+  "totalVisits": 202,
   "countries": [
     {
       "key": "BT",
@@ -15,9 +15,9 @@
       "key": "IN",
       "label": "IN",
       "country": "IN",
-      "count": 68,
+      "count": 69,
       "firstSeenAt": "2026-06-23T05:03:11.022Z",
-      "lastSeenAt": "2026-09-29T16:27:44.507Z"
+      "lastSeenAt": "2026-10-02T05:32:33.166Z"
     },
     {
       "key": "US",
@@ -928,15 +928,27 @@
       "count": 1,
       "firstSeenAt": "2026-09-29T03:59:40.616Z",
       "lastSeenAt": "2026-09-29T03:59:40.616Z"
+    },
+    {
+      "key": "Anand, Gujarat, IN",
+      "label": "Anand, Gujarat, IN",
+      "city": "Anand",
+      "region": "Gujarat",
+      "country": "IN",
+      "latitude": "22.553",
+      "longitude": "72.955",
+      "count": 1,
+      "firstSeenAt": "2026-10-02T05:32:33.166Z",
+      "lastSeenAt": "2026-10-02T05:32:33.166Z"
     }
   ],
   "pages": [
     {
       "key": "/",
       "label": "/",
-      "count": 189,
+      "count": 190,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-10-01T07:19:35.923Z"
+      "lastSeenAt": "2026-10-02T05:32:33.166Z"
     },
     {
       "key": "/mahar",
@@ -989,6 +1001,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-10-02T05:32:33.166Z",
+      "page": "/",
+      "country": "IN",
+      "continent": "AS",
+      "region": "Gujarat",
+      "city": "Anand",
+      "timezone": "Asia/Kolkata",
+      "latitude": "22.553",
+      "longitude": "72.955",
+      "visitorType": "new",
+      "sessionType": "new",
+      "visitorVisitCount": 1
+    },
     {
       "visitedAt": "2026-10-01T07:19:35.923Z",
       "page": "/",
@@ -2094,23 +2120,28 @@
       "visitorType": "new",
       "sessionType": "new",
       "visitorVisitCount": 1
-    },
-    {
-      "visitedAt": "2026-07-28T16:26:09.324Z",
-      "page": "/",
-      "country": "BT",
-      "continent": "AS",
-      "region": "Thimphu District",
-      "city": "Thimphu",
-      "timezone": "Asia/Thimphu",
-      "latitude": "27.466",
-      "longitude": "89.642",
-      "visitorType": "returning",
-      "sessionType": "new",
-      "visitorVisitCount": 2
     }
   ],
   "visitors": [
+    {
+      "key": "f5e2c80e9b854367b226800b839e30ce5dc45719ec1bf7e41144bc7460978a26",
+      "firstSeenAt": "2026-10-02T05:32:33.166Z",
+      "lastSeenAt": "2026-10-02T05:32:33.166Z",
+      "visitCount": 1,
+      "sessionCount": 1,
+      "firstPage": "/",
+      "lastPage": "/",
+      "firstCountry": "IN",
+      "firstRegion": "Gujarat",
+      "firstCity": "Anand",
+      "firstTimezone": "Asia/Kolkata",
+      "lastCountry": "IN",
+      "lastRegion": "Gujarat",
+      "lastCity": "Anand",
+      "lastTimezone": "Asia/Kolkata",
+      "lastLatitude": "22.553",
+      "lastLongitude": "72.955"
+    },
     {
       "key": "b45440d564634b97c2685b627e85e7672527c116f0d5f2a7b71ff133b33ebac7",
       "firstSeenAt": "2026-09-30T10:19:27.431Z",
@@ -4126,8 +4157,8 @@
       "lastLongitude": "89.642"
     }
   ],
-  "identifiedVisits": 147,
-  "uniqueVisitors": 106,
+  "identifiedVisits": 148,
+  "uniqueVisitors": 107,
   "returningVisitors": 21,
   "repeatVisits": 41,
   "legacyVisits": 54
