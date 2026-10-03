@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-02T05:32:33.166Z",
-  "totalVisits": 202,
+  "updatedAt": "2026-10-03T08:13:43.277Z",
+  "totalVisits": 203,
   "countries": [
     {
       "key": "BT",
@@ -108,6 +108,14 @@
       "lastSeenAt": "2026-09-22T14:48:33.340Z"
     },
     {
+      "key": "BD",
+      "label": "BD",
+      "country": "BD",
+      "count": 2,
+      "firstSeenAt": "2026-09-23T08:20:01.066Z",
+      "lastSeenAt": "2026-10-03T08:13:43.277Z"
+    },
+    {
       "key": "TH",
       "label": "TH",
       "country": "TH",
@@ -138,14 +146,6 @@
       "count": 1,
       "firstSeenAt": "2026-08-24T10:01:44.339Z",
       "lastSeenAt": "2026-08-24T10:01:44.339Z"
-    },
-    {
-      "key": "BD",
-      "label": "BD",
-      "country": "BD",
-      "count": 1,
-      "firstSeenAt": "2026-09-23T08:20:01.066Z",
-      "lastSeenAt": "2026-09-23T08:20:01.066Z"
     }
   ],
   "cities": [
@@ -424,6 +424,18 @@
       "count": 2,
       "firstSeenAt": "2026-06-23T18:49:41.127Z",
       "lastSeenAt": "2026-09-22T14:48:33.340Z"
+    },
+    {
+      "key": "Dhaka, Dhaka Division, BD",
+      "label": "Dhaka, Dhaka Division, BD",
+      "city": "Dhaka",
+      "region": "Dhaka Division",
+      "country": "BD",
+      "latitude": "23.710",
+      "longitude": "90.407",
+      "count": 2,
+      "firstSeenAt": "2026-09-23T08:20:01.066Z",
+      "lastSeenAt": "2026-10-03T08:13:43.277Z"
     },
     {
       "key": "Tinsukia, Assam, IN",
@@ -882,18 +894,6 @@
       "lastSeenAt": "2026-09-22T17:24:15.476Z"
     },
     {
-      "key": "Dhaka, Dhaka Division, BD",
-      "label": "Dhaka, Dhaka Division, BD",
-      "city": "Dhaka",
-      "region": "Dhaka Division",
-      "country": "BD",
-      "latitude": "23.710",
-      "longitude": "90.407",
-      "count": 1,
-      "firstSeenAt": "2026-09-23T08:20:01.066Z",
-      "lastSeenAt": "2026-09-23T08:20:01.066Z"
-    },
-    {
       "key": "Jodhpur, Rajasthan, IN",
       "label": "Jodhpur, Rajasthan, IN",
       "city": "Jodhpur",
@@ -946,9 +946,9 @@
     {
       "key": "/",
       "label": "/",
-      "count": 190,
+      "count": 191,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-10-02T05:32:33.166Z"
+      "lastSeenAt": "2026-10-03T08:13:43.277Z"
     },
     {
       "key": "/mahar",
@@ -1001,6 +1001,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-10-03T08:13:43.277Z",
+      "page": "/",
+      "country": "BD",
+      "continent": "AS",
+      "region": "Dhaka Division",
+      "city": "Dhaka",
+      "timezone": "Asia/Dhaka",
+      "latitude": "23.710",
+      "longitude": "90.407",
+      "visitorType": "new",
+      "sessionType": "new",
+      "visitorVisitCount": 1
+    },
     {
       "visitedAt": "2026-10-02T05:32:33.166Z",
       "page": "/",
@@ -2106,23 +2120,28 @@
       "visitorType": "returning",
       "sessionType": "new",
       "visitorVisitCount": 2
-    },
-    {
-      "visitedAt": "2026-07-30T04:14:22.563Z",
-      "page": "/",
-      "country": "ID",
-      "continent": "AS",
-      "region": "Jakarta",
-      "city": "Jakarta",
-      "timezone": "Asia/Jakarta",
-      "latitude": "-6.215",
-      "longitude": "106.845",
-      "visitorType": "new",
-      "sessionType": "new",
-      "visitorVisitCount": 1
     }
   ],
   "visitors": [
+    {
+      "key": "d05fbc67cf9d5993240bdbae5403e52a8835ed20216da472bd2ed455df153b37",
+      "firstSeenAt": "2026-10-03T08:13:43.277Z",
+      "lastSeenAt": "2026-10-03T08:13:43.277Z",
+      "visitCount": 1,
+      "sessionCount": 1,
+      "firstPage": "/",
+      "lastPage": "/",
+      "firstCountry": "BD",
+      "firstRegion": "Dhaka Division",
+      "firstCity": "Dhaka",
+      "firstTimezone": "Asia/Dhaka",
+      "lastCountry": "BD",
+      "lastRegion": "Dhaka Division",
+      "lastCity": "Dhaka",
+      "lastTimezone": "Asia/Dhaka",
+      "lastLatitude": "23.710",
+      "lastLongitude": "90.407"
+    },
     {
       "key": "f5e2c80e9b854367b226800b839e30ce5dc45719ec1bf7e41144bc7460978a26",
       "firstSeenAt": "2026-10-02T05:32:33.166Z",
@@ -4157,8 +4176,8 @@
       "lastLongitude": "89.642"
     }
   ],
-  "identifiedVisits": 148,
-  "uniqueVisitors": 107,
+  "identifiedVisits": 149,
+  "uniqueVisitors": 108,
   "returningVisitors": 21,
   "repeatVisits": 41,
   "legacyVisits": 54
