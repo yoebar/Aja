@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-03T08:13:43.277Z",
-  "totalVisits": 203,
+  "updatedAt": "2026-10-04T02:11:30.945Z",
+  "totalVisits": 204,
   "countries": [
     {
       "key": "BT",
@@ -15,9 +15,9 @@
       "key": "IN",
       "label": "IN",
       "country": "IN",
-      "count": 69,
+      "count": 70,
       "firstSeenAt": "2026-06-23T05:03:11.022Z",
-      "lastSeenAt": "2026-10-02T05:32:33.166Z"
+      "lastSeenAt": "2026-10-04T02:11:30.945Z"
     },
     {
       "key": "US",
@@ -306,6 +306,18 @@
       "lastSeenAt": "2026-09-27T20:29:25.385Z"
     },
     {
+      "key": "Ahmedabad, Gujarat, IN",
+      "label": "Ahmedabad, Gujarat, IN",
+      "city": "Ahmedabad",
+      "region": "Gujarat",
+      "country": "IN",
+      "latitude": "23.026",
+      "longitude": "72.587",
+      "count": 3,
+      "firstSeenAt": "2026-07-05T06:53:29.625Z",
+      "lastSeenAt": "2026-10-04T02:11:30.945Z"
+    },
+    {
       "key": "Hyderabad, Telangana, IN",
       "label": "Hyderabad, Telangana, IN",
       "city": "Hyderabad",
@@ -316,18 +328,6 @@
       "count": 2,
       "firstSeenAt": "2026-06-23T12:55:00.057Z",
       "lastSeenAt": "2026-06-23T13:30:04.286Z"
-    },
-    {
-      "key": "Ahmedabad, Gujarat, IN",
-      "label": "Ahmedabad, Gujarat, IN",
-      "city": "Ahmedabad",
-      "region": "Gujarat",
-      "country": "IN",
-      "latitude": "23.026",
-      "longitude": "72.587",
-      "count": 2,
-      "firstSeenAt": "2026-07-05T06:53:29.625Z",
-      "lastSeenAt": "2026-07-07T08:19:18.946Z"
     },
     {
       "key": "Brisbane, Queensland, AU",
@@ -946,9 +946,9 @@
     {
       "key": "/",
       "label": "/",
-      "count": 191,
+      "count": 192,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-10-03T08:13:43.277Z"
+      "lastSeenAt": "2026-10-04T02:11:30.945Z"
     },
     {
       "key": "/mahar",
@@ -1001,6 +1001,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-10-04T02:11:30.945Z",
+      "page": "/",
+      "country": "IN",
+      "continent": "AS",
+      "region": "Gujarat",
+      "city": "Ahmedabad",
+      "timezone": "Asia/Kolkata",
+      "latitude": "23.026",
+      "longitude": "72.587",
+      "visitorType": "returning",
+      "sessionType": "new",
+      "visitorVisitCount": 2
+    },
     {
       "visitedAt": "2026-10-03T08:13:43.277Z",
       "page": "/",
@@ -2106,23 +2120,28 @@
       "visitorType": "new",
       "sessionType": "new",
       "visitorVisitCount": 1
-    },
-    {
-      "visitedAt": "2026-07-30T10:29:22.901Z",
-      "page": "/",
-      "country": "ID",
-      "continent": "AS",
-      "region": "Jakarta",
-      "city": "Jakarta",
-      "timezone": "Asia/Jakarta",
-      "latitude": "-6.215",
-      "longitude": "106.845",
-      "visitorType": "returning",
-      "sessionType": "new",
-      "visitorVisitCount": 2
     }
   ],
   "visitors": [
+    {
+      "key": "f5e2c80e9b854367b226800b839e30ce5dc45719ec1bf7e41144bc7460978a26",
+      "firstSeenAt": "2026-10-02T05:32:33.166Z",
+      "lastSeenAt": "2026-10-04T02:11:30.945Z",
+      "visitCount": 2,
+      "sessionCount": 2,
+      "firstPage": "/",
+      "lastPage": "/",
+      "firstCountry": "IN",
+      "firstRegion": "Gujarat",
+      "firstCity": "Anand",
+      "firstTimezone": "Asia/Kolkata",
+      "lastCountry": "IN",
+      "lastRegion": "Gujarat",
+      "lastCity": "Ahmedabad",
+      "lastTimezone": "Asia/Kolkata",
+      "lastLatitude": "23.026",
+      "lastLongitude": "72.587"
+    },
     {
       "key": "d05fbc67cf9d5993240bdbae5403e52a8835ed20216da472bd2ed455df153b37",
       "firstSeenAt": "2026-10-03T08:13:43.277Z",
@@ -2141,25 +2160,6 @@
       "lastTimezone": "Asia/Dhaka",
       "lastLatitude": "23.710",
       "lastLongitude": "90.407"
-    },
-    {
-      "key": "f5e2c80e9b854367b226800b839e30ce5dc45719ec1bf7e41144bc7460978a26",
-      "firstSeenAt": "2026-10-02T05:32:33.166Z",
-      "lastSeenAt": "2026-10-02T05:32:33.166Z",
-      "visitCount": 1,
-      "sessionCount": 1,
-      "firstPage": "/",
-      "lastPage": "/",
-      "firstCountry": "IN",
-      "firstRegion": "Gujarat",
-      "firstCity": "Anand",
-      "firstTimezone": "Asia/Kolkata",
-      "lastCountry": "IN",
-      "lastRegion": "Gujarat",
-      "lastCity": "Anand",
-      "lastTimezone": "Asia/Kolkata",
-      "lastLatitude": "22.553",
-      "lastLongitude": "72.955"
     },
     {
       "key": "b45440d564634b97c2685b627e85e7672527c116f0d5f2a7b71ff133b33ebac7",
@@ -4176,9 +4176,9 @@
       "lastLongitude": "89.642"
     }
   ],
-  "identifiedVisits": 149,
+  "identifiedVisits": 150,
   "uniqueVisitors": 108,
-  "returningVisitors": 21,
-  "repeatVisits": 41,
+  "returningVisitors": 22,
+  "repeatVisits": 42,
   "legacyVisits": 54
 }
