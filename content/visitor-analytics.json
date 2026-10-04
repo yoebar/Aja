@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-04T02:11:30.945Z",
-  "totalVisits": 204,
+  "updatedAt": "2026-10-04T18:02:04.836Z",
+  "totalVisits": 205,
   "countries": [
     {
       "key": "BT",
@@ -15,9 +15,9 @@
       "key": "IN",
       "label": "IN",
       "country": "IN",
-      "count": 70,
+      "count": 71,
       "firstSeenAt": "2026-06-23T05:03:11.022Z",
-      "lastSeenAt": "2026-10-04T02:11:30.945Z"
+      "lastSeenAt": "2026-10-04T18:02:04.836Z"
     },
     {
       "key": "US",
@@ -940,15 +940,27 @@
       "count": 1,
       "firstSeenAt": "2026-10-02T05:32:33.166Z",
       "lastSeenAt": "2026-10-02T05:32:33.166Z"
+    },
+    {
+      "key": "Rehli, Madhya Pradesh, IN",
+      "label": "Rehli, Madhya Pradesh, IN",
+      "city": "Rehli",
+      "region": "Madhya Pradesh",
+      "country": "IN",
+      "latitude": "23.637",
+      "longitude": "79.063",
+      "count": 1,
+      "firstSeenAt": "2026-10-04T18:02:04.836Z",
+      "lastSeenAt": "2026-10-04T18:02:04.836Z"
     }
   ],
   "pages": [
     {
       "key": "/",
       "label": "/",
-      "count": 192,
+      "count": 193,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-10-04T02:11:30.945Z"
+      "lastSeenAt": "2026-10-04T18:02:04.836Z"
     },
     {
       "key": "/mahar",
@@ -1001,6 +1013,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-10-04T18:02:04.836Z",
+      "page": "/",
+      "country": "IN",
+      "continent": "AS",
+      "region": "Madhya Pradesh",
+      "city": "Rehli",
+      "timezone": "Asia/Kolkata",
+      "latitude": "23.637",
+      "longitude": "79.063",
+      "visitorType": "returning",
+      "sessionType": "new",
+      "visitorVisitCount": 3
+    },
     {
       "visitedAt": "2026-10-04T02:11:30.945Z",
       "page": "/",
@@ -2106,23 +2132,28 @@
       "visitorType": "returning",
       "sessionType": "new",
       "visitorVisitCount": 15
-    },
-    {
-      "visitedAt": "2026-07-30T12:51:48.554Z",
-      "page": "/",
-      "country": "IN",
-      "continent": "AS",
-      "region": "Gujarat",
-      "city": "Rājkot",
-      "timezone": "Asia/Kolkata",
-      "latitude": "22.292",
-      "longitude": "70.793",
-      "visitorType": "new",
-      "sessionType": "new",
-      "visitorVisitCount": 1
     }
   ],
   "visitors": [
+    {
+      "key": "6159ace4bc73e81380c2cb17e87dbbd9724b702fea152185f088e6128dba38c9",
+      "firstSeenAt": "2026-08-30T21:01:56.583Z",
+      "lastSeenAt": "2026-10-04T18:02:04.836Z",
+      "visitCount": 3,
+      "sessionCount": 3,
+      "firstPage": "/",
+      "lastPage": "/",
+      "firstCountry": "IN",
+      "firstRegion": "Madhya Pradesh",
+      "firstCity": "Indore",
+      "firstTimezone": "Asia/Kolkata",
+      "lastCountry": "IN",
+      "lastRegion": "Madhya Pradesh",
+      "lastCity": "Rehli",
+      "lastTimezone": "Asia/Kolkata",
+      "lastLatitude": "23.637",
+      "lastLongitude": "79.063"
+    },
     {
       "key": "f5e2c80e9b854367b226800b839e30ce5dc45719ec1bf7e41144bc7460978a26",
       "firstSeenAt": "2026-10-02T05:32:33.166Z",
@@ -2236,25 +2267,6 @@
       "lastTimezone": "America/Los_Angeles",
       "lastLatitude": "37.392",
       "lastLongitude": "-121.962"
-    },
-    {
-      "key": "6159ace4bc73e81380c2cb17e87dbbd9724b702fea152185f088e6128dba38c9",
-      "firstSeenAt": "2026-08-30T21:01:56.583Z",
-      "lastSeenAt": "2026-09-27T20:29:25.385Z",
-      "visitCount": 2,
-      "sessionCount": 2,
-      "firstPage": "/",
-      "lastPage": "/",
-      "firstCountry": "IN",
-      "firstRegion": "Madhya Pradesh",
-      "firstCity": "Indore",
-      "firstTimezone": "Asia/Kolkata",
-      "lastCountry": "IN",
-      "lastRegion": "Madhya Pradesh",
-      "lastCity": "Indore",
-      "lastTimezone": "Asia/Kolkata",
-      "lastLatitude": "22.718",
-      "lastLongitude": "75.833"
     },
     {
       "key": "89d0131a3baf9cf7445601f6724a957fd8ba2fbb951592cf53b1391f8b59bc19",
@@ -4176,9 +4188,9 @@
       "lastLongitude": "89.642"
     }
   ],
-  "identifiedVisits": 150,
+  "identifiedVisits": 151,
   "uniqueVisitors": 108,
   "returningVisitors": 22,
-  "repeatVisits": 42,
+  "repeatVisits": 43,
   "legacyVisits": 54
 }
