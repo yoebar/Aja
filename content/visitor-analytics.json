@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-04T18:02:04.836Z",
-  "totalVisits": 205,
+  "updatedAt": "2026-10-05T13:24:27.969Z",
+  "totalVisits": 206,
   "countries": [
     {
       "key": "BT",
@@ -15,9 +15,9 @@
       "key": "IN",
       "label": "IN",
       "country": "IN",
-      "count": 71,
+      "count": 72,
       "firstSeenAt": "2026-06-23T05:03:11.022Z",
-      "lastSeenAt": "2026-10-04T18:02:04.836Z"
+      "lastSeenAt": "2026-10-05T13:24:27.969Z"
     },
     {
       "key": "US",
@@ -436,6 +436,18 @@
       "count": 2,
       "firstSeenAt": "2026-09-23T08:20:01.066Z",
       "lastSeenAt": "2026-10-03T08:13:43.277Z"
+    },
+    {
+      "key": "Jodhpur, Rajasthan, IN",
+      "label": "Jodhpur, Rajasthan, IN",
+      "city": "Jodhpur",
+      "region": "Rajasthan",
+      "country": "IN",
+      "latitude": "26.268",
+      "longitude": "73.006",
+      "count": 2,
+      "firstSeenAt": "2026-09-24T19:23:39.479Z",
+      "lastSeenAt": "2026-10-05T13:24:27.969Z"
     },
     {
       "key": "Tinsukia, Assam, IN",
@@ -894,18 +906,6 @@
       "lastSeenAt": "2026-09-22T17:24:15.476Z"
     },
     {
-      "key": "Jodhpur, Rajasthan, IN",
-      "label": "Jodhpur, Rajasthan, IN",
-      "city": "Jodhpur",
-      "region": "Rajasthan",
-      "country": "IN",
-      "latitude": "26.268",
-      "longitude": "73.006",
-      "count": 1,
-      "firstSeenAt": "2026-09-24T19:23:39.479Z",
-      "lastSeenAt": "2026-09-24T19:23:39.479Z"
-    },
-    {
       "key": "Naikanidihi, Odisha, IN",
       "label": "Naikanidihi, Odisha, IN",
       "city": "Naikanidihi",
@@ -958,9 +958,9 @@
     {
       "key": "/",
       "label": "/",
-      "count": 193,
+      "count": 194,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-10-04T18:02:04.836Z"
+      "lastSeenAt": "2026-10-05T13:24:27.969Z"
     },
     {
       "key": "/mahar",
@@ -1013,6 +1013,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-10-05T13:24:27.969Z",
+      "page": "/",
+      "country": "IN",
+      "continent": "AS",
+      "region": "Rajasthan",
+      "city": "Jodhpur",
+      "timezone": "Asia/Kolkata",
+      "latitude": "26.268",
+      "longitude": "73.006",
+      "visitorType": "new",
+      "sessionType": "new",
+      "visitorVisitCount": 1
+    },
     {
       "visitedAt": "2026-10-04T18:02:04.836Z",
       "page": "/",
@@ -2118,23 +2132,28 @@
       "visitorType": "new",
       "sessionType": "new",
       "visitorVisitCount": 1
-    },
-    {
-      "visitedAt": "2026-07-31T04:16:42.945Z",
-      "page": "/",
-      "country": "BT",
-      "continent": "AS",
-      "region": "Thimphu District",
-      "city": "Thimphu",
-      "timezone": "Asia/Thimphu",
-      "latitude": "27.466",
-      "longitude": "89.642",
-      "visitorType": "returning",
-      "sessionType": "new",
-      "visitorVisitCount": 15
     }
   ],
   "visitors": [
+    {
+      "key": "381565cf264726d23f9b028f59e859df6a1830485dfbcdd461d56da93e61bd05",
+      "firstSeenAt": "2026-10-05T13:24:27.969Z",
+      "lastSeenAt": "2026-10-05T13:24:27.969Z",
+      "visitCount": 1,
+      "sessionCount": 1,
+      "firstPage": "/",
+      "lastPage": "/",
+      "firstCountry": "IN",
+      "firstRegion": "Rajasthan",
+      "firstCity": "Jodhpur",
+      "firstTimezone": "Asia/Kolkata",
+      "lastCountry": "IN",
+      "lastRegion": "Rajasthan",
+      "lastCity": "Jodhpur",
+      "lastTimezone": "Asia/Kolkata",
+      "lastLatitude": "26.268",
+      "lastLongitude": "73.006"
+    },
     {
       "key": "6159ace4bc73e81380c2cb17e87dbbd9724b702fea152185f088e6128dba38c9",
       "firstSeenAt": "2026-08-30T21:01:56.583Z",
@@ -4188,8 +4207,8 @@
       "lastLongitude": "89.642"
     }
   ],
-  "identifiedVisits": 151,
-  "uniqueVisitors": 108,
+  "identifiedVisits": 152,
+  "uniqueVisitors": 109,
   "returningVisitors": 22,
   "repeatVisits": 43,
   "legacyVisits": 54
