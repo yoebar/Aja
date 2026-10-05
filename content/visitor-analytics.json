@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-05T13:24:27.969Z",
-  "totalVisits": 206,
+  "updatedAt": "2026-10-05T14:45:26.093Z",
+  "totalVisits": 207,
   "countries": [
     {
       "key": "BT",
@@ -15,9 +15,9 @@
       "key": "IN",
       "label": "IN",
       "country": "IN",
-      "count": 72,
+      "count": 73,
       "firstSeenAt": "2026-06-23T05:03:11.022Z",
-      "lastSeenAt": "2026-10-05T13:24:27.969Z"
+      "lastSeenAt": "2026-10-05T14:45:26.093Z"
     },
     {
       "key": "US",
@@ -952,15 +952,27 @@
       "count": 1,
       "firstSeenAt": "2026-10-04T18:02:04.836Z",
       "lastSeenAt": "2026-10-04T18:02:04.836Z"
+    },
+    {
+      "key": "Jaipur, Rajasthan, IN",
+      "label": "Jaipur, Rajasthan, IN",
+      "city": "Jaipur",
+      "region": "Rajasthan",
+      "country": "IN",
+      "latitude": "26.920",
+      "longitude": "75.788",
+      "count": 1,
+      "firstSeenAt": "2026-10-05T14:45:26.093Z",
+      "lastSeenAt": "2026-10-05T14:45:26.093Z"
     }
   ],
   "pages": [
     {
       "key": "/",
       "label": "/",
-      "count": 194,
+      "count": 195,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-10-05T13:24:27.969Z"
+      "lastSeenAt": "2026-10-05T14:45:26.093Z"
     },
     {
       "key": "/mahar",
@@ -1013,6 +1025,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-10-05T14:45:26.093Z",
+      "page": "/",
+      "country": "IN",
+      "continent": "AS",
+      "region": "Rajasthan",
+      "city": "Jaipur",
+      "timezone": "Asia/Kolkata",
+      "latitude": "26.920",
+      "longitude": "75.788",
+      "visitorType": "new",
+      "sessionType": "new",
+      "visitorVisitCount": 1
+    },
     {
       "visitedAt": "2026-10-05T13:24:27.969Z",
       "page": "/",
@@ -2118,23 +2144,28 @@
       "visitorType": "new",
       "sessionType": "new",
       "visitorVisitCount": 1
-    },
-    {
-      "visitedAt": "2026-07-31T11:05:41.783Z",
-      "page": "/",
-      "country": "IN",
-      "continent": "AS",
-      "region": "Maharashtra",
-      "city": "Virār",
-      "timezone": "Asia/Kolkata",
-      "latitude": "19.456",
-      "longitude": "72.811",
-      "visitorType": "new",
-      "sessionType": "new",
-      "visitorVisitCount": 1
     }
   ],
   "visitors": [
+    {
+      "key": "245150e380126f3fe9f84a7a9941ec09e4dfd2f1754e8ae40ddc6ced3d9c1291",
+      "firstSeenAt": "2026-10-05T14:45:26.093Z",
+      "lastSeenAt": "2026-10-05T14:45:26.093Z",
+      "visitCount": 1,
+      "sessionCount": 1,
+      "firstPage": "/",
+      "lastPage": "/",
+      "firstCountry": "IN",
+      "firstRegion": "Rajasthan",
+      "firstCity": "Jaipur",
+      "firstTimezone": "Asia/Kolkata",
+      "lastCountry": "IN",
+      "lastRegion": "Rajasthan",
+      "lastCity": "Jaipur",
+      "lastTimezone": "Asia/Kolkata",
+      "lastLatitude": "26.920",
+      "lastLongitude": "75.788"
+    },
     {
       "key": "381565cf264726d23f9b028f59e859df6a1830485dfbcdd461d56da93e61bd05",
       "firstSeenAt": "2026-10-05T13:24:27.969Z",
@@ -4207,8 +4238,8 @@
       "lastLongitude": "89.642"
     }
   ],
-  "identifiedVisits": 152,
-  "uniqueVisitors": 109,
+  "identifiedVisits": 153,
+  "uniqueVisitors": 110,
   "returningVisitors": 22,
   "repeatVisits": 43,
   "legacyVisits": 54
