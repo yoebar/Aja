@@ -1,15 +1,15 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-06T09:16:00.130Z",
-  "totalVisits": 209,
+  "updatedAt": "2026-10-07T05:45:27.927Z",
+  "totalVisits": 210,
   "countries": [
     {
       "key": "BT",
       "label": "BT",
       "country": "BT",
-      "count": 80,
+      "count": 81,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-10-06T08:34:51.238Z"
+      "lastSeenAt": "2026-10-07T05:45:27.927Z"
     },
     {
       "key": "IN",
@@ -157,9 +157,9 @@
       "country": "BT",
       "latitude": "27.466",
       "longitude": "89.642",
-      "count": 60,
+      "count": 61,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-10-01T07:19:35.923Z"
+      "lastSeenAt": "2026-10-07T05:45:27.927Z"
     },
     {
       "key": "Siliguri, West Bengal, IN",
@@ -970,9 +970,9 @@
     {
       "key": "/",
       "label": "/",
-      "count": 197,
+      "count": 198,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-10-06T09:16:00.130Z"
+      "lastSeenAt": "2026-10-07T05:45:27.927Z"
     },
     {
       "key": "/mahar",
@@ -1025,6 +1025,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-10-07T05:45:27.927Z",
+      "page": "/",
+      "country": "BT",
+      "continent": "AS",
+      "region": "Thimphu District",
+      "city": "Thimphu",
+      "timezone": "Asia/Thimphu",
+      "latitude": "27.466",
+      "longitude": "89.642",
+      "visitorType": "new",
+      "sessionType": "new",
+      "visitorVisitCount": 1
+    },
     {
       "visitedAt": "2026-10-06T09:16:00.130Z",
       "page": "/",
@@ -2130,23 +2144,28 @@
       "visitorType": "returning",
       "sessionType": "new",
       "visitorVisitCount": 3
-    },
-    {
-      "visitedAt": "2026-07-31T12:31:40.446Z",
-      "page": "/",
-      "country": "IN",
-      "continent": "AS",
-      "region": "West Bengal",
-      "city": "Kātoya",
-      "timezone": "Asia/Kolkata",
-      "latitude": "23.646",
-      "longitude": "88.133",
-      "visitorType": "new",
-      "sessionType": "new",
-      "visitorVisitCount": 1
     }
   ],
   "visitors": [
+    {
+      "key": "585b6195db128ebe4d5aeac87b7a97141fa86e887b58230312d85f48120959f4",
+      "firstSeenAt": "2026-10-07T05:45:27.927Z",
+      "lastSeenAt": "2026-10-07T05:45:27.927Z",
+      "visitCount": 1,
+      "sessionCount": 1,
+      "firstPage": "/",
+      "lastPage": "/",
+      "firstCountry": "BT",
+      "firstRegion": "Thimphu District",
+      "firstCity": "Thimphu",
+      "firstTimezone": "Asia/Thimphu",
+      "lastCountry": "BT",
+      "lastRegion": "Thimphu District",
+      "lastCity": "Thimphu",
+      "lastTimezone": "Asia/Thimphu",
+      "lastLatitude": "27.466",
+      "lastLongitude": "89.642"
+    },
     {
       "key": "60931789854f6b38189bd89b45ad9b912676cba0cc7327914d439e34d4dcf901",
       "firstSeenAt": "2026-10-06T09:16:00.130Z",
@@ -4257,8 +4276,8 @@
       "lastLongitude": "89.642"
     }
   ],
-  "identifiedVisits": 155,
-  "uniqueVisitors": 111,
+  "identifiedVisits": 156,
+  "uniqueVisitors": 112,
   "returningVisitors": 23,
   "repeatVisits": 44,
   "legacyVisits": 54
