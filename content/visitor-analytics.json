@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-07T08:11:06.296Z",
-  "totalVisits": 212,
+  "updatedAt": "2026-10-07T18:31:02.603Z",
+  "totalVisits": 213,
   "countries": [
     {
       "key": "BT",
@@ -15,9 +15,9 @@
       "key": "IN",
       "label": "IN",
       "country": "IN",
-      "count": 75,
+      "count": 76,
       "firstSeenAt": "2026-06-23T05:03:11.022Z",
-      "lastSeenAt": "2026-10-07T08:11:06.296Z"
+      "lastSeenAt": "2026-10-07T18:31:02.603Z"
     },
     {
       "key": "US",
@@ -241,9 +241,9 @@
       "country": "IN",
       "latitude": "26.184",
       "longitude": "91.746",
-      "count": 4,
+      "count": 5,
       "firstSeenAt": "2026-06-23T05:03:11.022Z",
-      "lastSeenAt": "2026-09-09T19:52:14.896Z"
+      "lastSeenAt": "2026-10-07T18:31:02.603Z"
     },
     {
       "key": "Prineville, Oregon, US",
@@ -982,9 +982,9 @@
     {
       "key": "/",
       "label": "/",
-      "count": 200,
+      "count": 201,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-10-07T08:11:06.296Z"
+      "lastSeenAt": "2026-10-07T18:31:02.603Z"
     },
     {
       "key": "/mahar",
@@ -1037,6 +1037,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-10-07T18:31:02.603Z",
+      "page": "/",
+      "country": "IN",
+      "continent": "AS",
+      "region": "Assam",
+      "city": "Guwahati",
+      "timezone": "Asia/Kolkata",
+      "latitude": "26.184",
+      "longitude": "91.746",
+      "visitorType": "new",
+      "sessionType": "new",
+      "visitorVisitCount": 1
+    },
     {
       "visitedAt": "2026-10-07T08:11:06.296Z",
       "page": "/",
@@ -2142,23 +2156,28 @@
       "visitorType": "new",
       "sessionType": "new",
       "visitorVisitCount": 1
-    },
-    {
-      "visitedAt": "2026-08-03T10:28:26.618Z",
-      "page": "/",
-      "country": "BT",
-      "continent": "AS",
-      "region": "Thimphu District",
-      "city": "Thimphu",
-      "timezone": "Asia/Thimphu",
-      "latitude": "27.466",
-      "longitude": "89.642",
-      "visitorType": "new",
-      "sessionType": "new",
-      "visitorVisitCount": 1
     }
   ],
   "visitors": [
+    {
+      "key": "b4615125e6ddad3e431806c34f089df6abaf79bb4af45cde4495866d6011b1c7",
+      "firstSeenAt": "2026-10-07T18:31:02.603Z",
+      "lastSeenAt": "2026-10-07T18:31:02.603Z",
+      "visitCount": 1,
+      "sessionCount": 1,
+      "firstPage": "/",
+      "lastPage": "/",
+      "firstCountry": "IN",
+      "firstRegion": "Assam",
+      "firstCity": "Guwahati",
+      "firstTimezone": "Asia/Kolkata",
+      "lastCountry": "IN",
+      "lastRegion": "Assam",
+      "lastCity": "Guwahati",
+      "lastTimezone": "Asia/Kolkata",
+      "lastLatitude": "26.184",
+      "lastLongitude": "91.746"
+    },
     {
       "key": "cdc18fa6fef77c8f577d670b250e5bd52335bb0f58187472fd8430491e725f21",
       "firstSeenAt": "2026-10-07T08:11:06.296Z",
@@ -4307,8 +4326,8 @@
       "lastLongitude": "89.642"
     }
   ],
-  "identifiedVisits": 158,
-  "uniqueVisitors": 113,
+  "identifiedVisits": 159,
+  "uniqueVisitors": 114,
   "returningVisitors": 24,
   "repeatVisits": 45,
   "legacyVisits": 54
