@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-07T07:34:22.560Z",
-  "totalVisits": 211,
+  "updatedAt": "2026-10-07T08:11:06.296Z",
+  "totalVisits": 212,
   "countries": [
     {
       "key": "BT",
@@ -15,9 +15,9 @@
       "key": "IN",
       "label": "IN",
       "country": "IN",
-      "count": 74,
+      "count": 75,
       "firstSeenAt": "2026-06-23T05:03:11.022Z",
-      "lastSeenAt": "2026-10-06T09:16:00.130Z"
+      "lastSeenAt": "2026-10-07T08:11:06.296Z"
     },
     {
       "key": "US",
@@ -964,15 +964,27 @@
       "count": 1,
       "firstSeenAt": "2026-10-05T14:45:26.093Z",
       "lastSeenAt": "2026-10-05T14:45:26.093Z"
+    },
+    {
+      "key": "Āsansol, West Bengal, IN",
+      "label": "Āsansol, West Bengal, IN",
+      "city": "Āsansol",
+      "region": "West Bengal",
+      "country": "IN",
+      "latitude": "23.683",
+      "longitude": "86.983",
+      "count": 1,
+      "firstSeenAt": "2026-10-07T08:11:06.296Z",
+      "lastSeenAt": "2026-10-07T08:11:06.296Z"
     }
   ],
   "pages": [
     {
       "key": "/",
       "label": "/",
-      "count": 199,
+      "count": 200,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-10-07T07:34:22.560Z"
+      "lastSeenAt": "2026-10-07T08:11:06.296Z"
     },
     {
       "key": "/mahar",
@@ -1025,6 +1037,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-10-07T08:11:06.296Z",
+      "page": "/",
+      "country": "IN",
+      "continent": "AS",
+      "region": "West Bengal",
+      "city": "Āsansol",
+      "timezone": "Asia/Kolkata",
+      "latitude": "23.683",
+      "longitude": "86.983",
+      "visitorType": "new",
+      "sessionType": "new",
+      "visitorVisitCount": 1
+    },
     {
       "visitedAt": "2026-10-07T07:34:22.560Z",
       "page": "/",
@@ -2130,23 +2156,28 @@
       "visitorType": "new",
       "sessionType": "new",
       "visitorVisitCount": 1
-    },
-    {
-      "visitedAt": "2026-08-02T17:56:52.025Z",
-      "page": "/",
-      "country": "BT",
-      "continent": "AS",
-      "region": "Chukha",
-      "city": "Phuntsholing",
-      "timezone": "Asia/Thimphu",
-      "latitude": "26.852",
-      "longitude": "89.388",
-      "visitorType": "new",
-      "sessionType": "new",
-      "visitorVisitCount": 1
     }
   ],
   "visitors": [
+    {
+      "key": "cdc18fa6fef77c8f577d670b250e5bd52335bb0f58187472fd8430491e725f21",
+      "firstSeenAt": "2026-10-07T08:11:06.296Z",
+      "lastSeenAt": "2026-10-07T08:11:06.296Z",
+      "visitCount": 1,
+      "sessionCount": 1,
+      "firstPage": "/",
+      "lastPage": "/",
+      "firstCountry": "IN",
+      "firstRegion": "West Bengal",
+      "firstCity": "Āsansol",
+      "firstTimezone": "Asia/Kolkata",
+      "lastCountry": "IN",
+      "lastRegion": "West Bengal",
+      "lastCity": "Āsansol",
+      "lastTimezone": "Asia/Kolkata",
+      "lastLatitude": "23.683",
+      "lastLongitude": "86.983"
+    },
     {
       "key": "585b6195db128ebe4d5aeac87b7a97141fa86e887b58230312d85f48120959f4",
       "firstSeenAt": "2026-10-07T05:45:27.927Z",
@@ -4276,8 +4307,8 @@
       "lastLongitude": "89.642"
     }
   ],
-  "identifiedVisits": 157,
-  "uniqueVisitors": 112,
+  "identifiedVisits": 158,
+  "uniqueVisitors": 113,
   "returningVisitors": 24,
   "repeatVisits": 45,
   "legacyVisits": 54
