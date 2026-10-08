@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-07T18:31:02.603Z",
-  "totalVisits": 213,
+  "updatedAt": "2026-10-08T20:42:58.335Z",
+  "totalVisits": 214,
   "countries": [
     {
       "key": "BT",
@@ -15,9 +15,9 @@
       "key": "IN",
       "label": "IN",
       "country": "IN",
-      "count": 76,
+      "count": 77,
       "firstSeenAt": "2026-06-23T05:03:11.022Z",
-      "lastSeenAt": "2026-10-07T18:31:02.603Z"
+      "lastSeenAt": "2026-10-08T20:42:58.335Z"
     },
     {
       "key": "US",
@@ -222,6 +222,18 @@
       "lastSeenAt": "2026-07-22T01:29:13.573Z"
     },
     {
+      "key": "Guwahati, Assam, IN",
+      "label": "Guwahati, Assam, IN",
+      "city": "Guwahati",
+      "region": "Assam",
+      "country": "IN",
+      "latitude": "26.184",
+      "longitude": "91.746",
+      "count": 6,
+      "firstSeenAt": "2026-06-23T05:03:11.022Z",
+      "lastSeenAt": "2026-10-08T20:42:58.335Z"
+    },
+    {
       "key": "Kyoto, Kyoto, JP",
       "label": "Kyoto, Kyoto, JP",
       "city": "Kyoto",
@@ -232,18 +244,6 @@
       "count": 5,
       "firstSeenAt": "2026-07-04T10:19:44.593Z",
       "lastSeenAt": "2026-07-05T01:01:18.650Z"
-    },
-    {
-      "key": "Guwahati, Assam, IN",
-      "label": "Guwahati, Assam, IN",
-      "city": "Guwahati",
-      "region": "Assam",
-      "country": "IN",
-      "latitude": "26.184",
-      "longitude": "91.746",
-      "count": 5,
-      "firstSeenAt": "2026-06-23T05:03:11.022Z",
-      "lastSeenAt": "2026-10-07T18:31:02.603Z"
     },
     {
       "key": "Prineville, Oregon, US",
@@ -982,9 +982,9 @@
     {
       "key": "/",
       "label": "/",
-      "count": 201,
+      "count": 202,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-10-07T18:31:02.603Z"
+      "lastSeenAt": "2026-10-08T20:42:58.335Z"
     },
     {
       "key": "/mahar",
@@ -1037,6 +1037,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-10-08T20:42:58.335Z",
+      "page": "/",
+      "country": "IN",
+      "continent": "AS",
+      "region": "Assam",
+      "city": "Guwahati",
+      "timezone": "Asia/Kolkata",
+      "latitude": "26.184",
+      "longitude": "91.746",
+      "visitorType": "new",
+      "sessionType": "new",
+      "visitorVisitCount": 1
+    },
     {
       "visitedAt": "2026-10-07T18:31:02.603Z",
       "page": "/",
@@ -2142,23 +2156,28 @@
       "visitorType": "new",
       "sessionType": "new",
       "visitorVisitCount": 1
-    },
-    {
-      "visitedAt": "2026-08-03T12:43:04.035Z",
-      "page": "/",
-      "country": "IN",
-      "continent": "AS",
-      "region": "Delhi",
-      "city": "Delhi",
-      "timezone": "Asia/Kolkata",
-      "latitude": "28.652",
-      "longitude": "77.231",
-      "visitorType": "new",
-      "sessionType": "new",
-      "visitorVisitCount": 1
     }
   ],
   "visitors": [
+    {
+      "key": "4d5e56367165a5b2cbfeeb3685c02d67631086566388f32a0cfd94a224f8b46f",
+      "firstSeenAt": "2026-10-08T20:42:58.335Z",
+      "lastSeenAt": "2026-10-08T20:42:58.335Z",
+      "visitCount": 1,
+      "sessionCount": 1,
+      "firstPage": "/",
+      "lastPage": "/",
+      "firstCountry": "IN",
+      "firstRegion": "Assam",
+      "firstCity": "Guwahati",
+      "firstTimezone": "Asia/Kolkata",
+      "lastCountry": "IN",
+      "lastRegion": "Assam",
+      "lastCity": "Guwahati",
+      "lastTimezone": "Asia/Kolkata",
+      "lastLatitude": "26.184",
+      "lastLongitude": "91.746"
+    },
     {
       "key": "b4615125e6ddad3e431806c34f089df6abaf79bb4af45cde4495866d6011b1c7",
       "firstSeenAt": "2026-10-07T18:31:02.603Z",
@@ -4326,8 +4345,8 @@
       "lastLongitude": "89.642"
     }
   ],
-  "identifiedVisits": 159,
-  "uniqueVisitors": 114,
+  "identifiedVisits": 160,
+  "uniqueVisitors": 115,
   "returningVisitors": 24,
   "repeatVisits": 45,
   "legacyVisits": 54
