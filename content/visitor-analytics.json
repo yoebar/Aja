@@ -1,15 +1,15 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-08T21:13:25.318Z",
-  "totalVisits": 215,
+  "updatedAt": "2026-10-09T04:04:30.498Z",
+  "totalVisits": 216,
   "countries": [
     {
       "key": "BT",
       "label": "BT",
       "country": "BT",
-      "count": 82,
+      "count": 83,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-10-07T07:34:22.560Z"
+      "lastSeenAt": "2026-10-09T04:04:30.498Z"
     },
     {
       "key": "IN",
@@ -181,9 +181,9 @@
       "country": "BT",
       "latitude": "26.852",
       "longitude": "89.388",
-      "count": 16,
+      "count": 17,
       "firstSeenAt": "2026-06-24T14:41:27.830Z",
-      "lastSeenAt": "2026-10-06T08:34:51.238Z"
+      "lastSeenAt": "2026-10-09T04:04:30.498Z"
     },
     {
       "key": "Kolkata, West Bengal, IN",
@@ -982,9 +982,9 @@
     {
       "key": "/",
       "label": "/",
-      "count": 203,
+      "count": 204,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-10-08T21:13:25.318Z"
+      "lastSeenAt": "2026-10-09T04:04:30.498Z"
     },
     {
       "key": "/mahar",
@@ -1037,6 +1037,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-10-09T04:04:30.498Z",
+      "page": "/",
+      "country": "BT",
+      "continent": "AS",
+      "region": "Chukha",
+      "city": "Phuntsholing",
+      "timezone": "Asia/Thimphu",
+      "latitude": "26.852",
+      "longitude": "89.388",
+      "visitorType": "new",
+      "sessionType": "new",
+      "visitorVisitCount": 1
+    },
     {
       "visitedAt": "2026-10-08T21:13:25.318Z",
       "page": "/",
@@ -2142,23 +2156,28 @@
       "visitorType": "returning",
       "sessionType": "new",
       "visitorVisitCount": 3
-    },
-    {
-      "visitedAt": "2026-08-05T04:52:49.790Z",
-      "page": "/",
-      "country": "BT",
-      "continent": "AS",
-      "region": "Thimphu District",
-      "city": "Thimphu",
-      "timezone": "Asia/Thimphu",
-      "latitude": "27.466",
-      "longitude": "89.642",
-      "visitorType": "returning",
-      "sessionType": "new",
-      "visitorVisitCount": 2
     }
   ],
   "visitors": [
+    {
+      "key": "7b3f8387eccdc242e2285883d8f6c46612b39f466b0e34d141d91c2cfaad3dc9",
+      "firstSeenAt": "2026-10-09T04:04:30.498Z",
+      "lastSeenAt": "2026-10-09T04:04:30.498Z",
+      "visitCount": 1,
+      "sessionCount": 1,
+      "firstPage": "/",
+      "lastPage": "/",
+      "firstCountry": "BT",
+      "firstRegion": "Chukha",
+      "firstCity": "Phuntsholing",
+      "firstTimezone": "Asia/Thimphu",
+      "lastCountry": "BT",
+      "lastRegion": "Chukha",
+      "lastCity": "Phuntsholing",
+      "lastTimezone": "Asia/Thimphu",
+      "lastLatitude": "26.852",
+      "lastLongitude": "89.388"
+    },
     {
       "key": "4d5e56367165a5b2cbfeeb3685c02d67631086566388f32a0cfd94a224f8b46f",
       "firstSeenAt": "2026-10-08T20:42:58.335Z",
@@ -4345,8 +4364,8 @@
       "lastLongitude": "89.642"
     }
   ],
-  "identifiedVisits": 161,
-  "uniqueVisitors": 115,
+  "identifiedVisits": 162,
+  "uniqueVisitors": 116,
   "returningVisitors": 25,
   "repeatVisits": 46,
   "legacyVisits": 54
