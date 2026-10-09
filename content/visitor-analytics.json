@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-09T04:04:30.498Z",
-  "totalVisits": 216,
+  "updatedAt": "2026-10-09T04:42:47.278Z",
+  "totalVisits": 217,
   "countries": [
     {
       "key": "BT",
@@ -60,6 +60,14 @@
       "lastSeenAt": "2026-07-03T12:53:31.473Z"
     },
     {
+      "key": "IE",
+      "label": "IE",
+      "country": "IE",
+      "count": 3,
+      "firstSeenAt": "2026-07-22T02:13:04.992Z",
+      "lastSeenAt": "2026-10-09T04:42:47.278Z"
+    },
+    {
       "key": "MY",
       "label": "MY",
       "country": "MY",
@@ -90,14 +98,6 @@
       "count": 2,
       "firstSeenAt": "2026-06-30T03:41:36.187Z",
       "lastSeenAt": "2026-09-14T00:55:55.826Z"
-    },
-    {
-      "key": "IE",
-      "label": "IE",
-      "country": "IE",
-      "count": 2,
-      "firstSeenAt": "2026-07-22T02:13:04.992Z",
-      "lastSeenAt": "2026-09-19T12:22:02.182Z"
     },
     {
       "key": "SE",
@@ -318,6 +318,18 @@
       "lastSeenAt": "2026-10-04T02:11:30.945Z"
     },
     {
+      "key": "Clonee, Leinster, IE",
+      "label": "Clonee, Leinster, IE",
+      "city": "Clonee",
+      "region": "Leinster",
+      "country": "IE",
+      "latitude": "53.412",
+      "longitude": "-6.444",
+      "count": 3,
+      "firstSeenAt": "2026-07-22T02:13:04.992Z",
+      "lastSeenAt": "2026-10-09T04:42:47.278Z"
+    },
+    {
       "key": "Hyderabad, Telangana, IN",
       "label": "Hyderabad, Telangana, IN",
       "city": "Hyderabad",
@@ -400,18 +412,6 @@
       "count": 2,
       "firstSeenAt": "2026-07-28T11:51:37.512Z",
       "lastSeenAt": "2026-08-10T10:17:12.252Z"
-    },
-    {
-      "key": "Clonee, Leinster, IE",
-      "label": "Clonee, Leinster, IE",
-      "city": "Clonee",
-      "region": "Leinster",
-      "country": "IE",
-      "latitude": "53.412",
-      "longitude": "-6.444",
-      "count": 2,
-      "firstSeenAt": "2026-07-22T02:13:04.992Z",
-      "lastSeenAt": "2026-09-19T12:22:02.182Z"
     },
     {
       "key": "Luleå, Norrbotten, SE",
@@ -982,9 +982,9 @@
     {
       "key": "/",
       "label": "/",
-      "count": 204,
+      "count": 205,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-10-09T04:04:30.498Z"
+      "lastSeenAt": "2026-10-09T04:42:47.278Z"
     },
     {
       "key": "/mahar",
@@ -1037,6 +1037,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-10-09T04:42:47.278Z",
+      "page": "/",
+      "country": "IE",
+      "continent": "EU",
+      "region": "Leinster",
+      "city": "Clonee",
+      "timezone": "Europe/Dublin",
+      "latitude": "53.412",
+      "longitude": "-6.444",
+      "visitorType": "new",
+      "sessionType": "new",
+      "visitorVisitCount": 1
+    },
     {
       "visitedAt": "2026-10-09T04:04:30.498Z",
       "page": "/",
@@ -2142,23 +2156,28 @@
       "visitorType": "returning",
       "sessionType": "new",
       "visitorVisitCount": 4
-    },
-    {
-      "visitedAt": "2026-08-05T05:25:57.846Z",
-      "page": "/",
-      "country": "BT",
-      "continent": "AS",
-      "region": "Thimphu District",
-      "city": "Thimphu",
-      "timezone": "Asia/Thimphu",
-      "latitude": "27.466",
-      "longitude": "89.642",
-      "visitorType": "returning",
-      "sessionType": "new",
-      "visitorVisitCount": 3
     }
   ],
   "visitors": [
+    {
+      "key": "69aae2a2b9ad397d305f2f52dceb31a1bd44568adb3f5b3d45de73ff75f35135",
+      "firstSeenAt": "2026-10-09T04:42:47.278Z",
+      "lastSeenAt": "2026-10-09T04:42:47.278Z",
+      "visitCount": 1,
+      "sessionCount": 1,
+      "firstPage": "/",
+      "lastPage": "/",
+      "firstCountry": "IE",
+      "firstRegion": "Leinster",
+      "firstCity": "Clonee",
+      "firstTimezone": "Europe/Dublin",
+      "lastCountry": "IE",
+      "lastRegion": "Leinster",
+      "lastCity": "Clonee",
+      "lastTimezone": "Europe/Dublin",
+      "lastLatitude": "53.412",
+      "lastLongitude": "-6.444"
+    },
     {
       "key": "7b3f8387eccdc242e2285883d8f6c46612b39f466b0e34d141d91c2cfaad3dc9",
       "firstSeenAt": "2026-10-09T04:04:30.498Z",
@@ -4364,8 +4383,8 @@
       "lastLongitude": "89.642"
     }
   ],
-  "identifiedVisits": 162,
-  "uniqueVisitors": 116,
+  "identifiedVisits": 163,
+  "uniqueVisitors": 117,
   "returningVisitors": 25,
   "repeatVisits": 46,
   "legacyVisits": 54
