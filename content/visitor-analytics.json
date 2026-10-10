@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-09T04:42:47.278Z",
-  "totalVisits": 217,
+  "updatedAt": "2026-10-10T11:11:08.040Z",
+  "totalVisits": 218,
   "countries": [
     {
       "key": "BT",
@@ -15,9 +15,9 @@
       "key": "IN",
       "label": "IN",
       "country": "IN",
-      "count": 78,
+      "count": 79,
       "firstSeenAt": "2026-06-23T05:03:11.022Z",
-      "lastSeenAt": "2026-10-08T21:13:25.318Z"
+      "lastSeenAt": "2026-10-10T11:11:08.040Z"
     },
     {
       "key": "US",
@@ -450,6 +450,18 @@
       "lastSeenAt": "2026-10-05T13:24:27.969Z"
     },
     {
+      "key": "Rājkot, Gujarat, IN",
+      "label": "Rājkot, Gujarat, IN",
+      "city": "Rājkot",
+      "region": "Gujarat",
+      "country": "IN",
+      "latitude": "22.292",
+      "longitude": "70.793",
+      "count": 2,
+      "firstSeenAt": "2026-07-30T12:51:48.554Z",
+      "lastSeenAt": "2026-10-10T11:11:08.040Z"
+    },
+    {
       "key": "Tinsukia, Assam, IN",
       "label": "Tinsukia, Assam, IN",
       "city": "Tinsukia",
@@ -616,18 +628,6 @@
       "count": 1,
       "firstSeenAt": "2026-07-26T03:27:50.296Z",
       "lastSeenAt": "2026-07-26T03:27:50.296Z"
-    },
-    {
-      "key": "Rājkot, Gujarat, IN",
-      "label": "Rājkot, Gujarat, IN",
-      "city": "Rājkot",
-      "region": "Gujarat",
-      "country": "IN",
-      "latitude": "22.292",
-      "longitude": "70.793",
-      "count": 1,
-      "firstSeenAt": "2026-07-30T12:51:48.554Z",
-      "lastSeenAt": "2026-07-30T12:51:48.554Z"
     },
     {
       "key": "Virār, Maharashtra, IN",
@@ -982,9 +982,9 @@
     {
       "key": "/",
       "label": "/",
-      "count": 205,
+      "count": 206,
       "firstSeenAt": "2026-06-23T01:34:00.955Z",
-      "lastSeenAt": "2026-10-09T04:42:47.278Z"
+      "lastSeenAt": "2026-10-10T11:11:08.040Z"
     },
     {
       "key": "/mahar",
@@ -1037,6 +1037,20 @@
     }
   ],
   "recentVisits": [
+    {
+      "visitedAt": "2026-10-10T11:11:08.040Z",
+      "page": "/",
+      "country": "IN",
+      "continent": "AS",
+      "region": "Gujarat",
+      "city": "Rājkot",
+      "timezone": "Asia/Kolkata",
+      "latitude": "22.292",
+      "longitude": "70.793",
+      "visitorType": "new",
+      "sessionType": "new",
+      "visitorVisitCount": 1
+    },
     {
       "visitedAt": "2026-10-09T04:42:47.278Z",
       "page": "/",
@@ -2142,23 +2156,28 @@
       "visitorType": "returning",
       "sessionType": "new",
       "visitorVisitCount": 2
-    },
-    {
-      "visitedAt": "2026-08-05T06:24:31.126Z",
-      "page": "/",
-      "country": "BT",
-      "continent": "AS",
-      "region": "Thimphu District",
-      "city": "Thimphu",
-      "timezone": "Asia/Thimphu",
-      "latitude": "27.466",
-      "longitude": "89.642",
-      "visitorType": "returning",
-      "sessionType": "new",
-      "visitorVisitCount": 4
     }
   ],
   "visitors": [
+    {
+      "key": "1ef50c1cc6e34cffeff17d12600f272bd506fbff2322eea14ea46e743dac2c29",
+      "firstSeenAt": "2026-10-10T11:11:08.040Z",
+      "lastSeenAt": "2026-10-10T11:11:08.040Z",
+      "visitCount": 1,
+      "sessionCount": 1,
+      "firstPage": "/",
+      "lastPage": "/",
+      "firstCountry": "IN",
+      "firstRegion": "Gujarat",
+      "firstCity": "Rājkot",
+      "firstTimezone": "Asia/Kolkata",
+      "lastCountry": "IN",
+      "lastRegion": "Gujarat",
+      "lastCity": "Rājkot",
+      "lastTimezone": "Asia/Kolkata",
+      "lastLatitude": "22.292",
+      "lastLongitude": "70.793"
+    },
     {
       "key": "69aae2a2b9ad397d305f2f52dceb31a1bd44568adb3f5b3d45de73ff75f35135",
       "firstSeenAt": "2026-10-09T04:42:47.278Z",
@@ -4383,8 +4402,8 @@
       "lastLongitude": "89.642"
     }
   ],
-  "identifiedVisits": 163,
-  "uniqueVisitors": 117,
+  "identifiedVisits": 164,
+  "uniqueVisitors": 118,
   "returningVisitors": 25,
   "repeatVisits": 46,
   "legacyVisits": 54
